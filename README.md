@@ -8,8 +8,8 @@ PIT operates at the bytecode level and does not export mutated source code. This
 
 ```
 mutate-source-code/
-├── extract_mutated_src_code.py
-├── inject_mutated_src_code.py
+├── extract_mutated_src_code.py         ← created CSV files with mutated source lines
+├── inject_mutated_src_code.py          ← injects mutated source lines into source file
 └── test-projects/
     └── <project-name>/
         ├── src/main/java/              ← source codes
@@ -24,7 +24,7 @@ mutate-source-code/
 
 - Python 3.6+
 - `javalang` — `pip install javalang`
-- A Maven/Gradle project with PIT configured and a generated `mutations.xml` report
+- A Maven project with PIT configured and a generated `mutations.xml` report
 
 ## Usage
 
