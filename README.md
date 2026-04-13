@@ -8,22 +8,26 @@ PIT operates at the bytecode level and does not export mutated source code. This
 
 ```
 mutate-source-code/
-├── extract_mutated_src_code.py         ← created CSV files with mutated source lines
-├── inject_mutated_src_code.py          ← injects mutated source lines into source file
+├── extract_mutated_src_code.py         ← creates CSV files with mutated source lines
+├── inject_mutated_src_code.py          ← injects mutated source lines into source files
 └── test-projects/
     └── <project-name>/
-        ├── src/main/java/              ← source codes
+        ├── src/main/java/              ← source code
         ├── target/pit-reports/mutations.xml
-        └── mutated_src_lines/          ← generated output
-            ├── ClassName1.csv
-            ├── ClassName2.csv
+        ├── mutated_src_lines/          ← generated CSVs (one per source file)
+        │   ├── ClassName1.csv
+        │   ├── ClassName2.csv
+        │   └── ...
+        └── injected_mutants/           ← generated mutant source files
+            ├── ClassName1_line68_mutant1.java
+            ├── ClassName1_line68_mutant2.java
             └── ...
 ```
 
 ## Prerequisites
 
 - Python 3.6+
-- javalang`
+- javalang
 - A Maven project with PIT configured and a generated `mutations.xml` report
 
 ## Usage
@@ -57,11 +61,28 @@ Each CSV contains one row per mutation:
 
 ### Step 2: Inject Mutations into Source
 
+The injection script supports three modes depending on how many arguments are provided:
+
 ```bash
+# Inject all mutations from all files
 python inject_mutated_src_code.py <project-name>
+
+# Inject all mutations for a specific source file
+python inject_mutated_src_code.py <project-name> <source-file>
+
+# Inject mutations for a specific source file and line number
+python inject_mutated_src_code.py <project-name> <source-file> <line-number>
 ```
 
-This reads the CSVs from `mutated_src_lines/` and injects the mutated lines into copies of the source files.
+Examples:
+
+```bash
+python inject_mutated_src_code.py joda-time
+python inject_mutated_src_code.py joda-time PeriodFormatterBuilder.java
+python inject_mutated_src_code.py joda-time PeriodFormatterBuilder.java 1377
+```
+
+Each mutant is a full copy of the original source file with one line replaced. Output is written to `test-projects/<project-name>/injected_mutants/`.
 
 ## Supported Mutators
 
@@ -81,8 +102,8 @@ The extraction script handles all mutators in PIT's STRONGER group using `javala
 
 ## Generating a PIT Report
 
-If you need to generate a PIT mutation report for a Maven project, add the following plugin to the project's `pom.xml`:
-
+If you need to generate a PIT mutation report for a Maven project, add the following plugin to the project's `pom.xml`. The example below is configured for Apache Commons Lang 3 — update `targetClasses` and `targetTests` to match the subject project's package structure.
+ 
 ```xml
 <plugin>
   <groupId>org.pitest</groupId>

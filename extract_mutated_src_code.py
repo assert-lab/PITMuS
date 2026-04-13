@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import xml.etree.ElementTree as ET
 import csv
 import os
@@ -51,10 +50,81 @@ def nth_token_in(toks, values, n):
     return None
 
 
+def _expr_end_col(ltoks, start_idx):
+    depth = 0
+    last_i = start_idx
+    for i in range(start_idx, len(ltoks)):
+        v = ltoks[i].value
+        if v in ('(', '['):
+            depth += 1
+        elif v in (')', ']'):
+            if depth == 0:
+                break
+            depth -= 1
+        elif depth == 0 and v in ('||', '&&', ';', '{', ',', '?', ':'):
+            break
+        last_i = i
+    t = ltoks[last_i]
+    return t.position[1] - 1 + len(t.value)
+
+
+def _expr_start_col(ltoks, end_idx):
+    depth = 0
+    first_i = end_idx
+    for i in range(end_idx, -1, -1):
+        v = ltoks[i].value
+        if v in (')', ']'):
+            depth += 1
+        elif v in ('(', '['):
+            if depth == 0:
+                break
+            depth -= 1
+        elif depth == 0 and v in ('||', '&&', ';', '{', ',', '?', ':'):
+            break
+        first_i = i
+    t = ltoks[first_i]
+    return t.position[1] - 1
+
+
+def _find_eq_method_calls(ltoks):
+    calls = []
+    for i, tok in enumerate(ltoks):
+        if tok.value in ('equals', 'equalsIgnoreCase') and i >= 2 and ltoks[i - 1].value == '.':
+            obj_start = _expr_start_col(ltoks, i - 2)
+            if i + 1 < len(ltoks) and ltoks[i + 1].value == '(':
+                call_end = _expr_end_col(ltoks, i + 1)
+                calls.append((obj_start, call_end))
+    return calls
+
+
+def _find_compound_bool_subexprs(ltoks):
+    results = []
+    n = len(ltoks)
+    for i, tok in enumerate(ltoks):
+        if tok.value not in ('&&', '||'):
+            continue
+        j = i + 1
+        while j < n and ltoks[j].value == '!':
+            j += 1
+        if j >= n:
+            continue
+        if ltoks[j].value in ('(', ')', ';', '{', '}', ',', '&&', '||'):
+            continue
+        start_col = ltoks[j].position[1] - 1
+        end_col = _expr_end_col(ltoks, j)
+        has_method_call = any(
+            ltoks[k].value == '(' and k > j and ltoks[k - 1].value not in ('&&', '||', '(', '!', ';', '{')
+            for k in range(j, n)
+            if ltoks[k].position and ltoks[k].position[1] - 1 < end_col
+        )
+        if has_method_call:
+            results.append((start_col, end_col))
+    return results
+
+
 def apply_mutation(line, ltoks, desc, occ=0):
     d = desc.strip()
 
-    # --- Math mutations ---
     m = re.match(r"Replaced (?:integer|long|float|double) (\w+) with (\w+)", d)
     if m:
         ops = {
@@ -67,7 +137,6 @@ def apply_mutation(line, ltoks, desc, occ=0):
             if t:
                 return replace_at(line, t.position[1] - 1, len(old), new)
 
-    # --- Bitwise / shift ---
     shift_map = {
         "Replaced Shift Left with Shift Right": ("<<", ">>"),
         "Replaced Shift Right with Shift Left": (">>", "<<"),
@@ -82,51 +151,66 @@ def apply_mutation(line, ltoks, desc, occ=0):
         if t:
             return replace_at(line, t.position[1] - 1, len(old), new)
 
-    # --- Conditional boundary ---
     if d == "changed conditional boundary":
         bmap = {">=": ">", "<=": "<", ">": ">=", "<": "<="}
         t = nth_token_in(ltoks, bmap.keys(), occ)
         if t:
             return replace_at(line, t.position[1] - 1, len(t.value), bmap[t.value])
 
-    # --- Negate conditionals ---
     if d == "negated conditional":
         nmap = {"==": "!=", "!=": "==", ">=": "<", "<=": ">", ">": "<=", "<": ">="}
         t = nth_token_in(ltoks, nmap.keys(), occ)
         if t:
             return replace_at(line, t.position[1] - 1, len(t.value), nmap[t.value])
 
-    # --- Remove conditionals ---
     if d.startswith("removed conditional"):
         val = "true" if "with true" in d else "false"
-        comp_ops = {"==", "!="} if "equality" in d else {">", "<", ">=", "<="}
-        t = nth_token_in(ltoks, comp_ops, occ)
-        if t:
-            ti = next((i for i, x in enumerate(ltoks) if x is t), -1)
-            if ti > 0 and ti < len(ltoks) - 1:
-                li = ti - 1
-                while li >= 2 and ltoks[li - 1].value == ".":
-                    li -= 2
-                ri = ti + 1
-                while ri + 2 < len(ltoks) and ltoks[ri + 1].value == ".":
-                    ri += 2
-                start = ltoks[li].position[1] - 1
-                end = ltoks[ri].position[1] - 1 + len(ltoks[ri].value)
-                return line[:start] + val + line[end:]
-        m2 = re.search(r'(if|while)\s*\((.+)\)', line)
+        is_equality = "equality" in d
+        comp_ops = {"==", "!="} if is_equality else {">", "<", ">=", "<="}
+
+        candidates = []
+
+        for i_tok, tok in enumerate(ltoks):
+            if tok.value in comp_ops and 0 < i_tok < len(ltoks) - 1:
+                candidates.append((
+                    _expr_start_col(ltoks, i_tok - 1),
+                    _expr_end_col(ltoks, i_tok + 1),
+                ))
+
+        if is_equality:
+            for s, e in _find_eq_method_calls(ltoks):
+                candidates.append((s, e))
+
+            for m2 in re.finditer(
+                    r'(?<!\w)(\w[\w.]*(?:\(\))?)\s+instanceof\s+(\w[\w.]*)', line):
+                candidates.append((m2.start(), m2.end()))
+
+            covered = {s for s, _ in candidates}
+            for s, e in _find_compound_bool_subexprs(ltoks):
+                if s not in covered:
+                    candidates.append((s, e))
+                    covered.add(s)
+
+        candidates.sort(key=lambda x: x[0])
+        if occ < len(candidates):
+            s, e = candidates[occ]
+            return line[:s] + val + line[e:]
+
+        m2 = re.search(r'(?:if|while)\s*\((.+)\)', line)
         if m2:
-            return line[:m2.start(2)] + val + line[m2.end(2):]
+            return line[:m2.start(1)] + val + line[m2.end(1):]
+        m2 = re.search(r'\breturn\s+(.+);', line)
+        if m2:
+            return line[:m2.start(1)] + val + line[m2.end(1):]
         m2 = re.search(r'(\S+\([^)]*\))\s*\?', line)
         if m2:
             return line[:m2.start(1)] + val + line[m2.end(1):]
 
-    # --- Removed negation ---
     if d == "removed negation":
         t = nth_token(ltoks, "-", occ)
         if t:
             return replace_at(line, t.position[1] - 1, 1, "")
 
-    # --- Increments ---
     m = re.match(r"Changed increment from (-?\d+) to (-?\d+)", d)
     if m:
         old_v, new_v = int(m.group(1)), int(m.group(2))
@@ -150,12 +234,10 @@ def apply_mutation(line, ltoks, desc, occ=0):
                     end = col + len(abs_old)
                     return line[:start] + str(new_v) + line[end:]
 
-    # --- Void method call removal ---
     m = re.match(r"removed call to .+::(\w+)", d)
     if m:
         return "// removed call to " + m.group(1) + "()"
 
-    # --- Return value mutations ---
     m = re.match(r"replaced (?:\w+ )?return value with (.+)", d) or \
         re.match(r"replaced boolean return with (.+)", d) or \
         re.match(r"replaced (?:int|long|short|byte|char|float|double|Integer|Long|Short|Double|Float|Character|Boolean) return.*with (\S+)", d)
@@ -167,7 +249,6 @@ def apply_mutation(line, ltoks, desc, occ=0):
             val += "()"
         return re.sub(r'return\s+.+;', 'return ' + val + ';', line, count=1)
 
-    # --- Switch default ---
     if "Changed switch default" in d:
         return line + " // switch default changed to first case"
 
@@ -241,6 +322,9 @@ def main():
             else:
                 orig = ""
                 mutated = ""
+
+            if mutated.endswith("// MUTATED: " + desc):
+                continue
 
             test_files = extract_test_files(covering or killing)
 
