@@ -23,7 +23,7 @@ mutate-source-code/
 ## Prerequisites
 
 - Python 3.6+
-- `javalang` — `pip install javalang`
+- javalang`
 - A Maven project with PIT configured and a generated `mutations.xml` report
 
 ## Usage
