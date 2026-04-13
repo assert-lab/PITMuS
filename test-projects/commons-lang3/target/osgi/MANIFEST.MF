@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1776107177591
+Build-Jdk-Spec: 17
+Bundle-Description: Apache Commons Lang, a package of Java utility class
+ es for the  classes that are in java.lang's hierarchy, or are considere
+ d to be so  standard as to justify existence in java.lang.
+Bundle-DocURL: https://commons.apache.org/proper/commons-lang/
+Bundle-License: https://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: Apache Commons Lang
+Bundle-SymbolicName: org.apache.commons.lang3
+Bundle-Vendor: The Apache Software Foundation
+Bundle-Version: 3.12.0
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.apache.commons.lang3;version="3.12.0",org.apache.com
+ mons.lang3.arch;version="3.12.0",org.apache.commons.lang3.builder;versi
+ on="3.12.0",org.apache.commons.lang3.compare;version="3.12.0",org.apach
+ e.commons.lang3.concurrent;version="3.12.0",org.apache.commons.lang3.co
+ ncurrent.locks;version="3.12.0",org.apache.commons.lang3.event;version=
+ "3.12.0",org.apache.commons.lang3.exception;version="3.12.0",org.apache
+ .commons.lang3.function;version="3.12.0",org.apache.commons.lang3.math;
+ version="3.12.0",org.apache.commons.lang3.mutable;version="3.12.0",org.
+ apache.commons.lang3.reflect;version="3.12.0",org.apache.commons.lang3.
+ stream;version="3.12.0",org.apache.commons.lang3.text;version="3.12.0",
+ org.apache.commons.lang3.text.translate;version="3.12.0",org.apache.com
+ mons.lang3.time;version="3.12.0",org.apache.commons.lang3.tuple;version
+ ="3.12.0"
+Include-Resource: META-INF/LICENSE.txt=LICENSE.txt,META-INF/NOTICE.txt=N
+ OTICE.txt
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-5.3.0.202102221516

@@ -1,0 +1,1 @@
+Can't test IS_JAVA value: 17.0.17

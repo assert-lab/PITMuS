@@ -1,0 +1,24 @@
+Count(1) 1 : MEMORY - Total: 16,326,656k Used: 16,304,055k Free: 22,601k
+After GC2: MEMORY - Total: 303,104k Used: 13,562k Free: 289,542k Count 1
+Count 1 false
+Count(1) 1 : MEMORY - Total: 16,326,656k Used: 16,301,074k Free: 25,582k
+After GC2: MEMORY - Total: 491,520k Used: 14,713k Free: 476,807k Count 1
+Count 1 false
+Count(1) 1 : MEMORY - Total: 16,326,656k Used: 16,297,730k Free: 28,926k
+After GC2: MEMORY - Total: 491,520k Used: 14,711k Free: 476,809k Count 1
+Count 1 false
+Count(1) 1 : MEMORY - Total: 16,326,656k Used: 16,299,791k Free: 26,865k
+After GC2: MEMORY - Total: 548,864k Used: 14,707k Free: 534,157k Count 1
+Count 1 false
+Count(1) 1 : MEMORY - Total: 16,326,656k Used: 16,296,711k Free: 29,945k
+After GC2: MEMORY - Total: 524,288k Used: 14,707k Free: 509,581k Count 1
+Count 1 false
+Count(1) 1 : MEMORY - Total: 16,326,656k Used: 16,298,358k Free: 28,298k
+After GC2: MEMORY - Total: 491,520k Used: 14,715k Free: 476,805k Count 1
+Count 1 false
+Count(1) 1 : MEMORY - Total: 16,326,656k Used: 16,300,375k Free: 26,281k
+After GC2: MEMORY - Total: 524,288k Used: 14,707k Free: 509,581k Count 1
+Count 1 false
+Count(1) 1 : MEMORY - Total: 16,326,656k Used: 16,300,155k Free: 26,501k
+After GC2: MEMORY - Total: 491,520k Used: 14,707k Free: 476,813k Count 1
+Count 1 false

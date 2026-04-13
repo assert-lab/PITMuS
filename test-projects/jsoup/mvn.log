@@ -1,0 +1,126 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< org.jsoup:jsoup >---------------------------
+[INFO] Building jsoup Java HTML Parser 1.15.3
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ jsoup ---
+[INFO] Copying 3 resources to META-INF/
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ jsoup ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- animal-sniffer:1.21:check (animal-sniffer) @ jsoup ---
+[INFO] Signature version is: null
+[INFO] 
+[INFO] --- bundle:5.1.8:manifest (bundle-manifest) @ jsoup ---
+[INFO] Writing manifest: /sfs/weka/scratch/wxw9rr/artifact/RQ3/OE25-DEV/jsoup/target/classes/META-INF/MANIFEST.MF
+[INFO] 
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ jsoup ---
+[INFO] Copying 70 resources
+[INFO] 
+[INFO] --- compiler:3.10.1:testCompile (default-testCompile) @ jsoup ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.0.0-M7:test (default-test) @ jsoup ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.jsoup.select.XpathTest
+[INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.473 s - in org.jsoup.select.XpathTest
+[INFO] Running org.jsoup.select.CssTest
+[INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.165 s - in org.jsoup.select.CssTest
+[INFO] Running org.jsoup.select.SelectorTest
+[INFO] Tests run: 91, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.15 s - in org.jsoup.select.SelectorTest
+[INFO] Running org.jsoup.select.TraversorTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 s - in org.jsoup.select.TraversorTest
+[INFO] Running org.jsoup.select.QueryParserTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 s - in org.jsoup.select.QueryParserTest
+[INFO] Running org.jsoup.select.ElementsTest
+[INFO] Tests run: 38, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 s - in org.jsoup.select.ElementsTest
+[INFO] Running org.jsoup.helper.ValidateTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.jsoup.helper.ValidateTest
+[INFO] Running org.jsoup.helper.DataUtilTest
+[INFO] Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.241 s - in org.jsoup.helper.DataUtilTest
+[INFO] Running org.jsoup.helper.HttpConnectionTest
+[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.064 s - in org.jsoup.helper.HttpConnectionTest
+[INFO] Running org.jsoup.helper.W3CDomTest
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.473 s - in org.jsoup.helper.W3CDomTest
+[INFO] Running org.jsoup.parser.HtmlTreeBuilderStateTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 s - in org.jsoup.parser.HtmlTreeBuilderStateTest
+[INFO] Running org.jsoup.parser.ParserSettingsTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.jsoup.parser.ParserSettingsTest
+[INFO] Running org.jsoup.parser.HtmlTreeBuilderTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 s - in org.jsoup.parser.HtmlTreeBuilderTest
+[INFO] Running org.jsoup.parser.TokeniserTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.042 s - in org.jsoup.parser.TokeniserTest
+[INFO] Running org.jsoup.parser.TokenQueueTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.jsoup.parser.TokenQueueTest
+[INFO] Running org.jsoup.parser.CharacterReaderTest
+[INFO] Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s - in org.jsoup.parser.CharacterReaderTest
+[INFO] Running org.jsoup.parser.XmlTreeBuilderTest
+[WARNING] Tests run: 31, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.02 s - in org.jsoup.parser.XmlTreeBuilderTest
+[INFO] Running org.jsoup.parser.TagTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.jsoup.parser.TagTest
+[INFO] Running org.jsoup.parser.AttributeParseTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.jsoup.parser.AttributeParseTest
+[INFO] Running org.jsoup.parser.HtmlParserTest
+[INFO] Tests run: 169, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.178 s - in org.jsoup.parser.HtmlParserTest
+[INFO] Running org.jsoup.parser.TokeniserStateTest
+[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in org.jsoup.parser.TokeniserStateTest
+[INFO] Running org.jsoup.parser.ParserTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.jsoup.parser.ParserTest
+[INFO] Running org.jsoup.nodes.TextNodeTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.jsoup.nodes.TextNodeTest
+[INFO] Running org.jsoup.nodes.EntitiesTest
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.jsoup.nodes.EntitiesTest
+[INFO] Running org.jsoup.nodes.ElementTest
+[INFO] Tests run: 155, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.064 s - in org.jsoup.nodes.ElementTest
+[INFO] Running org.jsoup.nodes.AttributeTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.jsoup.nodes.AttributeTest
+[INFO] Running org.jsoup.nodes.DocumentTypeTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.jsoup.nodes.DocumentTypeTest
+[INFO] Running org.jsoup.nodes.LeafNodeTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.jsoup.nodes.LeafNodeTest
+[INFO] Running org.jsoup.nodes.FormElementTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.483 s - in org.jsoup.nodes.FormElementTest
+[INFO] Running org.jsoup.nodes.AttributesTest
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.jsoup.nodes.AttributesTest
+[INFO] Running org.jsoup.nodes.DocumentTest
+[INFO] Tests run: 35, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.437 s - in org.jsoup.nodes.DocumentTest
+[INFO] Running org.jsoup.nodes.CommentTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.jsoup.nodes.CommentTest
+[INFO] Running org.jsoup.nodes.PositionTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s - in org.jsoup.nodes.PositionTest
+[INFO] Running org.jsoup.nodes.NodeTest
+[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.049 s - in org.jsoup.nodes.NodeTest
+[INFO] Running org.jsoup.internal.StringUtilTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 s - in org.jsoup.internal.StringUtilTest
+[INFO] Running org.jsoup.safety.CleanerTest
+[INFO] Tests run: 40, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.091 s - in org.jsoup.safety.CleanerTest
+[INFO] Running org.jsoup.safety.SafelistTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in org.jsoup.safety.SafelistTest
+[INFO] Running org.jsoup.integration.ParseTest
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.214 s - in org.jsoup.integration.ParseTest
+[INFO] Running org.jsoup.integration.SafelistExtensionTest
+[WARNING] Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.001 s - in org.jsoup.integration.SafelistExtensionTest
+[INFO] Running org.jsoup.integration.ConnectTest
+[INFO] Tests run: 45, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.663 s - in org.jsoup.integration.ConnectTest
+[INFO] Running org.jsoup.integration.FuzzFixesTest
+[INFO] Tests run: 64, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.677 s - in org.jsoup.integration.FuzzFixesTest
+[INFO] Running org.jsoup.integration.SessionTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.068 s - in org.jsoup.integration.SessionTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[WARNING] Tests run: 1047, Failures: 0, Errors: 0, Skipped: 2
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  25.543 s
+[INFO] Finished at: 2026-01-14T13:27:04-05:00
+[INFO] ------------------------------------------------------------------------
