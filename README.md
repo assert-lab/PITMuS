@@ -1,21 +1,87 @@
-# PIT Mutation Testing — Source-Level Extraction
+# mutate-source-code
 
-Extract source-level mutation data from PIT (Pitest) XML reports into a CSV with the original source line, a mutated line, the source file, the test file, and the line number.
-
-## Overview
+Extract and inject source-level mutations from PIT (Pitest) XML reports.
 
 PIT operates at the bytecode level and does not export mutated source code. This tool bridges that gap by parsing PIT's XML output, mapping each mutation back to its source line, and applying the mutation description to produce a mutated source code line.
 
+## Repository Structure
+
+```
+mutate-source-code/
+├── extract_mutated_src_code.py
+├── inject_mutated_src_code.py
+└── test-projects/
+    └── <project-name>/
+        ├── src/main/java/              ← source codes
+        ├── target/pit-reports/mutations.xml
+        └── mutated_src_lines/          ← generated output
+            ├── ClassName1.csv
+            ├── ClassName2.csv
+            └── ...
+```
+
 ## Prerequisites
 
-- Java 1.8+
-- Maven
 - Python 3.6+
-- A Maven project with PIT configured (see POM configuration below)
+- `javalang` — `pip install javalang`
+- A Maven/Gradle project with PIT configured and a generated `mutations.xml` report
 
-## Step 1: Configure PIT for a Single Test File
+## Usage
 
-In the `pom.xml`, scope PIT to a specific source class and test class. For example, to run only `StringUtilsTest` in Apache Commons Lang 3:
+### Step 1: Extract Mutated Source Lines
+
+```bash
+python extract_mutated_src_code.py <project-name>
+```
+
+Example:
+
+```bash
+python extract_mutated_src_code.py joda-time
+```
+
+This reads `test-projects/joda-time/target/pit-reports/mutations.xml`, resolves each mutation to its source line, applies the mutation, and writes one CSV per source file into `test-projects/joda-time/mutated_src_lines/`.
+
+#### Output Format
+
+Each CSV contains one row per mutation:
+
+| Column | Description |
+|---|---|
+| `mutation_line` | Original source code at the mutated line |
+| `mutated_line` | Source code after applying the mutation |
+| `source_file` | Path to the source file (e.g. `org/joda/time/DateTime.java`) |
+| `line_number` | Line number in the source file |
+| `description` | PIT's mutation description |
+| `test_file` | Test file(s) covering the mutation, separated by `\|` |
+
+### Step 2: Inject Mutations into Source
+
+```bash
+python inject_mutated_src_code.py <project-name>
+```
+
+This reads the CSVs from `mutated_src_lines/` and injects the mutated lines into copies of the source files.
+
+## Supported Mutators
+
+The extraction script handles all mutators in PIT's STRONGER group using `javalang` tokenization for precise operator-level replacements:
+
+| Mutator | Example |
+|---|---|
+| ConditionalsBoundary | `>` → `>=` |
+| Math | `+` → `-`, `*` → `/`, `%` → `*`, etc. |
+| NegateConditionals | `==` → `!=`, `>=` → `<` |
+| RemoveConditionals | `if (x == y)` → `if (true)`, ternary conditions |
+| IncrementsMutator | `i++` → `i--`, `-4` → `4` |
+| InvertNegs | removes unary negation |
+| VoidMethodCall | removes the method call entirely |
+| Return values | `return x;` → `return null;` / `return true;` / `return Collections.emptyMap();` / etc. |
+| Bitwise / Shift | `&` → `\|`, `<<` → `>>`, etc. |
+
+## Generating a PIT Report
+
+If you need to generate a PIT mutation report for a Maven project, add the following plugin to the project's `pom.xml`:
 
 ```xml
 <plugin>
@@ -34,7 +100,7 @@ In the `pom.xml`, scope PIT to a specific source class and test class. For examp
       <param>org.apache.commons.lang3.*</param>
     </targetClasses>
     <targetTests>
-      <param>org.apache.commons.lang3.StringUtilsTest</param>
+      <param>org.apache.commons.lang3.*</param>
     </targetTests>
     <mutators>
       <mutator>STRONGER</mutator>
@@ -48,64 +114,10 @@ In the `pom.xml`, scope PIT to a specific source class and test class. For examp
 </plugin>
 ```
 
-Key points:
-- Set `targetTests` to avoid mutating the entire codebase.
-- Set `outputFormats` to `XML` so the report can be parsed.
-
-## Step 2: Run PIT
+Then run:
 
 ```bash
-mvn clean test org.pitest:pitest-maven:mutationCoverage \
+mvn clean test org.pitest:pitest-maven:mutationCoverage
 ```
 
-PIT writes its XML report to:
-
-```
-<project-name>/target/pit-reports/mutations.xml
-```
-
-## Step 3: Run the Parser
-
-```bash
-python parse_mutations.py <mutations.xml> <source_root> <output.csv>
-```
-
-Example:
-
-```bash
-python parse_mutations.py \
-  commons-lang3/target/pit-reports/mutations.xml \
-  commons-lang3/src/main/java \
-  commons-lang3/mutations.csv
-```
-
-## Output
-
-The CSV contains one row per mutation with the following columns:
-
-| Column | Description |
-|---|---|
-| `mutation_line` | Original source code at the mutated line |
-| `mutated_line` | Mutated source code |
-| `source_file` | Path to the source file being mutated in the project source (e.g. `StringUtils.java`) |
-| `line_number` | Line number in the source file |
-| `description` | Mutation described in PIT xml file |
-
-## Supported Mutators
-
-The script handles all mutators in PIT's STRONGER group:
-
-| Mutator | Example |
-|---|---|
-| ConditionalsBoundary | `>` to `>=` |
-| Math | `+` to `-`, `*` to `/`, etc. |
-| NegateConditionals | `==` to `!=` |
-| RemoveConditionals | `if (x == y)` to `if (true)` |
-| IncrementsMutator | `i++` to `i--` |
-| InvertNegs | removes unary negation |
-| VoidMethodCall | removes the method call entirely |
-| BooleanTrueReturn / BooleanFalseReturn | `return x;` to `return true;` / `return false;` |
-| NullReturn | `return x;` to `return null;` |
-| EmptyObjectReturn | `return list;` to `return Collections.emptyList();` |
-| PrimitiveReturns | `return x;` to `return 0;` |
-| Bitwise / Shift | `&` to `|`, `<<` to `>>`, etc. |
+The XML report is written to `target/pit-reports/mutations.xml`.
