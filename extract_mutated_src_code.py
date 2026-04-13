@@ -227,7 +227,12 @@ def apply_mutation(line, ltoks, desc, occ=0):
             for i, t in enumerate(ltoks):
                 if t.value == abs_old:
                     col = t.position[1] - 1
-                    if old_v < 0 and i > 0 and ltoks[i - 1].value == "-":
+                    prev_val = ltoks[i - 1].value if i > 0 else ""
+                    if old_v < 0 and prev_val == "-=":
+                        return replace_at(line, ltoks[i - 1].position[1] - 1, 2, "+=")
+                    elif old_v > 0 and prev_val == "+=":
+                        return replace_at(line, ltoks[i - 1].position[1] - 1, 2, "-=")
+                    elif old_v < 0 and prev_val == "-":
                         start = ltoks[i - 1].position[1] - 1
                     else:
                         start = col
@@ -247,7 +252,13 @@ def apply_mutation(line, ltoks, desc, occ=0):
             val = '""'
         elif "." in val and not val.endswith(")") and not val.endswith(";"):
             val += "()"
-        return re.sub(r'return\s+.+;', 'return ' + val + ';', line, count=1)
+        result = re.sub(r'return\s+.+;', 'return ' + val + ';', line, count=1)
+        if result != line:
+            return result
+        stripped = line.strip()
+        if stripped == 'return' or stripped.startswith('return ') or stripped.startswith('return\t'):
+            indent = line[: len(line) - len(line.lstrip())]
+            return indent + 'return ' + val + ';'
 
     if "Changed switch default" in d:
         return line + " // switch default changed to first case"

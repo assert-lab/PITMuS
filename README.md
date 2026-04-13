@@ -1,6 +1,6 @@
 # mutate-source-code
 
-Extract and inject source-level mutations from PIT (Pitest) XML reports.
+This repository is for two things:extract and inject source-level mutations from PIT (Pitest) XML reports.
 
 PIT operates at the bytecode level and does not export mutated source code. This tool bridges that gap by parsing PIT's XML output, mapping each mutation back to its source line, and applying the mutation description to produce a mutated source code line.
 
