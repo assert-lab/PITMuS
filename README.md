@@ -1,4 +1,4 @@
-# MutaSource: a tool to Mutate Source code
+# MutaSource: a tool to Mutate Source code from PIT mutation
 
 This repository is for two things:extract and inject source-level mutations from PIT (Pitest) XML reports.
 
