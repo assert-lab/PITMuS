@@ -79,7 +79,7 @@ def _expr_start_col(ltoks, end_idx):
             if depth == 0:
                 break
             depth -= 1
-        elif depth == 0 and v in ('||', '&&', ';', '{', ',', '?', ':'):
+        elif depth == 0 and v in ('||', '&&', ';', '{', ',', '?', ':', 'return', 'throw', '=', '==', '!='):
             break
         first_i = i
     t = ltoks[first_i]
@@ -190,6 +190,14 @@ def apply_mutation(line, ltoks, desc, occ=0):
                 if s not in covered:
                     candidates.append((s, e))
                     covered.add(s)
+
+        for i_tok, tok in enumerate(ltoks):
+            if tok.value == '?' and i_tok > 0:
+                prev = ltoks[i_tok - 1]
+                end_col = prev.position[1] - 1 + len(prev.value)
+                start_col = _expr_start_col(ltoks, i_tok - 1)
+                if not any(start_col <= s and e <= end_col for s, e in candidates):
+                    candidates.append((start_col, end_col))
 
         candidates.sort(key=lambda x: x[0])
         if occ < len(candidates):

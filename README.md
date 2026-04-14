@@ -8,8 +8,9 @@ PIT operates at the bytecode level and does not export mutated source code. This
 
 ```
 mutate-source-code/
-├── extract_mutated_src_code.py         ← creates CSV files with mutated source lines
-├── inject_mutated_src_code.py          ← injects mutated source lines into source files
+├── scripts/
+│   ├── extract.py                      ← creates CSV files with mutated source lines
+│   └── inject.py                       ← injects mutated source lines into source files
 └── test-projects/
     └── <project-name>/
         ├── src/main/java/              ← source code
@@ -34,14 +35,16 @@ mutate-source-code/
 
 ### Step 1: Extract Mutated Source Lines
 
+Run from the repository root:
+
 ```bash
-python extract_mutated_src_code.py <project-name>
+python scripts/extract.py <project-name>
 ```
 
 Example:
 
 ```bash
-python extract_mutated_src_code.py joda-time
+python scripts/extract.py joda-time
 ```
 
 This reads `test-projects/joda-time/target/pit-reports/mutations.xml`, resolves each mutation to its source line, applies the mutation, and writes one CSV per source file into `test-projects/joda-time/mutated_src_lines/`.
@@ -65,21 +68,21 @@ The injection script supports three modes depending on how many arguments are pr
 
 ```bash
 # Inject all mutations from all files
-python inject_mutated_src_code.py <project-name>
+python scripts/inject.py <project-name>
 
 # Inject all mutations for a specific source file
-python inject_mutated_src_code.py <project-name> <source-file>
+python scripts/inject.py <project-name> <source-file>
 
 # Inject mutations for a specific source file and line number
-python inject_mutated_src_code.py <project-name> <source-file> <line-number>
+python scripts/inject.py <project-name> <source-file> <line-number>
 ```
 
 Examples:
 
 ```bash
-python inject_mutated_src_code.py joda-time
-python inject_mutated_src_code.py joda-time PeriodFormatterBuilder.java
-python inject_mutated_src_code.py joda-time PeriodFormatterBuilder.java 1377
+python scripts/inject.py joda-time
+python scripts/inject.py joda-time PeriodFormatterBuilder.java
+python scripts/inject.py joda-time PeriodFormatterBuilder.java 1377
 ```
 
 Each mutant is a full copy of the original source file with one line replaced. Output is written to `test-projects/<project-name>/injected_mutants/`.
