@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: org.jsoup.select.XpathTest
 -------------------------------------------------------------------------------
-Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.127 s - in org.jsoup.select.XpathTest
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.712 s - in org.jsoup.select.XpathTest

@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: org.apache.commons.lang3.StringUtilsTest
 -------------------------------------------------------------------------------
-Tests run: 155, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.019 s - in org.apache.commons.lang3.StringUtilsTest
+Tests run: 155, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.027 s - in org.apache.commons.lang3.StringUtilsTest

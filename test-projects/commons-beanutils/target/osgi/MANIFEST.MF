@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1776110623475
+Bnd-LastModified: 1776140371072
 Build-Jdk: 17.0.17
 Built-By: tasfia
 Bundle-Description: Apache Commons BeanUtils provides an easy-to-use but
