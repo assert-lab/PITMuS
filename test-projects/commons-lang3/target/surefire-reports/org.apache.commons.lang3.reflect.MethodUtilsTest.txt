@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: org.apache.commons.lang3.reflect.MethodUtilsTest
 -------------------------------------------------------------------------------
-Tests run: 43, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in org.apache.commons.lang3.reflect.MethodUtilsTest
+Tests run: 43, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in org.apache.commons.lang3.reflect.MethodUtilsTest

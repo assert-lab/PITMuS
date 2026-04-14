@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: org.apache.commons.beanutils.bugs.Jira347TestCase
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.309 s - in org.apache.commons.beanutils.bugs.Jira347TestCase
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.883 s - in org.apache.commons.beanutils.bugs.Jira347TestCase
