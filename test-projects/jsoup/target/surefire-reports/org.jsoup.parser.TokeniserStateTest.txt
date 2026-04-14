@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: org.jsoup.parser.TokeniserStateTest
 -------------------------------------------------------------------------------
-Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 s - in org.jsoup.parser.TokeniserStateTest
+Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in org.jsoup.parser.TokeniserStateTest

@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Automatic-Module-Name: org.jsoup
-Bnd-LastModified: 1776140695942
+Bnd-LastModified: 1776144689339
 Build-Jdk-Spec: 17
 Bundle-Description: jsoup is a Java library for working with real-world 
  HTML. It provides a very convenient API for fetching URLs and extractin

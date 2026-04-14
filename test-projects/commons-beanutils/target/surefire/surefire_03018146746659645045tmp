@@ -1,8 +1,0 @@
-#surefire_0
-#Mon Apr 13 23:19:32 CDT 2026
-basedir=/home/tasfia/Desktop/EvoAI/mutate-source-code/test-projects/commons-beanutils
-org.apache.commons.logging.simplelog.defaultlog=WARN
-user.dir=/home/tasfia/Desktop/EvoAI/mutate-source-code/test-projects/commons-beanutils
-org.apache.commons.logging.Log=org.apache.commons.logging.impl.SimpleLog
-org.apache.commons.logging.LogFactory=org.apache.commons.logging.impl.LogFactoryImpl
-localRepository=/home/tasfia/.m2/repository
