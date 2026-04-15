@@ -1,3 +1,0 @@
-[WARN] DoubleConverter -     DoubleConverter cannot handle conversion to 'Object'
-[WARN] DoubleConverter -     DoubleConverter cannot handle conversion to 'Object'
-[WARN] DoubleConverter -     DoubleConverter cannot handle conversion to 'Object'

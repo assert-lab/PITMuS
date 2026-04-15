@@ -35,7 +35,6 @@
 "if (range.contains(ch)) {","if (false) {","org/apache/commons/lang3/CharSet.java",241,"removed conditional - replaced equality check with false",""
 "if (range.contains(ch)) {","if (true) {","org/apache/commons/lang3/CharSet.java",241,"removed conditional - replaced equality check with true",""
 "return true;","return false;","org/apache/commons/lang3/CharSet.java",242,"replaced boolean return with false for org/apache/commons/lang3/CharSet::contains",""
-"return true;","return true;","org/apache/commons/lang3/CharSet.java",242,"replaced boolean return with true for org/apache/commons/lang3/CharSet::contains",""
 "return false;","return true;","org/apache/commons/lang3/CharSet.java",246,"replaced boolean return with true for org/apache/commons/lang3/CharSet::contains",""
 "if (obj == this) {","if (true) {","org/apache/commons/lang3/CharSet.java",264,"removed conditional - replaced equality check with true",""
 "return true;","return false;","org/apache/commons/lang3/CharSet.java",265,"replaced boolean return with false for org/apache/commons/lang3/CharSet::equals",""

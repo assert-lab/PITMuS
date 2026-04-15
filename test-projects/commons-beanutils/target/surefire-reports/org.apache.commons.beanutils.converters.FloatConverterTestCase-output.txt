@@ -1,3 +1,0 @@
-[WARN] FloatConverter -     FloatConverter cannot handle conversion to 'Object'
-[WARN] FloatConverter -     FloatConverter cannot handle conversion to 'Object'
-[WARN] FloatConverter -     FloatConverter cannot handle conversion to 'Object'

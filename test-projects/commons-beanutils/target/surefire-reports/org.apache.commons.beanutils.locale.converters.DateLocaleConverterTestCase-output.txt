@@ -1,3 +1,0 @@
-[ERROR] DateLocaleConverterTestCase - Invalid locale symbols *** skipping testConstructorMain() **
-[ERROR] DateLocaleConverterTestCase - Invalid locale symbols *** skipping testConstructor_5() **
-[ERROR] DateLocaleConverterTestCase - Invalid locale symbols *** skipping testConstructor_7() **

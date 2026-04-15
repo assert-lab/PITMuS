@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <copy todir="/home/tasfia/Desktop/EvoAI/mutate-source-code/test-projects/commons-collections4/target/apidocs/META-INF">
+    <fileset dir="/home/tasfia/Desktop/EvoAI/mutate-source-code/test-projects/commons-collections4">
+      <include name="LICENSE.txt"/>
+      <include name="NOTICE.txt"/>
+    </fileset>
+  </copy>
+</target>
+</project>

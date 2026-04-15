@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0.013" tests="340" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/tasfia/Desktop/EvoAI/mutate-source-code/test-projects/commons-collections4/target/test-classes:/home/tasfia/Desktop/EvoAI/mutate-source-code/test-projects/commons-collections4/target/classes:/home/tasfia/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/tasfia/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/tasfia/.m2/repository/org/easymock/easymock/4.0.2/easymock-4.0.2.jar:/home/tasfia/.m2/repository/org/objenesis/objenesis/3.0.1/objenesis-3.0.1.jar:/home/tasfia/.m2/repository/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar:"/>
+    <property name="java.vm.vendor" value="Ubuntu"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://ubuntu.com/"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="/home/tasfia/Desktop/EvoAI/mutate-source-code/test-projects/commons-collections4/target/surefire/surefirebooter4868684934744383976.jar /home/tasfia/Desktop/EvoAI/mutate-source-code/test-projects/commons-collections4/target/surefire 2026-04-15T17-04-55_774-jvmRun1 surefire6814239051130662861tmp surefire_07116820395449631163tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/tasfia/Desktop/EvoAI/mutate-source-code/test-projects/commons-collections4/target/test-classes:/home/tasfia/Desktop/EvoAI/mutate-source-code/test-projects/commons-collections4/target/classes:/home/tasfia/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/tasfia/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/tasfia/.m2/repository/org/easymock/easymock/4.0.2/easymock-4.0.2.jar:/home/tasfia/.m2/repository/org/objenesis/objenesis/3.0.1/objenesis-3.0.1.jar:/home/tasfia/.m2/repository/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/tasfia"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-10-21"/>
+    <property name="java.home" value="/usr/lib/jvm/java-17-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/tasfia/Desktop/EvoAI/mutate-source-code/test-projects/commons-collections4"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/home/tasfia/Desktop/EvoAI/mutate-source-code/test-projects/commons-collections4/target/surefire/surefirebooter4868684934744383976.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.17+10-Ubuntu-124.04"/>
+    <property name="user.name" value="tasfia"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.14.0-37-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/tasfia/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-17"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="17.0.17"/>
+    <property name="user.dir" value="/home/tasfia/Desktop/EvoAI/mutate-source-code/test-projects/commons-collections4"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Ubuntu"/>
+    <property name="java.vm.version" value="17.0.17+10-Ubuntu-124.04"/>
+    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="testSetValuedMapAdd" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testSetValuedMapRemove" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0.001"/>
+  <testcase name="testSetValuedMapRemoveViaIterator" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testSetValuedMapEqualsHashCodeContract" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testMapIterator" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testSize" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testNoMappingReturnsEmptyCol" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testMultipleValues" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testGet" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testAddMappingThroughGet" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testRemoveMappingThroughGet" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testRemoveMappingThroughGetIterator" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testContainsValue" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testKeyContainsValue" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testValues" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testRemoveAllViaValuesIterator" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testRemoveViaValuesRemove" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testEntriesCollectionIterator" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testRemoveAllViaEntriesIterator" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testMapEquals" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testSizeWithPutRemove" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testKeySetSize" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testSize_Key" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testContainsValue_Key" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testPutAll_Map1" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testPutAll_Map2" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testPutAll_KeyIterable" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testRemove_KeyItem" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testKeysMultiSet" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testKeysBagIterator" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testKeysBagContainsAll" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testAsMapGet" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testAsMapRemove" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testMapIteratorRemove" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testMapIteratorUnsupportedSet" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testEmptyMapCompatibility" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testFullMapCompatibility" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testSerializeDeserializeThenCompare" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testCollectionAdd" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testCollectionAddAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testUnsupportedAdd" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testCollectionClear" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testCollectionContains" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testCollectionContainsAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testCollectionIsEmpty" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testCollectionIterator" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testCollectionIteratorRemove" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testCollectionRemove" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testCollectionRemoveAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testCollectionRemoveIf" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testCollectionRetainAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testCollectionSize" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testCollectionToArray" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testCollectionToArray2" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testCollectionToString" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0.001"/>
+  <testcase name="testUnsupportedRemove" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testCollectionIteratorFailFast" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testObjectEqualsSelf" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testEqualsNull" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testObjectHashCodeEqualsSelfHashCode" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testObjectHashCodeEqualsContract" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testSimpleSerialization" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testCanonicalEmptyCollectionExists" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testCanonicalFullCollectionExists" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapEntries" time="0"/>
+  <testcase name="testSetEquals" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testSetHashCode" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testSerializeDeserializeThenCompare" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testCollectionAdd" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testCollectionAddAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testUnsupportedAdd" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testCollectionClear" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testCollectionContains" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testCollectionContainsAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testCollectionIsEmpty" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testCollectionIterator" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testCollectionIteratorRemove" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testCollectionRemove" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testCollectionRemoveAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testCollectionRemoveIf" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testCollectionRetainAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testCollectionSize" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testCollectionToArray" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testCollectionToArray2" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testCollectionToString" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testUnsupportedRemove" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testCollectionIteratorFailFast" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testObjectEqualsSelf" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testEqualsNull" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testObjectHashCodeEqualsSelfHashCode" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testObjectHashCodeEqualsContract" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testSimpleSerialization" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testCanonicalEmptyCollectionExists" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testCanonicalFullCollectionExists" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeySet" time="0"/>
+  <testcase name="testSerializeDeserializeThenCompare" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testCollectionAdd" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testCollectionAddAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testUnsupportedAdd" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testCollectionClear" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testCollectionContains" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testCollectionContainsAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testCollectionIsEmpty" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testCollectionIterator" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testCollectionIteratorRemove" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testCollectionRemove" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0.001"/>
+  <testcase name="testCollectionRemoveAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testCollectionRemoveIf" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testCollectionRetainAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testCollectionSize" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testCollectionToArray" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testCollectionToArray2" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testCollectionToString" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testUnsupportedRemove" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testCollectionIteratorFailFast" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testObjectEqualsSelf" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testEqualsNull" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testObjectHashCodeEqualsSelfHashCode" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testObjectHashCodeEqualsContract" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testSimpleSerialization" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testCanonicalEmptyCollectionExists" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testCanonicalFullCollectionExists" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapValues" time="0"/>
+  <testcase name="testMultiSetAdd" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testMultiSetEqualsSelf" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testMultiSetRemove" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testMultiSetRemoveAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testMultiSetContains" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testMultiSetContainsAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testMultiSetSize" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testMultiSetRetainAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testMultiSetIterator" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testMultiSetIteratorFail" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testMultiSetIteratorFailNoMore" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testMultiSetIteratorFailDoubleRemove" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testMultiSetIteratorRemoveProtectsInvariants" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testMultiSetEntrySetUpdatedToZero" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testMultiSetToArray" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testMultiSetToArrayPopulate" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testMultiSetEquals" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testMultiSetEqualsHashMultiSet" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testMultiSetHashCode" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testSetEquals" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testSetHashCode" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testSerializeDeserializeThenCompare" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testCollectionAdd" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testCollectionAddAll" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testUnsupportedAdd" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testCollectionClear" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testCollectionContains" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testCollectionContainsAll" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testCollectionIsEmpty" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testCollectionIterator" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0.001"/>
+  <testcase name="testCollectionIteratorRemove" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testCollectionRemove" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testCollectionRemoveAll" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testCollectionRemoveIf" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testCollectionRetainAll" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testCollectionSize" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testCollectionToArray" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testCollectionToArray2" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testCollectionToString" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testUnsupportedRemove" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testCollectionIteratorFailFast" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testObjectEqualsSelf" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testEqualsNull" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testObjectHashCodeEqualsSelfHashCode" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testObjectHashCodeEqualsContract" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testSimpleSerialization" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testCanonicalEmptyCollectionExists" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testCanonicalFullCollectionExists" classname="org.apache.commons.collections4.multiset.AbstractMultiSetTest$TestMultiSetUniqueSet" time="0"/>
+  <testcase name="testEmptyMultiSetCompatibility" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testFullMultiSetCompatibility" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testSerializeDeserializeThenCompare" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testCollectionAdd" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testCollectionAddAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testUnsupportedAdd" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testCollectionClear" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testCollectionContains" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testCollectionContainsAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testCollectionIsEmpty" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testCollectionIterator" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testCollectionIteratorRemove" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testCollectionRemove" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testCollectionRemoveAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testCollectionRemoveIf" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testCollectionRetainAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testCollectionSize" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testCollectionToArray" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testCollectionToArray2" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testCollectionToString" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testUnsupportedRemove" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testCollectionIteratorFailFast" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testObjectEqualsSelf" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testEqualsNull" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testObjectHashCodeEqualsSelfHashCode" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testObjectHashCodeEqualsContract" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testSimpleSerialization" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testCanonicalEmptyCollectionExists" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testCanonicalFullCollectionExists" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapKeys" time="0"/>
+  <testcase name="testMapEquals" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0.001"/>
+  <testcase name="testEmptyMapCompatibility" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testFullMapCompatibility" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testSampleMappings" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testMakeMap" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testMapIsEmpty" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testMapSize" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testMapClear" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testMapContainsKey" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testMapContainsValue" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testMapGet" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testMapHashCode" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testMapToString" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testMapPut" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testMapPutNullKey" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testMapPutNullValue" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testMapPutAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testMapRemove" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testValuesClearChangesMap" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testKeySetClearChangesMap" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testEntrySetClearChangesMap" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testEntrySetContains1" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0.001"/>
+  <testcase name="testEntrySetContains2" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testEntrySetContains3" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testEntrySetRemove1" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testEntrySetRemove2" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testEntrySetRemove3" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testValuesRemoveChangesMap" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testValuesRemoveAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testValuesRetainAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testValuesIteratorRemoveChangesMap" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testKeySetRemoveChangesMap" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testKeySetRemoveAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testKeySetRetainAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testKeySetIteratorRemoveChangesMap" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testEntrySetRemoveChangesMap" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testEntrySetRemoveAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testEntrySetRetainAll" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testEntrySetIteratorRemoveChangesMap" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testMapEntrySetIteratorEntrySetValue" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testMapEntrySetIteratorEntry" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testMapEntrySetRemoveNonMapEntry" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testSetEquals" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testSetHashCode" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testSerializeDeserializeThenCompare" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testCollectionAdd" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testCollectionAddAll" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testUnsupportedAdd" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testCollectionClear" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testCollectionContains" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testCollectionContainsAll" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0.001"/>
+  <testcase name="testCollectionIsEmpty" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testCollectionIterator" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testCollectionIteratorRemove" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testCollectionRemove" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testCollectionRemoveAll" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testCollectionRemoveIf" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testCollectionRetainAll" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0.001"/>
+  <testcase name="testCollectionSize" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testCollectionToArray" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testCollectionToArray2" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testCollectionToString" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testUnsupportedRemove" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testCollectionIteratorFailFast" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testObjectEqualsSelf" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testEqualsNull" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testObjectHashCodeEqualsSelfHashCode" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testObjectHashCodeEqualsContract" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testSimpleSerialization" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testCanonicalEmptyCollectionExists" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testCanonicalFullCollectionExists" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapEntrySet" time="0"/>
+  <testcase name="testSetEquals" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testSetHashCode" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testSerializeDeserializeThenCompare" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testCollectionAdd" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testCollectionAddAll" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testUnsupportedAdd" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testCollectionClear" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testCollectionContains" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testCollectionContainsAll" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testCollectionIsEmpty" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testCollectionIterator" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testCollectionIteratorRemove" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testCollectionRemove" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0.001"/>
+  <testcase name="testCollectionRemoveAll" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testCollectionRemoveIf" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testCollectionRetainAll" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testCollectionSize" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testCollectionToArray" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testCollectionToArray2" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testCollectionToString" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testUnsupportedRemove" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testCollectionIteratorFailFast" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testObjectEqualsSelf" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testEqualsNull" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testObjectHashCodeEqualsSelfHashCode" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testObjectHashCodeEqualsContract" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testSimpleSerialization" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testCanonicalEmptyCollectionExists" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testCanonicalFullCollectionExists" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapKeySet" time="0"/>
+  <testcase name="testSerializeDeserializeThenCompare" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testCollectionAdd" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testCollectionAddAll" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testUnsupportedAdd" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testCollectionClear" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testCollectionContains" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testCollectionContainsAll" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testCollectionIsEmpty" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testCollectionIterator" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testCollectionIteratorRemove" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0.001"/>
+  <testcase name="testCollectionRemove" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testCollectionRemoveAll" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testCollectionRemoveIf" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testCollectionRetainAll" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testCollectionSize" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testCollectionToArray" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testCollectionToArray2" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testCollectionToString" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testUnsupportedRemove" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testCollectionIteratorFailFast" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testObjectEqualsSelf" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testEqualsNull" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testObjectHashCodeEqualsSelfHashCode" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testObjectHashCodeEqualsContract" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testSimpleSerialization" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testCanonicalEmptyCollectionExists" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testCanonicalFullCollectionExists" classname="org.apache.commons.collections4.map.AbstractMapTest$TestMapValues" time="0"/>
+  <testcase name="testObjectEqualsSelf" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testEqualsNull" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testObjectHashCodeEqualsSelfHashCode" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testObjectHashCodeEqualsContract" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testSerializeDeserializeThenCompare" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testSimpleSerialization" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testCanonicalEmptyCollectionExists" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testCanonicalFullCollectionExists" classname="org.apache.commons.collections4.multimap.AbstractMultiValuedMapTest$TestMultiValuedMapAsMap" time="0"/>
+  <testcase name="testObjectEqualsSelf" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testEqualsNull" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testObjectHashCodeEqualsSelfHashCode" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0.001"/>
+  <testcase name="testObjectHashCodeEqualsContract" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testSerializeDeserializeThenCompare" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testSimpleSerialization" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testCanonicalEmptyCollectionExists" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+  <testcase name="testCanonicalFullCollectionExists" classname="org.apache.commons.collections4.multimap.HashSetValuedHashMapTest" time="0"/>
+</testsuite>

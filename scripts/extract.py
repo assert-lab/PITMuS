@@ -632,6 +632,8 @@ def main():
 
             if mutated.endswith("// MUTATED: " + desc):
                 continue
+            if orig == mutated:
+                continue
 
             test_files = extract_test_files(covering or killing)
 
@@ -640,18 +642,17 @@ def main():
             ])
 
             span = find_span_for_line(spans, lineno) if spans else None
-            if span and 0 < lineno <= len(lines):
-                s, e, _name = span
-                body_lines = lines[s - 1:e]
-                original_method = "\n".join(body_lines)
-                mutated_body = list(body_lines)
-                mutated_body[lineno - s] = raw_mutated_line
-                mutated_method = "\n".join(mutated_body)
-                docstring = extract_javadoc(lines, s)
-            else:
-                original_method = ""
-                mutated_method = ""
-                docstring = ""
+            if not (span and 0 < lineno <= len(lines)):
+                continue
+            s, e, _name = span
+            body_lines = lines[s - 1:e]
+            original_method = "\n".join(body_lines)
+            mutated_body = list(body_lines)
+            mutated_body[lineno - s] = raw_mutated_line
+            mutated_method = "\n".join(mutated_body)
+            if not original_method.strip() or original_method == mutated_method:
+                continue
+            docstring = extract_javadoc(lines, s)
 
             row_id = f"{id_prefix}_{len(methods_rows) + 1}"
             methods_rows.append([row_id, original_method, mutated_method, docstring])
@@ -670,8 +671,11 @@ def main():
 
     print(f"Total: {total} mutations across {len(by_file)} files")
 
-    methods_csv = os.path.join(project, "mutated_methods.csv")
-    meta_csv = os.path.join(project, "mutated_meta.csv")
+    scripts_dir = os.path.dirname(os.path.abspath(__file__))
+    dataset_dir = os.path.join(os.path.dirname(scripts_dir), "PITMuS_dataset", project_name)
+    os.makedirs(dataset_dir, exist_ok=True)
+    methods_csv = os.path.join(dataset_dir, "mutated_methods.csv")
+    meta_csv = os.path.join(dataset_dir, "meta.csv")
     with open(methods_csv, "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f, quoting=csv.QUOTE_NONNUMERIC)
         w.writerow(["id", "original_method", "mutated_method", "docstring"])
