@@ -116,22 +116,20 @@ Each mutant is a full copy of the original source file with one line replaced. O
 
 ## Supported Mutators
 
-The extraction script handles all 13 mutators in PIT's STRONGER group (DEFAULTS + `REMOVE_CONDITIONALS` + `EXPERIMENTAL_SWITCH`). Source tokens are located by combining `javalang` tokenization with the bytecode offset in PIT's `<indexes><index>` element: for each mutation, the script reads the compiled `.class` via `javap -c -p -l`, filters the method's instructions to those on the mutation's source line whose opcode matches the mutator (e.g. `IADD` for "integer addition", `IF_ICMP*` for conditionals), and uses the mutation's index to pick the exact Nth occurrence. This disambiguates lines with multiple same-kind operators (e.g. `if (a == b || c == d)`).
+The extraction script handles all 13 mutators in PIT's STRONGER group (DEFAULTS + `REMOVE_CONDITIONALS` + `EXPERIMENTAL_SWITCH`). 
 
 | Mutator | Example |
 |---|---|
-| ConditionalsBoundary | `>` → `>=` |
+| ConditionalsBoundary | `>` → `>=`, etc. |
 | Math | `+` → `-`, `*` → `/`, `%` → `*`, etc. |
 | NegateConditionals | `==` → `!=`, `>=` → `<` |
 | RemoveConditionals | `if (x == y)` → `if (true)`, ternary conditions |
-| IncrementsMutator | `i++` → `i--`, `-4` → `4` |
+| IncrementsMutator | `i++` → `i--`, `-4` → `4`, etc. |
 | InvertNegs | removes unary negation |
 | VoidMethodCall | removes the method call entirely |
 | Empty / Null / Primitive / True / False Returns | `return x;` → `return null;` / `return true;` / `return Collections.emptyMap();` / etc. |
-| Experimental Switch | mutates switch default/labels |
 | Bitwise / Shift | `&` → `\|`, `<<` → `>>`, etc. |
 
-If the compiled `.class` file is unavailable or a description doesn't match the opcode-family map, the script falls back to PIT-ordered occurrence counting (sorted by `mutatedMethod` + `methodDescription` + `lineNumber` + `<blocks><block>` + `<indexes><index>`).
 
 ## Generating a PIT Report
 
