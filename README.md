@@ -73,18 +73,29 @@ This reads `test-projects/joda-time/target/pit-reports/mutations.xml`, resolves 
 
 | Column | Description |
 |---|---|
+| `id` | Stable row identifier, shared with `mutated_meta.csv` (see below) |
 | `original_method` | Full body of the method containing the mutated line |
 | `mutated_method` | Same method body with the mutated line substituted |
 | `docstring` | Javadoc block (`/** ... */`) immediately preceding the method, or empty |
 
-**`mutated_meta.csv`** — row-aligned with `mutated_methods.csv`:
+**`mutated_meta.csv`** — row-aligned with `mutated_methods.csv` via the shared `id` column:
 
 | Column | Description |
 |---|---|
+| `id` | Same id as the corresponding row in `mutated_methods.csv` |
 | `line_no` | Line number in the source file |
 | `original_line` | Original source line |
 | `mutated_line` | Mutated source line |
 | `source_filepath` | Path to the source file |
+
+**`id` format.** `<prefix>_<serial>`, where the prefix is derived from the project name by stripping a leading `commons-` and taking the first 4 alphabetic characters (lowercased). Serial is 1-based across all rows in the project.
+
+| Project | Prefix | Example id |
+|---|---|---|
+| `commons-lang3` | `lang` | `lang_1` |
+| `commons-dbutils` | `dbut` | `dbut_1` |
+| `jsoup` | `jsou` | `jsou_1` |
+| `joda-time` | `joda` | `joda_1` |
 
 ### Step 2: Inject Mutations into Source
 
