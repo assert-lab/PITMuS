@@ -87,15 +87,6 @@ This reads `test-projects/joda-time/target/pit-reports/mutations.xml`, resolves 
 | `mutated_line` | Mutated source line |
 | `source_filepath` | Path to the source file |
 
-**`id` format.** `<prefix>_<serial>`, where the prefix is derived from the project name by stripping a leading `commons-` and taking the first 4 alphabetic characters (lowercased). Serial is 1-based across all rows in the project.
-
-| Project | Prefix | Example id |
-|---|---|---|
-| `commons-lang3` | `lang` | `lang_1` |
-| `commons-dbutils` | `dbut` | `dbut_1` |
-| `jsoup` | `jsou` | `jsou_1` |
-| `joda-time` | `joda` | `joda_1` |
-
 ### Step 2: Inject Mutations into Source
 
 The injection script supports three modes depending on how many arguments are provided:
