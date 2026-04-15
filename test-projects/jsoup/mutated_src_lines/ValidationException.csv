@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:190a60d4d1953b36e015c761a615e28ff1dcf3a10971e056b27298905b2f9cb5
-size 860
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"if (trace.getClassName().equals(Validator)) continue;","if (false) continue;","org/jsoup/helper/ValidationException.java",26,"removed conditional - replaced equality check with false","","7"
+"if (trace.getClassName().equals(Validator)) continue;","if (true) continue;","org/jsoup/helper/ValidationException.java",26,"removed conditional - replaced equality check with true","","7"
+"setStackTrace(filteredTrace.toArray(new StackTraceElement[0]));","setStackTrace(filteredTrace.toArray(new StackTraceElement[0]));  // removed call to setStackTrace()","org/jsoup/helper/ValidationException.java",30,"removed call to org/jsoup/helper/ValidationException::setStackTrace","","13"
+"return this;","return null;","org/jsoup/helper/ValidationException.java",32,"replaced return value with null for org/jsoup/helper/ValidationException::fillInStackTrace","","14"

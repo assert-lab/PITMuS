@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cd81a4bdbfe9116fcf2710ba0ba4fedd6f13e0927903c3c4ecfe0cdbb8b58980
-size 3171
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return owner != null ? owner.outputSettings() : (new Document("""")).outputSettings();","return false ? owner.outputSettings() : (new Document("""")).outputSettings();","org/jsoup/nodes/NodeUtils.java",23,"removed conditional - replaced equality check with false","Document$OutputSettings.java|Locale.java|String.java","1"
+"return owner != null ? owner.outputSettings() : (new Document("""")).outputSettings();","return true ? owner.outputSettings() : (new Document("""")).outputSettings();","org/jsoup/nodes/NodeUtils.java",23,"removed conditional - replaced equality check with true","Document$OutputSettings.java|Locale.java|String.java","1"
+"return owner != null ? owner.outputSettings() : (new Document("""")).outputSettings();","return null;","org/jsoup/nodes/NodeUtils.java",23,"replaced return value with null for org/jsoup/nodes/NodeUtils::outputSettings","Document$OutputSettings.java|Locale.java|String.java","6"
+"return doc != null && doc.parser() != null ? doc.parser() : new Parser(new HtmlTreeBuilder());","return false && doc.parser() != null ? doc.parser() : new Parser(new HtmlTreeBuilder());","org/jsoup/nodes/NodeUtils.java",31,"removed conditional - replaced equality check with false","File.java|Locale.java","1"
+"return doc != null && doc.parser() != null ? doc.parser() : new Parser(new HtmlTreeBuilder());","return true && doc.parser() != null ? doc.parser() : new Parser(new HtmlTreeBuilder());","org/jsoup/nodes/NodeUtils.java",31,"removed conditional - replaced equality check with true","File.java|Locale.java","1"
+"return doc != null && doc.parser() != null ? doc.parser() : new Parser(new HtmlTreeBuilder());","return doc != null && false ? doc.parser() : new Parser(new HtmlTreeBuilder());","org/jsoup/nodes/NodeUtils.java",31,"removed conditional - replaced equality check with false","File.java|Locale.java","3"
+"return doc != null && doc.parser() != null ? doc.parser() : new Parser(new HtmlTreeBuilder());","return doc != null && true ? doc.parser() : new Parser(new HtmlTreeBuilder());","org/jsoup/nodes/NodeUtils.java",31,"removed conditional - replaced equality check with true","File.java|Locale.java","3"
+"return doc != null && doc.parser() != null ? doc.parser() : new Parser(new HtmlTreeBuilder());","return null;","org/jsoup/nodes/NodeUtils.java",31,"replaced return value with null for org/jsoup/nodes/NodeUtils::parser","File.java|Locale.java","8"
+"Validate.notEmpty(xpath);","// removed call to notEmpty()","org/jsoup/nodes/NodeUtils.java",41,"removed call to org/jsoup/helper/Validate::notEmpty","String.java","0"
+"Validate.notNull(el);","// removed call to notNull()","org/jsoup/nodes/NodeUtils.java",42,"removed call to org/jsoup/helper/Validate::notNull","String.java","1"
+"Validate.notNull(nodeType);","// removed call to notNull()","org/jsoup/nodes/NodeUtils.java",43,"removed call to org/jsoup/helper/Validate::notNull","String.java","2"
+"return w3c.sourceNodes(nodeList, nodeType);","return Collections.emptyList();","org/jsoup/nodes/NodeUtils.java",49,"replaced return value with Collections.emptyList for org/jsoup/nodes/NodeUtils::selectXpath","String.java","9"

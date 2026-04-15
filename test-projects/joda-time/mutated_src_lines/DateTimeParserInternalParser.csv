@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2c8f113254702630d9dc60440d6c01886a5a753547c170d3c39bf0d55864b425
-size 2461
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return underlying.estimateParsedLength();","return 0;","org/joda/time/format/DateTimeParserInternalParser.java",48,"replaced int return with 0 for org/joda/time/format/DateTimeParserInternalParser::estimateParsedLength","","1"
+"return underlying;","return null;","org/joda/time/format/DateTimeParserInternalParser.java",44,"replaced return value with null for org/joda/time/format/DateTimeParserInternalParser::getUnderlying","","0"
+"if (underlying instanceof InternalParserDateTimeParser) {","if (false) {","org/joda/time/format/DateTimeParserInternalParser.java",29,"removed conditional - replaced equality check with false","TestChronology.java|TestDateTimeFormatter.java|TestDateTimeFormatterBuilder.java|TestDateTimeParserBucket.java|TestDays.java","0"
+"if (underlying instanceof InternalParserDateTimeParser) {","if (true) {","org/joda/time/format/DateTimeParserInternalParser.java",29,"removed conditional - replaced equality check with true","TestChronology.java|TestDateTimeFormatter.java|TestDateTimeFormatterBuilder.java|TestDateTimeParserBucket.java|TestDays.java","0"
+"return (InternalParser) underlying;","return null;","org/joda/time/format/DateTimeParserInternalParser.java",30,"replaced return value with null for org/joda/time/format/DateTimeParserInternalParser::of","TestChronology.java|TestDateTimeFormatter.java|TestDateTimeFormatterBuilder.java|TestDays.java","1"
+"if (underlying == null) {","if (false) {","org/joda/time/format/DateTimeParserInternalParser.java",32,"removed conditional - replaced equality check with false","TestChronology.java|TestDateTimeFormatter.java|TestDateTimeParserBucket.java","2"
+"if (underlying == null) {","if (true) {","org/joda/time/format/DateTimeParserInternalParser.java",32,"removed conditional - replaced equality check with true","TestChronology.java|TestDateTimeFormatter.java|TestDateTimeParserBucket.java","2"
+"return new DateTimeParserInternalParser(underlying);","return null;","org/joda/time/format/DateTimeParserInternalParser.java",35,"replaced return value with null for org/joda/time/format/DateTimeParserInternalParser::of","TestDateTimeParserBucket.java","5"
+"return underlying.parseInto(bucket, text.toString(), position);","return 0;","org/joda/time/format/DateTimeParserInternalParser.java",52,"replaced int return with 0 for org/joda/time/format/DateTimeParserInternalParser::parseInto","TestDateTimeParserBucket.java","2"

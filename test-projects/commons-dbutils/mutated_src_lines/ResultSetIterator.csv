@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:156bbab65c8e275a3ee1813fc42569675ffd10207fb69831666052a763f7810f
-size 2240
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return !rs.isLast();","return false;","org/apache/commons/dbutils/ResultSetIterator.java",75,"removed conditional - replaced equality check with false","ResultSetIteratorTest.java","1"
+"return !rs.isLast();","return true;","org/apache/commons/dbutils/ResultSetIterator.java",75,"removed conditional - replaced equality check with true","ResultSetIteratorTest.java","1"
+"return !rs.isLast();","return true;","org/apache/commons/dbutils/ResultSetIterator.java",75,"replaced boolean return with true for org/apache/commons/dbutils/ResultSetIterator::hasNext","ResultSetIteratorTest.java","4"
+"rethrow(e);","// removed call to rethrow()","org/apache/commons/dbutils/ResultSetIterator.java",77,"removed call to org/apache/commons/dbutils/ResultSetIterator::rethrow","","5"
+"return false;","return true;","org/apache/commons/dbutils/ResultSetIterator.java",78,"replaced boolean return with true for org/apache/commons/dbutils/ResultSetIterator::hasNext","","6"
+"return new Iterable<Object[]>() {","return Collections.emptyList();","org/apache/commons/dbutils/ResultSetIterator.java",131,"replaced return value with Collections.emptyList for org/apache/commons/dbutils/ResultSetIterator::iterable","","1"
+"return this.convert.toArray(rs);","return null;","org/apache/commons/dbutils/ResultSetIterator.java",93,"replaced return value with null for org/apache/commons/dbutils/ResultSetIterator::next","ResultSetIteratorTest.java","2"
+"rethrow(e);","// removed call to rethrow()","org/apache/commons/dbutils/ResultSetIterator.java",95,"removed call to org/apache/commons/dbutils/ResultSetIterator::rethrow","","3"
+"this.rs.deleteRow();","// removed call to deleteRow()","org/apache/commons/dbutils/ResultSetIterator.java",108,"removed call to java/sql/ResultSet::deleteRow","ResultSetIteratorTest.java","0"
+"rethrow(e);","// removed call to rethrow()","org/apache/commons/dbutils/ResultSetIterator.java",110,"removed call to org/apache/commons/dbutils/ResultSetIterator::rethrow","","2"
+"return new ResultSetIterator(rs);","return null;","org/apache/commons/dbutils/ResultSetIterator.java",135,"replaced return value with null for org/apache/commons/dbutils/ResultSetIterator$1::iterator","","1"

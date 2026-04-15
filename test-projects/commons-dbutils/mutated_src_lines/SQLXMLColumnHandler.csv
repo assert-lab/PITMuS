@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f297cafe140d8dd29a586302060babcf7cb201789c99af366ac225adb6e71de8
-size 1090
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return rs.getSQLXML(columnIndex);","return null;","org/apache/commons/dbutils/handlers/columns/SQLXMLColumnHandler.java",33,"replaced return value with null for org/apache/commons/dbutils/handlers/columns/SQLXMLColumnHandler::apply","SQLXMLColumnHandlerTest.java","1"
+"return propType.equals(SQLXML.class);","return false;","org/apache/commons/dbutils/handlers/columns/SQLXMLColumnHandler.java",28,"replaced boolean return with false for org/apache/commons/dbutils/handlers/columns/SQLXMLColumnHandler::match","BasicRowProcessorTest.java|BeanHandlerTest.java|BeanListHandlerTest.java|BeanProcessorTest.java|SQLXMLColumnHandlerTest.java","1"
+"return propType.equals(SQLXML.class);","return true;","org/apache/commons/dbutils/handlers/columns/SQLXMLColumnHandler.java",28,"replaced boolean return with true for org/apache/commons/dbutils/handlers/columns/SQLXMLColumnHandler::match","BasicRowProcessorTest.java|BeanHandlerTest.java|BeanListHandlerTest.java|BeanProcessorTest.java|SQLXMLColumnHandlerTest.java","1"

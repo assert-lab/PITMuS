@@ -1,3 +1,3 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3775e5d631797e55159092842d3a7a241bda17cd9dea17e18eb4f3ff886d3605
-size 581
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return (final T t, final U u, final V v) -> after.apply(apply(t, u, v));","return null;","org/apache/commons/lang3/function/TriFunction.java",64,"replaced return value with null for org/apache/commons/lang3/function/TriFunction::andThen","","1"
+"return (final T t, final U u, final V v) -> after.apply(apply(t, u, v));","return null;","org/apache/commons/lang3/function/TriFunction.java",64,"replaced return value with null for org/apache/commons/lang3/function/TriFunction::lambda$andThen$0","","2"

@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:93748d591a349aea09fe7f8e4adc4d0b14a2c3bd38591a6dcc0dd8fdf412dd46
-size 3789
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"changeSupport.addPropertyChangeListener(listener);","// removed call to addPropertyChangeListener()","org/apache/commons/lang3/concurrent/AbstractCircuitBreaker.java",124,"removed call to java/beans/PropertyChangeSupport::addPropertyChangeListener","","0"
+"if (state.compareAndSet(newState.oppositeState(), newState)) {","if (false) {","org/apache/commons/lang3/concurrent/AbstractCircuitBreaker.java",111,"removed conditional - replaced equality check with false","","2"
+"if (state.compareAndSet(newState.oppositeState(), newState)) {","if (true) {","org/apache/commons/lang3/concurrent/AbstractCircuitBreaker.java",111,"removed conditional - replaced equality check with true","","2"
+"changeSupport.firePropertyChange(PROPERTY_NAME, !isOpen(newState), isOpen(newState));","changeSupport.firePropertyChange(PROPERTY_NAME, !isOpen(newState), isOpen(newState));  // removed call to firePropertyChange()","org/apache/commons/lang3/concurrent/AbstractCircuitBreaker.java",112,"removed call to java/beans/PropertyChangeSupport::firePropertyChange","","8"
+"changeState(State.CLOSED);","// removed call to changeState()","org/apache/commons/lang3/concurrent/AbstractCircuitBreaker.java",83,"removed call to org/apache/commons/lang3/concurrent/AbstractCircuitBreaker::changeState","","0"
+"return !isOpen();","return false;","org/apache/commons/lang3/concurrent/AbstractCircuitBreaker.java",63,"removed conditional - replaced equality check with false","","1"
+"return !isOpen();","return true;","org/apache/commons/lang3/concurrent/AbstractCircuitBreaker.java",63,"removed conditional - replaced equality check with true","","1"
+"return !isOpen();","return true;","org/apache/commons/lang3/concurrent/AbstractCircuitBreaker.java",63,"replaced boolean return with true for org/apache/commons/lang3/concurrent/AbstractCircuitBreaker::isClosed","","4"
+"return isOpen(state.get());","return false;","org/apache/commons/lang3/concurrent/AbstractCircuitBreaker.java",55,"replaced boolean return with false for org/apache/commons/lang3/concurrent/AbstractCircuitBreaker::isOpen","","2"
+"return isOpen(state.get());","return true;","org/apache/commons/lang3/concurrent/AbstractCircuitBreaker.java",55,"replaced boolean return with true for org/apache/commons/lang3/concurrent/AbstractCircuitBreaker::isOpen","","2"
+"return state == State.OPEN;","return false;","org/apache/commons/lang3/concurrent/AbstractCircuitBreaker.java",101,"removed conditional - replaced equality check with false","","0"
+"return state == State.OPEN;","return true;","org/apache/commons/lang3/concurrent/AbstractCircuitBreaker.java",101,"removed conditional - replaced equality check with true","","0"
+"return state == State.OPEN;","return true;","org/apache/commons/lang3/concurrent/AbstractCircuitBreaker.java",101,"replaced boolean return with true for org/apache/commons/lang3/concurrent/AbstractCircuitBreaker::isOpen","","3"
+"changeState(State.OPEN);","// removed call to changeState()","org/apache/commons/lang3/concurrent/AbstractCircuitBreaker.java",91,"removed call to org/apache/commons/lang3/concurrent/AbstractCircuitBreaker::changeState","","0"
+"changeSupport.removePropertyChangeListener(listener);","// removed call to removePropertyChangeListener()","org/apache/commons/lang3/concurrent/AbstractCircuitBreaker.java",133,"removed call to java/beans/PropertyChangeSupport::removePropertyChangeListener","","0"
+"return OPEN;","return null;","org/apache/commons/lang3/concurrent/AbstractCircuitBreaker.java",151,"replaced return value with null for org/apache/commons/lang3/concurrent/AbstractCircuitBreaker$State$1::oppositeState","","0"
+"return CLOSED;","return null;","org/apache/commons/lang3/concurrent/AbstractCircuitBreaker.java",162,"replaced return value with null for org/apache/commons/lang3/concurrent/AbstractCircuitBreaker$State$2::oppositeState","","0"

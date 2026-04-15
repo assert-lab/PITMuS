@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0bc4b6244f77d6b4244ebaf1b78cc663457b800f324ccbc23992e2a14f5cc993
-size 684
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return calendar.get(Calendar.DAY_OF_MONTH);","return 0;","org/apache/commons/lang3/time/CalendarUtils.java",52,"replaced int return with 0 for org/apache/commons/lang3/time/CalendarUtils::getDayOfMonth","","1"
+"return calendar.get(Calendar.MONTH);","return 0;","org/apache/commons/lang3/time/CalendarUtils.java",61,"replaced int return with 0 for org/apache/commons/lang3/time/CalendarUtils::getMonth","","1"
+"return calendar.get(Calendar.YEAR);","return 0;","org/apache/commons/lang3/time/CalendarUtils.java",70,"replaced int return with 0 for org/apache/commons/lang3/time/CalendarUtils::getYear","","1"

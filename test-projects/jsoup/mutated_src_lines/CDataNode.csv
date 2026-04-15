@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e2560aee656b22d1663768d02981ae510773168300aefbf786f8342f302c6704
-size 548
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return (CDataNode) super.clone();","return null;","org/jsoup/nodes/CDataNode.java",47,"replaced return value with null for org/jsoup/nodes/CDataNode::clone","","1"
+"return ""#cdata"";","return """";","org/jsoup/nodes/CDataNode.java",17,"replaced return value with """" for org/jsoup/nodes/CDataNode::nodeName","","0"
+"return getWholeText();","return """";","org/jsoup/nodes/CDataNode.java",26,"replaced return value with """" for org/jsoup/nodes/CDataNode::text","","1"

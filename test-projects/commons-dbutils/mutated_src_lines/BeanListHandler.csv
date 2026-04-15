@@ -1,3 +1,2 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:387a249f14c0ce349ac7b11bcbdcef33487e8ecd7b98e783a4f3c17c7de8891d
-size 369
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return this.convert.toBeanList(rs, type);","return Collections.emptyList();","org/apache/commons/dbutils/handlers/BeanListHandler.java",83,"replaced return value with Collections.emptyList for org/apache/commons/dbutils/handlers/BeanListHandler::handle","BeanListHandlerTest.java","1"

@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:77e36e88f0f6bd9ef4050cde47a362b4bb636ea95adf378bafa0a761670beeb5
-size 2133
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return codepoint >= Character.MIN_SURROGATE && codepoint <= Character.MAX_SURROGATE;","return codepoint > Character.MIN_SURROGATE && codepoint <= Character.MAX_SURROGATE;","org/apache/commons/lang3/text/translate/UnicodeUnpairedSurrogateRemover.java",38,"changed conditional boundary","","0"
+"return codepoint >= Character.MIN_SURROGATE && codepoint <= Character.MAX_SURROGATE;","return false && codepoint <= Character.MAX_SURROGATE;","org/apache/commons/lang3/text/translate/UnicodeUnpairedSurrogateRemover.java",38,"removed conditional - replaced comparison check with false","","0"
+"return codepoint >= Character.MIN_SURROGATE && codepoint <= Character.MAX_SURROGATE;","return true && codepoint <= Character.MAX_SURROGATE;","org/apache/commons/lang3/text/translate/UnicodeUnpairedSurrogateRemover.java",38,"removed conditional - replaced comparison check with true","","0"
+"return codepoint >= Character.MIN_SURROGATE && codepoint <= Character.MAX_SURROGATE;","return codepoint >= Character.MIN_SURROGATE && codepoint < Character.MAX_SURROGATE;","org/apache/commons/lang3/text/translate/UnicodeUnpairedSurrogateRemover.java",38,"changed conditional boundary","","1"
+"return codepoint >= Character.MIN_SURROGATE && codepoint <= Character.MAX_SURROGATE;","return codepoint >= Character.MIN_SURROGATE && false;","org/apache/commons/lang3/text/translate/UnicodeUnpairedSurrogateRemover.java",38,"removed conditional - replaced comparison check with false","","1"
+"return codepoint >= Character.MIN_SURROGATE && codepoint <= Character.MAX_SURROGATE;","return codepoint >= Character.MIN_SURROGATE && true;","org/apache/commons/lang3/text/translate/UnicodeUnpairedSurrogateRemover.java",38,"removed conditional - replaced comparison check with true","","1"
+"return codepoint >= Character.MIN_SURROGATE && codepoint <= Character.MAX_SURROGATE;","return true;","org/apache/commons/lang3/text/translate/UnicodeUnpairedSurrogateRemover.java",38,"replaced boolean return with true for org/apache/commons/lang3/text/translate/UnicodeUnpairedSurrogateRemover::translate","","4"

@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:76fe69d371463718636d8ef8611bd74174e841746ff91bb7d7ae12af20b28c1f
-size 871
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return (t, u) -> {","return null;","org/apache/commons/lang3/function/FailableBiConsumer.java",68,"replaced return value with null for org/apache/commons/lang3/function/FailableBiConsumer::andThen","","1"
+"accept(t, u);","// removed call to accept()","org/apache/commons/lang3/function/FailableBiConsumer.java",69,"removed call to org/apache/commons/lang3/function/FailableBiConsumer::accept","","0"
+"after.accept(t, u);","// removed call to accept()","org/apache/commons/lang3/function/FailableBiConsumer.java",70,"removed call to org/apache/commons/lang3/function/FailableBiConsumer::accept","","1"
+"return NOP;","return null;","org/apache/commons/lang3/function/FailableBiConsumer.java",47,"replaced return value with null for org/apache/commons/lang3/function/FailableBiConsumer::nop","","0"

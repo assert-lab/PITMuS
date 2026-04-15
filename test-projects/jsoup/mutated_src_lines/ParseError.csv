@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d3ef3a4598ff8ca54294e8e41e5b223b49f6a657cb8efe57992f177a58b51e1b
-size 726
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return cursorPos;","return """";","org/jsoup/parser/ParseError.java",56,"replaced return value with """" for org/jsoup/parser/ParseError::getCursorPos","","0"
+"return errorMsg;","return """";","org/jsoup/parser/ParseError.java",40,"replaced return value with """" for org/jsoup/parser/ParseError::getErrorMessage","","0"
+"return pos;","return 0;","org/jsoup/parser/ParseError.java",48,"replaced int return with 0 for org/jsoup/parser/ParseError::getPosition","","0"
+"return ""<"" + cursorPos + "">: "" + errorMsg;","return """";","org/jsoup/parser/ParseError.java",61,"replaced return value with """" for org/jsoup/parser/ParseError::toString","","6"

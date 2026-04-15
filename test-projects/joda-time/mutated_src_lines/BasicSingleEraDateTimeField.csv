@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d99392286a744e61ce7104b7c6ee0c4fc45b8b47d1a08260048f82e794295903
-size 4514
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return ERA_VALUE;","return 0;","org/joda/time/chrono/BasicSingleEraDateTimeField.java",64,"replaced int return with 0 for org/joda/time/chrono/BasicSingleEraDateTimeField::get","TestBuddhistChronology.java|TestCopticChronology.java|TestEthiopicChronology.java|TestIslamicChronology.java","0"
+"return iEraText;","return """";","org/joda/time/chrono/BasicSingleEraDateTimeField.java",140,"replaced return value with """" for org/joda/time/chrono/BasicSingleEraDateTimeField::getAsText","TestCopticChronology.java|TestEthiopicChronology.java|TestIslamicChronology.java","0"
+"return UnsupportedDurationField.getInstance(DurationFieldType.eras());","return null;","org/joda/time/chrono/BasicSingleEraDateTimeField.java",116,"replaced return value with null for org/joda/time/chrono/BasicSingleEraDateTimeField::getDurationField","TestAbstractPartial.java|TestBuddhistChronology.java|TestDateTimeFormatter.java|TestDateTimeUtils.java|TestStringConverter.java","2"
+"return iEraText.length();","return 0;","org/joda/time/chrono/BasicSingleEraDateTimeField.java",146,"replaced int return with 0 for org/joda/time/chrono/BasicSingleEraDateTimeField::getMaximumTextLength","","1"
+"return ERA_VALUE;","return 0;","org/joda/time/chrono/BasicSingleEraDateTimeField.java",134,"replaced int return with 0 for org/joda/time/chrono/BasicSingleEraDateTimeField::getMaximumValue","","0"
+"return ERA_VALUE;","return 0;","org/joda/time/chrono/BasicSingleEraDateTimeField.java",128,"replaced int return with 0 for org/joda/time/chrono/BasicSingleEraDateTimeField::getMinimumValue","","0"
+"return false;","return true;","org/joda/time/chrono/BasicSingleEraDateTimeField.java",58,"replaced boolean return with true for org/joda/time/chrono/BasicSingleEraDateTimeField::isLenient","TestInterval_Basics.java|TestLocalDate_Basics.java|TestLocalDate_Properties.java|TestYearMonthDay_Properties.java|TestYearMonth_Properties.java","0"
+"return Long.MAX_VALUE;","return 0;","org/joda/time/chrono/BasicSingleEraDateTimeField.java",92,"replaced long return with 0 for org/joda/time/chrono/BasicSingleEraDateTimeField::roundCeiling","","0"
+"return Long.MIN_VALUE;","return 0;","org/joda/time/chrono/BasicSingleEraDateTimeField.java",86,"replaced long return with 0 for org/joda/time/chrono/BasicSingleEraDateTimeField::roundFloor","","0"
+"return Long.MIN_VALUE;","return 0;","org/joda/time/chrono/BasicSingleEraDateTimeField.java",104,"replaced long return with 0 for org/joda/time/chrono/BasicSingleEraDateTimeField::roundHalfCeiling","","0"
+"return Long.MIN_VALUE;","return 0;","org/joda/time/chrono/BasicSingleEraDateTimeField.java",110,"replaced long return with 0 for org/joda/time/chrono/BasicSingleEraDateTimeField::roundHalfEven","","0"
+"return Long.MIN_VALUE;","return 0;","org/joda/time/chrono/BasicSingleEraDateTimeField.java",98,"replaced long return with 0 for org/joda/time/chrono/BasicSingleEraDateTimeField::roundHalfFloor","","0"
+"FieldUtils.verifyValueBounds(this, era, ERA_VALUE, ERA_VALUE);","// removed call to verifyValueBounds()","org/joda/time/chrono/BasicSingleEraDateTimeField.java",70,"removed call to org/joda/time/field/FieldUtils::verifyValueBounds","","0"
+"return instant;","return 0;","org/joda/time/chrono/BasicSingleEraDateTimeField.java",71,"replaced long return with 0 for org/joda/time/chrono/BasicSingleEraDateTimeField::set","","1"
+"if (iEraText.equals(text) == false && ""1"".equals(text) == false) {","if (false && ""1"".equals(text) == false) {","org/joda/time/chrono/BasicSingleEraDateTimeField.java",77,"removed conditional - replaced equality check with false","","1"
+"if (iEraText.equals(text) == false && ""1"".equals(text) == false) {","if (true && ""1"".equals(text) == false) {","org/joda/time/chrono/BasicSingleEraDateTimeField.java",77,"removed conditional - replaced equality check with true","","1"
+"if (iEraText.equals(text) == false && ""1"".equals(text) == false) {","if (false && ""1"".equals(text) == false) {","org/joda/time/chrono/BasicSingleEraDateTimeField.java",77,"removed conditional - replaced equality check with false","","3"
+"if (iEraText.equals(text) == false && ""1"".equals(text) == false) {","if (true && ""1"".equals(text) == false) {","org/joda/time/chrono/BasicSingleEraDateTimeField.java",77,"removed conditional - replaced equality check with true","","3"
+"return instant;","return 0;","org/joda/time/chrono/BasicSingleEraDateTimeField.java",80,"replaced long return with 0 for org/joda/time/chrono/BasicSingleEraDateTimeField::set","","7"

@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ae96d0a5e59e5e2db3a1757124fa4a994f6b680107aa17ca40953952deecdcb3
-size 2435
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"if (value == Integer.MIN_VALUE) {","if (false) {","org/joda/time/DurationField.java",209,"removed conditional - replaced equality check with false","TestDateMidnight_Basics.java|TestDateTime_Basics.java|TestDurationField.java|TestISOChronology.java|TestLocalDateTime_Basics.java|TestLocalDate_Basics.java|TestLocalTime_Basics.java|TestMinMaxLong.java","0"
+"if (value == Integer.MIN_VALUE) {","if (true) {","org/joda/time/DurationField.java",209,"removed conditional - replaced equality check with true","TestDateMidnight_Basics.java|TestDateTime_Basics.java|TestDurationField.java|TestISOChronology.java|TestLocalDateTime_Basics.java|TestLocalDate_Basics.java|TestLocalTime_Basics.java|TestMinMaxLong.java","0"
+"return subtract(instant, (long) value);","return 0;","org/joda/time/DurationField.java",210,"replaced long return with 0 for org/joda/time/DurationField::subtract","TestDateTime_Basics.java|TestDurationField.java","2"
+"return add(instant, -value);","return add(instant, value);","org/joda/time/DurationField.java",212,"removed negation","TestDateMidnight_Basics.java|TestDateTime_Basics.java|TestDurationField.java|TestISOChronology.java|TestLocalDateTime_Basics.java|TestLocalDate_Basics.java|TestLocalTime_Basics.java|TestMinMaxLong.java","3"
+"return add(instant, -value);","return 0;","org/joda/time/DurationField.java",212,"replaced long return with 0 for org/joda/time/DurationField::subtract","TestDateMidnight_Basics.java|TestDateTime_Basics.java|TestDurationField.java|TestLocalDateTime_Basics.java|TestLocalDate_Basics.java|TestLocalTime_Basics.java|TestMinMaxLong.java","4"
+"if (value == Long.MIN_VALUE) {","if (false) {","org/joda/time/DurationField.java",224,"removed conditional - replaced equality check with false","TestDateTime_Basics.java|TestDurationField.java","0"
+"if (value == Long.MIN_VALUE) {","if (true) {","org/joda/time/DurationField.java",224,"removed conditional - replaced equality check with true","TestDateTime_Basics.java|TestDurationField.java","0"
+"return add(instant, -value);","return add(instant, value);","org/joda/time/DurationField.java",227,"removed negation","TestDateTime_Basics.java|TestDurationField.java","3"
+"return add(instant, -value);","return 0;","org/joda/time/DurationField.java",227,"replaced long return with 0 for org/joda/time/DurationField::subtract","TestDateTime_Basics.java|TestDurationField.java","4"

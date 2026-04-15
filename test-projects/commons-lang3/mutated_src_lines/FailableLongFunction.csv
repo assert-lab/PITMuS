@@ -1,3 +1,2 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5a2edd00eda3aaeea3e4363df676de1954f0395298bee8579aa40e26d63ea645
-size 282
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return NOP;","return null;","org/apache/commons/lang3/function/FailableLongFunction.java",44,"replaced return value with null for org/apache/commons/lang3/function/FailableLongFunction::nop","","0"

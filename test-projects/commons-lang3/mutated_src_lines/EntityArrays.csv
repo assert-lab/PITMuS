@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ac419f8e8db550f325720c35ea28b47b9206bed6b0afdf8aacad0a9d91424af1
-size 3172
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return APOS_ESCAPE.clone();","return null;","org/apache/commons/lang3/text/translate/EntityArrays.java",399,"replaced return value with null for org/apache/commons/lang3/text/translate/EntityArrays::APOS_ESCAPE","","1"
+"return APOS_UNESCAPE.clone();","return null;","org/apache/commons/lang3/text/translate/EntityArrays.java",411,"replaced return value with null for org/apache/commons/lang3/text/translate/EntityArrays::APOS_UNESCAPE","","1"
+"return BASIC_ESCAPE.clone();","return null;","org/apache/commons/lang3/text/translate/EntityArrays.java",374,"replaced return value with null for org/apache/commons/lang3/text/translate/EntityArrays::BASIC_ESCAPE","","1"
+"return BASIC_UNESCAPE.clone();","return null;","org/apache/commons/lang3/text/translate/EntityArrays.java",389,"replaced return value with null for org/apache/commons/lang3/text/translate/EntityArrays::BASIC_UNESCAPE","","1"
+"return HTML40_EXTENDED_ESCAPE.clone();","return null;","org/apache/commons/lang3/text/translate/EntityArrays.java",157,"replaced return value with null for org/apache/commons/lang3/text/translate/EntityArrays::HTML40_EXTENDED_ESCAPE","","1"
+"return HTML40_EXTENDED_UNESCAPE.clone();","return null;","org/apache/commons/lang3/text/translate/EntityArrays.java",362,"replaced return value with null for org/apache/commons/lang3/text/translate/EntityArrays::HTML40_EXTENDED_UNESCAPE","","1"
+"return ISO8859_1_ESCAPE.clone();","return null;","org/apache/commons/lang3/text/translate/EntityArrays.java",38,"replaced return value with null for org/apache/commons/lang3/text/translate/EntityArrays::ISO8859_1_ESCAPE","","1"
+"return ISO8859_1_UNESCAPE.clone();","return null;","org/apache/commons/lang3/text/translate/EntityArrays.java",145,"replaced return value with null for org/apache/commons/lang3/text/translate/EntityArrays::ISO8859_1_UNESCAPE","","1"
+"return JAVA_CTRL_CHARS_ESCAPE.clone();","return null;","org/apache/commons/lang3/text/translate/EntityArrays.java",423,"replaced return value with null for org/apache/commons/lang3/text/translate/EntityArrays::JAVA_CTRL_CHARS_ESCAPE","","1"
+"return JAVA_CTRL_CHARS_UNESCAPE.clone();","return null;","org/apache/commons/lang3/text/translate/EntityArrays.java",439,"replaced return value with null for org/apache/commons/lang3/text/translate/EntityArrays::JAVA_CTRL_CHARS_UNESCAPE","","1"
+"for (int i = 0; i<array.length; i++) {","for (int i = 0; i<=array.length; i++) {","org/apache/commons/lang3/text/translate/EntityArrays.java",451,"changed conditional boundary","","1"
+"for (int i = 0; i<array.length; i++) {","for (int i = 0; false; i++) {","org/apache/commons/lang3/text/translate/EntityArrays.java",451,"removed conditional - replaced comparison check with false","","1"
+"for (int i = 0; i<array.length; i++) {","for (int i = 0; true; i++) {","org/apache/commons/lang3/text/translate/EntityArrays.java",451,"removed conditional - replaced comparison check with true","","1"
+"return newarray;","return null;","org/apache/commons/lang3/text/translate/EntityArrays.java",455,"replaced return value with null for org/apache/commons/lang3/text/translate/EntityArrays::invert","","3"

@@ -1,3 +1,2 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:94c793ec6b9f73f66a49bf5fd03e452b373385ddaf1e3f5de35edf57d31f3e24
-size 356
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return this.convert.toMap(rs);","return Collections.emptyMap();","org/apache/commons/dbutils/handlers/MapListHandler.java",70,"replaced return value with Collections.emptyMap for org/apache/commons/dbutils/handlers/MapListHandler::handleRow","MapListHandlerTest.java","1"

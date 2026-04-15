@@ -1,3 +1,2 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:72e96b7d4c748daae33447366efdd196faab9e68c36c469e18399f7c76524cc6
-size 284
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return NOP;","return null;","org/apache/commons/lang3/function/FailableToIntFunction.java",44,"replaced return value with null for org/apache/commons/lang3/function/FailableToIntFunction::nop","","0"

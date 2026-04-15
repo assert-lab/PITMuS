@@ -3,10 +3,136 @@ import csv
 import os
 import sys
 import re
+import subprocess
 from collections import defaultdict
 
 import javalang
 from javalang.tokenizer import LexerError
+
+
+MATH_OPCODES = {
+    "addition":       {"iadd", "ladd", "fadd", "dadd"},
+    "subtraction":    {"isub", "lsub", "fsub", "dsub"},
+    "multiplication": {"imul", "lmul", "fmul", "dmul"},
+    "division":       {"idiv", "ldiv", "fdiv", "ddiv"},
+    "modulus":        {"irem", "lrem", "frem", "drem"},
+}
+COND_OPCODES = {
+    "ifeq", "ifne", "iflt", "ifle", "ifgt", "ifge",
+    "if_icmpeq", "if_icmpne", "if_icmplt", "if_icmple", "if_icmpgt", "if_icmpge",
+    "if_acmpeq", "if_acmpne", "ifnull", "ifnonnull",
+}
+COND_BOUNDARY_OPCODES = {
+    "iflt", "ifle", "ifgt", "ifge",
+    "if_icmplt", "if_icmple", "if_icmpgt", "if_icmpge",
+}
+RETURN_OPCODES = {"ireturn", "lreturn", "freturn", "dreturn", "areturn"}
+INVOKE_OPCODES = {"invokevirtual", "invokestatic", "invokeinterface", "invokespecial", "invokedynamic"}
+
+
+def family_for_desc(desc):
+    d = desc.strip()
+    m = re.match(r"Replaced (?:integer|long|float|double) (\w+) with", d)
+    if m:
+        return MATH_OPCODES.get(m.group(1))
+    if d == "Replaced Shift Left with Shift Right":        return {"ishl", "lshl"}
+    if d == "Replaced Shift Right with Shift Left":        return {"ishr", "lshr"}
+    if d == "Replaced Unsigned Shift Right with Shift Left": return {"iushr", "lushr"}
+    if d == "Replaced XOR with AND":                       return {"ixor", "lxor"}
+    if d == "Replaced bitwise AND with OR":                return {"iand", "land"}
+    if d == "Replaced bitwise OR with AND":                return {"ior", "lor"}
+    if d == "changed conditional boundary":                return COND_BOUNDARY_OPCODES
+    if d == "negated conditional":                         return COND_OPCODES
+    if d.startswith("removed conditional"):                return COND_OPCODES
+    if d == "removed negation":                            return {"ineg", "lneg", "fneg", "dneg"}
+    if d.startswith("Changed increment"):                  return {"iinc"}
+    if d.startswith("removed call to"):                    return INVOKE_OPCODES
+    if re.search(r"replaced .*return.*with", d, re.IGNORECASE): return RETURN_OPCODES
+    if "Changed switch default" in d:                      return {"tableswitch", "lookupswitch"}
+    return None
+
+
+def _parse_javap(text, simple_class_name):
+    methods = {}
+    lines = text.splitlines()
+    current = None
+    for i, line in enumerate(lines):
+        stripped = line.strip()
+        if stripped.startswith("descriptor:") and i > 0:
+            sig = lines[i - 1].strip().rstrip(";").rstrip()
+            mm = re.search(r"([\w<>$]+)\s*\([^)]*\)\s*$", sig)
+            name = None
+            if mm:
+                name = mm.group(1)
+                if name == simple_class_name:
+                    name = "<init>"
+            elif "static" in sig and "{}" in sig:
+                name = "<clinit>"
+            if name:
+                desc = stripped[len("descriptor:"):].strip()
+                current = {"insns": [], "lnt": []}
+                methods[(name, desc)] = current
+            else:
+                current = None
+            continue
+        if current is None:
+            continue
+        cm = re.match(r"\s+(\d+):\s+(\w+)", line)
+        if cm:
+            current["insns"].append((int(cm.group(1)), cm.group(2).lower()))
+            continue
+        lm = re.match(r"\s+line\s+(\d+):\s+(\d+)\s*$", line)
+        if lm:
+            current["lnt"].append((int(lm.group(2)), int(lm.group(1))))
+
+
+    return methods
+
+
+def load_class_bytecode(class_file):
+    if not os.path.exists(class_file):
+        return {}
+    try:
+        out = subprocess.run(
+            ["javap", "-c", "-p", "-l", class_file],
+            capture_output=True, text=True, timeout=60,
+        )
+        text = out.stdout
+    except (subprocess.SubprocessError, FileNotFoundError):
+        return {}
+    simple = os.path.splitext(os.path.basename(class_file))[0]
+    simple = simple.rsplit("$", 1)[-1]
+    return _parse_javap(text, simple)
+
+
+def _line_for_offset(lnt_sorted, offset):
+    result = None
+    for off, ln in lnt_sorted:
+        if off <= offset:
+            result = ln
+        else:
+            break
+    return result
+
+
+def resolve_occ_from_bytecode(methods_info, method, method_desc, index, line, desc):
+    info = methods_info.get((method, method_desc))
+    if not info or not info["insns"]:
+        return None
+    family = family_for_desc(desc)
+    if not family:
+        return None
+    lnt = sorted(info["lnt"])
+    matches_on_line = []
+    for off, mnem in info["insns"]:
+        if mnem not in family:
+            continue
+        if _line_for_offset(lnt, off) != line:
+            continue
+        matches_on_line.append(off)
+    if index not in matches_on_line:
+        return None
+    return matches_on_line.index(index)
 
 
 def load_source(path):
@@ -249,15 +375,25 @@ def apply_mutation(line, ltoks, desc, occ=0):
 
     m = re.match(r"removed call to .+::(\w+)", d)
     if m:
-        return "// removed call to " + m.group(1) + "()"
+        name = m.group(1)
+        indent = line[: len(line) - len(line.lstrip())]
+        call_re = re.compile(r'(?:\b\w+\s*\.\s*)*\b' + re.escape(name) + r'\s*\([^()]*\)\s*;?')
+        stripped = call_re.sub('', line)
+        if stripped.strip():
+            return stripped.rstrip() + "  // removed call to " + name + "()"
+        return indent + "// removed call to " + name + "()"
 
     m = re.match(r"replaced (?:\w+ )?return value with (.+)", d) or \
-        re.match(r"replaced boolean return with (.+)", d) or \
+        re.match(r"replaced (?:boolean|Boolean) return with (.+)", d) or \
         re.match(r"replaced (?:int|long|short|byte|char|float|double|Integer|Long|Short|Double|Float|Character|Boolean) return.*with (\S+)", d)
     if m:
         val = re.sub(r'\s+for\s+\S+::\S+$', '', m.group(1)).strip()
         if val == "&quot;&quot;" or val == '""':
             val = '""'
+        elif val == "True":
+            val = "Boolean.TRUE"
+        elif val == "False":
+            val = "Boolean.FALSE"
         elif "." in val and not val.endswith(")") and not val.endswith(";"):
             val += "()"
         result = re.sub(r'return\s+.+;', 'return ' + val + ';', line, count=1)
@@ -267,6 +403,8 @@ def apply_mutation(line, ltoks, desc, occ=0):
         if stripped == 'return' or stripped.startswith('return ') or stripped.startswith('return\t'):
             indent = line[: len(line) - len(line.lstrip())]
             return indent + 'return ' + val + ';'
+        if re.match(r'\s*(?:public|private|protected|static|final|\w[\w<>,\[\]\s]*\s+\w+\s*\()', line):
+            return line + " // return value replaced with " + val
 
     if "Changed switch default" in d:
         return line + " // switch default changed to first case"
@@ -295,8 +433,18 @@ def main():
     project = os.path.join("test-projects", sys.argv[1].rstrip("/"))
     xml_path = os.path.join(project, "target", "pit-reports", "mutations.xml")
     src_root = os.path.join(project, "src", "main", "java")
+    classes_root = os.path.join(project, "target", "classes")
     out_dir = os.path.join(project, "mutated_src_lines")
     os.makedirs(out_dir, exist_ok=True)
+
+    bytecode_cache = {}
+
+    def get_bytecode(fqcn):
+        if fqcn in bytecode_cache:
+            return bytecode_cache[fqcn]
+        class_file = os.path.join(classes_root, fqcn.replace(".", os.sep) + ".class")
+        bytecode_cache[fqcn] = load_class_bytecode(class_file)
+        return bytecode_cache[fqcn]
 
     tree = ET.parse(xml_path)
     root = tree.getroot()
@@ -309,6 +457,21 @@ def main():
     total = 0
 
     for src_file, mutations in by_file.items():
+        def _sort_key(m):
+            blocks_vals = [int(b.text) for b in m.findall("blocks/block") if (b.text or "").lstrip("-").isdigit()]
+            idx_vals = [int(x.text) for x in m.findall("indexes/index") if (x.text or "").lstrip("-").isdigit()]
+            first_block = blocks_vals[0] if blocks_vals else 0
+            first_idx = idx_vals[0] if idx_vals else 0
+            return (
+                m.findtext("mutatedClass", ""),
+                m.findtext("mutatedMethod", ""),
+                m.findtext("methodDescription", ""),
+                int(m.findtext("lineNumber", "0") or 0),
+                first_block,
+                first_idx,
+            )
+        mutations.sort(key=_sort_key)
+
         occ_counter = defaultdict(int)
         csv_name = os.path.splitext(src_file)[0] + ".csv"
         csv_path = os.path.join(out_dir, csv_name)
@@ -316,10 +479,15 @@ def main():
 
         for mut in mutations:
             cls = mut.findtext("mutatedClass", "")
+            method = mut.findtext("mutatedMethod", "")
+            method_desc = mut.findtext("methodDescription", "")
             lineno = int(mut.findtext("lineNumber", "0"))
             desc = mut.findtext("description", "")
             killing = mut.findtext("killingTests", "") or ""
             covering = mut.findtext("coveringTests", "") or ""
+            blocks = "|".join(b.text or "" for b in mut.findall("blocks/block"))
+            index_vals = [int(x.text) for x in mut.findall("indexes/index") if (x.text or "").lstrip("-").isdigit()]
+            bc_index = index_vals[0] if index_vals else None
 
             pkg = cls.rsplit(".", 1)[0] if "." in cls else ""
             rel_src = os.path.join(pkg.replace(".", "/"), src_file)
@@ -329,8 +497,16 @@ def main():
                 source_cache[abs_path] = load_source(abs_path)
             lines, tokens = source_cache[abs_path]
 
-            key = (src_file, lineno, desc)
-            occ = occ_counter[key]
+            key = (src_file, method, method_desc, lineno, desc)
+            bc_occ = None
+            if bc_index is not None:
+                bc_occ = resolve_occ_from_bytecode(
+                    get_bytecode(cls), method, method_desc, bc_index, lineno, desc,
+                )
+            if bc_occ is not None:
+                occ = bc_occ
+            else:
+                occ = occ_counter[key]
             occ_counter[key] += 1
 
             if 0 < lineno <= len(lines):
@@ -348,14 +524,14 @@ def main():
             test_files = extract_test_files(covering or killing)
 
             rows.append([
-                orig, mutated, rel_src, lineno, desc, test_files
+                orig, mutated, rel_src, lineno, desc, test_files, blocks
             ])
 
         with open(csv_path, "w", newline="", encoding="utf-8") as f:
             w = csv.writer(f, quoting=csv.QUOTE_NONNUMERIC)
             w.writerow([
                 "mutation_line", "mutated_line", "source_file",
-                "line_number", "description", "test_file"
+                "line_number", "description", "test_file", "block"
             ])
             w.writerows(rows)
 

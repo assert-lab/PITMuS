@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:62522e1fd66bf299586e8644297b9295791d70ea72f5fe8dd24ff75920753188
-size 2627
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"NodeTraversor.traverse(new Accumulator(root, elements, eval), root);","NodeTraversor.traverse(new Accumulator(root, elements, eval), root);  // removed call to traverse()","org/jsoup/select/Collector.java",28,"removed call to org/jsoup/select/NodeTraversor::traverse","Locale.java|String.java","2"
+"return elements;","return null;","org/jsoup/select/Collector.java",29,"replaced return value with null for org/jsoup/select/Collector::collect","Locale.java|String.java","3"
+"return finder.find(root, root);","return null;","org/jsoup/select/Collector.java",65,"replaced return value with null for org/jsoup/select/Collector::findFirst","","2"
+"if (node instanceof Element) {","if (false) {","org/jsoup/select/Collector.java",44,"removed conditional - replaced equality check with false","Locale.java|String.java","0"
+"if (node instanceof Element) {","if (true) {","org/jsoup/select/Collector.java",44,"removed conditional - replaced equality check with true","Locale.java|String.java","0"
+"if (eval.matches(root, el))","if (false)","org/jsoup/select/Collector.java",46,"removed conditional - replaced equality check with false","Locale.java|String.java","2"
+"if (eval.matches(root, el))","if (true)","org/jsoup/select/Collector.java",46,"removed conditional - replaced equality check with true","Locale.java|String.java","2"
+"return match;","return null;","org/jsoup/select/Collector.java",81,"replaced return value with null for org/jsoup/select/Collector$FirstFinder::find","Locale.java","1"
+"if (node instanceof Element) {","if (false) {","org/jsoup/select/Collector.java",86,"removed conditional - replaced equality check with false","Locale.java","0"
+"if (node instanceof Element) {","if (true) {","org/jsoup/select/Collector.java",86,"removed conditional - replaced equality check with true","Locale.java","0"
+"if (eval.matches(evalRoot, el)) {","if (false) {","org/jsoup/select/Collector.java",88,"removed conditional - replaced equality check with false","Locale.java","2"
+"if (eval.matches(evalRoot, el)) {","if (true) {","org/jsoup/select/Collector.java",88,"removed conditional - replaced equality check with true","Locale.java","2"
+"return STOP;","return null;","org/jsoup/select/Collector.java",90,"replaced return value with null for org/jsoup/select/Collector$FirstFinder::head","Locale.java","3"
+"return CONTINUE;","return null;","org/jsoup/select/Collector.java",93,"replaced return value with null for org/jsoup/select/Collector$FirstFinder::head","Locale.java","4"
+"return CONTINUE;","return null;","org/jsoup/select/Collector.java",98,"replaced return value with null for org/jsoup/select/Collector$FirstFinder::tail","Locale.java","0"

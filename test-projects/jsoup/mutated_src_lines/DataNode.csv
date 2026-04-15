@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c43a59b9684001cd6c54d5635f316d2c2327d1405fe5e51acbc0e20d6246aa2f
-size 1065
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return (DataNode) super.clone();","return null;","org/jsoup/nodes/DataNode.java",54,"replaced return value with null for org/jsoup/nodes/DataNode::clone","","1"
+"return coreValue();","return """";","org/jsoup/nodes/DataNode.java",28,"replaced return value with """" for org/jsoup/nodes/DataNode::getWholeData","Document$OutputSettings.java|Locale.java","1"
+"return ""#data"";","return """";","org/jsoup/nodes/DataNode.java",20,"replaced return value with """" for org/jsoup/nodes/DataNode::nodeName","Document$OutputSettings.java|Locale.java","0"
+"coreValue(data);","// removed call to coreValue()","org/jsoup/nodes/DataNode.java",37,"removed call to org/jsoup/nodes/DataNode::coreValue","","0"
+"return this;","return null;","org/jsoup/nodes/DataNode.java",38,"replaced return value with null for org/jsoup/nodes/DataNode::setWholeData","","1"
+"return outerHtml();","return """";","org/jsoup/nodes/DataNode.java",49,"replaced return value with """" for org/jsoup/nodes/DataNode::toString","","1"

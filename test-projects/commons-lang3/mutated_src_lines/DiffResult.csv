@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:505210ab21948ebaee8c001878bcc3f502e2500fd0f0d5253ae4b6c64c8a8898
-size 2342
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"if (style == null) {","if (false) {","org/apache/commons/lang3/builder/DiffResult.java",84,"removed conditional - replaced equality check with false","","4"
+"if (style == null) {","if (true) {","org/apache/commons/lang3/builder/DiffResult.java",84,"removed conditional - replaced equality check with true","","4"
+"return Collections.unmodifiableList(diffList);","return Collections.emptyList();","org/apache/commons/lang3/builder/DiffResult.java",120,"replaced return value with Collections.emptyList for org/apache/commons/lang3/builder/DiffResult::getDiffs","","1"
+"return this.lhs;","return null;","org/apache/commons/lang3/builder/DiffResult.java",98,"replaced return value with null for org/apache/commons/lang3/builder/DiffResult::getLeft","","0"
+"return diffList.size();","return 0;","org/apache/commons/lang3/builder/DiffResult.java",131,"replaced int return with 0 for org/apache/commons/lang3/builder/DiffResult::getNumberOfDiffs","","1"
+"return this.rhs;","return null;","org/apache/commons/lang3/builder/DiffResult.java",108,"replaced return value with null for org/apache/commons/lang3/builder/DiffResult::getRight","","0"
+"return style;","return null;","org/apache/commons/lang3/builder/DiffResult.java",142,"replaced return value with null for org/apache/commons/lang3/builder/DiffResult::getToStringStyle","","0"
+"return diffList.iterator();","return null;","org/apache/commons/lang3/builder/DiffResult.java",218,"replaced return value with null for org/apache/commons/lang3/builder/DiffResult::iterator","","1"
+"return toString(style);","return """";","org/apache/commons/lang3/builder/DiffResult.java",178,"replaced return value with """" for org/apache/commons/lang3/builder/DiffResult::toString","","1"
+"if (diffList.isEmpty()) {","if (false) {","org/apache/commons/lang3/builder/DiffResult.java",193,"removed conditional - replaced equality check with false","","1"
+"if (diffList.isEmpty()) {","if (true) {","org/apache/commons/lang3/builder/DiffResult.java",193,"removed conditional - replaced equality check with true","","1"
+"return String.format(""%s %s %s"", lhsBuilder.build(), DIFFERS_STRING,","return """";","org/apache/commons/lang3/builder/DiffResult.java",205,"replaced return value with """" for org/apache/commons/lang3/builder/DiffResult::toString","","20"

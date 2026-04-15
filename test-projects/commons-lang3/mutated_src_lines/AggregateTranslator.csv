@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:04012a0bdfdc44e454c4928a14bab1b456bbc2f4bed8f7d24189c76f0a557188
-size 635
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"if (consumed != 0) {","if (false) {","org/apache/commons/lang3/text/translate/AggregateTranslator.java",56,"removed conditional - replaced equality check with false","","3"
+"if (consumed != 0) {","if (true) {","org/apache/commons/lang3/text/translate/AggregateTranslator.java",56,"removed conditional - replaced equality check with true","","3"
+"return consumed;","return 0;","org/apache/commons/lang3/text/translate/AggregateTranslator.java",57,"replaced int return with 0 for org/apache/commons/lang3/text/translate/AggregateTranslator::translate","","4"

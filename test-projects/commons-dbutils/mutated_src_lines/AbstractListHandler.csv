@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3cf97518679745e54198057f7f49becf7d23cd8718c1dad493b03c4dc3c158cc
-size 888
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"while (rs.next()) {","while (false) {","org/apache/commons/dbutils/handlers/AbstractListHandler.java",47,"removed conditional - replaced equality check with false","ArrayListHandlerTest.java|ColumnListHandlerTest.java|MapListHandlerTest.java","3"
+"while (rs.next()) {","while (true) {","org/apache/commons/dbutils/handlers/AbstractListHandler.java",47,"removed conditional - replaced equality check with true","ArrayListHandlerTest.java|ColumnListHandlerTest.java|MapListHandlerTest.java","3"
+"return rows;","return Collections.emptyList();","org/apache/commons/dbutils/handlers/AbstractListHandler.java",50,"replaced return value with Collections.emptyList for org/apache/commons/dbutils/handlers/AbstractListHandler::handle","ArrayListHandlerTest.java|ColumnListHandlerTest.java|MapListHandlerTest.java","7"

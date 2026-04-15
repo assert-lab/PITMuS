@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a96da253f9dba28a94decdbe027276640994358e5c011eda926687111923f8d5
-size 948
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"if (result == NO_INIT) {","if (false) {","org/apache/commons/lang3/concurrent/LazyInitializer.java",102,"removed conditional - replaced equality check with false","","0"
+"if (result == NO_INIT) {","if (true) {","org/apache/commons/lang3/concurrent/LazyInitializer.java",102,"removed conditional - replaced equality check with true","","0"
+"if (result == NO_INIT) {","if (false) {","org/apache/commons/lang3/concurrent/LazyInitializer.java",105,"removed conditional - replaced equality check with false","","1"
+"if (result == NO_INIT) {","if (true) {","org/apache/commons/lang3/concurrent/LazyInitializer.java",105,"removed conditional - replaced equality check with true","","1"
+"return result;","return null;","org/apache/commons/lang3/concurrent/LazyInitializer.java",111,"replaced return value with null for org/apache/commons/lang3/concurrent/LazyInitializer::get","","6"

@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4fd900b5aaff7617eb7ab1eed4d1eb60a26cfabd268b7dd41120471a8bef3622
-size 3677
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return lowerCase(name.trim());","return """";","org/jsoup/parser/ParseSettings.java",85,"replaced return value with """" for org/jsoup/parser/ParseSettings::normalName","Document$OutputSettings.java|File.java|Locale.java|String.java","2"
+"if (!preserveAttributeCase)","if (false)","org/jsoup/parser/ParseSettings.java",71,"removed conditional - replaced equality check with false","File.java|Locale.java","1"
+"if (!preserveAttributeCase)","if (true)","org/jsoup/parser/ParseSettings.java",71,"removed conditional - replaced equality check with true","File.java|Locale.java","1"
+"return name;","return """";","org/jsoup/parser/ParseSettings.java",73,"replaced return value with """" for org/jsoup/parser/ParseSettings::normalizeAttribute","File.java|Locale.java","4"
+"if (attributes != null && !preserveAttributeCase) {","if (false && !preserveAttributeCase) {","org/jsoup/parser/ParseSettings.java",77,"removed conditional - replaced equality check with false","Document$OutputSettings.java|File.java|Locale.java|String.java","0"
+"if (attributes != null && !preserveAttributeCase) {","if (true && !preserveAttributeCase) {","org/jsoup/parser/ParseSettings.java",77,"removed conditional - replaced equality check with true","Document$OutputSettings.java|File.java|Locale.java|String.java","0"
+"if (attributes != null && !preserveAttributeCase) {","if (false) {","org/jsoup/parser/ParseSettings.java",77,"removed conditional - replaced equality check with false","File.java|Locale.java|String.java","1"
+"if (attributes != null && !preserveAttributeCase) {","if (true) {","org/jsoup/parser/ParseSettings.java",77,"removed conditional - replaced equality check with true","File.java|Locale.java|String.java","1"
+"attributes.normalize();","// removed call to normalize()","org/jsoup/parser/ParseSettings.java",78,"removed call to org/jsoup/nodes/Attributes::normalize","File.java|Locale.java|String.java","2"
+"return attributes;","return null;","org/jsoup/parser/ParseSettings.java",80,"replaced return value with null for org/jsoup/parser/ParseSettings::normalizeAttributes","Document$OutputSettings.java|File.java|Locale.java|String.java","3"
+"if (!preserveTagCase)","if (false)","org/jsoup/parser/ParseSettings.java",61,"removed conditional - replaced equality check with false","Document$OutputSettings.java|File.java|Locale.java|String.java","1"
+"if (!preserveTagCase)","if (true)","org/jsoup/parser/ParseSettings.java",61,"removed conditional - replaced equality check with true","Document$OutputSettings.java|File.java|Locale.java|String.java","1"
+"return name;","return """";","org/jsoup/parser/ParseSettings.java",63,"replaced return value with """" for org/jsoup/parser/ParseSettings::normalizeTag","Document$OutputSettings.java|File.java|Locale.java|String.java","4"
+"return preserveAttributeCase;","return false;","org/jsoup/parser/ParseSettings.java",39,"replaced boolean return with false for org/jsoup/parser/ParseSettings::preserveAttributeCase","File.java|Locale.java|String.java","0"
+"return preserveAttributeCase;","return true;","org/jsoup/parser/ParseSettings.java",39,"replaced boolean return with true for org/jsoup/parser/ParseSettings::preserveAttributeCase","File.java|Locale.java|String.java","0"
+"return preserveTagCase;","return false;","org/jsoup/parser/ParseSettings.java",32,"replaced boolean return with false for org/jsoup/parser/ParseSettings::preserveTagCase","File.java|Locale.java|String.java","0"
+"return preserveTagCase;","return true;","org/jsoup/parser/ParseSettings.java",32,"replaced boolean return with true for org/jsoup/parser/ParseSettings::preserveTagCase","File.java|Locale.java|String.java","0"

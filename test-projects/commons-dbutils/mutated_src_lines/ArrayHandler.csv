@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0c9a763cbfef50e66bb18fb5c7d0317057bf328f7799a1318f23403f0ad44cc9
-size 1002
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return rs.next() ? this.convert.toArray(rs) : EMPTY_ARRAY;","return false ? this.convert.toArray(rs) : EMPTY_ARRAY;","org/apache/commons/dbutils/handlers/ArrayHandler.java",83,"removed conditional - replaced equality check with false","ArrayHandlerTest.java|AsyncQueryRunnerTest.java|QueryRunnerTest.java","1"
+"return rs.next() ? this.convert.toArray(rs) : EMPTY_ARRAY;","return true ? this.convert.toArray(rs) : EMPTY_ARRAY;","org/apache/commons/dbutils/handlers/ArrayHandler.java",83,"removed conditional - replaced equality check with true","ArrayHandlerTest.java|AsyncQueryRunnerTest.java|QueryRunnerTest.java","1"
+"return rs.next() ? this.convert.toArray(rs) : EMPTY_ARRAY;","return null;","org/apache/commons/dbutils/handlers/ArrayHandler.java",83,"replaced return value with null for org/apache/commons/dbutils/handlers/ArrayHandler::handle","ArrayHandlerTest.java|AsyncQueryRunnerTest.java|QueryRunnerTest.java","5"

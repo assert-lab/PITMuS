@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1776181074617
+Bnd-LastModified: 1776201868541
 Build-Jdk-Spec: 17
 Bundle-Description: Apache Commons Lang, a package of Java utility class
  es for the  classes that are in java.lang's hierarchy, or are considere

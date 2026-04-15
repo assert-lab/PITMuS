@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fb998f98b58abc7e5d1cd79d4b0495de2453d2b57255177c6cb1ccee5313c9dc
-size 2122
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"if (obj == this) {","if (true) {","org/apache/commons/lang3/reflect/TypeLiteral.java",100,"removed conditional - replaced equality check with true","","0"
+"return true;","return false;","org/apache/commons/lang3/reflect/TypeLiteral.java",101,"replaced boolean return with false for org/apache/commons/lang3/reflect/TypeLiteral::equals","","1"
+"if (!(obj instanceof TypeLiteral)) {","if (!(false)) {","org/apache/commons/lang3/reflect/TypeLiteral.java",103,"removed conditional - replaced equality check with false","","2"
+"if (!(obj instanceof TypeLiteral)) {","if (!(true)) {","org/apache/commons/lang3/reflect/TypeLiteral.java",103,"removed conditional - replaced equality check with true","","2"
+"return false;","return true;","org/apache/commons/lang3/reflect/TypeLiteral.java",104,"replaced boolean return with true for org/apache/commons/lang3/reflect/TypeLiteral::equals","","3"
+"return TypeUtils.equals(value, other.value);","return false;","org/apache/commons/lang3/reflect/TypeLiteral.java",107,"replaced boolean return with false for org/apache/commons/lang3/reflect/TypeLiteral::equals","","5"
+"return TypeUtils.equals(value, other.value);","return true;","org/apache/commons/lang3/reflect/TypeLiteral.java",107,"replaced boolean return with true for org/apache/commons/lang3/reflect/TypeLiteral::equals","","5"
+"return value;","return null;","org/apache/commons/lang3/reflect/TypeLiteral.java",122,"replaced return value with null for org/apache/commons/lang3/reflect/TypeLiteral::getType","","0"
+"return 37 << 4 | value.hashCode();","return 37 << 4 & value.hashCode();","org/apache/commons/lang3/reflect/TypeLiteral.java",112,"Replaced bitwise OR with AND","","1"
+"return 37 << 4 | value.hashCode();","return 0;","org/apache/commons/lang3/reflect/TypeLiteral.java",112,"replaced int return with 0 for org/apache/commons/lang3/reflect/TypeLiteral::hashCode","","1"
+"return toString;","return """";","org/apache/commons/lang3/reflect/TypeLiteral.java",117,"replaced return value with """" for org/apache/commons/lang3/reflect/TypeLiteral::toString","","0"

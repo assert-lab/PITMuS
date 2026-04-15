@@ -1,3 +1,3 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e17f8615282d0e891a3d171080508876ee03b87bb0495a5517c4d4066ceb08c0
-size 452
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return consumed ? 1 : 0;","return false ? 1 : 0;","org/apache/commons/lang3/text/translate/CodePointTranslator.java",42,"removed conditional - replaced equality check with false","","2"
+"return consumed ? 1 : 0;","return true ? 1 : 0;","org/apache/commons/lang3/text/translate/CodePointTranslator.java",42,"removed conditional - replaced equality check with true","","2"

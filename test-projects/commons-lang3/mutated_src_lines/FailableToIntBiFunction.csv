@@ -1,3 +1,2 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:32986083e278dc8a212bddd4ab16be3938f1a6fddbf60977bc687876d10a4bd5
-size 288
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return NOP;","return null;","org/apache/commons/lang3/function/FailableToIntBiFunction.java",46,"replaced return value with null for org/apache/commons/lang3/function/FailableToIntBiFunction::nop","","0"

@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:471602ae5a53ea256eb7d6a16aa4a4dd3aa3905c87693d03989fc80816e9b87a
-size 2819
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"if (context == null) {","if (false) {","org/apache/commons/lang3/exception/ContextedRuntimeException.java",149,"removed conditional - replaced equality check with false","","1"
+"if (context == null) {","if (true) {","org/apache/commons/lang3/exception/ContextedRuntimeException.java",149,"removed conditional - replaced equality check with true","","1"
+"return this;","return null;","org/apache/commons/lang3/exception/ContextedRuntimeException.java",172,"replaced return value with null for org/apache/commons/lang3/exception/ContextedRuntimeException::addContextValue","","1"
+"return this.exceptionContext.getContextEntries();","return Collections.emptyList();","org/apache/commons/lang3/exception/ContextedRuntimeException.java",215,"replaced return value with Collections.emptyList for org/apache/commons/lang3/exception/ContextedRuntimeException::getContextEntries","","1"
+"return exceptionContext.getContextLabels();","return Collections.emptySet();","org/apache/commons/lang3/exception/ContextedRuntimeException.java",223,"replaced return value with Collections.emptySet for org/apache/commons/lang3/exception/ContextedRuntimeException::getContextLabels","","1"
+"return this.exceptionContext.getContextValues(label);","return Collections.emptyList();","org/apache/commons/lang3/exception/ContextedRuntimeException.java",199,"replaced return value with Collections.emptyList for org/apache/commons/lang3/exception/ContextedRuntimeException::getContextValues","","1"
+"return this.exceptionContext.getFirstContextValue(label);","return null;","org/apache/commons/lang3/exception/ContextedRuntimeException.java",207,"replaced return value with null for org/apache/commons/lang3/exception/ContextedRuntimeException::getFirstContextValue","","1"
+"return exceptionContext.getFormattedExceptionMessage(baseMessage);","return """";","org/apache/commons/lang3/exception/ContextedRuntimeException.java",253,"replaced return value with """" for org/apache/commons/lang3/exception/ContextedRuntimeException::getFormattedExceptionMessage","","1"
+"return getFormattedExceptionMessage(super.getMessage());","return """";","org/apache/commons/lang3/exception/ContextedRuntimeException.java",234,"replaced return value with """" for org/apache/commons/lang3/exception/ContextedRuntimeException::getMessage","","2"
+"return super.getMessage();","return """";","org/apache/commons/lang3/exception/ContextedRuntimeException.java",245,"replaced return value with """" for org/apache/commons/lang3/exception/ContextedRuntimeException::getRawMessage","","1"
+"return this;","return null;","org/apache/commons/lang3/exception/ContextedRuntimeException.java",191,"replaced return value with null for org/apache/commons/lang3/exception/ContextedRuntimeException::setContextValue","","1"

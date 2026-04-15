@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3909eefccba32596af775145918de00ea8757d1c1765dfee57069b3d15a821ac
-size 4191
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return (final T t, final U u) -> test(t, u) && other.test(t, u);","return null;","org/apache/commons/lang3/function/FailableBiPredicate.java",75,"replaced return value with null for org/apache/commons/lang3/function/FailableBiPredicate::and","","1"
+"return FALSE;","return null;","org/apache/commons/lang3/function/FailableBiPredicate.java",51,"replaced return value with null for org/apache/commons/lang3/function/FailableBiPredicate::falsePredicate","","0"
+"return (final T t, final U u) -> test(t, u) && other.test(t, u);","return (final T t, final U u) -> test(t, u) && false;","org/apache/commons/lang3/function/FailableBiPredicate.java",75,"removed conditional - replaced equality check with false","","1"
+"return (final T t, final U u) -> test(t, u) && other.test(t, u);","return (final T t, final U u) -> test(t, u) && true;","org/apache/commons/lang3/function/FailableBiPredicate.java",75,"removed conditional - replaced equality check with true","","1"
+"return (final T t, final U u) -> test(t, u) && other.test(t, u);","return false;","org/apache/commons/lang3/function/FailableBiPredicate.java",75,"removed conditional - replaced equality check with false","","3"
+"return (final T t, final U u) -> test(t, u) && other.test(t, u);","return true;","org/apache/commons/lang3/function/FailableBiPredicate.java",75,"removed conditional - replaced equality check with true","","3"
+"return (final T t, final U u) -> test(t, u) && other.test(t, u);","return true;","org/apache/commons/lang3/function/FailableBiPredicate.java",75,"replaced boolean return with true for org/apache/commons/lang3/function/FailableBiPredicate::lambda$and$2","","6"
+"return (final T t, final U u) -> !test(t, u);","return false;","org/apache/commons/lang3/function/FailableBiPredicate.java",84,"removed conditional - replaced equality check with false","","1"
+"return (final T t, final U u) -> !test(t, u);","return true;","org/apache/commons/lang3/function/FailableBiPredicate.java",84,"removed conditional - replaced equality check with true","","1"
+"return (final T t, final U u) -> !test(t, u);","return true;","org/apache/commons/lang3/function/FailableBiPredicate.java",84,"replaced boolean return with true for org/apache/commons/lang3/function/FailableBiPredicate::lambda$negate$3","","4"
+"return (final T t, final U u) -> test(t, u) || other.test(t, u);","return (final T t, final U u) -> test(t, u) || false;","org/apache/commons/lang3/function/FailableBiPredicate.java",96,"removed conditional - replaced equality check with false","","1"
+"return (final T t, final U u) -> test(t, u) || other.test(t, u);","return (final T t, final U u) -> test(t, u) || true;","org/apache/commons/lang3/function/FailableBiPredicate.java",96,"removed conditional - replaced equality check with true","","1"
+"return (final T t, final U u) -> test(t, u) || other.test(t, u);","return false;","org/apache/commons/lang3/function/FailableBiPredicate.java",96,"removed conditional - replaced equality check with false","","3"
+"return (final T t, final U u) -> test(t, u) || other.test(t, u);","return true;","org/apache/commons/lang3/function/FailableBiPredicate.java",96,"removed conditional - replaced equality check with true","","3"
+"return (final T t, final U u) -> test(t, u) || other.test(t, u);","return true;","org/apache/commons/lang3/function/FailableBiPredicate.java",96,"replaced boolean return with true for org/apache/commons/lang3/function/FailableBiPredicate::lambda$or$4","","6"
+"return (final T t, final U u) -> !test(t, u);","return null;","org/apache/commons/lang3/function/FailableBiPredicate.java",84,"replaced return value with null for org/apache/commons/lang3/function/FailableBiPredicate::negate","","0"
+"return (final T t, final U u) -> test(t, u) || other.test(t, u);","return null;","org/apache/commons/lang3/function/FailableBiPredicate.java",96,"replaced return value with null for org/apache/commons/lang3/function/FailableBiPredicate::or","","1"
+"return TRUE;","return null;","org/apache/commons/lang3/function/FailableBiPredicate.java",63,"replaced return value with null for org/apache/commons/lang3/function/FailableBiPredicate::truePredicate","","0"

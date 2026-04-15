@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1f2c9a60880ace7c8e3c279b12f9fc9cce5963dcdbbeb9fd604f7bc6df2f2d81
-size 1254
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"while ((result = reference.get()) == null) {","while (false) {","org/apache/commons/lang3/concurrent/AtomicSafeInitializer.java",75,"removed conditional - replaced equality check with false","","1"
+"while ((result = reference.get()) == null) {","while (true) {","org/apache/commons/lang3/concurrent/AtomicSafeInitializer.java",75,"removed conditional - replaced equality check with true","","1"
+"if (factory.compareAndSet(null, this)) {","if (false) {","org/apache/commons/lang3/concurrent/AtomicSafeInitializer.java",76,"removed conditional - replaced equality check with false","","3"
+"if (factory.compareAndSet(null, this)) {","if (true) {","org/apache/commons/lang3/concurrent/AtomicSafeInitializer.java",76,"removed conditional - replaced equality check with true","","3"
+"reference.set(initialize());","reference.set(initialize());  // removed call to set()","org/apache/commons/lang3/concurrent/AtomicSafeInitializer.java",77,"removed call to java/util/concurrent/atomic/AtomicReference::set","","5"
+"return result;","return null;","org/apache/commons/lang3/concurrent/AtomicSafeInitializer.java",81,"replaced return value with null for org/apache/commons/lang3/concurrent/AtomicSafeInitializer::get","","7"

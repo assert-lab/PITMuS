@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:785db7a2496d04fd422e51e9479e889528c3f203e98d6991f359eafebb2362bd
-size 806
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"cVerbose.set(verbose);","// removed call to set()","org/joda/time/tz/ZoneInfoLogger.java",39,"removed call to java/lang/ThreadLocal::set","TestCompiler.java","1"
+"return cVerbose.get();","return false;","org/joda/time/tz/ZoneInfoLogger.java",35,"replaced boolean return with false for org/joda/time/tz/ZoneInfoLogger::verbose","TestCompiler.java","2"
+"return cVerbose.get();","return true;","org/joda/time/tz/ZoneInfoLogger.java",35,"replaced boolean return with true for org/joda/time/tz/ZoneInfoLogger::verbose","TestCompiler.java","2"
+"return Boolean.FALSE;","return Boolean.TRUE;","org/joda/time/tz/ZoneInfoLogger.java",26,"replaced Boolean return with True for org/joda/time/tz/ZoneInfoLogger$1::initialValue","TestCompiler.java","0"

@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b2a3df820ee9bf3d66f9e9c013f53b0e6f405db8101889beed8e6c1739a86355
-size 1281
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return (ImmutableTriple<L, M, R>[]) EMPTY_ARRAY;","return null;","org/apache/commons/lang3/tuple/ImmutableTriple.java",69,"replaced return value with null for org/apache/commons/lang3/tuple/ImmutableTriple::emptyArray","","0"
+"return left;","return null;","org/apache/commons/lang3/tuple/ImmutableTriple.java",129,"replaced return value with null for org/apache/commons/lang3/tuple/ImmutableTriple::getLeft","","0"
+"return middle;","return null;","org/apache/commons/lang3/tuple/ImmutableTriple.java",137,"replaced return value with null for org/apache/commons/lang3/tuple/ImmutableTriple::getMiddle","","0"
+"return right;","return null;","org/apache/commons/lang3/tuple/ImmutableTriple.java",145,"replaced return value with null for org/apache/commons/lang3/tuple/ImmutableTriple::getRight","","0"
+"return NULL;","return null;","org/apache/commons/lang3/tuple/ImmutableTriple.java",82,"replaced return value with null for org/apache/commons/lang3/tuple/ImmutableTriple::nullTriple","","0"
+"return new ImmutableTriple<>(left, middle, right);","return null;","org/apache/commons/lang3/tuple/ImmutableTriple.java",100,"replaced return value with null for org/apache/commons/lang3/tuple/ImmutableTriple::of","","1"

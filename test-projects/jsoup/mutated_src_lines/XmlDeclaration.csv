@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f399e152af39019027d1c52276dfa17da9008604bf96807d05e42773d4cc05e4
-size 3153
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"Validate.notNull(name);","// removed call to notNull()","org/jsoup/nodes/XmlDeclaration.java",22,"removed call to org/jsoup/helper/Validate::notNull","File.java","1"
+"return (XmlDeclaration) super.clone();","return null;","org/jsoup/nodes/XmlDeclaration.java",91,"replaced return value with null for org/jsoup/nodes/XmlDeclaration::clone","","1"
+"getWholeDeclaration(sb, new Document.OutputSettings());","getWholeDeclaration(sb, new Document.OutputSettings());  // removed call to getWholeDeclaration()","org/jsoup/nodes/XmlDeclaration.java",46,"removed call to org/jsoup/nodes/XmlDeclaration::getWholeDeclaration","","2"
+"return StringUtil.releaseBuilder(sb).trim();","return """";","org/jsoup/nodes/XmlDeclaration.java",50,"replaced return value with """" for org/jsoup/nodes/XmlDeclaration::getWholeDeclaration","","8"
+"if (!key.equals(nodeName())) { // skips coreValue (name)","if (false) { // skips coreValue (name)","org/jsoup/nodes/XmlDeclaration.java",57,"removed conditional - replaced equality check with false","","10"
+"if (!key.equals(nodeName())) { // skips coreValue (name)","if (true) { // skips coreValue (name)","org/jsoup/nodes/XmlDeclaration.java",57,"removed conditional - replaced equality check with true","","10"
+"if (!val.isEmpty()) {","if (false) {","org/jsoup/nodes/XmlDeclaration.java",61,"removed conditional - replaced equality check with false","","14"
+"if (!val.isEmpty()) {","if (true) {","org/jsoup/nodes/XmlDeclaration.java",61,"removed conditional - replaced equality check with true","","14"
+"Entities.escape(accum, val, out, true, false, false, false);","// removed call to escape()","org/jsoup/nodes/XmlDeclaration.java",63,"removed call to org/jsoup/nodes/Entities::escape","","16"
+"return coreValue();","return """";","org/jsoup/nodes/XmlDeclaration.java",36,"replaced return value with """" for org/jsoup/nodes/XmlDeclaration::name","","1"
+"return ""#declaration"";","return """";","org/jsoup/nodes/XmlDeclaration.java",28,"replaced return value with """" for org/jsoup/nodes/XmlDeclaration::nodeName","File.java","0"
+".append(isProcessingInstruction ? ""!"" : ""?"")",".append(false ? ""!"" : ""?"")","org/jsoup/nodes/XmlDeclaration.java",73,"removed conditional - replaced equality check with false","","1"
+".append(isProcessingInstruction ? ""!"" : ""?"")",".append(true ? ""!"" : ""?"")","org/jsoup/nodes/XmlDeclaration.java",73,"removed conditional - replaced equality check with true","","1"
+"getWholeDeclaration(accum, out);","// removed call to getWholeDeclaration()","org/jsoup/nodes/XmlDeclaration.java",75,"removed call to org/jsoup/nodes/XmlDeclaration::getWholeDeclaration","","7"
+".append(isProcessingInstruction ? ""!"" : ""?"")",".append(false ? ""!"" : ""?"")","org/jsoup/nodes/XmlDeclaration.java",77,"removed conditional - replaced equality check with false","","8"
+".append(isProcessingInstruction ? ""!"" : ""?"")",".append(true ? ""!"" : ""?"")","org/jsoup/nodes/XmlDeclaration.java",77,"removed conditional - replaced equality check with true","","8"
+"return outerHtml();","return """";","org/jsoup/nodes/XmlDeclaration.java",86,"replaced return value with """" for org/jsoup/nodes/XmlDeclaration::toString","","1"

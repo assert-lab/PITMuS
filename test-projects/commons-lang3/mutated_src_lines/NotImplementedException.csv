@@ -1,3 +1,2 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:848b76a5bfb3a048295ac966554d93976c854a549f73c3d31f9e28bb52feb98b
-size 281
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return this.code;","return """";","org/apache/commons/lang3/NotImplementedException.java",134,"replaced return value with """" for org/apache/commons/lang3/NotImplementedException::getCode","","0"

@@ -1,3 +1,2 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7dc5c19b252b9b7e237926faba3378daf5bb4bbbde63f86f8c40329936f9879e
-size 288
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return NOP;","return null;","org/apache/commons/lang3/function/FailableObjLongConsumer.java",44,"replaced return value with null for org/apache/commons/lang3/function/FailableObjLongConsumer::nop","","0"

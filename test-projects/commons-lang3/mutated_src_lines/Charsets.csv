@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b5401f3ce77b15e53a90a911262e63d3d8cb47a5bdf9b96561e648fe91ceac01
-size 2233
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return charsetName == null ? Charset.defaultCharset() : Charset.forName(charsetName);","return false ? Charset.defaultCharset() : Charset.forName(charsetName);","org/apache/commons/lang3/Charsets.java",56,"removed conditional - replaced equality check with false","","0"
+"return charsetName == null ? Charset.defaultCharset() : Charset.forName(charsetName);","return true ? Charset.defaultCharset() : Charset.forName(charsetName);","org/apache/commons/lang3/Charsets.java",56,"removed conditional - replaced equality check with true","","0"
+"return charsetName == null ? Charset.defaultCharset() : Charset.forName(charsetName);","return null;","org/apache/commons/lang3/Charsets.java",56,"replaced return value with null for org/apache/commons/lang3/Charsets::toCharset","","4"
+"return charset == null ? Charset.defaultCharset() : charset;","return false ? Charset.defaultCharset() : charset;","org/apache/commons/lang3/Charsets.java",44,"removed conditional - replaced equality check with false","","0"
+"return charset == null ? Charset.defaultCharset() : charset;","return true ? Charset.defaultCharset() : charset;","org/apache/commons/lang3/Charsets.java",44,"removed conditional - replaced equality check with true","","0"
+"return charset == null ? Charset.defaultCharset() : charset;","return null;","org/apache/commons/lang3/Charsets.java",44,"replaced return value with null for org/apache/commons/lang3/Charsets::toCharset","","4"
+"return charsetName == null ? Charset.defaultCharset().name() : charsetName;","return false ? Charset.defaultCharset().name() : charsetName;","org/apache/commons/lang3/Charsets.java",66,"removed conditional - replaced equality check with false","","0"
+"return charsetName == null ? Charset.defaultCharset().name() : charsetName;","return true ? Charset.defaultCharset().name() : charsetName;","org/apache/commons/lang3/Charsets.java",66,"removed conditional - replaced equality check with true","","0"
+"return charsetName == null ? Charset.defaultCharset().name() : charsetName;","return """";","org/apache/commons/lang3/Charsets.java",66,"replaced return value with """" for org/apache/commons/lang3/Charsets::toCharsetName","","5"

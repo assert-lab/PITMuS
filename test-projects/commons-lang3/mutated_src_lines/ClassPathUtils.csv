@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:41a258f463b3694d23fbb3e17b7b1b412cb80b095cae3a0458df7f72cb8a81bc
-size 1018
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return toFullyQualifiedName(context.getPackage(), resourceName);","return """";","org/apache/commons/lang3/ClassPathUtils.java",59,"replaced return value with """" for org/apache/commons/lang3/ClassPathUtils::toFullyQualifiedName","","4"
+"return context.getName() + ""."" + resourceName;","return """";","org/apache/commons/lang3/ClassPathUtils.java",81,"replaced return value with """" for org/apache/commons/lang3/ClassPathUtils::toFullyQualifiedName","","8"
+"return toFullyQualifiedPath(context.getPackage(), resourceName);","return """";","org/apache/commons/lang3/ClassPathUtils.java",103,"replaced return value with """" for org/apache/commons/lang3/ClassPathUtils::toFullyQualifiedPath","","4"
+"return context.getName().replace('.', '/') + ""/"" + resourceName;","return """";","org/apache/commons/lang3/ClassPathUtils.java",126,"replaced return value with """" for org/apache/commons/lang3/ClassPathUtils::toFullyQualifiedPath","","9"

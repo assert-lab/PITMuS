@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:aff05c5368a965b33627c4e653ccb7f03362c2f7a1ee81862043319c2370a639
-size 969
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return (columnName == null) ?","return (false) ?","org/apache/commons/dbutils/handlers/KeyedHandler.java",141,"removed conditional - replaced equality check with false","KeyedHandlerTest.java","0"
+"return (columnName == null) ?","return (true) ?","org/apache/commons/dbutils/handlers/KeyedHandler.java",141,"removed conditional - replaced equality check with true","KeyedHandlerTest.java","0"
+"return (columnName == null) ?","return null;","org/apache/commons/dbutils/handlers/KeyedHandler.java",141,"replaced return value with null for org/apache/commons/dbutils/handlers/KeyedHandler::createKey","KeyedHandlerTest.java","4"
+"return this.convert.toMap(rs);","return Collections.emptyMap();","org/apache/commons/dbutils/handlers/KeyedHandler.java",158,"replaced return value with Collections.emptyMap for org/apache/commons/dbutils/handlers/KeyedHandler::createRow","KeyedHandlerTest.java","1"

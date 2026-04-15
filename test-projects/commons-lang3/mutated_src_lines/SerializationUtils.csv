@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5aef5c9ca33ca7b7eacbe6a78817d542a7c40048eaf68790739bcba768a27ecf
-size 2831
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"if (object == null) {","if (false) {","org/apache/commons/lang3/SerializationUtils.java",135,"removed conditional - replaced equality check with false","","0"
+"if (object == null) {","if (true) {","org/apache/commons/lang3/SerializationUtils.java",135,"removed conditional - replaced equality check with true","","0"
+"return readObject;","return null;","org/apache/commons/lang3/SerializationUtils.java",150,"replaced return value with null for org/apache/commons/lang3/SerializationUtils::clone","","9"
+"return obj;","return null;","org/apache/commons/lang3/SerializationUtils.java",216,"replaced return value with null for org/apache/commons/lang3/SerializationUtils::deserialize","","4"
+"return deserialize(new ByteArrayInputStream(objectData));","return null;","org/apache/commons/lang3/SerializationUtils.java",179,"replaced return value with null for org/apache/commons/lang3/SerializationUtils::deserialize","","3"
+"return (T) deserialize(serialize(obj));","return null;","org/apache/commons/lang3/SerializationUtils.java",235,"replaced return value with null for org/apache/commons/lang3/SerializationUtils::roundtrip","","2"
+"serialize(obj, baos);","// removed call to serialize()","org/apache/commons/lang3/SerializationUtils.java",248,"removed call to org/apache/commons/lang3/SerializationUtils::serialize","","1"
+"return baos.toByteArray();","return null;","org/apache/commons/lang3/SerializationUtils.java",249,"replaced return value with null for org/apache/commons/lang3/SerializationUtils::serialize","","3"
+"out.writeObject(obj);","// removed call to writeObject()","org/apache/commons/lang3/SerializationUtils.java",271,"removed call to java/io/ObjectOutputStream::writeObject","","2"
+"return Class.forName(name, false, classLoader);","return null;","org/apache/commons/lang3/SerializationUtils.java",104,"replaced return value with null for org/apache/commons/lang3/SerializationUtils$ClassLoaderAwareObjectInputStream::resolveClass","","2"
+"return Class.forName(name, false, Thread.currentThread().getContextClassLoader());","return null;","org/apache/commons/lang3/SerializationUtils.java",107,"replaced return value with null for org/apache/commons/lang3/SerializationUtils$ClassLoaderAwareObjectInputStream::resolveClass","","6"
+"if (cls != null) {","if (false) {","org/apache/commons/lang3/SerializationUtils.java",110,"removed conditional - replaced equality check with false","","8"
+"if (cls != null) {","if (true) {","org/apache/commons/lang3/SerializationUtils.java",110,"removed conditional - replaced equality check with true","","8"
+"return cls;","return null;","org/apache/commons/lang3/SerializationUtils.java",111,"replaced return value with null for org/apache/commons/lang3/SerializationUtils$ClassLoaderAwareObjectInputStream::resolveClass","","9"

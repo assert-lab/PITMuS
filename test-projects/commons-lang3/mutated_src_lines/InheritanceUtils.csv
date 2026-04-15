@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:27623687a3c170da15fefe38ccf2cbe820af7d7a7ba1a885d05311ec8649150d
-size 2754
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"if (child == null || parent == null) {","if (false || parent == null) {","org/apache/commons/lang3/reflect/InheritanceUtils.java",49,"removed conditional - replaced equality check with false","","0"
+"if (child == null || parent == null) {","if (true || parent == null) {","org/apache/commons/lang3/reflect/InheritanceUtils.java",49,"removed conditional - replaced equality check with true","","0"
+"if (child == null || parent == null) {","if (child == null || false) {","org/apache/commons/lang3/reflect/InheritanceUtils.java",49,"removed conditional - replaced equality check with false","","1"
+"if (child == null || parent == null) {","if (child == null || true) {","org/apache/commons/lang3/reflect/InheritanceUtils.java",49,"removed conditional - replaced equality check with true","","1"
+"return -1;","return 0;","org/apache/commons/lang3/reflect/InheritanceUtils.java",50,"replaced int return with 0 for org/apache/commons/lang3/reflect/InheritanceUtils::distance","","2"
+"if (child.equals(parent)) {","if (false) {","org/apache/commons/lang3/reflect/InheritanceUtils.java",53,"removed conditional - replaced equality check with false","","4"
+"if (child.equals(parent)) {","if (true) {","org/apache/commons/lang3/reflect/InheritanceUtils.java",53,"removed conditional - replaced equality check with true","","4"
+"if (d == 1) {","if (false) {","org/apache/commons/lang3/reflect/InheritanceUtils.java",60,"removed conditional - replaced equality check with false","","9"
+"if (d == 1) {","if (true) {","org/apache/commons/lang3/reflect/InheritanceUtils.java",60,"removed conditional - replaced equality check with true","","9"
+"return d;","return 0;","org/apache/commons/lang3/reflect/InheritanceUtils.java",61,"replaced int return with 0 for org/apache/commons/lang3/reflect/InheritanceUtils::distance","","10"
+"return d > 0 ? d + 1 : -1;","return d >= 0 ? d + 1 : -1;","org/apache/commons/lang3/reflect/InheritanceUtils.java",64,"changed conditional boundary","","12"
+"return d > 0 ? d + 1 : -1;","return false ? d + 1 : -1;","org/apache/commons/lang3/reflect/InheritanceUtils.java",64,"removed conditional - replaced comparison check with false","","12"
+"return d > 0 ? d + 1 : -1;","return true ? d + 1 : -1;","org/apache/commons/lang3/reflect/InheritanceUtils.java",64,"removed conditional - replaced comparison check with true","","12"
+"return d > 0 ? d + 1 : -1;","return d > 0 ? d - 1 : -1;","org/apache/commons/lang3/reflect/InheritanceUtils.java",64,"Replaced integer addition with subtraction","","13"
+"return d > 0 ? d + 1 : -1;","return 0;","org/apache/commons/lang3/reflect/InheritanceUtils.java",64,"replaced int return with 0 for org/apache/commons/lang3/reflect/InheritanceUtils::distance","","15"

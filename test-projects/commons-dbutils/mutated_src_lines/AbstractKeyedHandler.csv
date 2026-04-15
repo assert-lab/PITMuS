@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6a88447b236ed429adba8a68a2171db441df56e450d83a00f1a82e31916ac010
-size 1100
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return new HashMap<K, V>();","return Collections.emptyMap();","org/apache/commons/dbutils/handlers/AbstractKeyedHandler.java",66,"replaced return value with Collections.emptyMap for org/apache/commons/dbutils/handlers/AbstractKeyedHandler::createMap","BeanMapHandlerTest.java|KeyedHandlerTest.java","1"
+"while (rs.next()) {","while (false) {","org/apache/commons/dbutils/handlers/AbstractKeyedHandler.java",52,"removed conditional - replaced equality check with false","BeanMapHandlerTest.java|KeyedHandlerTest.java","3"
+"while (rs.next()) {","while (true) {","org/apache/commons/dbutils/handlers/AbstractKeyedHandler.java",52,"removed conditional - replaced equality check with true","BeanMapHandlerTest.java|KeyedHandlerTest.java","3"
+"return result;","return Collections.emptyMap();","org/apache/commons/dbutils/handlers/AbstractKeyedHandler.java",55,"replaced return value with Collections.emptyMap for org/apache/commons/dbutils/handlers/AbstractKeyedHandler::handle","BeanMapHandlerTest.java|KeyedHandlerTest.java","8"

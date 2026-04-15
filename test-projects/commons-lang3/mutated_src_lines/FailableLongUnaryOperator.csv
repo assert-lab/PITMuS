@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6fa942a9de25b92ee980863a4b27e4f2a3b6c2792d433abbcce78772c9c1da76
-size 1760
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return (final long t) -> after.applyAsLong(applyAsLong(t));","return null;","org/apache/commons/lang3/function/FailableLongUnaryOperator.java",65,"replaced return value with null for org/apache/commons/lang3/function/FailableLongUnaryOperator::andThen","","1"
+"return (final long v) -> applyAsLong(before.applyAsLong(v));","return null;","org/apache/commons/lang3/function/FailableLongUnaryOperator.java",87,"replaced return value with null for org/apache/commons/lang3/function/FailableLongUnaryOperator::compose","","1"
+"return t -> t;","return null;","org/apache/commons/lang3/function/FailableLongUnaryOperator.java",42,"replaced return value with null for org/apache/commons/lang3/function/FailableLongUnaryOperator::identity","","0"
+"return (final long t) -> after.applyAsLong(applyAsLong(t));","return 0;","org/apache/commons/lang3/function/FailableLongUnaryOperator.java",65,"replaced long return with 0 for org/apache/commons/lang3/function/FailableLongUnaryOperator::lambda$andThen$2","","2"
+"return (final long v) -> applyAsLong(before.applyAsLong(v));","return 0;","org/apache/commons/lang3/function/FailableLongUnaryOperator.java",87,"replaced long return with 0 for org/apache/commons/lang3/function/FailableLongUnaryOperator::lambda$compose$3","","2"
+"return t -> t;","return 0;","org/apache/commons/lang3/function/FailableLongUnaryOperator.java",42,"replaced long return with 0 for org/apache/commons/lang3/function/FailableLongUnaryOperator::lambda$identity$1","","0"
+"return NOP;","return null;","org/apache/commons/lang3/function/FailableLongUnaryOperator.java",52,"replaced return value with null for org/apache/commons/lang3/function/FailableLongUnaryOperator::nop","","0"

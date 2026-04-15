@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:25238535f85d2f37e994b2e0fa79916000922242ab43d77dbd5b9d12967cb08f
-size 880
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return (final int t) -> {","return null;","org/apache/commons/lang3/function/FailableIntConsumer.java",63,"replaced return value with null for org/apache/commons/lang3/function/FailableIntConsumer::andThen","","1"
+"accept(t);","// removed call to accept()","org/apache/commons/lang3/function/FailableIntConsumer.java",64,"removed call to org/apache/commons/lang3/function/FailableIntConsumer::accept","","0"
+"after.accept(t);","// removed call to accept()","org/apache/commons/lang3/function/FailableIntConsumer.java",65,"removed call to org/apache/commons/lang3/function/FailableIntConsumer::accept","","1"
+"return NOP;","return null;","org/apache/commons/lang3/function/FailableIntConsumer.java",43,"replaced return value with null for org/apache/commons/lang3/function/FailableIntConsumer::nop","","0"

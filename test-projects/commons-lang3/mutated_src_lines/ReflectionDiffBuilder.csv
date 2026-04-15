@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b70f7f957e2406c94c22572e758c68d93342b75b1de24918faff7cb3cec04a7e
-size 3285
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"if (field.getName().indexOf(ClassUtils.INNER_CLASS_SEPARATOR_CHAR) != -1) {","if (false) {","org/apache/commons/lang3/builder/ReflectionDiffBuilder.java",128,"removed conditional - replaced equality check with false","","2"
+"if (field.getName().indexOf(ClassUtils.INNER_CLASS_SEPARATOR_CHAR) != -1) {","if (true) {","org/apache/commons/lang3/builder/ReflectionDiffBuilder.java",128,"removed conditional - replaced equality check with true","","2"
+"return false;","return true;","org/apache/commons/lang3/builder/ReflectionDiffBuilder.java",129,"replaced boolean return with true for org/apache/commons/lang3/builder/ReflectionDiffBuilder::accept","","3"
+"if (Modifier.isTransient(field.getModifiers())) {","if (false) {","org/apache/commons/lang3/builder/ReflectionDiffBuilder.java",131,"removed conditional - replaced equality check with false","","6"
+"if (Modifier.isTransient(field.getModifiers())) {","if (true) {","org/apache/commons/lang3/builder/ReflectionDiffBuilder.java",131,"removed conditional - replaced equality check with true","","6"
+"return false;","return true;","org/apache/commons/lang3/builder/ReflectionDiffBuilder.java",132,"replaced boolean return with true for org/apache/commons/lang3/builder/ReflectionDiffBuilder::accept","","7"
+"return !Modifier.isStatic(field.getModifiers());","return false;","org/apache/commons/lang3/builder/ReflectionDiffBuilder.java",134,"removed conditional - replaced equality check with false","","10"
+"return !Modifier.isStatic(field.getModifiers());","return true;","org/apache/commons/lang3/builder/ReflectionDiffBuilder.java",134,"removed conditional - replaced equality check with true","","10"
+"return !Modifier.isStatic(field.getModifiers());","return true;","org/apache/commons/lang3/builder/ReflectionDiffBuilder.java",134,"replaced boolean return with true for org/apache/commons/lang3/builder/ReflectionDiffBuilder::accept","","13"
+"if (accept(field)) {","if (false) {","org/apache/commons/lang3/builder/ReflectionDiffBuilder.java",114,"removed conditional - replaced equality check with false","","4"
+"if (accept(field)) {","if (true) {","org/apache/commons/lang3/builder/ReflectionDiffBuilder.java",114,"removed conditional - replaced equality check with true","","4"
+"if (left.equals(right)) {","if (false) {","org/apache/commons/lang3/builder/ReflectionDiffBuilder.java",104,"removed conditional - replaced equality check with false","","1"
+"if (left.equals(right)) {","if (true) {","org/apache/commons/lang3/builder/ReflectionDiffBuilder.java",104,"removed conditional - replaced equality check with true","","1"
+"return diffBuilder.build();","return null;","org/apache/commons/lang3/builder/ReflectionDiffBuilder.java",105,"replaced return value with null for org/apache/commons/lang3/builder/ReflectionDiffBuilder::build","","3"
+"appendFields(left.getClass());","appendFields(left.getClass());  // removed call to appendFields()","org/apache/commons/lang3/builder/ReflectionDiffBuilder.java",108,"removed call to org/apache/commons/lang3/builder/ReflectionDiffBuilder::appendFields","","5"
+"return diffBuilder.build();","return null;","org/apache/commons/lang3/builder/ReflectionDiffBuilder.java",109,"replaced return value with null for org/apache/commons/lang3/builder/ReflectionDiffBuilder::build","","7"

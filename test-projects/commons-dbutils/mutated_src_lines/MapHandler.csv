@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:73d01f616e09fd8a3d609f8b01536813f2e444c869b68dd5178531a303ac24b2
-size 836
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return rs.next() ? this.convert.toMap(rs) : null;","return false ? this.convert.toMap(rs) : null;","org/apache/commons/dbutils/handlers/MapHandler.java",73,"removed conditional - replaced equality check with false","MapHandlerTest.java","1"
+"return rs.next() ? this.convert.toMap(rs) : null;","return true ? this.convert.toMap(rs) : null;","org/apache/commons/dbutils/handlers/MapHandler.java",73,"removed conditional - replaced equality check with true","MapHandlerTest.java","1"
+"return rs.next() ? this.convert.toMap(rs) : null;","return Collections.emptyMap();","org/apache/commons/dbutils/handlers/MapHandler.java",73,"replaced return value with Collections.emptyMap for org/apache/commons/dbutils/handlers/MapHandler::handle","MapHandlerTest.java","5"

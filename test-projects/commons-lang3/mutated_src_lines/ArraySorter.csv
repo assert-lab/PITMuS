@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3b9c493540a85054d16e18ef239708ad4a89cd780f8df8bbf4ba0ec6481a4f7e
-size 2849
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"Arrays.sort(array);","// removed call to sort()","org/apache/commons/lang3/ArraySorter.java",37,"removed call to java/util/Arrays::sort","","0"
+"return array;","return null;","org/apache/commons/lang3/ArraySorter.java",38,"replaced return value with null for org/apache/commons/lang3/ArraySorter::sort","","1"
+"Arrays.sort(array);","// removed call to sort()","org/apache/commons/lang3/ArraySorter.java",49,"removed call to java/util/Arrays::sort","","0"
+"return array;","return null;","org/apache/commons/lang3/ArraySorter.java",50,"replaced return value with null for org/apache/commons/lang3/ArraySorter::sort","","1"
+"Arrays.sort(array);","// removed call to sort()","org/apache/commons/lang3/ArraySorter.java",61,"removed call to java/util/Arrays::sort","","0"
+"return array;","return null;","org/apache/commons/lang3/ArraySorter.java",62,"replaced return value with null for org/apache/commons/lang3/ArraySorter::sort","","1"
+"Arrays.sort(array);","// removed call to sort()","org/apache/commons/lang3/ArraySorter.java",73,"removed call to java/util/Arrays::sort","","0"
+"return array;","return null;","org/apache/commons/lang3/ArraySorter.java",74,"replaced return value with null for org/apache/commons/lang3/ArraySorter::sort","","1"
+"Arrays.sort(array);","// removed call to sort()","org/apache/commons/lang3/ArraySorter.java",85,"removed call to java/util/Arrays::sort","","0"
+"return array;","return null;","org/apache/commons/lang3/ArraySorter.java",86,"replaced return value with null for org/apache/commons/lang3/ArraySorter::sort","","1"
+"Arrays.sort(array);","// removed call to sort()","org/apache/commons/lang3/ArraySorter.java",97,"removed call to java/util/Arrays::sort","","0"
+"return array;","return null;","org/apache/commons/lang3/ArraySorter.java",98,"replaced return value with null for org/apache/commons/lang3/ArraySorter::sort","","1"
+"Arrays.sort(array);","// removed call to sort()","org/apache/commons/lang3/ArraySorter.java",122,"removed call to java/util/Arrays::sort","","0"
+"return array;","return null;","org/apache/commons/lang3/ArraySorter.java",123,"replaced return value with null for org/apache/commons/lang3/ArraySorter::sort","","1"
+"Arrays.sort(array, comparator);","// removed call to sort()","org/apache/commons/lang3/ArraySorter.java",137,"removed call to java/util/Arrays::sort","","0"
+"return array;","return null;","org/apache/commons/lang3/ArraySorter.java",138,"replaced return value with null for org/apache/commons/lang3/ArraySorter::sort","","1"
+"Arrays.sort(array);","// removed call to sort()","org/apache/commons/lang3/ArraySorter.java",109,"removed call to java/util/Arrays::sort","","0"
+"return array;","return null;","org/apache/commons/lang3/ArraySorter.java",110,"replaced return value with null for org/apache/commons/lang3/ArraySorter::sort","","1"

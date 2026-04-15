@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:98106bd4974b465cc0f9fbbd68d544ff186ba9959cf9f7be2ad68739b2dfcfbb
-size 2280
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return instance;","return null;","org/apache/commons/dbutils/QueryLoader.java",49,"replaced return value with null for org/apache/commons/dbutils/QueryLoader::instance","QueryLoaderTest.java","0"
+"if (queryMap == null) {","if (false) {","org/apache/commons/dbutils/QueryLoader.java",87,"removed conditional - replaced equality check with false","QueryLoaderTest.java","1"
+"if (queryMap == null) {","if (true) {","org/apache/commons/dbutils/QueryLoader.java",87,"removed conditional - replaced equality check with true","QueryLoaderTest.java","1"
+"return queryMap;","return Collections.emptyMap();","org/apache/commons/dbutils/QueryLoader.java",92,"replaced return value with Collections.emptyMap for org/apache/commons/dbutils/QueryLoader::load","QueryLoaderTest.java","5"
+"if (in == null) {","if (false) {","org/apache/commons/dbutils/QueryLoader.java",115,"removed conditional - replaced equality check with false","QueryLoaderTest.java","2"
+"if (in == null) {","if (true) {","org/apache/commons/dbutils/QueryLoader.java",115,"removed conditional - replaced equality check with true","QueryLoaderTest.java","2"
+"if (dotXml.matcher(path).matches()) {","if (false) {","org/apache/commons/dbutils/QueryLoader.java",121,"removed conditional - replaced equality check with false","QueryLoaderTest.java","12"
+"if (dotXml.matcher(path).matches()) {","if (true) {","org/apache/commons/dbutils/QueryLoader.java",121,"removed conditional - replaced equality check with true","QueryLoaderTest.java","12"
+"props.loadFromXML(in);","// removed call to loadFromXML()","org/apache/commons/dbutils/QueryLoader.java",122,"removed call to java/util/Properties::loadFromXML","","13"
+"props.load(in);","// removed call to load()","org/apache/commons/dbutils/QueryLoader.java",124,"removed call to java/util/Properties::load","QueryLoaderTest.java","15"
+"in.close();","// removed call to close()","org/apache/commons/dbutils/QueryLoader.java",127,"removed call to java/io/InputStream::close","QueryLoaderTest.java","16|18"
+"return hashMap;","return Collections.emptyMap();","org/apache/commons/dbutils/QueryLoader.java",134,"replaced return value with Collections.emptyMap for org/apache/commons/dbutils/QueryLoader::loadQueries","QueryLoaderTest.java","21"

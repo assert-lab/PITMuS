@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b2b2e0e824d5d87ae50469fd83af901bbef0db51f1623e00f1e404c3f58ab059
-size 660
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return fieldName;","return """";","org/apache/commons/lang3/builder/Diff.java",84,"replaced return value with """" for org/apache/commons/lang3/builder/Diff::getFieldName","","0"
+"return type;","return null;","org/apache/commons/lang3/builder/Diff.java",73,"replaced return value with null for org/apache/commons/lang3/builder/Diff::getType","","0"
+"return String.format(""[%s: %s, %s]"", fieldName, getLeft(), getRight());","return """";","org/apache/commons/lang3/builder/Diff.java",101,"replaced return value with """" for org/apache/commons/lang3/builder/Diff::toString","","3"

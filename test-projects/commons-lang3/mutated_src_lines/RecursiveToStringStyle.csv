@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:eae27004b943d60429de2c059f231dcf97f2717cba42e5050fb3a43e8808342b
-size 2027
+"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
+"return true;","return false;","org/apache/commons/lang3/builder/RecursiveToStringStyle.java",96,"replaced boolean return with false for org/apache/commons/lang3/builder/RecursiveToStringStyle::accept","","0"
+"if (!ClassUtils.isPrimitiveWrapper(value.getClass()) &&","if (false) &&","org/apache/commons/lang3/builder/RecursiveToStringStyle.java",70,"removed conditional - replaced equality check with false","","2"
+"if (!ClassUtils.isPrimitiveWrapper(value.getClass()) &&","if (true) &&","org/apache/commons/lang3/builder/RecursiveToStringStyle.java",70,"removed conditional - replaced equality check with true","","2"
+"!String.class.equals(value.getClass()) &&","false &&","org/apache/commons/lang3/builder/RecursiveToStringStyle.java",71,"removed conditional - replaced equality check with false","","5"
+"!String.class.equals(value.getClass()) &&","true &&","org/apache/commons/lang3/builder/RecursiveToStringStyle.java",71,"removed conditional - replaced equality check with true","","5"
+"super.appendDetail(buffer, fieldName, value);","// removed call to appendDetail()","org/apache/commons/lang3/builder/RecursiveToStringStyle.java",75,"removed call to org/apache/commons/lang3/builder/ToStringStyle::appendDetail","","12"
+"appendClassName(buffer, coll);","// removed call to appendClassName()","org/apache/commons/lang3/builder/RecursiveToStringStyle.java",81,"removed call to org/apache/commons/lang3/builder/RecursiveToStringStyle::appendClassName","","0"
+"appendIdentityHashCode(buffer, coll);","// removed call to appendIdentityHashCode()","org/apache/commons/lang3/builder/RecursiveToStringStyle.java",82,"removed call to org/apache/commons/lang3/builder/RecursiveToStringStyle::appendIdentityHashCode","","1"
+"appendDetail(buffer, fieldName, coll.toArray());","appendDetail(buffer, fieldName, coll.toArray());  // removed call to appendDetail()","org/apache/commons/lang3/builder/RecursiveToStringStyle.java",83,"removed call to org/apache/commons/lang3/builder/RecursiveToStringStyle::appendDetail","","3"
