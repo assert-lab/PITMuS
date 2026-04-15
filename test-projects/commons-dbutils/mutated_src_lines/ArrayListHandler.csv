@@ -1,2 +1,2 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
-"return this.convert.toArray(rs);","return null;","org/apache/commons/dbutils/handlers/ArrayListHandler.java",69,"replaced return value with null for org/apache/commons/dbutils/handlers/ArrayListHandler::handleRow","ArrayListHandlerTest.java","1"
+"mutation_line","mutated_line","source_file","line_number","description","test_file"
+"return this.convert.toArray(rs);","return null;","org/apache/commons/dbutils/handlers/ArrayListHandler.java",69,"replaced return value with null for org/apache/commons/dbutils/handlers/ArrayListHandler::handleRow","ArrayListHandlerTest.java"

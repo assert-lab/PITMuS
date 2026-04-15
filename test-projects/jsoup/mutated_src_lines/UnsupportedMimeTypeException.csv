@@ -1,4 +1,4 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
-"return mimeType;","return """";","org/jsoup/UnsupportedMimeTypeException.java",19,"replaced return value with """" for org/jsoup/UnsupportedMimeTypeException::getMimeType","","0"
-"return url;","return """";","org/jsoup/UnsupportedMimeTypeException.java",23,"replaced return value with """" for org/jsoup/UnsupportedMimeTypeException::getUrl","","0"
-"return super.toString() + "". Mimetype="" + mimeType + "", URL=""+url;","return """";","org/jsoup/UnsupportedMimeTypeException.java",28,"replaced return value with """" for org/jsoup/UnsupportedMimeTypeException::toString","","8"
+"mutation_line","mutated_line","source_file","line_number","description","test_file"
+"return mimeType;","return """";","org/jsoup/UnsupportedMimeTypeException.java",19,"replaced return value with """" for org/jsoup/UnsupportedMimeTypeException::getMimeType",""
+"return url;","return """";","org/jsoup/UnsupportedMimeTypeException.java",23,"replaced return value with """" for org/jsoup/UnsupportedMimeTypeException::getUrl",""
+"return super.toString() + "". Mimetype="" + mimeType + "", URL=""+url;","return """";","org/jsoup/UnsupportedMimeTypeException.java",28,"replaced return value with """" for org/jsoup/UnsupportedMimeTypeException::toString",""

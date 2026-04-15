@@ -1,3 +1,3 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
-"return rs.next() ? this.convert.toBean(rs, this.type) : null;","return false ? this.convert.toBean(rs, this.type) : null;","org/apache/commons/dbutils/handlers/BeanHandler.java",80,"removed conditional - replaced equality check with false","BeanHandlerTest.java","1"
-"return rs.next() ? this.convert.toBean(rs, this.type) : null;","return true ? this.convert.toBean(rs, this.type) : null;","org/apache/commons/dbutils/handlers/BeanHandler.java",80,"removed conditional - replaced equality check with true","BeanHandlerTest.java","1"
+"mutation_line","mutated_line","source_file","line_number","description","test_file"
+"return rs.next() ? this.convert.toBean(rs, this.type) : null;","return false ? this.convert.toBean(rs, this.type) : null;","org/apache/commons/dbutils/handlers/BeanHandler.java",80,"removed conditional - replaced equality check with false","BeanHandlerTest.java"
+"return rs.next() ? this.convert.toBean(rs, this.type) : null;","return true ? this.convert.toBean(rs, this.type) : null;","org/apache/commons/dbutils/handlers/BeanHandler.java",80,"removed conditional - replaced equality check with true","BeanHandlerTest.java"

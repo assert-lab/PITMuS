@@ -1,4 +1,4 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
-"writableInterval.setChronology(chrono);","// removed call to setChronology()","org/joda/time/convert/NullConverter.java",83,"removed call to org/joda/time/ReadWritableInterval::setChronology","TestNullConverter.java","0"
-"writableInterval.setInterval(now, now);","// removed call to setInterval()","org/joda/time/convert/NullConverter.java",85,"removed call to org/joda/time/ReadWritableInterval::setInterval","TestNullConverter.java","2"
-"duration.setPeriod((Period) null);","duration.setPeriod((Period) null);  // removed call to setPeriod()","org/joda/time/convert/NullConverter.java",69,"removed call to org/joda/time/ReadWritablePeriod::setPeriod","TestMutablePeriod_Constructors.java|TestNullConverter.java|TestPeriod_Constructors.java","0"
+"mutation_line","mutated_line","source_file","line_number","description","test_file"
+"writableInterval.setChronology(chrono);","// removed call to setChronology()","org/joda/time/convert/NullConverter.java",83,"removed call to org/joda/time/ReadWritableInterval::setChronology","TestNullConverter.java"
+"writableInterval.setInterval(now, now);","// removed call to setInterval()","org/joda/time/convert/NullConverter.java",85,"removed call to org/joda/time/ReadWritableInterval::setInterval","TestNullConverter.java"
+"duration.setPeriod((Period) null);","duration.setPeriod((Period) null);  // removed call to setPeriod()","org/joda/time/convert/NullConverter.java",69,"removed call to org/joda/time/ReadWritablePeriod::setPeriod","TestMutablePeriod_Constructors.java|TestNullConverter.java|TestPeriod_Constructors.java"

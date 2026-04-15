@@ -1,3 +1,3 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
-"return statusCode;","return 0;","org/jsoup/HttpStatusException.java",19,"replaced int return with 0 for org/jsoup/HttpStatusException::getStatusCode","","0"
-"return url;","return """";","org/jsoup/HttpStatusException.java",23,"replaced return value with """" for org/jsoup/HttpStatusException::getUrl","","0"
+"mutation_line","mutated_line","source_file","line_number","description","test_file"
+"return statusCode;","return 0;","org/jsoup/HttpStatusException.java",19,"replaced int return with 0 for org/jsoup/HttpStatusException::getStatusCode",""
+"return url;","return """";","org/jsoup/HttpStatusException.java",23,"replaced return value with """" for org/jsoup/HttpStatusException::getUrl",""

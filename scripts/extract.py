@@ -596,7 +596,6 @@ def main():
             desc = mut.findtext("description", "")
             killing = mut.findtext("killingTests", "") or ""
             covering = mut.findtext("coveringTests", "") or ""
-            blocks = "|".join(b.text or "" for b in mut.findall("blocks/block"))
             index_vals = [int(x.text) for x in mut.findall("indexes/index") if (x.text or "").lstrip("-").isdigit()]
             bc_index = index_vals[0] if index_vals else None
 
@@ -637,7 +636,7 @@ def main():
             test_files = extract_test_files(covering or killing)
 
             rows.append([
-                orig, mutated, rel_src, lineno, desc, test_files, blocks
+                orig, mutated, rel_src, lineno, desc, test_files
             ])
 
             span = find_span_for_line(spans, lineno) if spans else None
@@ -662,7 +661,7 @@ def main():
             w = csv.writer(f, quoting=csv.QUOTE_NONNUMERIC)
             w.writerow([
                 "mutation_line", "mutated_line", "source_file",
-                "line_number", "description", "test_file", "block"
+                "line_number", "description", "test_file"
             ])
             w.writerows(rows)
 

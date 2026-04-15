@@ -1,2 +1,2 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
-"return NOP;","return null;","org/apache/commons/lang3/function/FailableLongToDoubleFunction.java",42,"replaced return value with null for org/apache/commons/lang3/function/FailableLongToDoubleFunction::nop","","0"
+"mutation_line","mutated_line","source_file","line_number","description","test_file"
+"return NOP;","return null;","org/apache/commons/lang3/function/FailableLongToDoubleFunction.java",42,"replaced return value with null for org/apache/commons/lang3/function/FailableLongToDoubleFunction::nop",""

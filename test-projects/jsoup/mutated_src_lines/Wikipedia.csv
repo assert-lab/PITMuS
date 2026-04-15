@@ -1,4 +1,4 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file","block"
-"System.out.println(String.format(msg, vals));","System.out.println(String.format(msg, vals));  // removed call to println()","org/jsoup/examples/Wikipedia.java",25,"removed call to java/io/PrintStream::println","","1"
-"log(doc.title());","log(doc.title());  // removed call to log()","org/jsoup/examples/Wikipedia.java",16,"removed call to org/jsoup/examples/Wikipedia::log","","3"
-"log(""%s\n\t%s"", headline.attr(""title""), headline.absUrl(""href""));","log(""%s\n\t%s"", headline.attr(""title""), headline.absUrl(""href""));  // removed call to log()","org/jsoup/examples/Wikipedia.java",20,"removed call to org/jsoup/examples/Wikipedia::log","","12"
+"mutation_line","mutated_line","source_file","line_number","description","test_file"
+"System.out.println(String.format(msg, vals));","System.out.println(String.format(msg, vals));  // removed call to println()","org/jsoup/examples/Wikipedia.java",25,"removed call to java/io/PrintStream::println",""
+"log(doc.title());","log(doc.title());  // removed call to log()","org/jsoup/examples/Wikipedia.java",16,"removed call to org/jsoup/examples/Wikipedia::log",""
+"log(""%s\n\t%s"", headline.attr(""title""), headline.absUrl(""href""));","log(""%s\n\t%s"", headline.attr(""title""), headline.absUrl(""href""));  // removed call to log()","org/jsoup/examples/Wikipedia.java",20,"removed call to org/jsoup/examples/Wikipedia::log",""
