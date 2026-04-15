@@ -14,7 +14,7 @@ mutate-source-code/
 ├── PITMuS_dataset/
 │   └── <project-name>/
 │       ├── mutated_methods.csv         ← full method bodies (original + mutated) with Javadoc
-│       └── meta.csv                    ← row-aligned metadata (line_no, original_line, mutated_line, source_filepath)
+│       └── meta.csv                    ← corresponding metadata (line_no, original_line, mutated_line, source_filepath)
 └── test-projects/
     └── <project-name>/
         ├── src/main/java/              ← source code
@@ -74,7 +74,7 @@ This reads `test-projects/joda-time/target/pit-reports/mutations.xml`, resolves 
 
 | Column | Description |
 |---|---|
-| `id` | Stable row identifier, shared with `meta.csv` (see below) |
+| `id` | row identifier, shared with `meta.csv` (see below) |
 | `original_method` | Full body of the method containing the mutated line |
 | `mutated_method` | Same method body with the mutated line substituted |
 | `docstring` | Javadoc block (`/** ... */`) immediately preceding the method, or empty |
@@ -142,13 +142,6 @@ If you need to generate a PIT mutation report for a Maven project, add the follo
   <groupId>org.pitest</groupId>
   <artifactId>pitest-maven</artifactId>
   <version>1.22.0</version>
-  <dependencies>
-    <dependency>
-      <groupId>org.pitest</groupId>
-      <artifactId>pitest-junit5-plugin</artifactId>
-      <version>1.2.1</version>
-    </dependency>
-  </dependencies>
   <configuration>
     <targetClasses>
       <param>org.apache.commons.lang3.*</param>
@@ -159,8 +152,6 @@ If you need to generate a PIT mutation report for a Maven project, add the follo
     <mutators>
       <mutator>STRONGER</mutator>
     </mutators>
-    <threads>4</threads>
-    <timeoutConstant>16000</timeoutConstant>
     <fullMutationMatrix>true</fullMutationMatrix>
     <exportLineCoverage>true</exportLineCoverage>
     <outputFormats>XML</outputFormats>
