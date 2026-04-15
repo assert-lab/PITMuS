@@ -11,6 +11,10 @@ mutate-source-code/
 ├── scripts/
 │   ├── extract.py                      ← creates CSV files with mutated source lines
 │   └── inject.py                       ← injects mutated source lines into source files
+├── PITMuS_dataset/
+│   └── <project-name>/
+│       ├── mutated_methods.csv         ← full method bodies (original + mutated) with Javadoc
+│       └── meta.csv                    ← row-aligned metadata (line_no, original_line, mutated_line, source_filepath)
 └── test-projects/
     └── <project-name>/
         ├── src/main/java/              ← source code
@@ -19,8 +23,6 @@ mutate-source-code/
         │   ├── ClassName1.csv
         │   ├── ClassName2.csv
         │   └── ...
-        ├── mutated_methods.csv         ← full method bodies (original + mutated) with Javadoc
-        ├── mutated_meta.csv            ← row-aligned metadata (line_no, original_line, mutated_line, source_filepath)
         └── injected_mutants/           ← generated mutant source files
             ├── ClassName1_line68_mutant1.java
             ├── ClassName1_line68_mutant2.java
@@ -53,7 +55,7 @@ python scripts/extract.py joda-time
 This reads `test-projects/joda-time/target/pit-reports/mutations.xml`, resolves each mutation to its source line (using PIT's `<indexes><index>` bytecode offsets + `javap` output from `target/classes/` to target the exact token), applies the mutation, and writes:
 
 - one CSV per source file into `test-projects/joda-time/mutated_src_lines/`,
-- two project-level CSVs at the project root: `mutated_methods.csv` and `mutated_meta.csv` (row-aligned).
+- two project-level CSVs into `PITMuS_dataset/joda-time/`: `mutated_methods.csv` and `meta.csv` (row-aligned).
 
 #### Output Format
 
@@ -68,16 +70,16 @@ This reads `test-projects/joda-time/target/pit-reports/mutations.xml`, resolves 
 | `description` | PIT's mutation description |
 | `test_file` | Test file(s) covering the mutation, separated by `\|` |
 
-**`mutated_methods.csv`** — one row per mutation, full method bodies:
+**`PITMuS_dataset/<project-name>/mutated_methods.csv`** — one row per mutation, full method bodies:
 
 | Column | Description |
 |---|---|
-| `id` | Stable row identifier, shared with `mutated_meta.csv` (see below) |
+| `id` | Stable row identifier, shared with `meta.csv` (see below) |
 | `original_method` | Full body of the method containing the mutated line |
 | `mutated_method` | Same method body with the mutated line substituted |
 | `docstring` | Javadoc block (`/** ... */`) immediately preceding the method, or empty |
 
-**`mutated_meta.csv`** — row-aligned with `mutated_methods.csv` via the shared `id` column:
+**`PITMuS_dataset/<project-name>/meta.csv`** — row-aligned with `mutated_methods.csv` via the shared `id` column:
 
 | Column | Description |
 |---|---|
