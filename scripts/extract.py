@@ -137,7 +137,7 @@ def resolve_occ_from_bytecode(methods_info, method, method_desc, index, line, de
 
 def load_source(path):
     if not os.path.exists(path):
-        return [], []
+        return [], [], []
     with open(path, encoding="utf-8", errors="replace") as f:
         source = f.read()
     lines = source.splitlines()
@@ -145,7 +145,113 @@ def load_source(path):
         tokens = list(javalang.tokenizer.tokenize(source))
     except (LexerError, StopIteration, Exception):
         tokens = []
-    return lines, tokens
+    spans = extract_method_spans(source, lines)
+    return lines, tokens, spans
+
+
+def _find_method_end(lines, start_line):
+    depth = 0
+    started = False
+    in_str = in_char = in_block = False
+    i = start_line - 1
+    while i < len(lines):
+        line = lines[i]
+        in_line = False
+        j = 0
+        while j < len(line):
+            c = line[j]
+            nxt = line[j + 1] if j + 1 < len(line) else ""
+            if in_line:
+                break
+            if in_block:
+                if c == "*" and nxt == "/":
+                    in_block = False
+                    j += 2
+                    continue
+                j += 1
+                continue
+            if in_str:
+                if c == "\\":
+                    j += 2
+                    continue
+                if c == '"':
+                    in_str = False
+                j += 1
+                continue
+            if in_char:
+                if c == "\\":
+                    j += 2
+                    continue
+                if c == "'":
+                    in_char = False
+                j += 1
+                continue
+            if c == "/" and nxt == "/":
+                break
+            if c == "/" and nxt == "*":
+                in_block = True
+                j += 2
+                continue
+            if c == '"':
+                in_str = True
+            elif c == "'":
+                in_char = True
+            elif c == "{":
+                depth += 1
+                started = True
+            elif c == "}":
+                depth -= 1
+                if started and depth == 0:
+                    return i + 1
+            j += 1
+        i += 1
+    return None
+
+
+def extract_method_spans(source, lines):
+    try:
+        tree = javalang.parse.parse(source)
+    except Exception:
+        return []
+    spans = []
+    seen = set()
+    for path, node in tree.filter(javalang.tree.MethodDeclaration):
+        if node.position and node.body is not None:
+            start = node.position.line
+            end = _find_method_end(lines, start)
+            if end and (start, end) not in seen:
+                spans.append((start, end, node.name))
+                seen.add((start, end))
+    for path, node in tree.filter(javalang.tree.ConstructorDeclaration):
+        if node.position and node.body is not None:
+            start = node.position.line
+            end = _find_method_end(lines, start)
+            if end and (start, end) not in seen:
+                spans.append((start, end, node.name))
+                seen.add((start, end))
+    spans.sort()
+    return spans
+
+
+def find_span_for_line(spans, lineno):
+    for s, e, name in spans:
+        if s <= lineno <= e:
+            return s, e, name
+    return None
+
+
+def extract_javadoc(lines, method_start):
+    i = method_start - 2
+    while i >= 0 and (lines[i].strip() == "" or lines[i].lstrip().startswith("@")):
+        i -= 1
+    if i < 0 or not lines[i].rstrip().endswith("*/"):
+        return ""
+    end = i
+    while i >= 0 and "/**" not in lines[i]:
+        i -= 1
+    if i < 0:
+        return ""
+    return "\n".join(lines[i:end + 1])
 
 
 def tokens_on_line(all_tokens, lineno):
@@ -430,7 +536,10 @@ def main():
         print("  Expects project at test-projects/<project-name>/")
         sys.exit(1)
 
-    project = os.path.join("test-projects", sys.argv[1].rstrip("/"))
+    project_name = sys.argv[1].rstrip("/")
+    project = os.path.join("test-projects", project_name)
+    stem = re.sub(r"^commons-", "", project_name)
+    id_prefix = "".join(c for c in stem if c.isalpha())[:4].lower() or "proj"
     xml_path = os.path.join(project, "target", "pit-reports", "mutations.xml")
     src_root = os.path.join(project, "src", "main", "java")
     classes_root = os.path.join(project, "target", "classes")
@@ -455,6 +564,8 @@ def main():
 
     source_cache = {}
     total = 0
+    methods_rows = []
+    meta_rows = []
 
     for src_file, mutations in by_file.items():
         def _sort_key(m):
@@ -495,7 +606,7 @@ def main():
 
             if abs_path not in source_cache:
                 source_cache[abs_path] = load_source(abs_path)
-            lines, tokens = source_cache[abs_path]
+            lines, tokens, spans = source_cache[abs_path]
 
             key = (src_file, method, method_desc, lineno, desc)
             bc_occ = None
@@ -509,11 +620,13 @@ def main():
                 occ = occ_counter[key]
             occ_counter[key] += 1
 
+            raw_mutated_line = ""
             if 0 < lineno <= len(lines):
                 raw_line = lines[lineno - 1]
                 orig = raw_line.strip()
                 ltoks = tokens_on_line(tokens, lineno)
-                mutated = apply_mutation(raw_line, ltoks, desc, occ).strip()
+                raw_mutated_line = apply_mutation(raw_line, ltoks, desc, occ)
+                mutated = raw_mutated_line.strip()
             else:
                 orig = ""
                 mutated = ""
@@ -527,6 +640,24 @@ def main():
                 orig, mutated, rel_src, lineno, desc, test_files, blocks
             ])
 
+            span = find_span_for_line(spans, lineno) if spans else None
+            if span and 0 < lineno <= len(lines):
+                s, e, _name = span
+                body_lines = lines[s - 1:e]
+                original_method = "\n".join(body_lines)
+                mutated_body = list(body_lines)
+                mutated_body[lineno - s] = raw_mutated_line
+                mutated_method = "\n".join(mutated_body)
+                docstring = extract_javadoc(lines, s)
+            else:
+                original_method = ""
+                mutated_method = ""
+                docstring = ""
+
+            row_id = f"{id_prefix}_{len(methods_rows) + 1}"
+            methods_rows.append([row_id, original_method, mutated_method, docstring])
+            meta_rows.append([row_id, lineno, orig, mutated, rel_src])
+
         with open(csv_path, "w", newline="", encoding="utf-8") as f:
             w = csv.writer(f, quoting=csv.QUOTE_NONNUMERIC)
             w.writerow([
@@ -539,6 +670,18 @@ def main():
         print(f"{csv_path}: {len(rows)} mutations")
 
     print(f"Total: {total} mutations across {len(by_file)} files")
+
+    methods_csv = os.path.join(project, "mutated_methods.csv")
+    meta_csv = os.path.join(project, "mutated_meta.csv")
+    with open(methods_csv, "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f, quoting=csv.QUOTE_NONNUMERIC)
+        w.writerow(["id", "original_method", "mutated_method", "docstring"])
+        w.writerows(methods_rows)
+    with open(meta_csv, "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f, quoting=csv.QUOTE_NONNUMERIC)
+        w.writerow(["id", "line_no", "original_line", "mutated_line", "source_filepath"])
+        w.writerows(meta_rows)
+    print(f"Wrote {methods_csv} and {meta_csv} ({len(methods_rows)} rows)")
 
 
 if __name__ == "__main__":

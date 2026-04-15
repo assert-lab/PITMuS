@@ -19,6 +19,8 @@ mutate-source-code/
         │   ├── ClassName1.csv
         │   ├── ClassName2.csv
         │   └── ...
+        ├── mutated_methods.csv         ← full method bodies (original + mutated) with Javadoc
+        ├── mutated_meta.csv            ← row-aligned metadata (line_no, original_line, mutated_line, source_filepath)
         └── injected_mutants/           ← generated mutant source files
             ├── ClassName1_line68_mutant1.java
             ├── ClassName1_line68_mutant2.java
@@ -29,7 +31,8 @@ mutate-source-code/
 
 - Python 3.6+
 - javalang
-- A Maven project with PIT configured and a generated `mutations.xml` report
+- A JDK on `PATH` (the extractor invokes `javap` to read compiled `.class` files for bytecode-accurate mutation targeting)
+- A Maven project with PIT configured, a generated `mutations.xml` report, and compiled classes under `target/classes/`
 
 ## Usage
 
@@ -47,11 +50,14 @@ Example:
 python scripts/extract.py joda-time
 ```
 
-This reads `test-projects/joda-time/target/pit-reports/mutations.xml`, resolves each mutation to its source line, applies the mutation, and writes one CSV per source file into `test-projects/joda-time/mutated_src_lines/`.
+This reads `test-projects/joda-time/target/pit-reports/mutations.xml`, resolves each mutation to its source line (using PIT's `<indexes><index>` bytecode offsets + `javap` output from `target/classes/` to target the exact token), applies the mutation, and writes:
+
+- one CSV per source file into `test-projects/joda-time/mutated_src_lines/`,
+- two project-level CSVs at the project root: `mutated_methods.csv` and `mutated_meta.csv` (row-aligned).
 
 #### Output Format
 
-Each CSV contains one row per mutation:
+**Per-source-file CSV** (`mutated_src_lines/<ClassName>.csv`) — one row per mutation:
 
 | Column | Description |
 |---|---|
@@ -61,6 +67,24 @@ Each CSV contains one row per mutation:
 | `line_number` | Line number in the source file |
 | `description` | PIT's mutation description |
 | `test_file` | Test file(s) covering the mutation, separated by `\|` |
+| `block` | PIT basic block id(s) for the mutation |
+
+**`mutated_methods.csv`** — one row per mutation, full method bodies:
+
+| Column | Description |
+|---|---|
+| `original_method` | Full body of the method containing the mutated line |
+| `mutated_method` | Same method body with the mutated line substituted |
+| `docstring` | Javadoc block (`/** ... */`) immediately preceding the method, or empty |
+
+**`mutated_meta.csv`** — row-aligned with `mutated_methods.csv`:
+
+| Column | Description |
+|---|---|
+| `line_no` | Line number in the source file |
+| `original_line` | Original source line |
+| `mutated_line` | Mutated source line |
+| `source_filepath` | Path to the source file |
 
 ### Step 2: Inject Mutations into Source
 
@@ -89,7 +113,7 @@ Each mutant is a full copy of the original source file with one line replaced. O
 
 ## Supported Mutators
 
-The extraction script handles all mutators in PIT's STRONGER group using `javalang` tokenization for precise operator-level replacements:
+The extraction script handles all 13 mutators in PIT's STRONGER group (DEFAULTS + `REMOVE_CONDITIONALS` + `EXPERIMENTAL_SWITCH`). Source tokens are located by combining `javalang` tokenization with the bytecode offset in PIT's `<indexes><index>` element: for each mutation, the script reads the compiled `.class` via `javap -c -p -l`, filters the method's instructions to those on the mutation's source line whose opcode matches the mutator (e.g. `IADD` for "integer addition", `IF_ICMP*` for conditionals), and uses the mutation's index to pick the exact Nth occurrence. This disambiguates lines with multiple same-kind operators (e.g. `if (a == b || c == d)`).
 
 | Mutator | Example |
 |---|---|
@@ -100,8 +124,11 @@ The extraction script handles all mutators in PIT's STRONGER group using `javala
 | IncrementsMutator | `i++` → `i--`, `-4` → `4` |
 | InvertNegs | removes unary negation |
 | VoidMethodCall | removes the method call entirely |
-| Return values | `return x;` → `return null;` / `return true;` / `return Collections.emptyMap();` / etc. |
+| Empty / Null / Primitive / True / False Returns | `return x;` → `return null;` / `return true;` / `return Collections.emptyMap();` / etc. |
+| Experimental Switch | mutates switch default/labels |
 | Bitwise / Shift | `&` → `\|`, `<<` → `>>`, etc. |
+
+If the compiled `.class` file is unavailable or a description doesn't match the opcode-family map, the script falls back to PIT-ordered occurrence counting (sorted by `mutatedMethod` + `methodDescription` + `lineNumber` + `<blocks><block>` + `<indexes><index>`).
 
 ## Generating a PIT Report
 
