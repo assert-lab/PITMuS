@@ -67,7 +67,6 @@ This reads `test-projects/joda-time/target/pit-reports/mutations.xml`, resolves 
 | `line_number` | Line number in the source file |
 | `description` | PIT's mutation description |
 | `test_file` | Test file(s) covering the mutation, separated by `\|` |
-| `block` | PIT basic block id(s) for the mutation |
 
 **`mutated_methods.csv`** — one row per mutation, full method bodies:
 
