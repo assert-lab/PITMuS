@@ -36,11 +36,11 @@ mutate-source-code/
 - A JDK on `PATH` (the extractor invokes `javap` to read compiled `.class` files for bytecode-accurate mutation targeting)
 - A Maven project with PIT configured, a generated `mutations.xml` report, and compiled classes under `target/classes/`
 
-## Usage
-
-## Demo
+## Demo Video
 
 [![Demo video](https://img.youtube.com/vi/37TtM6UfYMQ/hqdefault.jpg)](https://youtu.be/37TtM6UfYMQ)
+
+## Usage
 
 ### Step 1: Extract Mutated Source Lines
 
