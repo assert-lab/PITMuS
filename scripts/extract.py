@@ -531,12 +531,17 @@ def extract_test_files(test_str):
 
 
 def main():
-    if len(sys.argv) < 2:
-        print("Usage: python extract_mutations.py <project-name>")
-        print("  Expects project at test-projects/<project-name>/")
+    if len(sys.argv) < 3:
+        print("Usage: python extract.py <project-name> <mode>")
+        print("  mode: 'dataset'   → PITMuS_dataset/<project-name>/ (mutated_methods.csv + meta.csv)")
+        print("  mode: 'file-wise' → test-projects/<project-name>/mutated_src_lines/ (per-file CSVs)")
         sys.exit(1)
 
     project_name = sys.argv[1].rstrip("/")
+    mode = sys.argv[2].strip().lower()
+    if mode not in ("dataset", "file-wise"):
+        print(f"Error: unknown mode '{mode}'. Use 'dataset' or 'file-wise'.")
+        sys.exit(1)
     project = os.path.join("test-projects", project_name)
     stem = re.sub(r"^commons-", "", project_name)
     id_prefix = "".join(c for c in stem if c.isalpha())[:4].lower() or "proj"
@@ -544,7 +549,8 @@ def main():
     src_root = os.path.join(project, "src", "main", "java")
     classes_root = os.path.join(project, "target", "classes")
     out_dir = os.path.join(project, "mutated_src_lines")
-    os.makedirs(out_dir, exist_ok=True)
+    if mode == "file-wise":
+        os.makedirs(out_dir, exist_ok=True)
 
     bytecode_cache = {}
 
@@ -637,54 +643,59 @@ def main():
 
             test_files = extract_test_files(covering or killing)
 
-            rows.append([
-                orig, mutated, rel_src, lineno, desc, test_files
-            ])
+            if mode == "file-wise":
+                rows.append([
+                    orig, mutated, rel_src, lineno, desc, test_files
+                ])
 
-            span = find_span_for_line(spans, lineno) if spans else None
-            if not (span and 0 < lineno <= len(lines)):
-                continue
-            s, e, _name = span
-            body_lines = lines[s - 1:e]
-            original_method = "\n".join(body_lines)
-            mutated_body = list(body_lines)
-            mutated_body[lineno - s] = raw_mutated_line
-            mutated_method = "\n".join(mutated_body)
-            if not original_method.strip() or original_method == mutated_method:
-                continue
-            docstring = extract_javadoc(lines, s)
+            if mode == "dataset":
+                span = find_span_for_line(spans, lineno) if spans else None
+                if not (span and 0 < lineno <= len(lines)):
+                    continue
+                s, e, _name = span
+                body_lines = lines[s - 1:e]
+                original_method = "\n".join(body_lines)
+                mutated_body = list(body_lines)
+                mutated_body[lineno - s] = raw_mutated_line
+                mutated_method = "\n".join(mutated_body)
+                if not original_method.strip() or original_method == mutated_method:
+                    continue
+                docstring = extract_javadoc(lines, s)
 
-            row_id = f"{id_prefix}_{len(methods_rows) + 1}"
-            methods_rows.append([row_id, original_method, mutated_method, docstring])
-            meta_rows.append([row_id, lineno, orig, mutated, rel_src])
+                row_id = f"{id_prefix}_{len(methods_rows) + 1}"
+                methods_rows.append([row_id, original_method, mutated_method, docstring])
+                meta_rows.append([row_id, lineno, orig, mutated, rel_src])
 
-        with open(csv_path, "w", newline="", encoding="utf-8") as f:
+        if mode == "file-wise":
+            with open(csv_path, "w", newline="", encoding="utf-8") as f:
+                w = csv.writer(f, quoting=csv.QUOTE_NONNUMERIC)
+                w.writerow([
+                    "mutation_line", "mutated_line", "source_file",
+                    "line_number", "description", "test_file"
+                ])
+                w.writerows(rows)
+
+            total += len(rows)
+            print(f"{csv_path}: {len(rows)} mutations")
+
+    if mode == "file-wise":
+        print(f"Total: {total} mutations across {len(by_file)} files")
+
+    if mode == "dataset":
+        scripts_dir = os.path.dirname(os.path.abspath(__file__))
+        dataset_dir = os.path.join(os.path.dirname(scripts_dir), "PITMuS_dataset", project_name)
+        os.makedirs(dataset_dir, exist_ok=True)
+        methods_csv = os.path.join(dataset_dir, "mutated_methods.csv")
+        meta_csv = os.path.join(dataset_dir, "meta.csv")
+        with open(methods_csv, "w", newline="", encoding="utf-8") as f:
             w = csv.writer(f, quoting=csv.QUOTE_NONNUMERIC)
-            w.writerow([
-                "mutation_line", "mutated_line", "source_file",
-                "line_number", "description", "test_file"
-            ])
-            w.writerows(rows)
-
-        total += len(rows)
-        print(f"{csv_path}: {len(rows)} mutations")
-
-    print(f"Total: {total} mutations across {len(by_file)} files")
-
-    scripts_dir = os.path.dirname(os.path.abspath(__file__))
-    dataset_dir = os.path.join(os.path.dirname(scripts_dir), "PITMuS_dataset", project_name)
-    os.makedirs(dataset_dir, exist_ok=True)
-    methods_csv = os.path.join(dataset_dir, "mutated_methods.csv")
-    meta_csv = os.path.join(dataset_dir, "meta.csv")
-    with open(methods_csv, "w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f, quoting=csv.QUOTE_NONNUMERIC)
-        w.writerow(["id", "original_method", "mutated_method", "docstring"])
-        w.writerows(methods_rows)
-    with open(meta_csv, "w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f, quoting=csv.QUOTE_NONNUMERIC)
-        w.writerow(["id", "line_no", "original_line", "mutated_line", "source_filepath"])
-        w.writerows(meta_rows)
-    print(f"Wrote {methods_csv} and {meta_csv} ({len(methods_rows)} rows)")
+            w.writerow(["id", "original_method", "mutated_method", "docstring"])
+            w.writerows(methods_rows)
+        with open(meta_csv, "w", newline="", encoding="utf-8") as f:
+            w = csv.writer(f, quoting=csv.QUOTE_NONNUMERIC)
+            w.writerow(["id", "line_no", "original_line", "mutated_line", "source_filepath"])
+            w.writerows(meta_rows)
+        print(f"Wrote {methods_csv} and {meta_csv} ({len(methods_rows)} rows)")
 
 
 if __name__ == "__main__":
