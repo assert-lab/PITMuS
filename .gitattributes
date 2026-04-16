@@ -1,0 +1,2 @@
+*.xml filter=lfs diff=lfs merge=lfs -text
+test-projects/**/pit-reports/*.xml filter=lfs diff=lfs merge=lfs -text
