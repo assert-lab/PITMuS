@@ -43,19 +43,22 @@ mutate-source-code/
 Run from the repository root:
 
 ```bash
-python scripts/extract.py <project-name>
+python scripts/extract.py <project-name> <mode>
 ```
 
-Example:
+The script supports two modes:
+
+- **`dataset`** — creates project-level CSVs in `PITMuS_dataset/<project-name>/` (`mutated_methods.csv` and `meta.csv`)
+- **`file-wise`** — creates per-source-file CSVs in `test-projects/<project-name>/mutated_src_lines/`
+
+Examples:
 
 ```bash
-python scripts/extract.py joda-time
+python scripts/extract.py joda-time dataset
+python scripts/extract.py joda-time file-wise
 ```
 
-This reads `test-projects/joda-time/target/pit-reports/mutations.xml`, resolves each mutation to its source line (using PIT's `<indexes><index>` bytecode offsets + `javap` output from `target/classes/` to target the exact token), applies the mutation, and writes:
-
-- one CSV per source file into `test-projects/joda-time/mutated_src_lines/`,
-- two project-level CSVs into `PITMuS_dataset/joda-time/`: `mutated_methods.csv` and `meta.csv` (row-aligned).
+This reads `test-projects/joda-time/target/pit-reports/mutations.xml`, resolves each mutation to its source line (using PIT's `<indexes><index>` bytecode offsets + `javap` output from `target/classes/` to target the exact token), applies the mutation, and writes the output according to the selected mode.
 
 #### Output Format
 

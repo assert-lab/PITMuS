@@ -1,11 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<project name="maven-antrun-" default="main"  >
-<target name="main">
-  <copy todir="/home/tasfia/Desktop/EvoAI/mutate-source-code/test-projects/commons-collections4/target/apidocs/META-INF">
-    <fileset dir="/home/tasfia/Desktop/EvoAI/mutate-source-code/test-projects/commons-collections4">
-      <include name="LICENSE.txt"/>
-      <include name="NOTICE.txt"/>
-    </fileset>
-  </copy>
-</target>
-</project>
+version https://git-lfs.github.com/spec/v1
+oid sha256:f8deaa73a61e132f86f7a4e89f7ce1fbce4fd07412b5e5bddd13983c3382e958
+size 448
