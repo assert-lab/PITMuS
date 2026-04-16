@@ -1,0 +1,5 @@
+"mutation_line","mutated_line","source_file","line_number","description","test_file"
+"return (final int t) -> {","return null;","org/apache/commons/lang3/function/FailableIntConsumer.java",63,"replaced return value with null for org/apache/commons/lang3/function/FailableIntConsumer::andThen",""
+"accept(t);","// removed call to accept()","org/apache/commons/lang3/function/FailableIntConsumer.java",64,"removed call to org/apache/commons/lang3/function/FailableIntConsumer::accept",""
+"after.accept(t);","// removed call to accept()","org/apache/commons/lang3/function/FailableIntConsumer.java",65,"removed call to org/apache/commons/lang3/function/FailableIntConsumer::accept",""
+"return NOP;","return null;","org/apache/commons/lang3/function/FailableIntConsumer.java",43,"replaced return value with null for org/apache/commons/lang3/function/FailableIntConsumer::nop",""

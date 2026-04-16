@@ -167,3 +167,5 @@ mvn clean test org.pitest:pitest-maven:mutationCoverage
 ```
 
 The XML report is written to `target/pit-reports/mutations.xml`.
+
+<a href="https://youtu.be/37TtM6UfYMQ" target="_blank">Demo video</a>

@@ -1,0 +1,8 @@
+"mutation_line","mutated_line","source_file","line_number","description","test_file"
+"return (final int t) -> after.applyAsInt(applyAsInt(t));","return null;","org/apache/commons/lang3/function/FailableIntUnaryOperator.java",65,"replaced return value with null for org/apache/commons/lang3/function/FailableIntUnaryOperator::andThen",""
+"return (final int v) -> applyAsInt(before.applyAsInt(v));","return null;","org/apache/commons/lang3/function/FailableIntUnaryOperator.java",87,"replaced return value with null for org/apache/commons/lang3/function/FailableIntUnaryOperator::compose",""
+"return t -> t;","return null;","org/apache/commons/lang3/function/FailableIntUnaryOperator.java",42,"replaced return value with null for org/apache/commons/lang3/function/FailableIntUnaryOperator::identity",""
+"return (final int t) -> after.applyAsInt(applyAsInt(t));","return 0;","org/apache/commons/lang3/function/FailableIntUnaryOperator.java",65,"replaced int return with 0 for org/apache/commons/lang3/function/FailableIntUnaryOperator::lambda$andThen$2",""
+"return (final int v) -> applyAsInt(before.applyAsInt(v));","return 0;","org/apache/commons/lang3/function/FailableIntUnaryOperator.java",87,"replaced int return with 0 for org/apache/commons/lang3/function/FailableIntUnaryOperator::lambda$compose$3",""
+"return t -> t;","return 0;","org/apache/commons/lang3/function/FailableIntUnaryOperator.java",42,"replaced int return with 0 for org/apache/commons/lang3/function/FailableIntUnaryOperator::lambda$identity$1",""
+"return NOP;","return null;","org/apache/commons/lang3/function/FailableIntUnaryOperator.java",52,"replaced return value with null for org/apache/commons/lang3/function/FailableIntUnaryOperator::nop",""

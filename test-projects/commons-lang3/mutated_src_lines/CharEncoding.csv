@@ -1,0 +1,7 @@
+"mutation_line","mutated_line","source_file","line_number","description","test_file"
+"if (name == null) {","if (false) {","org/apache/commons/lang3/CharEncoding.java",100,"removed conditional - replaced equality check with false",""
+"if (name == null) {","if (true) {","org/apache/commons/lang3/CharEncoding.java",100,"removed conditional - replaced equality check with true",""
+"return false;","return true;","org/apache/commons/lang3/CharEncoding.java",101,"replaced boolean return with true for org/apache/commons/lang3/CharEncoding::isSupported",""
+"return Charset.isSupported(name);","return false;","org/apache/commons/lang3/CharEncoding.java",104,"replaced boolean return with false for org/apache/commons/lang3/CharEncoding::isSupported",""
+"return Charset.isSupported(name);","return true;","org/apache/commons/lang3/CharEncoding.java",104,"replaced boolean return with true for org/apache/commons/lang3/CharEncoding::isSupported",""
+"return false;","return true;","org/apache/commons/lang3/CharEncoding.java",106,"replaced boolean return with true for org/apache/commons/lang3/CharEncoding::isSupported",""

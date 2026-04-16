@@ -1,0 +1,6 @@
+"mutation_line","mutated_line","source_file","line_number","description","test_file"
+"return outsideOf(0, codepoint);","return null;","org/apache/commons/lang3/text/translate/JavaUnicodeEscaper.java",40,"replaced return value with null for org/apache/commons/lang3/text/translate/JavaUnicodeEscaper::above",""
+"return outsideOf(codepoint, Integer.MAX_VALUE);","return null;","org/apache/commons/lang3/text/translate/JavaUnicodeEscaper.java",53,"replaced return value with null for org/apache/commons/lang3/text/translate/JavaUnicodeEscaper::below",""
+"return new JavaUnicodeEscaper(codepointLow, codepointHigh, true);","return null;","org/apache/commons/lang3/text/translate/JavaUnicodeEscaper.java",68,"replaced return value with null for org/apache/commons/lang3/text/translate/JavaUnicodeEscaper::between",""
+"return new JavaUnicodeEscaper(codepointLow, codepointHigh, false);","return null;","org/apache/commons/lang3/text/translate/JavaUnicodeEscaper.java",83,"replaced return value with null for org/apache/commons/lang3/text/translate/JavaUnicodeEscaper::outsideOf",""
+"return ""\\u"" + hex(surrogatePair[0]) + ""\\u"" + hex(surrogatePair[1]);","return """";","org/apache/commons/lang3/text/translate/JavaUnicodeEscaper.java",114,"replaced return value with """" for org/apache/commons/lang3/text/translate/JavaUnicodeEscaper::toUtf16Escape",""
