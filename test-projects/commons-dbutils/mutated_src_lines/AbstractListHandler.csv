@@ -1,4 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"while (rs.next()) {","while (false) {","org/apache/commons/dbutils/handlers/AbstractListHandler.java",47,"removed conditional - replaced equality check with false","ArrayListHandlerTest.java|ColumnListHandlerTest.java|MapListHandlerTest.java"
-"while (rs.next()) {","while (true) {","org/apache/commons/dbutils/handlers/AbstractListHandler.java",47,"removed conditional - replaced equality check with true","ArrayListHandlerTest.java|ColumnListHandlerTest.java|MapListHandlerTest.java"
-"return rows;","return Collections.emptyList();","org/apache/commons/dbutils/handlers/AbstractListHandler.java",50,"replaced return value with Collections.emptyList for org/apache/commons/dbutils/handlers/AbstractListHandler::handle","ArrayListHandlerTest.java|ColumnListHandlerTest.java|MapListHandlerTest.java"

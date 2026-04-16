@@ -1,4 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"if (consumed != 0) {","if (false) {","org/apache/commons/lang3/text/translate/AggregateTranslator.java",56,"removed conditional - replaced equality check with false",""
-"if (consumed != 0) {","if (true) {","org/apache/commons/lang3/text/translate/AggregateTranslator.java",56,"removed conditional - replaced equality check with true",""
-"return consumed;","return 0;","org/apache/commons/lang3/text/translate/AggregateTranslator.java",57,"replaced int return with 0 for org/apache/commons/lang3/text/translate/AggregateTranslator::translate",""

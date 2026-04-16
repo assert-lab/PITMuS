@@ -1,5 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"return new HashMap<K, V>();","return Collections.emptyMap();","org/apache/commons/dbutils/handlers/AbstractKeyedHandler.java",66,"replaced return value with Collections.emptyMap for org/apache/commons/dbutils/handlers/AbstractKeyedHandler::createMap","BeanMapHandlerTest.java|KeyedHandlerTest.java"
-"while (rs.next()) {","while (false) {","org/apache/commons/dbutils/handlers/AbstractKeyedHandler.java",52,"removed conditional - replaced equality check with false","BeanMapHandlerTest.java|KeyedHandlerTest.java"
-"while (rs.next()) {","while (true) {","org/apache/commons/dbutils/handlers/AbstractKeyedHandler.java",52,"removed conditional - replaced equality check with true","BeanMapHandlerTest.java|KeyedHandlerTest.java"
-"return result;","return Collections.emptyMap();","org/apache/commons/dbutils/handlers/AbstractKeyedHandler.java",55,"replaced return value with Collections.emptyMap for org/apache/commons/dbutils/handlers/AbstractKeyedHandler::handle","BeanMapHandlerTest.java|KeyedHandlerTest.java"

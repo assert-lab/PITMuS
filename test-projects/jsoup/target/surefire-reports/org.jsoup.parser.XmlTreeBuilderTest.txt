@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: org.jsoup.parser.XmlTreeBuilderTest
--------------------------------------------------------------------------------
-Tests run: 31, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.019 s - in org.jsoup.parser.XmlTreeBuilderTest
