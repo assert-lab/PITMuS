@@ -38,6 +38,10 @@ mutate-source-code/
 
 ## Usage
 
+## Demo
+
+[![Demo video](https://img.youtube.com/vi/37TtM6UfYMQ/hqdefault.jpg)](https://youtu.be/37TtM6UfYMQ)
+
 ### Step 1: Extract Mutated Source Lines
 
 Run from the repository root:
@@ -168,6 +172,3 @@ mvn clean test org.pitest:pitest-maven:mutationCoverage
 
 The XML report is written to `target/pit-reports/mutations.xml`.
 
-## Demo
-
-[![Demo video](https://img.youtube.com/vi/37TtM6UfYMQ/hqdefault.jpg)](https://youtu.be/37TtM6UfYMQ)
