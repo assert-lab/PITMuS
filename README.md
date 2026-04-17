@@ -184,8 +184,8 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 If you use PITMuS in your work, please cite it:
 
 ```bibtex
-@software{tasnim_pitmus_2026,
-  author  = {Tasnim, Tasfia},
+@misc{pitmus,
+  author  = {{AssertLab}},
   title   = {{PITMuS}: {PIT} {Mutations} in the {Source} {Code}},
   year    = {2026},
   version = {1.0.0},
