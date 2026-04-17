@@ -183,7 +183,7 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 If you use PITMuS in your research, please cite it:
 
-​```bibtex
+```bibtex
 @software{tasnim_pitmus_2026,
   author  = {Tasnim, Tasfia},
   title   = {{PITMuS}: {PIT} {Mutations} in the {Source} {Code}},
@@ -191,4 +191,4 @@ If you use PITMuS in your research, please cite it:
   version = {1.0.0},
   url     = {https://github.com/assert-lab/PITMuS}
 }
-​```
+```
