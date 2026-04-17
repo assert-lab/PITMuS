@@ -178,3 +178,17 @@ The XML report is written to `target/pit-reports/mutations.xml`.
 ## License
 
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+## Citation
+
+If you use PITMuS in your research, please cite it:
+
+​```bibtex
+@software{tasnim_pitmus_2026,
+  author  = {Tasnim, Tasfia},
+  title   = {{PITMuS}: {PIT} {Mutations} in the {Source} {Code}},
+  year    = {2026},
+  version = {1.0.0},
+  url     = {https://github.com/assert-lab/PITMuS}
+}
+​```
