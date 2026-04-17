@@ -4,6 +4,12 @@ This repository is for two things: extract and inject source-level mutations fro
 
 PIT operates at the bytecode level and does not export mutated source code. This tool bridges that gap by parsing PIT's XML output, mapping each mutation back to its source line, and applying the mutation description to produce a mutated source code line.
 
+
+## Demo Video
+
+[![Demo video](https://img.youtube.com/vi/37TtM6UfYMQ/hqdefault.jpg)](https://youtu.be/37TtM6UfYMQ)
+
+
 ## Repository Structure
 
 ```
@@ -36,9 +42,6 @@ mutate-source-code/
 - A JDK on `PATH` (the extractor invokes `javap` to read compiled `.class` files for bytecode-accurate mutation targeting)
 - A Maven project with PIT configured, a generated `mutations.xml` report, and compiled classes under `target/classes/`
 
-## Demo Video
-
-[![Demo video](https://img.youtube.com/vi/37TtM6UfYMQ/hqdefault.jpg)](https://youtu.be/37TtM6UfYMQ)
 
 ## Usage
 
