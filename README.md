@@ -175,3 +175,6 @@ mvn clean test org.pitest:pitest-maven:mutationCoverage
 
 The XML report is written to `target/pit-reports/mutations.xml`.
 
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
