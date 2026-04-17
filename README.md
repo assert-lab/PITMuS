@@ -181,7 +181,7 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ## Citation
 
-If you use PITMuS in your research, please cite it:
+If you use PITMuS in your work, please cite it:
 
 ```bibtex
 @software{tasnim_pitmus_2026,
