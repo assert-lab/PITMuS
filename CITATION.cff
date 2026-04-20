@@ -3,7 +3,7 @@ message: "If you use this software, please cite it as below."
 title: "PITMuS: PIT Mutations In the Source Code"
 abstract: "A tool for extracting and injecting source-level mutations from PIT (Pitest) XML reports, bridging the gap between PIT's bytecode-level mutations and source code."
 authors:
-  - family-names: "AseertLab"
+  - family-names: "AssertLab"
 repository-code: "https://github.com/assert-lab/PITMuS"
 url: "https://github.com/assert-lab/PITMuS"
 license: Apache-2.0
