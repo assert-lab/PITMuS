@@ -185,7 +185,7 @@ If you use PITMuS in your work, please cite it:
 
 ```bibtex
 @misc{pitmus,
-  author  = {{Tasfia Tasnim, Soneya Binta Hossain}},
+  author  = {Tasfia Tasnim, Soneya Binta Hossain},
   title   = {{PITMuS}: {PIT} {Mutations} in the {Source} {Code}},
   year    = {2026},
   version = {1.0.0},
