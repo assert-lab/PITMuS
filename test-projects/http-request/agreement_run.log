@@ -1,0 +1,69 @@
+[info] 603 PIT mutants, 586 PITMuS rows
+[progress] 1 evaluated, 0 skipped, 2.1s elapsed (last: NullReturnValsMutator L2591 -> KILLED, agreed=1)
+[progress] 10 evaluated, 2 skipped, 18.6s elapsed (last: RemoveConditionalMutator_EQUAL_ELSE L356 -> KILLED, agreed=1)
+[progress] 20 evaluated, 4 skipped, 38.9s elapsed (last: RemoveConditionalMutator_EQUAL_ELSE L332 -> KILLED, agreed=1)
+[progress] 30 evaluated, 6 skipped, 58.6s elapsed (last: RemoveConditionalMutator_EQUAL_ELSE L927 -> KILLED, agreed=1)
+[progress] 40 evaluated, 12 skipped, 76.5s elapsed (last: RemoveConditionalMutator_ORDER_IF L963 -> KILLED, agreed=1)
+[progress] 50 evaluated, 26 skipped, 92.8s elapsed (last: RemoveConditionalMutator_EQUAL_ELSE L1627 -> KILLED, agreed=1)
+[progress] 60 evaluated, 26 skipped, 114.0s elapsed (last: NullReturnValsMutator L1844 -> KILLED, agreed=1)
+[progress] 70 evaluated, 26 skipped, 135.4s elapsed (last: RemoveConditionalMutator_ORDER_IF L1745 -> KILLED, agreed=1)
+[progress] 80 evaluated, 26 skipped, 155.1s elapsed (last: RemoveConditionalMutator_EQUAL_ELSE L2689 -> SURVIVED, agreed=1)
+[progress] 90 evaluated, 26 skipped, 173.6s elapsed (last: VoidMethodCallMutator L1576 -> SURVIVED, agreed=0)
+[progress] 100 evaluated, 26 skipped, 192.2s elapsed (last: NullReturnValsMutator L2527 -> KILLED, agreed=1)
+[progress] 110 evaluated, 26 skipped, 210.6s elapsed (last: RemoveConditionalMutator_EQUAL_ELSE L1500 -> KILLED, agreed=1)
+[progress] 120 evaluated, 26 skipped, 231.3s elapsed (last: PrimitiveReturnsMutator L2152 -> KILLED, agreed=1)
+[progress] 130 evaluated, 26 skipped, 251.9s elapsed (last: NullReturnValsMutator L1672 -> KILLED, agreed=1)
+[progress] 140 evaluated, 35 skipped, 268.0s elapsed (last: RemoveConditionalMutator_EQUAL_ELSE L3145 -> KILLED, agreed=1)
+[progress] 150 evaluated, 36 skipped, 289.5s elapsed (last: NullReturnValsMutator L3111 -> KILLED, agreed=0)
+[progress] 160 evaluated, 36 skipped, 310.5s elapsed (last: RemoveConditionalMutator_EQUAL_IF L1032 -> SURVIVED, agreed=1)
+[progress] 170 evaluated, 36 skipped, 330.8s elapsed (last: MathMutator L2294 -> KILLED, agreed=1)
+Traceback (most recent call last):
+  File "/home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/scripts/evaluate_agreement.py", line 414, in <module>
+    main()
+  File "/home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/scripts/evaluate_agreement.py", line 308, in main
+    pitmus_status, detail = classify_outcome(rc, stdout, stderr)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/scripts/evaluate_agreement.py", line 146, in classify_outcome
+    out = (stdout or "") + "\n" + (stderr or "")
+          ~~~~~~~~~~~~~~~^~~~~~
+TypeError: can't concat str to bytes
+[info] 603 PIT mutants, 586 PITMuS rows
+[info] resume: 170 mutants already evaluated
+[progress] 1 evaluated, 37 skipped, 60.1s elapsed (last: MathMutator L2304 -> KILLED, agreed=1)
+[progress] 10 evaluated, 45 skipped, 79.9s elapsed (last: RemoveConditionalMutator_EQUAL_IF L2292 -> SURVIVED, agreed=1)
+[progress] 20 evaluated, 45 skipped, 100.0s elapsed (last: RemoveConditionalMutator_ORDER_IF L2292 -> SURVIVED, agreed=1)
+[progress] 30 evaluated, 45 skipped, 122.9s elapsed (last: ConditionalsBoundaryMutator L2253 -> SURVIVED, agreed=1)
+[progress] 40 evaluated, 50 skipped, 202.9s elapsed (last: RemoveConditionalMutator_EQUAL_ELSE L2263 -> KILLED, agreed=1)
+[progress] 50 evaluated, 54 skipped, 224.4s elapsed (last: RemoveConditionalMutator_ORDER_ELSE L2253 -> KILLED, agreed=1)
+[progress] 60 evaluated, 54 skipped, 245.5s elapsed (last: RemoveConditionalMutator_EQUAL_ELSE L303 -> KILLED, agreed=0)
+[progress] 70 evaluated, 54 skipped, 268.2s elapsed (last: NullReturnValsMutator L1236 -> KILLED, agreed=1)
+[progress] 80 evaluated, 54 skipped, 290.9s elapsed (last: RemoveConditionalMutator_EQUAL_IF L2078 -> KILLED, agreed=1)
+[progress] 90 evaluated, 63 skipped, 311.8s elapsed (last: NullReturnValsMutator L2092 -> KILLED, agreed=1)
+[progress] 100 evaluated, 64 skipped, 333.0s elapsed (last: PrimitiveReturnsMutator L2164 -> KILLED, agreed=1)
+[progress] 110 evaluated, 64 skipped, 356.5s elapsed (last: RemoveConditionalMutator_EQUAL_IF L1607 -> KILLED, agreed=1)
+[progress] 120 evaluated, 73 skipped, 379.1s elapsed (last: BooleanTrueReturnValsMutator L1587 -> KILLED, agreed=1)
+[progress] 130 evaluated, 73 skipped, 399.6s elapsed (last: NullReturnValsMutator L2869 -> KILLED, agreed=0)
+[progress] 140 evaluated, 73 skipped, 422.3s elapsed (last: NullReturnValsMutator L2943 -> SURVIVED, agreed=1)
+[progress] 150 evaluated, 73 skipped, 444.6s elapsed (last: NullReturnValsMutator L1055 -> KILLED, agreed=1)
+[progress] 160 evaluated, 73 skipped, 466.5s elapsed (last: RemoveConditionalMutator_EQUAL_ELSE L1160 -> KILLED, agreed=1)
+[progress] 170 evaluated, 73 skipped, 484.0s elapsed (last: NullReturnValsMutator L1989 -> KILLED, agreed=1)
+[progress] 180 evaluated, 73 skipped, 502.6s elapsed (last: NullReturnValsMutator L2987 -> KILLED, agreed=1)
+[progress] 190 evaluated, 76 skipped, 526.1s elapsed (last: ConditionalsBoundaryMutator L1855 -> KILLED, agreed=1)
+[progress] 200 evaluated, 80 skipped, 547.5s elapsed (last: EmptyObjectReturnValsMutator L1513 -> KILLED, agreed=1)
+[progress] 210 evaluated, 80 skipped, 570.0s elapsed (last: NullReturnValsMutator L3210 -> KILLED, agreed=1)
+[progress] 220 evaluated, 81 skipped, 591.1s elapsed (last: RemoveConditionalMutator_EQUAL_ELSE L2779 -> KILLED, agreed=1)
+[progress] 230 evaluated, 82 skipped, 613.4s elapsed (last: MathMutator L507 -> KILLED, agreed=1)
+[progress] 240 evaluated, 87 skipped, 634.7s elapsed (last: MathMutator L515 -> KILLED, agreed=1)
+[progress] 250 evaluated, 97 skipped, 656.8s elapsed (last: RemoveConditionalMutator_ORDER_IF L507 -> KILLED, agreed=1)
+[progress] 260 evaluated, 100 skipped, 679.1s elapsed (last: ConditionalsBoundaryMutator L633 -> SURVIVED, agreed=1)
+[progress] 270 evaluated, 100 skipped, 701.2s elapsed (last: MathMutator L633 -> SURVIVED, agreed=1)
+[progress] 280 evaluated, 100 skipped, 723.0s elapsed (last: RemoveConditionalMutator_ORDER_ELSE L622 -> SURVIVED, agreed=1)
+[progress] 290 evaluated, 100 skipped, 743.3s elapsed (last: RemoveConditionalMutator_ORDER_IF L640 -> KILLED, agreed=1)
+[progress] 300 evaluated, 102 skipped, 761.3s elapsed (last: VoidMethodCallMutator L764 -> KILLED, agreed=1)
+[progress] 310 evaluated, 102 skipped, 778.4s elapsed (last: NullReturnValsMutator L2624 -> KILLED, agreed=1)
+[progress] 320 evaluated, 102 skipped, 795.5s elapsed (last: NullReturnValsMutator L389 -> KILLED, agreed=1)
+
+[done] evaluated=326, skipped=106, total_elapsed=808.6s
+[done] details: /home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/test-projects/http-request/agreement/details.csv
+[done] by-project: /home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/test-projects/http-request/agreement/by_project.csv
+[done] by-operator: /home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/test-projects/http-request/agreement/by_operator.csv

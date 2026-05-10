@@ -1,0 +1,2 @@
+"mutation_line","mutated_line","source_file","line_number","description","test_file"
+"return Type.UNKNOWN;","return null;","org/apache/bcel/generic/StackInstruction.java",45,"replaced return value with null for org/apache/bcel/generic/StackInstruction::getType",""

@@ -1,0 +1,62 @@
+mutant_id=ef599844ce6f
+class=org.apache.commons.dbutils.AbstractQueryRunner
+method=rethrow
+methodDescription=(Ljava/sql/SQLException;Ljava/lang/String;[Ljava/lang/Object;)V
+line=528
+mutator=VoidMethodCallMutator
+description=removed call to java/sql/SQLException::setNextException
+sourceFile=AbstractQueryRunner.java
+pit_status=SURVIVED
+pitmus_status=KILLED
+detail=test_failure
+return_code=1
+--- STDOUT ---
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:2.22.0:test[m [1m(default-test)[m on project [36mcommons-dbutils[m: [1;31mThere are test failures.[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31mPlease refer to /home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/test-projects/commons-dbutils/target/surefire-reports for the individual test results.[m
+[[1;31mERROR[m] [1;31mPlease refer to dump files (if any exist) [date]-jvmRun[N].dump, [date].dumpstream and [date]-jvmRun[N].dumpstream.[m
+[[1;31mERROR[m] [1;31mThere was an error in the forked process[m
+[[1;31mERROR[m] [1;31morg/apache/commons/dbutils/ResultSetHandler[m
+[[1;31mERROR[m] [1;31morg.apache.maven.surefire.booter.SurefireBooterForkException: There was an error in the forked process[m
+[[1;31mERROR[m] [1;31morg/apache/commons/dbutils/ResultSetHandler[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.fork(ForkStarter.java:658)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.fork(ForkStarter.java:533)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:278)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:244)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeProvider(AbstractSurefireMojo.java:1194)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeAfterPreconditionsChecked(AbstractSurefireMojo.java:1022)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.execute(AbstractSurefireMojo.java:868)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:370)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:351)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:215)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:171)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:163)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:298)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:960)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:293)[m
+[[1;31mERROR[m] [1;31m	at org.apache.maven.cli.MavenCli.main(MavenCli.java:196)[m
+[[1;31mERROR[m] [1;31m	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[m
+[[1;31mERROR[m] [1;31m	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)[m
+[[1;31mERROR[m] [1;31m	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[m
+[[1;31mERROR[m] [1;31m	at java.base/java.lang.reflect.Method.invoke(Method.java:569)[m
+[[1;31mERROR[m] [1;31m	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:283)[m
+[[1;31mERROR[m] [1;31m	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:226)[m
+[[1;31mERROR[m] [1;31m	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:407)[m
+[[1;31mERROR[m] [1;31m	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:348)[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+
+--- STDERR ---

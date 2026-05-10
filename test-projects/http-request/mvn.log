@@ -1,0 +1,59 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for com.github.kevinsawicki:http-request:jar:6.0
+[[1;33mWARNING[m] Reporting configuration should be done in <reporting> section, not in maven-site-plugin <configuration> as reportPlugins parameter. @ line 170, column 24
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] It is highly recommended to fix these problems because they threaten the stability of your build.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] For this reason, future Maven versions might no longer support building such malformed projects.
+[[1;33mWARNING[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------< [0;36mcom.github.kevinsawicki:http-request[0;1m >----------------[m
+[[1;34mINFO[m] [1mBuilding http-request 6.0[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mhttp-request[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.0:enforce[m [1m(enforce-maven)[m @ [36mhttp-request[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mhttp-request[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/http-request/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:2.3.2:compile[m [1m(default-compile)[m @ [36mhttp-request[0;1m ---[m
+[[1;34mINFO[m] Compiling 1 source file to /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/http-request/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:2.3.7:manifest[m [1m(bundle-manifest)[m @ [36mhttp-request[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mhttp-request[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/http-request/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:2.3.2:testCompile[m [1m(default-testCompile)[m @ [36mhttp-request[0;1m ---[m
+[[1;34mINFO[m] Compiling 3 source files to /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/http-request/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mhttp-request[0;1m ---[m
+[[1;34mINFO[m] Surefire report directory: /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/http-request/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.github.kevinsawicki.http.HttpRequestTest
+2026-05-06 09:59:09.587:INFO:oejs.Server:jetty-8.1.9.v20130131
+2026-05-06 09:59:09.596:INFO:oejs.AbstractConnector:Started SelectChannelConnector@0.0.0.0:35519
+2026-05-06 09:59:09.600:INFO:oejs.Server:jetty-8.1.9.v20130131
+2026-05-06 09:59:09.603:INFO:oejs.AbstractConnector:Started SelectChannelConnector@0.0.0.0:35079
+Tests run: 156, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.909 sec
+Running com.github.kevinsawicki.http.EncodeTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+
+Results :
+
+Tests run: 158, Failures: 0, Errors: 0, Skipped: 0
+
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  2.281 s
+[[1;34mINFO[m] Finished at: 2026-05-06T09:59:10-05:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m

@@ -1,0 +1,10 @@
+[2026-05-08T17:41:53] start project=jsoup sampled=500 resume=True already_done=0
+[2026-05-08T17:41:54] progress evaluated=1 skipped=0 elapsed=1.5s last=BooleanTrueReturnValsMutator L143 -> KILLED agreed
+[2026-05-08T17:42:30] progress evaluated=25 skipped=5 elapsed=36.8s last=EmptyObjectReturnValsMutator L44 -> KILLED agreed
+[2026-05-08T17:43:07] progress evaluated=50 skipped=11 elapsed=73.7s last=VoidMethodCallMutator L1703 -> KILLED agreed
+[2026-05-08T17:43:43] progress evaluated=75 skipped=16 elapsed=110.5s last=RemoveConditionalMutator_ORDER_IF L377 -> KILLED agreed
+[2026-05-08T17:44:20] progress evaluated=100 skipped=20 elapsed=147.5s last=NullReturnValsMutator L703 -> KILLED disagreed
+[2026-05-08T17:44:57] progress evaluated=125 skipped=36 elapsed=184.7s last=VoidMethodCallMutator L1543 -> KILLED disagreed
+[2026-05-08T17:45:34] progress evaluated=150 skipped=39 elapsed=221.6s last=RemoveConditionalMutator_EQUAL_ELSE L123 -> KILLED agreed
+[2026-05-08T17:46:11] progress evaluated=175 skipped=50 elapsed=257.9s last=RemoveConditionalMutator_EQUAL_IF L28 -> KILLED agreed
+[2026-05-08T17:46:49] progress evaluated=200 skipped=52 elapsed=296.0s last=RemoveConditionalMutator_ORDER_IF L443 -> KILLED agreed

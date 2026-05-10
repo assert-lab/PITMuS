@@ -1,0 +1,6 @@
+"mutation_line","mutated_line","source_file","line_number","description","test_file"
+"v.visitStackConsumer(this);","// removed call to visitStackConsumer()","org/apache/bcel/generic/IF_ACMPEQ.java",60,"removed call to org/apache/bcel/generic/Visitor::visitStackConsumer",""
+"v.visitBranchInstruction(this);","// removed call to visitBranchInstruction()","org/apache/bcel/generic/IF_ACMPEQ.java",61,"removed call to org/apache/bcel/generic/Visitor::visitBranchInstruction",""
+"v.visitIfInstruction(this);","// removed call to visitIfInstruction()","org/apache/bcel/generic/IF_ACMPEQ.java",62,"removed call to org/apache/bcel/generic/Visitor::visitIfInstruction",""
+"v.visitIF_ACMPEQ(this);","// removed call to visitIF_ACMPEQ()","org/apache/bcel/generic/IF_ACMPEQ.java",63,"removed call to org/apache/bcel/generic/Visitor::visitIF_ACMPEQ",""
+"return new IF_ACMPNE(super.getTarget());","return null;","org/apache/bcel/generic/IF_ACMPEQ.java",46,"replaced return value with null for org/apache/bcel/generic/IF_ACMPEQ::negate",""

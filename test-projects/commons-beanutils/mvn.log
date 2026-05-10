@@ -1,0 +1,280 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------< [0;36mcommons-beanutils:commons-beanutils[0;1m >-----------------[m
+[[1;34mINFO[m] [1mBuilding Apache Commons BeanUtils 1.9.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;33mWARNING[m] The POM for commons-collections:commons-collections-testframework:jar:3.2.1 is missing, no dependency information available
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.0.0:clean[m [1m(default-clean)[m @ [36mcommons-beanutils[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/commons-beanutils/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.0.0-M2:enforce[m [1m(enforce-maven-version)[m @ [36mcommons-beanutils[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.0.0-M2:enforce[m [1m(enforce-maven-3)[m @ [36mcommons-beanutils[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mbuild-helper-maven-plugin:3.0.0:parse-version[m [1m(parse-version)[m @ [36mcommons-beanutils[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-antrun-plugin:1.8:run[m [1m(javadoc.resources)[m @ [36mcommons-beanutils[0;1m ---[m
+[[1;34mINFO[m] Executing tasks
+
+main:
+     [copy] Copying 2 files to /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/commons-beanutils/target/apidocs/META-INF
+[[1;34mINFO[m] Executed tasks
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.5:process[m [1m(process-resource-bundles)[m @ [36mcommons-beanutils[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mbuildnumber-maven-plugin:1.4:create[m [1m(default)[m @ [36mcommons-beanutils[0;1m ---[m
+[[1;34mINFO[m] Executing: /bin/sh -c cd '/home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/commons-beanutils' && 'svn' '--non-interactive' 'info'
+[[1;34mINFO[m] Working directory: /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/commons-beanutils
+[[1;33mWARNING[m] Cannot get the revision information from the scm repository, proceeding with revision of ?????? : 
+Exception while executing SCM command.
+[[1;34mINFO[m] Storing buildNumber: ?????? at timestamp: 1778065465688
+[[1;34mINFO[m] Executing: /bin/sh -c cd '/home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/commons-beanutils' && 'svn' '--non-interactive' 'info'
+[[1;34mINFO[m] Working directory: /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/commons-beanutils
+[[1;33mWARNING[m] Cannot get the branch information from the scm repository, proceeding with UNKNOWN_BRANCH : 
+Exception while executing SCM command.
+[[1;34mINFO[m] Storing buildScmBranch: UNKNOWN_BRANCH
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.0.2:resources[m [1m(default-resources)[m @ [36mcommons-beanutils[0;1m ---[m
+[[1;34mINFO[m] Using 'iso-8859-1' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/commons-beanutils/src/main/resources
+[[1;34mINFO[m] Copying 2 resources to META-INF
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.7.0:compile[m [1m(default-compile)[m @ [36mcommons-beanutils[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 111 source files to /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/commons-beanutils/target/classes
+[[1;34mINFO[m] /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/commons-beanutils/src/main/java/org/apache/commons/beanutils/BeanUtilsBean.java: Some input files use or override a deprecated API.
+[[1;34mINFO[m] /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/commons-beanutils/src/main/java/org/apache/commons/beanutils/BeanUtilsBean.java: Recompile with -Xlint:deprecation for details.
+[[1;34mINFO[m] /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/commons-beanutils/src/main/java/org/apache/commons/beanutils/locale/converters/ByteLocaleConverter.java: Some input files use or override a deprecated API that is marked for removal.
+[[1;34mINFO[m] /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/commons-beanutils/src/main/java/org/apache/commons/beanutils/locale/converters/ByteLocaleConverter.java: Recompile with -Xlint:removal for details.
+[[1;34mINFO[m] /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/commons-beanutils/src/main/java/org/apache/commons/beanutils/converters/AbstractArrayConverter.java: Some input files use unchecked or unsafe operations.
+[[1;34mINFO[m] /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/commons-beanutils/src/main/java/org/apache/commons/beanutils/converters/AbstractArrayConverter.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:3.5.0:manifest[m [1m(bundle-manifest)[m @ [36mcommons-beanutils[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32manimal-sniffer-maven-plugin:1.16:check[m [1m(checkAPIcompatibility)[m @ [36mcommons-beanutils[0;1m ---[m
+[[1;34mINFO[m] Checking unresolved references to org.codehaus.mojo.signature:java18:1.0
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.0.2:testResources[m [1m(default-testResources)[m @ [36mcommons-beanutils[0;1m ---[m
+[[1;34mINFO[m] Using 'iso-8859-1' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/commons-beanutils/src/test/resources
+[[1;34mINFO[m] Copying 2 resources to META-INF
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.7.0:testCompile[m [1m(default-testCompile)[m @ [36mcommons-beanutils[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 147 source files to /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/commons-beanutils/target/test-classes
+[[1;34mINFO[m] /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/commons-beanutils/src/test/java/org/apache/commons/beanutils/memoryleaktests/MemoryLeakTestCase.java: Some input files use or override a deprecated API.
+[[1;34mINFO[m] /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/commons-beanutils/src/test/java/org/apache/commons/beanutils/memoryleaktests/MemoryLeakTestCase.java: Recompile with -Xlint:deprecation for details.
+[[1;34mINFO[m] /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/commons-beanutils/src/test/java/org/apache/commons/beanutils/BeanUtilsTestCase.java: Some input files use or override a deprecated API that is marked for removal.
+[[1;34mINFO[m] /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/commons-beanutils/src/test/java/org/apache/commons/beanutils/BeanUtilsTestCase.java: Recompile with -Xlint:removal for details.
+[[1;34mINFO[m] /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/commons-beanutils/src/test/java/org/apache/commons/beanutils/BeanMapTestCase.java: /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/commons-beanutils/src/test/java/org/apache/commons/beanutils/BeanMapTestCase.java uses unchecked or unsafe operations.
+[[1;34mINFO[m] /home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects/commons-beanutils/src/test/java/org/apache/commons/beanutils/BeanMapTestCase.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.0:test[m [1m(default-test)[m @ [36mcommons-beanutils[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mBeanPredicateTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s - in org.apache.commons.beanutils.[1mBeanPredicateTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mBeanToPropertyValueTransformerTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m17[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.commons.beanutils.[1mBeanToPropertyValueTransformerTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mBeanMapTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m132[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 s - in org.apache.commons.beanutils.[1mBeanMapTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mWrapDynaBeanTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m43[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in org.apache.commons.beanutils.[1mWrapDynaBeanTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mDynaResultSetTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m7[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in org.apache.commons.beanutils.[1mDynaResultSetTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira345TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.bugs.[1mJira345TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira369TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.commons.beanutils.bugs.[1mJira369TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira493TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in org.apache.commons.beanutils.bugs.[1mJira493TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira492TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m8[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.apache.commons.beanutils.bugs.[1mJira492TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira463TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.bugs.[1mJira463TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira411TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.bugs.[1mJira411TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira273TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m6[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.apache.commons.beanutils.bugs.[1mJira273TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira465TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.commons.beanutils.bugs.[1mJira465TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira422TestCase[m
+[[1;33mWARNING[m] [1;33mTests [0;1mrun: [0;1m1[m, Failures: 0, Errors: 0, [1;33mSkipped: [0;1;33m1[m, Time elapsed: 0.001 s - in org.apache.commons.beanutils.bugs.[1mJira422TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira347TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.556 s - in org.apache.commons.beanutils.bugs.[1mJira347TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira520TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.commons.beanutils.bugs.[1mJira520TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira157TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.apache.commons.beanutils.bugs.[1mJira157TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira458TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.commons.beanutils.bugs.[1mJira458TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira456TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.bugs.[1mJira456TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira61TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m16[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.commons.beanutils.bugs.[1mJira61TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira339TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.bugs.[1mJira339TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira298TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.bugs.[1mJira298TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira87TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.bugs.[1mJira87TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira368TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.bugs.[1mJira368TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira358TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.commons.beanutils.bugs.[1mJira358TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira92TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in org.apache.commons.beanutils.bugs.[1mJira92TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira349TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.commons.beanutils.bugs.[1mJira349TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira359TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.commons.beanutils.bugs.[1mJira359TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira381TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.bugs.[1mJira381TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira422bTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.commons.beanutils.bugs.[1mJira422bTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira357TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.commons.beanutils.bugs.[1mJira357TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira454TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.bugs.[1mJira454TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.bugs.[1mJira18TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m12[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.commons.beanutils.bugs.[1mJira18TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mBeanUtilsTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m55[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.039 s - in org.apache.commons.beanutils.[1mBeanUtilsTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mBeanIntrospectionDataTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.[1mBeanIntrospectionDataTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mDynaRowSetTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m9[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in org.apache.commons.beanutils.[1mDynaRowSetTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mBeanComparatorTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m8[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.commons.beanutils.[1mBeanComparatorTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mMethodUtilsTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m32[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.apache.commons.beanutils.[1mMethodUtilsTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mDefaultIntrospectionContextTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m9[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.[1mDefaultIntrospectionContextTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mBeanPropertyValueChangeClosureTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m26[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.apache.commons.beanutils.[1mBeanPropertyValueChangeClosureTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mBeanPropertyValueEqualsPredicateTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m17[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.[1mBeanPropertyValueEqualsPredicateTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mDynaPropertyTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.[1mDynaPropertyTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mFluentPropertyBeanIntrospectorTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.commons.beanutils.[1mFluentPropertyBeanIntrospectorTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.converters.[1mCharacterConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m6[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.converters.[1mCharacterConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.converters.[1mClassConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m7[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.commons.beanutils.converters.[1mClassConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.converters.[1mIntegerConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m21[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in org.apache.commons.beanutils.converters.[1mIntegerConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.converters.[1mSqlDateConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m12[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in org.apache.commons.beanutils.converters.[1mSqlDateConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.converters.[1mShortConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m20[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.commons.beanutils.converters.[1mShortConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.converters.[1mCalendarConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m11[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.apache.commons.beanutils.converters.[1mCalendarConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.converters.[1mFloatConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m20[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.apache.commons.beanutils.converters.[1mFloatConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.converters.[1mArrayConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m7[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.commons.beanutils.converters.[1mArrayConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.converters.[1mDateConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m11[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in org.apache.commons.beanutils.converters.[1mDateConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.converters.[1mSqlTimestampConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m11[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in org.apache.commons.beanutils.converters.[1mSqlTimestampConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.converters.[1mBigDecimalConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m19[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.apache.commons.beanutils.converters.[1mBigDecimalConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.converters.[1mBooleanConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m7[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.converters.[1mBooleanConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.converters.[1mByteConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m20[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.apache.commons.beanutils.converters.[1mByteConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.converters.[1mStringArrayConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.converters.[1mStringArrayConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.converters.[1mLongConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m19[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.commons.beanutils.converters.[1mLongConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.converters.[1mStringConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m3[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.converters.[1mStringConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.converters.[1mSqlTimeConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m11[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.apache.commons.beanutils.converters.[1mSqlTimeConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.converters.[1mBigIntegerConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m19[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.commons.beanutils.converters.[1mBigIntegerConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.converters.[1mClassReloaderTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.apache.commons.beanutils.converters.[1mClassReloaderTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.converters.[1mURLConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 s - in org.apache.commons.beanutils.converters.[1mURLConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.converters.[1mDoubleConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m19[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.apache.commons.beanutils.converters.[1mDoubleConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.converters.[1mFileConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.converters.[1mFileConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.converters.[1mBooleanArrayConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m9[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.converters.[1mBooleanArrayConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mBasicDynaBeanTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m35[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in org.apache.commons.beanutils.[1mBasicDynaBeanTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mLazyDynaBeanTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m16[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.[1mLazyDynaBeanTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mDynaBeanMapDecoratorTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m13[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.[1mDynaBeanMapDecoratorTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mDynaBeanUtilsTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m29[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.apache.commons.beanutils.[1mDynaBeanUtilsTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.expression.[1mDefaultResolverTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m7[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.expression.[1mDefaultResolverTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mSuppressPropertiesBeanIntrospectorTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.[1mSuppressPropertiesBeanIntrospectorTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mLazyDynaClassTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m15[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.[1mLazyDynaClassTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.locale.[1mLocaleBeanificationTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m8[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.063 s - in org.apache.commons.beanutils.locale.[1mLocaleBeanificationTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.locale.[1mLocaleBeanUtilsTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.locale.[1mLocaleBeanUtilsTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.locale.converters.[1mFloatLocaleConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m12[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in org.apache.commons.beanutils.locale.converters.[1mFloatLocaleConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.locale.converters.[1mIntegerLocaleConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m12[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.commons.beanutils.locale.converters.[1mIntegerLocaleConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.locale.converters.[1mBigIntegerLocaleConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m11[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.locale.converters.[1mBigIntegerLocaleConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.locale.converters.[1mDateLocaleConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m14[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.apache.commons.beanutils.locale.converters.[1mDateLocaleConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.locale.converters.[1mLongLocaleConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m10[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.locale.converters.[1mLongLocaleConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.locale.converters.[1mDoubleLocaleConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m10[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.commons.beanutils.locale.converters.[1mDoubleLocaleConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.locale.converters.[1mShortLocaleConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m10[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.locale.converters.[1mShortLocaleConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.locale.converters.[1mByteLocaleConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m10[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.locale.converters.[1mByteLocaleConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.locale.converters.[1mBaseLocaleConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m1[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.locale.converters.[1mBaseLocaleConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.locale.converters.[1mBigDecimalLocaleConverterTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m10[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.commons.beanutils.locale.converters.[1mBigDecimalLocaleConverterTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mMappedPropertyTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m17[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.commons.beanutils.[1mMappedPropertyTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mIndexedPropertyTestCase[m
+[[1;33mWARNING[m] [1;33mTests [0;1mrun: [0;1m29[m, Failures: 0, Errors: 0, [1;33mSkipped: [0;1;33m2[m, Time elapsed: 0.007 s - in org.apache.commons.beanutils.[1mIndexedPropertyTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mBeanUtils2TestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m55[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in org.apache.commons.beanutils.[1mBeanUtils2TestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mLazyDynaMapTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m17[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.[1mLazyDynaMapTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mLazyDynaListTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m15[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in org.apache.commons.beanutils.[1mLazyDynaListTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mPropertyUtilsTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m116[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.079 s - in org.apache.commons.beanutils.[1mPropertyUtilsTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mBeanificationTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m8[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.115 s - in org.apache.commons.beanutils.[1mBeanificationTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mConvertUtilsTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m13[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.apache.commons.beanutils.[1mConvertUtilsTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mDynaPropertyUtilsTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m55[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.apache.commons.beanutils.[1mDynaPropertyUtilsTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.memoryleaktests.[1mMemoryLeakTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m8[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 171.21 s - in org.apache.commons.beanutils.memoryleaktests.[1mMemoryLeakTestCase[m
+[[1;34mINFO[m] Running org.apache.commons.beanutils.[1mConstructorUtilsTestCase[m
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m11[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.commons.beanutils.[1mConstructorUtilsTestCase[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;33mWARNING[m] [1;33mTests run: 1286, Failures: 0, Errors: 0, Skipped: 3[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  03:17 min
+[[1;34mINFO[m] Finished at: 2026-05-06T06:07:42-05:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m

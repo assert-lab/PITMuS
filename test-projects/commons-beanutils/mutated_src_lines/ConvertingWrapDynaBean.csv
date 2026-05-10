@@ -1,0 +1,2 @@
+"mutation_line","mutated_line","source_file","line_number","description","test_file"
+"BeanUtils.copyProperty(instance, name, value);","// removed call to copyProperty()","org/apache/commons/beanutils/ConvertingWrapDynaBean.java",67,"removed call to org/apache/commons/beanutils/BeanUtils::copyProperty",""

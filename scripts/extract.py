@@ -1,3 +1,5 @@
+#extraction
+
 import xml.etree.ElementTree as ET
 import csv
 import os
@@ -547,6 +549,11 @@ def main():
     id_prefix = "".join(c for c in stem if c.isalpha())[:4].lower() or "proj"
     xml_path = os.path.join(project, "target", "pit-reports", "mutations.xml")
     src_root = os.path.join(project, "src", "main", "java")
+    extra_src_roots = [
+        os.path.join(project, "target", "generated-sources", "java"),
+        os.path.join(project, "target", "generated-sources", "jjtree"),
+        os.path.join(project, "target", "generated-sources", "annotations"),
+    ]
     classes_root = os.path.join(project, "target", "classes")
     out_dir = os.path.join(project, "mutated_src_lines")
     if mode == "file-wise":
@@ -608,6 +615,12 @@ def main():
             pkg = cls.rsplit(".", 1)[0] if "." in cls else ""
             rel_src = os.path.join(pkg.replace(".", "/"), src_file)
             abs_path = os.path.join(src_root, pkg.replace(".", os.sep), src_file)
+            if not os.path.isfile(abs_path):
+                for alt_root in extra_src_roots:
+                    candidate = os.path.join(alt_root, pkg.replace(".", os.sep), src_file)
+                    if os.path.isfile(candidate):
+                        abs_path = candidate
+                        break
 
             if abs_path not in source_cache:
                 source_cache[abs_path] = load_source(abs_path)

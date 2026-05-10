@@ -1,0 +1,5 @@
+"mutation_line","mutated_line","source_file","line_number","description","test_file"
+"return stack.empty();","return false;","org/apache/bcel/util/ClassStack.java",50,"replaced boolean return with false for org/apache/bcel/util/ClassStack::empty",""
+"return stack.empty();","return true;","org/apache/bcel/util/ClassStack.java",50,"replaced boolean return with true for org/apache/bcel/util/ClassStack::empty",""
+"return stack.pop();","return null;","org/apache/bcel/util/ClassStack.java",40,"replaced return value with null for org/apache/bcel/util/ClassStack::pop",""
+"return stack.peek();","return null;","org/apache/bcel/util/ClassStack.java",45,"replaced return value with null for org/apache/bcel/util/ClassStack::top",""

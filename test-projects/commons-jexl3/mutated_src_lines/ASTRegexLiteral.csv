@@ -1,0 +1,6 @@
+"mutation_line","mutated_line","source_file","line_number","description","test_file"
+"return this.literal;","return null;","org/apache/commons/jexl3/parser/ASTRegexLiteral.java",46,"replaced return value with null for org/apache/commons/jexl3/parser/ASTRegexLiteral::getLiteral","ArithmeticOperatorTest.java"
+"return true;","return false;","org/apache/commons/jexl3/parser/ASTRegexLiteral.java",51,"replaced boolean return with false for org/apache/commons/jexl3/parser/ASTRegexLiteral::isConstant",""
+"return visitor.visit(this, data);","return null;","org/apache/commons/jexl3/parser/ASTRegexLiteral.java",60,"replaced return value with null for org/apache/commons/jexl3/parser/ASTRegexLiteral::jjtAccept","ArithmeticOperatorTest.java"
+"return literal != null ? literal.toString() : """";","return false ? literal.toString() : """";","org/apache/commons/jexl3/parser/ASTRegexLiteral.java",37,"removed conditional - replaced equality check with false","ArithmeticOperatorTest.java"
+"return literal != null ? literal.toString() : """";","return true ? literal.toString() : """";","org/apache/commons/jexl3/parser/ASTRegexLiteral.java",37,"removed conditional - replaced equality check with true","ArithmeticOperatorTest.java"

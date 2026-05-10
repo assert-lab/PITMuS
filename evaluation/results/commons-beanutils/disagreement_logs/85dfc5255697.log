@@ -1,0 +1,15 @@
+mutant_id=85dfc5255697
+class=org.apache.commons.beanutils.WrapDynaClass$CacheKey
+method=equals
+methodDescription=(Ljava/lang/Object;)Z
+line=532
+mutator=RemoveConditionalMutator_EQUAL_IF
+description=removed conditional - replaced equality check with true
+sourceFile=WrapDynaClass.java
+pit_status=KILLED
+pitmus_status=SURVIVED
+detail=ok
+return_code=0
+--- STDOUT ---
+
+--- STDERR ---

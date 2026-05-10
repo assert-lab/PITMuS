@@ -9,7 +9,11 @@
 "return printer.format(millis, buf);","return null;","org/apache/commons/lang3/time/FastDateFormat.java",510,"replaced return value with null for org/apache/commons/lang3/time/FastDateFormat::format",""
 "return printer.format(millis, buf);","return null;","org/apache/commons/lang3/time/FastDateFormat.java",466,"replaced return value with null for org/apache/commons/lang3/time/FastDateFormat::format",""
 "return toAppendTo.append(printer.format(obj));","return null;","org/apache/commons/lang3/time/FastDateFormat.java",416,"replaced return value with null for org/apache/commons/lang3/time/FastDateFormat::format",""
+<<<<<<< HEAD
 "return printer.format(calendar);","return """";","org/apache/commons/lang3/time/FastDateFormat.java",450,"replaced return value with """" for org/apache/commons/lang3/time/FastDateFormat::format",""
+=======
+"return printer.format(calendar);","return """";","org/apache/commons/lang3/time/FastDateFormat.java",450,"replaced return value with """" for org/apache/commons/lang3/time/FastDateFormat::format","TimeZone.java"
+>>>>>>> 7a6d5edbb (additional projects and requirements)
 "return printer.format(calendar, buf);","return null;","org/apache/commons/lang3/time/FastDateFormat.java",538,"replaced return value with null for org/apache/commons/lang3/time/FastDateFormat::format",""
 "return printer.format(calendar, buf);","return null;","org/apache/commons/lang3/time/FastDateFormat.java",496,"replaced return value with null for org/apache/commons/lang3/time/FastDateFormat::format",""
 "return printer.format(date);","return """";","org/apache/commons/lang3/time/FastDateFormat.java",439,"replaced return value with """" for org/apache/commons/lang3/time/FastDateFormat::format",""
@@ -26,8 +30,13 @@
 "return cache.getInstance();","return null;","org/apache/commons/lang3/time/FastDateFormat.java",120,"replaced return value with null for org/apache/commons/lang3/time/FastDateFormat::getInstance",""
 "return cache.getInstance(pattern, null, null);","return null;","org/apache/commons/lang3/time/FastDateFormat.java",133,"replaced return value with null for org/apache/commons/lang3/time/FastDateFormat::getInstance",""
 "return cache.getInstance(pattern, null, locale);","return null;","org/apache/commons/lang3/time/FastDateFormat.java",162,"replaced return value with null for org/apache/commons/lang3/time/FastDateFormat::getInstance",""
+<<<<<<< HEAD
 "return cache.getInstance(pattern, timeZone, null);","return null;","org/apache/commons/lang3/time/FastDateFormat.java",148,"replaced return value with null for org/apache/commons/lang3/time/FastDateFormat::getInstance",""
 "return cache.getInstance(pattern, timeZone, locale);","return null;","org/apache/commons/lang3/time/FastDateFormat.java",179,"replaced return value with null for org/apache/commons/lang3/time/FastDateFormat::getInstance",""
+=======
+"return cache.getInstance(pattern, timeZone, null);","return null;","org/apache/commons/lang3/time/FastDateFormat.java",148,"replaced return value with null for org/apache/commons/lang3/time/FastDateFormat::getInstance","TimeZone.java"
+"return cache.getInstance(pattern, timeZone, locale);","return null;","org/apache/commons/lang3/time/FastDateFormat.java",179,"replaced return value with null for org/apache/commons/lang3/time/FastDateFormat::getInstance","TriFunction.java"
+>>>>>>> 7a6d5edbb (additional projects and requirements)
 "return printer.getLocale();","return null;","org/apache/commons/lang3/time/FastDateFormat.java",609,"replaced return value with null for org/apache/commons/lang3/time/FastDateFormat::getLocale",""
 "return printer.getMaxLengthEstimate();","return 0;","org/apache/commons/lang3/time/FastDateFormat.java",622,"replaced int return with 0 for org/apache/commons/lang3/time/FastDateFormat::getMaxLengthEstimate",""
 "return printer.getPattern();","return """";","org/apache/commons/lang3/time/FastDateFormat.java",587,"replaced return value with """" for org/apache/commons/lang3/time/FastDateFormat::getPattern",""
@@ -36,11 +45,20 @@
 "return cache.getTimeInstance(style, timeZone, null);","return null;","org/apache/commons/lang3/time/FastDateFormat.java",287,"replaced return value with null for org/apache/commons/lang3/time/FastDateFormat::getTimeInstance",""
 "return cache.getTimeInstance(style, timeZone, locale);","return null;","org/apache/commons/lang3/time/FastDateFormat.java",303,"replaced return value with null for org/apache/commons/lang3/time/FastDateFormat::getTimeInstance",""
 "return printer.getTimeZone();","return null;","org/apache/commons/lang3/time/FastDateFormat.java",599,"replaced return value with null for org/apache/commons/lang3/time/FastDateFormat::getTimeZone",""
+<<<<<<< HEAD
 "return printer.hashCode();","return 0;","org/apache/commons/lang3/time/FastDateFormat.java",650,"replaced int return with 0 for org/apache/commons/lang3/time/FastDateFormat::hashCode",""
 "return parser.parse(source);","return null;","org/apache/commons/lang3/time/FastDateFormat.java",550,"replaced return value with null for org/apache/commons/lang3/time/FastDateFormat::parse",""
+=======
+"return printer.hashCode();","return 0;","org/apache/commons/lang3/time/FastDateFormat.java",650,"replaced int return with 0 for org/apache/commons/lang3/time/FastDateFormat::hashCode","TriFunction.java"
+"return parser.parse(source);","return null;","org/apache/commons/lang3/time/FastDateFormat.java",550,"replaced return value with null for org/apache/commons/lang3/time/FastDateFormat::parse","TriFunction.java"
+>>>>>>> 7a6d5edbb (additional projects and requirements)
 "return parser.parse(source, pos);","return null;","org/apache/commons/lang3/time/FastDateFormat.java",558,"replaced return value with null for org/apache/commons/lang3/time/FastDateFormat::parse",""
 "return parser.parse(source, pos, calendar);","return false;","org/apache/commons/lang3/time/FastDateFormat.java",567,"replaced boolean return with false for org/apache/commons/lang3/time/FastDateFormat::parse",""
 "return parser.parse(source, pos, calendar);","return true;","org/apache/commons/lang3/time/FastDateFormat.java",567,"replaced boolean return with true for org/apache/commons/lang3/time/FastDateFormat::parse",""
 "return parser.parseObject(source, pos);","return null;","org/apache/commons/lang3/time/FastDateFormat.java",575,"replaced return value with null for org/apache/commons/lang3/time/FastDateFormat::parseObject",""
 "return ""FastDateFormat["" + printer.getPattern() + "","" + printer.getLocale() + "","" + printer.getTimeZone().getID() + ""]"";","return """";","org/apache/commons/lang3/time/FastDateFormat.java",660,"replaced return value with """" for org/apache/commons/lang3/time/FastDateFormat::toString",""
+<<<<<<< HEAD
 "return new FastDateFormat(pattern, timeZone, locale);","return null;","org/apache/commons/lang3/time/FastDateFormat.java",105,"replaced return value with null for org/apache/commons/lang3/time/FastDateFormat$1::createInstance",""
+=======
+"return new FastDateFormat(pattern, timeZone, locale);","return null;","org/apache/commons/lang3/time/FastDateFormat.java",105,"replaced return value with null for org/apache/commons/lang3/time/FastDateFormat$1::createInstance","TimeZone.java|TriFunction.java"
+>>>>>>> 7a6d5edbb (additional projects and requirements)

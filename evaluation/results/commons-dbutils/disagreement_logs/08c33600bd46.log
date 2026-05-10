@@ -1,0 +1,31 @@
+mutant_id=08c33600bd46
+class=org.apache.commons.dbutils.AbstractQueryRunner
+method=fillStatement
+methodDescription=(Ljava/sql/PreparedStatement;[Ljava/lang/Object;)V
+line=365
+mutator=RemoveConditionalMutator_EQUAL_ELSE
+description=removed conditional - replaced equality check with false
+sourceFile=AbstractQueryRunner.java
+pit_status=SURVIVED
+pitmus_status=KILLED
+detail=non_zero_rc_1
+return_code=1
+--- STDOUT ---
+[[1;31mERROR[m] COMPILATION ERROR : 
+[[1;31mERROR[m] /home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/test-projects/commons-dbutils/src/main/java/org/apache/commons/dbutils/BasicRowProcessor.java:[172,21] cannot find symbol
+  symbol:   variable Collections
+  location: class org.apache.commons.dbutils.BasicRowProcessor
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-compiler-plugin:3.5.1:compile[m [1m(default-compile)[m on project [36mcommons-dbutils[m: [1;31mCompilation failure[m
+[[1;31mERROR[m] [1;31m/home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/test-projects/commons-dbutils/src/main/java/org/apache/commons/dbutils/BasicRowProcessor.java:[172,21] cannot find symbol[m
+[[1;31mERROR[m] [1;31m  symbol:   variable Collections[m
+[[1;31mERROR[m] [1;31m  location: class org.apache.commons.dbutils.BasicRowProcessor[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+--- STDERR ---

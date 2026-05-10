@@ -139,7 +139,11 @@
 "if (Double.isNaN(value)) {","if (false) {","org/apache/commons/lang3/Validate.java",906,"removed conditional - replaced equality check with false",""
 "if (Double.isNaN(value)) {","if (true) {","org/apache/commons/lang3/Validate.java",906,"removed conditional - replaced equality check with true",""
 "return notNull(object, DEFAULT_IS_NULL_EX_MESSAGE);","return null;","org/apache/commons/lang3/Validate.java",206,"replaced return value with null for org/apache/commons/lang3/Validate::notNull",""
+<<<<<<< HEAD
 "return Objects.requireNonNull(object, () -> String.format(message, values));","return null;","org/apache/commons/lang3/Validate.java",224,"replaced return value with null for org/apache/commons/lang3/Validate::notNull",""
+=======
+"return Objects.requireNonNull(object, () -> String.format(message, values));","return null;","org/apache/commons/lang3/Validate.java",224,"replaced return value with null for org/apache/commons/lang3/Validate::notNull","TimeZone.java|TriFunction.java"
+>>>>>>> 7a6d5edbb (additional projects and requirements)
 "return validIndex(chars, index, DEFAULT_VALID_INDEX_CHAR_SEQUENCE_EX_MESSAGE, Integer.valueOf(index));","return null;","org/apache/commons/lang3/Validate.java",767,"replaced return value with null for org/apache/commons/lang3/Validate::validIndex",""
 "if (index < 0 || index >= chars.length()) {","if (index <= 0 || index >= chars.length()) {","org/apache/commons/lang3/Validate.java",736,"changed conditional boundary",""
 "if (index < 0 || index >= chars.length()) {","if (false || index >= chars.length()) {","org/apache/commons/lang3/Validate.java",736,"removed conditional - replaced comparison check with false",""

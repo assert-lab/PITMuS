@@ -1,0 +1,32 @@
+project: commons-dbutils
+evaluated: 132
+agreed: 116
+agreement_rate: 0.8788
+compile_failures: 0
+skipped: 53
+
+Confusion (PIT vs PITMuS):
+  PIT_KILLED   PITMuS_KILLED   = 94
+  PIT_KILLED   PITMuS_SURVIVED = 2
+  PIT_SURVIVED PITMuS_KILLED   = 14
+  PIT_SURVIVED PITMuS_SURVIVED = 22
+
+Per-operator agreement:
+  operator                                       eval  agree    rate  cfail
+  BooleanFalseReturnValsMutator                     3      3  1.0000      0
+  BooleanTrueReturnValsMutator                      8      8  1.0000      0
+  ConditionalsBoundaryMutator                       8      7  0.8750      0
+  EmptyObjectReturnValsMutator                      4      2  0.5000      0
+  MathMutator                                       4      3  0.7500      0
+  NullReturnValsMutator                             8      8  1.0000      0
+  PrimitiveReturnsMutator                           1      1  1.0000      0
+  RemoveConditionalMutator_EQUAL_ELSE              35     29  0.8286      0
+  RemoveConditionalMutator_EQUAL_IF                36     34  0.9444      0
+  RemoveConditionalMutator_ORDER_ELSE               5      5  1.0000      0
+  RemoveConditionalMutator_ORDER_IF                 9      8  0.8889      0
+  VoidMethodCallMutator                            11      8  0.7273      0
+
+Skipped reasons:
+  ambiguous_pitmus_match_2: 47
+  ambiguous_pitmus_match_3: 4
+  ambiguous_pitmus_match_6: 2

@@ -1,0 +1,33 @@
+project: commons-beanutils
+evaluated: 425
+agreed: 392
+agreement_rate: 0.9224
+compile_failures: 0
+skipped: 75
+
+Confusion (PIT vs PITMuS):
+  PIT_KILLED   PITMuS_KILLED   = 283
+  PIT_KILLED   PITMuS_SURVIVED = 26
+  PIT_SURVIVED PITMuS_KILLED   = 7
+  PIT_SURVIVED PITMuS_SURVIVED = 109
+
+Per-operator agreement:
+  operator                                       eval  agree    rate  cfail
+  BooleanFalseReturnValsMutator                     5      5  1.0000      0
+  BooleanTrueReturnValsMutator                      2      2  1.0000      0
+  ConditionalsBoundaryMutator                      12     11  0.9167      0
+  EmptyObjectReturnValsMutator                      9      9  1.0000      0
+  MathMutator                                       2      2  1.0000      0
+  NullReturnValsMutator                            48     48  1.0000      0
+  PrimitiveReturnsMutator                           2      2  1.0000      0
+  RemoveConditionalMutator_EQUAL_ELSE             142    129  0.9085      0
+  RemoveConditionalMutator_EQUAL_IF               154    142  0.9221      0
+  RemoveConditionalMutator_ORDER_ELSE              13     13  1.0000      0
+  RemoveConditionalMutator_ORDER_IF                11     11  1.0000      0
+  VoidMethodCallMutator                            25     18  0.7200      0
+
+Skipped reasons:
+  ambiguous_pitmus_match_2: 57
+  no_pitmus_match: 8
+  ambiguous_pitmus_match_17: 5
+  ambiguous_pitmus_match_3: 5

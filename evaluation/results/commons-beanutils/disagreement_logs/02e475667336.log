@@ -1,0 +1,15 @@
+mutant_id=02e475667336
+class=org.apache.commons.beanutils.BeanUtilsBean
+method=populate
+methodDescription=(Ljava/lang/Object;Ljava/util/Map;)V
+line=823
+mutator=VoidMethodCallMutator
+description=removed call to org/apache/commons/beanutils/BeanUtilsBean::setProperty
+sourceFile=BeanUtilsBean.java
+pit_status=KILLED
+pitmus_status=SURVIVED
+detail=ok
+return_code=0
+--- STDOUT ---
+
+--- STDERR ---

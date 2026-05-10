@@ -1,0 +1,4 @@
+"mutation_line","mutated_line","source_file","line_number","description","test_file"
+"return enumeration.hasMoreElements();","return false;","org/apache/commons/jexl3/internal/introspection/EnumerationIterator.java",52,"replaced boolean return with false for org/apache/commons/jexl3/internal/introspection/EnumerationIterator::hasNext","ForEachTest.java"
+"return enumeration.hasMoreElements();","return true;","org/apache/commons/jexl3/internal/introspection/EnumerationIterator.java",52,"replaced boolean return with true for org/apache/commons/jexl3/internal/introspection/EnumerationIterator::hasNext","ForEachTest.java"
+"return enumeration.nextElement();","return null;","org/apache/commons/jexl3/internal/introspection/EnumerationIterator.java",47,"replaced return value with null for org/apache/commons/jexl3/internal/introspection/EnumerationIterator::next","ForEachTest.java"

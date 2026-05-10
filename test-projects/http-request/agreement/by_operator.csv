@@ -1,0 +1,15 @@
+project,operator,evaluated,agreed,agreement_rate,compile_fail,no_tests_run,pit_killed_pitmus_killed,pit_killed_pitmus_survived,pit_survived_pitmus_killed,pit_survived_pitmus_survived
+http-request,BooleanFalseReturnValsMutator,1,1,1.0000,0,0,0,0,0,1
+http-request,BooleanTrueReturnValsMutator,9,9,1.0000,0,0,9,0,0,0
+http-request,ConditionalsBoundaryMutator,25,25,1.0000,0,0,9,0,0,16
+http-request,EmptyObjectReturnValsMutator,34,34,1.0000,0,0,34,0,0,0
+http-request,IncrementsMutator,3,3,1.0000,0,0,3,0,0,0
+http-request,MathMutator,42,41,0.9762,0,0,34,0,1,7
+http-request,NullReturnValsMutator,134,121,0.9030,0,0,103,0,13,18
+http-request,PrimitiveReturnsMutator,10,10,1.0000,0,0,10,0,0,0
+http-request,RemoveConditionalMutator_EQUAL_ELSE,79,77,0.9747,0,0,63,0,2,14
+http-request,RemoveConditionalMutator_EQUAL_IF,79,78,0.9873,0,0,51,0,1,27
+http-request,RemoveConditionalMutator_ORDER_ELSE,25,25,1.0000,0,0,17,0,0,8
+http-request,RemoveConditionalMutator_ORDER_IF,25,25,1.0000,0,0,15,0,0,10
+http-request,SwitchMutator,1,0,0.0000,0,0,0,1,0,0
+http-request,VoidMethodCallMutator,30,22,0.7333,0,0,19,4,4,3

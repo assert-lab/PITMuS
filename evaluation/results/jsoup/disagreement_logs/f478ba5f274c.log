@@ -1,0 +1,22 @@
+mutant_id=f478ba5f274c
+class=org.jsoup.parser.HtmlTreeBuilder
+method=resetInsertionMode
+methodDescription=()Z
+line=488
+mutator=MathMutator
+description=Replaced integer subtraction with addition
+sourceFile=HtmlTreeBuilder.java
+pit_status=SURVIVED
+pitmus_status=KILLED
+detail=non_zero_rc_1
+return_code=1
+--- STDOUT ---
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:3.0.0-M7:test[m [1m(default-test)[m on project [36mjsoup[m: [1;31mNo tests matching pattern "org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testHtmlParse(java.io.File)]/[test-template-invocation:#5], org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testHtmlParse(java.io.File)]/[test-template-invocation:#2], org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testHtmlParse(java.io.File)]/[test-template-invocation:#24], org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testHtmlParse(java.io.File)]/[test-template-invocation:#4], org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testHtmlParse(java.io.File)]/[test-template-invocation:#8], org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testHtmlParse(java.io.File)]/[test-template-invocation:#8], org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testHtmlParse(java.io.File)]/[test-template-invocation:#5], org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#28], org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testHtmlParse(java.io.File)]/[test-template-invocation:#16], org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testHtmlParse(java.io.File)]/[test-template-invocation:#16], org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testHtmlParse(java.io.File)]/[test-template-invocation:#2], org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testHtmlParse(java.io.File)]/[test-template-invocation:#26], org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testHtmlParse(java.io.File)]/[test-template-invocation:#26], org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testHtmlParse(java.io.File)]/[test-template-invocation:#4], org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testHtmlParse(java.io.File)]/[test-template-invocation:#24], org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#28]" were executed! (Set -Dsurefire.failIfNoSpecifiedTests=false to ignore this error.)[m -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+--- STDERR ---

@@ -1,0 +1,4 @@
+"mutation_line","mutated_line","source_file","line_number","description","test_file"
+"setIndex(bytes.readUnsignedShort());","setIndex(bytes.readUnsignedShort());  // removed call to setIndex()","org/apache/bcel/generic/LDC_W.java",50,"removed call to org/apache/bcel/generic/LDC_W::setIndex","JdkGenericDumpTestCase.java|PerformanceTest.java"
+"super.setOpcode(org.apache.bcel.Const.LDC_W);","// removed call to setOpcode()","org/apache/bcel/generic/LDC_W.java",52,"removed call to org/apache/bcel/generic/LDC::setOpcode","JdkGenericDumpTestCase.java|PerformanceTest.java"
+"super.setLength(3);","// removed call to setLength()","org/apache/bcel/generic/LDC_W.java",53,"removed call to org/apache/bcel/generic/LDC::setLength","JdkGenericDumpTestCase.java|PerformanceTest.java"

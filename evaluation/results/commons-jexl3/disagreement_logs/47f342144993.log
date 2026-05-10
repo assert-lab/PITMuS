@@ -1,0 +1,36 @@
+mutant_id=47f342144993
+class=org.apache.commons.jexl3.internal.introspection.MethodKey$Parameters
+method=isApplicable
+methodDescription=(Ljava/lang/Object;[Ljava/lang/Class;)Z
+line=730
+mutator=BooleanTrueReturnValsMutator
+description=replaced boolean return with true for org/apache/commons/jexl3/internal/introspection/MethodKey$Parameters::isApplicable
+sourceFile=MethodKey.java
+pit_status=SURVIVED
+pitmus_status=KILLED
+detail=test_failure
+return_code=1
+--- STDOUT ---
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m1[m, Failures: 0, [1;31mErrors: [0;1;31m1[m, Skipped: 0, Time elapsed: 0.136 s[1;31m <<< FAILURE![m - in org.apache.commons.jexl3.[1mIssues300Test[m
+[[1;31mERROR[m] test314(org.apache.commons.jexl3.Issues300Test)  Time elapsed: 0.106 s  <<< ERROR!
+org.apache.commons.jexl3.JexlException: org.apache.commons.jexl3.Issues300Test.test314:266 JEXL error : cell
+	at org.apache.commons.jexl3.Issues300Test.test314(Issues300Test.java:267)
+Caused by: java.lang.NegativeArraySizeException: -1
+	at org.apache.commons.jexl3.Issues300Test.test314(Issues300Test.java:267)
+
+[[1;31mERROR[m] [1;31mErrors: [m
+[[1;31mERROR[m] [1;31m  Issues300Test.test314:267 Jexl org.apache.commons.jexl3.Issues300Test.test314:...[m
+[[1;31mERROR[m] [1;31mTests run: 1, Failures: 0, Errors: 1, Skipped: 0[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:2.22.0:test[m [1m(default-test)[m on project [36mcommons-jexl3[m: [1;31mThere are test failures.[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31mPlease refer to /home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/test-projects/commons-jexl3/target/surefire-reports for the individual test results.[m
+[[1;31mERROR[m] [1;31mPlease refer to dump files (if any exist) [date]-jvmRun[N].dump, [date].dumpstream and [date]-jvmRun[N].dumpstream.[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+--- STDERR ---

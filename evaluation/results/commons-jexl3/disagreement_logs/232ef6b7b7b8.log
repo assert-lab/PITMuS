@@ -1,0 +1,15 @@
+mutant_id=232ef6b7b7b8
+class=org.apache.commons.jexl3.internal.SoftCache
+method=get
+methodDescription=(Ljava/lang/Object;)Ljava/lang/Object;
+line=96
+mutator=RemoveConditionalMutator_EQUAL_ELSE
+description=removed conditional - replaced equality check with false
+sourceFile=SoftCache.java
+pit_status=TIMED_OUT
+pitmus_status=SURVIVED
+detail=ok
+return_code=0
+--- STDOUT ---
+
+--- STDERR ---

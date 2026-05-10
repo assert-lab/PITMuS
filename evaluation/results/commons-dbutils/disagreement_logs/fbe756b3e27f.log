@@ -1,0 +1,15 @@
+mutant_id=fbe756b3e27f
+class=org.apache.commons.dbutils.QueryLoader
+method=loadQueries
+methodDescription=(Ljava/lang/String;)Ljava/util/Map;
+line=127
+mutator=VoidMethodCallMutator
+description=removed call to java/io/InputStream::close
+sourceFile=QueryLoader.java
+pit_status=KILLED
+pitmus_status=SURVIVED
+detail=ok
+return_code=0
+--- STDOUT ---
+
+--- STDERR ---

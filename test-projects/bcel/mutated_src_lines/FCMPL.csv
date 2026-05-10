@@ -1,0 +1,6 @@
+"mutation_line","mutated_line","source_file","line_number","description","test_file"
+"v.visitTypedInstruction(this);","// removed call to visitTypedInstruction()","org/apache/bcel/generic/FCMPL.java",50,"removed call to org/apache/bcel/generic/Visitor::visitTypedInstruction",""
+"v.visitStackProducer(this);","// removed call to visitStackProducer()","org/apache/bcel/generic/FCMPL.java",51,"removed call to org/apache/bcel/generic/Visitor::visitStackProducer",""
+"v.visitStackConsumer(this);","// removed call to visitStackConsumer()","org/apache/bcel/generic/FCMPL.java",52,"removed call to org/apache/bcel/generic/Visitor::visitStackConsumer",""
+"v.visitFCMPL(this);","// removed call to visitFCMPL()","org/apache/bcel/generic/FCMPL.java",53,"removed call to org/apache/bcel/generic/Visitor::visitFCMPL",""
+"return Type.FLOAT;","return null;","org/apache/bcel/generic/FCMPL.java",36,"replaced return value with null for org/apache/bcel/generic/FCMPL::getType",""

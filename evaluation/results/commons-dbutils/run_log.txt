@@ -1,0 +1,9 @@
+[2026-05-08T15:36:21] start project=commons-dbutils sampled=185 resume=True already_done=0
+[2026-05-08T15:36:24] progress evaluated=1 skipped=0 elapsed=3.1s last=RemoveConditionalMutator_EQUAL_IF L256 -> SURVIVED agreed
+[2026-05-08T15:37:28] progress evaluated=25 skipped=1 elapsed=66.8s last=NullReturnValsMutator L107 -> KILLED agreed
+[2026-05-08T15:38:31] progress evaluated=50 skipped=12 elapsed=130.2s last=RemoveConditionalMutator_EQUAL_IF L524 -> KILLED agreed
+[2026-05-08T15:39:39] progress evaluated=75 skipped=15 elapsed=197.7s last=RemoveConditionalMutator_EQUAL_ELSE L926 -> SURVIVED agreed
+[2026-05-08T15:40:52] progress evaluated=100 skipped=17 elapsed=270.7s last=PrimitiveReturnsMutator L540 -> SURVIVED agreed
+[2026-05-08T15:41:59] progress evaluated=125 skipped=45 elapsed=337.4s last=BooleanFalseReturnValsMutator L32 -> KILLED agreed
+[2026-05-08T15:42:14] done evaluated=132 skipped=53 elapsed=353.2s
+[2026-05-08T15:42:14] summary at /home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/evaluation/results/commons-dbutils/agreement_summary.txt

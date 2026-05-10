@@ -1,0 +1,15 @@
+mutant_id=05c39a42c458
+class=org.apache.commons.jexl3.parser.NumberParser
+method=setReal
+methodDescription=(Ljava/lang/String;)V
+line=145
+mutator=SwitchMutator
+description=Changed switch default to be first case
+sourceFile=NumberParser.java
+pit_status=KILLED
+pitmus_status=SURVIVED
+detail=ok
+return_code=0
+--- STDOUT ---
+
+--- STDERR ---

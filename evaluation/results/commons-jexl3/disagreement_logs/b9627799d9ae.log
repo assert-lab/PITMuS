@@ -1,0 +1,32 @@
+mutant_id=b9627799d9ae
+class=org.apache.commons.jexl3.JexlArithmetic
+method=narrowNumber
+methodDescription=(Ljava/lang/Number;Ljava/lang/Class;)Ljava/lang/Number;
+line=561
+mutator=RemoveConditionalMutator_EQUAL_ELSE
+description=removed conditional - replaced equality check with false
+sourceFile=JexlArithmetic.java
+pit_status=SURVIVED
+pitmus_status=KILLED
+detail=non_zero_rc_1
+return_code=1
+--- STDOUT ---
+[[1;31mERROR[m] COMPILATION ERROR : 
+[[1;31mERROR[m] /home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/test-projects/commons-jexl3/src/main/java/org/apache/commons/jexl3/JexlArithmetic.java:[562,21] illegal start of expression
+[[1;31mERROR[m] /home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/test-projects/commons-jexl3/src/main/java/org/apache/commons/jexl3/JexlArithmetic.java:[563,21] not a statement
+[[1;31mERROR[m] /home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/test-projects/commons-jexl3/src/main/java/org/apache/commons/jexl3/JexlArithmetic.java:[563,47] ';' expected
+[[1;31mERROR[m] /home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/test-projects/commons-jexl3/src/main/java/org/apache/commons/jexl3/JexlArithmetic.java:[566,15] 'else' without 'if'
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m on project [36mcommons-jexl3[m: [1;31mCompilation failure[m: Compilation failure: 
+[[1;31mERROR[m] /home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/test-projects/commons-jexl3/src/main/java/org/apache/commons/jexl3/JexlArithmetic.java:[562,21] illegal start of expression
+[[1;31mERROR[m] /home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/test-projects/commons-jexl3/src/main/java/org/apache/commons/jexl3/JexlArithmetic.java:[563,21] not a statement
+[[1;31mERROR[m] /home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/test-projects/commons-jexl3/src/main/java/org/apache/commons/jexl3/JexlArithmetic.java:[563,47] ';' expected
+[[1;31mERROR[m] /home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/test-projects/commons-jexl3/src/main/java/org/apache/commons/jexl3/JexlArithmetic.java:[566,15] 'else' without 'if'
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+--- STDERR ---

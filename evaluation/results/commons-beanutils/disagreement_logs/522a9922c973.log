@@ -1,0 +1,15 @@
+mutant_id=522a9922c973
+class=org.apache.commons.beanutils.locale.converters.DecimalLocaleConverter
+method=parse
+methodDescription=(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+line=243
+mutator=RemoveConditionalMutator_EQUAL_IF
+description=removed conditional - replaced equality check with true
+sourceFile=DecimalLocaleConverter.java
+pit_status=MEMORY_ERROR
+pitmus_status=SURVIVED
+detail=ok
+return_code=0
+--- STDOUT ---
+
+--- STDERR ---

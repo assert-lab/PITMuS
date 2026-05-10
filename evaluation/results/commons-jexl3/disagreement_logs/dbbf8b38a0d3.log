@@ -1,0 +1,15 @@
+mutant_id=dbbf8b38a0d3
+class=org.apache.commons.jexl3.internal.TemplateScript
+method=<init>
+methodDescription=(Lorg/apache/commons/jexl3/internal/TemplateEngine;Lorg/apache/commons/jexl3/JexlInfo;Ljava/lang/String;Ljava/io/Reader;[Ljava/lang/String;)V
+line=80
+mutator=RemoveConditionalMutator_EQUAL_ELSE
+description=removed conditional - replaced equality check with false
+sourceFile=TemplateScript.java
+pit_status=KILLED
+pitmus_status=SURVIVED
+detail=ok
+return_code=0
+--- STDOUT ---
+
+--- STDERR ---

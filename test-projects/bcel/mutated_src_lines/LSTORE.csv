@@ -1,0 +1,3 @@
+"mutation_line","mutated_line","source_file","line_number","description","test_file"
+"super.accept(v);","// removed call to accept()","org/apache/bcel/generic/LSTORE.java",51,"removed call to org/apache/bcel/generic/StoreInstruction::accept",""
+"v.visitLSTORE(this);","// removed call to visitLSTORE()","org/apache/bcel/generic/LSTORE.java",52,"removed call to org/apache/bcel/generic/Visitor::visitLSTORE",""

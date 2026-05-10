@@ -1,0 +1,16 @@
+---
+run_at: 2026-05-08T15:42:14
+total_runtime_seconds: 353.2
+new_mutants_evaluated: 132
+avg_seconds_per_mutant: 2.67
+slowest 10 (this run):
+  3.61s  ab6d91a118dc  org.apache.commons.dbutils.AbstractQueryRunner::rethrow
+  3.59s  28fee88b3583  org.apache.commons.dbutils.AbstractQueryRunner::fillStatement
+  3.53s  ce70d2b88632  org.apache.commons.dbutils.AbstractQueryRunner::configureStatement
+  3.31s  d5426f80df1c  org.apache.commons.dbutils.AbstractQueryRunner::rethrow
+  3.26s  b4e50515cd93  org.apache.commons.dbutils.QueryRunner::execute
+  3.23s  459d5acefa53  org.apache.commons.dbutils.QueryRunner::retrieveOutParameters
+  3.21s  d0264e7efa74  org.apache.commons.dbutils.handlers.ScalarHandler::handle
+  3.20s  def4a171389d  org.apache.commons.dbutils.GenerousBeanProcessor::mapColumnsToProperties
+  3.17s  ad860e7beb92  org.apache.commons.dbutils.AbstractQueryRunner::fillStatementWithBean
+  3.15s  d5062d9f5ef0  org.apache.commons.dbutils.QueryRunner::query

@@ -1,0 +1,15 @@
+Operator,Eval,Preserved,Rate
+ExperimentalSwitch,27,27.0,100.00%
+InvertNegatives,20,20.0,100.00%
+NullReturns,1710,1709.6,99.98%
+PrimitiveReturns,772,769.83,99.72%
+EmptyReturns,813,805.12,99.03%
+ConditionalsBoundary,1343,1327.51,98.85%
+VoidMethodCall,1021,1009.05,98.83%
+FalseReturns,359,354.5,98.75%
+TrueReturns,678,667.99,98.52%
+RemoveConditionals,9471,9302.55,98.22%
+Increments,200,187.33,93.67%
+Math,1578,1258.51,79.75%
+NegateConditionals,0,0.0,--
+Total,17992,17439.0,96.93%

@@ -1,0 +1,15 @@
+mutant_id=2ea48c01e9b2
+class=org.apache.commons.jexl3.internal.introspection.ClassMap
+method=getMethods
+methodDescription=(Ljava/lang/String;)[Ljava/lang/reflect/Method;
+line=152
+mutator=RemoveConditionalMutator_ORDER_IF
+description=removed conditional - replaced comparison check with true
+sourceFile=ClassMap.java
+pit_status=KILLED
+pitmus_status=SURVIVED
+detail=ok
+return_code=0
+--- STDOUT ---
+
+--- STDERR ---

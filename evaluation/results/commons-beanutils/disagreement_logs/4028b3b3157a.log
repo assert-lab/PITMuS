@@ -1,0 +1,32 @@
+mutant_id=4028b3b3157a
+class=org.apache.commons.beanutils.converters.AbstractConverter
+method=toString
+methodDescription=(Ljava/lang/Class;)Ljava/lang/String;
+line=436
+mutator=RemoveConditionalMutator_EQUAL_IF
+description=removed conditional - replaced equality check with true
+sourceFile=AbstractConverter.java
+pit_status=SURVIVED
+pitmus_status=KILLED
+detail=non_zero_rc_1
+return_code=1
+--- STDOUT ---
+[[1;31mERROR[m] COMPILATION ERROR : 
+[[1;31mERROR[m] /home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/test-projects/commons-beanutils/src/main/java/org/apache/commons/beanutils/converters/AbstractConverter.java:[436,19] illegal start of expression
+[[1;31mERROR[m] /home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/test-projects/commons-beanutils/src/main/java/org/apache/commons/beanutils/converters/AbstractConverter.java:[437,47] not a statement
+[[1;31mERROR[m] /home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/test-projects/commons-beanutils/src/main/java/org/apache/commons/beanutils/converters/AbstractConverter.java:[438,46] ';' expected
+[[1;31mERROR[m] /home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/test-projects/commons-beanutils/src/main/java/org/apache/commons/beanutils/converters/AbstractConverter.java:[440,11] 'else' without 'if'
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-compiler-plugin:3.7.0:compile[m [1m(default-compile)[m on project [36mcommons-beanutils[m: [1;31mCompilation failure[m: Compilation failure: 
+[[1;31mERROR[m] /home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/test-projects/commons-beanutils/src/main/java/org/apache/commons/beanutils/converters/AbstractConverter.java:[436,19] illegal start of expression
+[[1;31mERROR[m] /home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/test-projects/commons-beanutils/src/main/java/org/apache/commons/beanutils/converters/AbstractConverter.java:[437,47] not a statement
+[[1;31mERROR[m] /home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/test-projects/commons-beanutils/src/main/java/org/apache/commons/beanutils/converters/AbstractConverter.java:[438,46] ';' expected
+[[1;31mERROR[m] /home/tasfia/Desktop/EvoAI/demo_pitmus/PITMuS/test-projects/commons-beanutils/src/main/java/org/apache/commons/beanutils/converters/AbstractConverter.java:[440,11] 'else' without 'if'
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+--- STDERR ---

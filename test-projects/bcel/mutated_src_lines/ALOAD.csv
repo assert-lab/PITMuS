@@ -1,0 +1,3 @@
+"mutation_line","mutated_line","source_file","line_number","description","test_file"
+"super.accept(v);","// removed call to accept()","org/apache/bcel/generic/ALOAD.java",54,"removed call to org/apache/bcel/generic/LoadInstruction::accept","BCELifierTestCase.java|VerifierArrayAccessTestCase.java|VerifierInvokeTestCase.java|VerifierReturnTestCase.java"
+"v.visitALOAD(this);","// removed call to visitALOAD()","org/apache/bcel/generic/ALOAD.java",55,"removed call to org/apache/bcel/generic/Visitor::visitALOAD","BCELifierTestCase.java|VerifierArrayAccessTestCase.java|VerifierInvokeTestCase.java|VerifierReturnTestCase.java"

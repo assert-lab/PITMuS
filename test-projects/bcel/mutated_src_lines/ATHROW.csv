@@ -1,0 +1,5 @@
+"mutation_line","mutated_line","source_file","line_number","description","test_file"
+"v.visitUnconditionalBranch(this);","// removed call to visitUnconditionalBranch()","org/apache/bcel/generic/ATHROW.java",57,"removed call to org/apache/bcel/generic/Visitor::visitUnconditionalBranch",""
+"v.visitExceptionThrower(this);","// removed call to visitExceptionThrower()","org/apache/bcel/generic/ATHROW.java",58,"removed call to org/apache/bcel/generic/Visitor::visitExceptionThrower",""
+"v.visitATHROW(this);","// removed call to visitATHROW()","org/apache/bcel/generic/ATHROW.java",59,"removed call to org/apache/bcel/generic/Visitor::visitATHROW",""
+"return new Class[] {","return null;","org/apache/bcel/generic/ATHROW.java",41,"replaced return value with null for org/apache/bcel/generic/ATHROW::getExceptions",""

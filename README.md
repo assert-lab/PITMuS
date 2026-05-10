@@ -1,5 +1,9 @@
 # PITMuS: PIT Mutations In the Source Code
 
+## Demo Video
+
+[![Watch the demo](https://img.youtube.com/vi/37TtM6UfYMQ/maxresdefault.jpg)](https://youtu.be/37TtM6UfYMQ)
+
 This repository is for two things: extract and inject source-level mutations from PIT (Pitest) XML reports.
 
 PIT operates at the bytecode level and does not export mutated source code. This tool bridges that gap by parsing PIT's XML output, mapping each mutation back to its source line, and applying the mutation description to produce a mutated source code line.
@@ -38,7 +42,11 @@ mutate-source-code/
 ## Prerequisites
 
 - Python 3.6+
-- javalang
+- Python dependencies — install with:
+  ```bash
+  pip install -r requirements.txt
+  ```
+  (`javalang` for source parsing; `pandas` for the evaluation sampling script.)
 - A JDK on `PATH` (the extractor invokes `javap` to read compiled `.class` files for bytecode-accurate mutation targeting)
 - A Maven project with PIT configured, a generated `mutations.xml` report, and compiled classes under `target/classes/`
 

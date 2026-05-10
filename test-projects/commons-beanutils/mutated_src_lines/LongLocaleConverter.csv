@@ -1,0 +1,7 @@
+"mutation_line","mutated_line","source_file","line_number","description","test_file"
+"if (result == null || result instanceof Long) {","if (false || result instanceof Long) {","org/apache/commons/beanutils/locale/converters/LongLocaleConverter.java",220,"removed conditional - replaced equality check with false",""
+"if (result == null || result instanceof Long) {","if (true || result instanceof Long) {","org/apache/commons/beanutils/locale/converters/LongLocaleConverter.java",220,"removed conditional - replaced equality check with true",""
+"if (result == null || result instanceof Long) {","if (result == null || false) {","org/apache/commons/beanutils/locale/converters/LongLocaleConverter.java",220,"removed conditional - replaced equality check with false",""
+"if (result == null || result instanceof Long) {","if (result == null || true) {","org/apache/commons/beanutils/locale/converters/LongLocaleConverter.java",220,"removed conditional - replaced equality check with true",""
+"return result;","return null;","org/apache/commons/beanutils/locale/converters/LongLocaleConverter.java",221,"replaced return value with null for org/apache/commons/beanutils/locale/converters/LongLocaleConverter::parse",""
+"return new Long(((Number)result).longValue());","return null;","org/apache/commons/beanutils/locale/converters/LongLocaleConverter.java",224,"replaced return value with null for org/apache/commons/beanutils/locale/converters/LongLocaleConverter::parse",""

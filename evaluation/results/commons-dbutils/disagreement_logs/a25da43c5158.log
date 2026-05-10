@@ -1,0 +1,15 @@
+mutant_id=a25da43c5158
+class=org.apache.commons.dbutils.AbstractQueryRunner
+method=configureStatement
+methodDescription=(Ljava/sql/Statement;)V
+line=257
+mutator=VoidMethodCallMutator
+description=removed call to java/sql/Statement::setFetchDirection
+sourceFile=AbstractQueryRunner.java
+pit_status=KILLED
+pitmus_status=SURVIVED
+detail=ok
+return_code=0
+--- STDOUT ---
+
+--- STDERR ---

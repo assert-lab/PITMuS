@@ -1,0 +1,32 @@
+project: commons-jexl3
+evaluated: 235
+agreed: 212
+agreement_rate: 0.9021
+compile_failures: 0
+skipped: 265
+
+Confusion (PIT vs PITMuS):
+  PIT_KILLED   PITMuS_KILLED   = 152
+  PIT_KILLED   PITMuS_SURVIVED = 15
+  PIT_SURVIVED PITMuS_KILLED   = 8
+  PIT_SURVIVED PITMuS_SURVIVED = 60
+
+Per-operator agreement:
+  operator                                       eval  agree    rate  cfail
+  BooleanFalseReturnValsMutator                     4      4  1.0000      0
+  BooleanTrueReturnValsMutator                     12     11  0.9167      0
+  ConditionalsBoundaryMutator                      13     11  0.8462      0
+  EmptyObjectReturnValsMutator                      5      5  1.0000      0
+  MathMutator                                       4      4  1.0000      0
+  NullReturnValsMutator                            24     23  0.9583      0
+  RemoveConditionalMutator_EQUAL_ELSE              64     56  0.8750      0
+  RemoveConditionalMutator_EQUAL_IF                71     68  0.9577      0
+  RemoveConditionalMutator_ORDER_ELSE              12     11  0.9167      0
+  RemoveConditionalMutator_ORDER_IF                12     10  0.8333      0
+  SwitchMutator                                     3      0  0.0000      0
+  VoidMethodCallMutator                            11      9  0.8182      0
+
+Skipped reasons:
+  no_pitmus_match: 192
+  ambiguous_pitmus_match_2: 63
+  ambiguous_pitmus_match_3: 10

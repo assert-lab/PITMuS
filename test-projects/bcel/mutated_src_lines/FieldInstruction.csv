@@ -1,0 +1,6 @@
+"mutation_line","mutated_line","source_file","line_number","description","test_file"
+"return getName(cpg);","return """";","org/apache/bcel/generic/FieldInstruction.java",79,"replaced return value with """" for org/apache/bcel/generic/FieldInstruction::getFieldName","BCELifierTestCase.java"
+"return Type.size(Type.getTypeSize(getSignature(cpg)));","return 0;","org/apache/bcel/generic/FieldInstruction.java",57,"replaced int return with 0 for org/apache/bcel/generic/FieldInstruction::getFieldSize","GeneratingAnnotatedClassesTestCase.java|LocalVariableTypeTableTestCase.java|PerformanceTest.java"
+"return Type.getType(getSignature(cpg));","return null;","org/apache/bcel/generic/FieldInstruction.java",72,"replaced return value with null for org/apache/bcel/generic/FieldInstruction::getFieldType","BCELifierTestCase.java"
+"return getFieldType(cpg);","return null;","org/apache/bcel/generic/FieldInstruction.java",65,"replaced return value with null for org/apache/bcel/generic/FieldInstruction::getType",""
+"return org.apache.bcel.Const.getOpcodeName(super.getOpcode()) + "" ""","return """";","org/apache/bcel/generic/FieldInstruction.java",49,"replaced return value with """" for org/apache/bcel/generic/FieldInstruction::toString",""

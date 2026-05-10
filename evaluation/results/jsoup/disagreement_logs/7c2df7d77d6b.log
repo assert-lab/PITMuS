@@ -1,0 +1,22 @@
+mutant_id=7c2df7d77d6b
+class=org.jsoup.helper.HttpConnection$Response
+method=body
+methodDescription=()Ljava/lang/String;
+line=989
+mutator=RemoveConditionalMutator_EQUAL_IF
+description=removed conditional - replaced equality check with true
+sourceFile=HttpConnection.java
+pit_status=SURVIVED
+pitmus_status=KILLED
+detail=non_zero_rc_1
+return_code=1
+--- STDOUT ---
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:3.0.0-M7:test[m [1m(default-test)[m on project [36mjsoup[m: [1;31mNo tests matching pattern "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:bodyAndBytesAvailableBeforeParse()], org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:sendHeadRequest()], org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:maxBodySizeInReadToByteBuffer()]" were executed! (Set -Dsurefire.failIfNoSpecifiedTests=false to ignore this error.)[m -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+--- STDERR ---

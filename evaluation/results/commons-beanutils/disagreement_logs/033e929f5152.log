@@ -1,0 +1,15 @@
+mutant_id=033e929f5152
+class=org.apache.commons.beanutils.MethodUtils
+method=isAssignmentCompatible
+methodDescription=(Ljava/lang/Class;Ljava/lang/Class;)Z
+line=1180
+mutator=RemoveConditionalMutator_EQUAL_IF
+description=removed conditional - replaced equality check with true
+sourceFile=MethodUtils.java
+pit_status=KILLED
+pitmus_status=SURVIVED
+detail=ok
+return_code=0
+--- STDOUT ---
+
+--- STDERR ---

@@ -1,0 +1,15 @@
+mutant_id=2dc188631a14
+class=org.apache.commons.beanutils.MappedPropertyDescriptor
+method=getMethod
+methodDescription=(Ljava/lang/Class;Ljava/lang/String;I)Ljava/lang/reflect/Method;
+line=386
+mutator=RemoveConditionalMutator_EQUAL_IF
+description=removed conditional - replaced equality check with true
+sourceFile=MappedPropertyDescriptor.java
+pit_status=MEMORY_ERROR
+pitmus_status=SURVIVED
+detail=ok
+return_code=0
+--- STDOUT ---
+
+--- STDERR ---
