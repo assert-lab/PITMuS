@@ -1,6 +1,6 @@
 # PITMuS: PIT Mutations In the Source Code
 
-[![Watch the demo](https://img.youtube.com/vi/37TtM6UfYMQ/maxresdefault.jpg)](https://youtu.be/37TtM6UfYMQ)
+[![Watch the demo](https://img.youtube.com/vi/zgHkXnsgciw/maxresdefault.jpg)](https://youtu.be/zgHkXnsgciw)
 
 This repository contains two end-to-end scripts that extract and inject source-level mutations from PIT (Pitest) XML reports.
 
