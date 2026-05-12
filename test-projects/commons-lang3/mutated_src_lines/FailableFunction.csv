@@ -1,8 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"return (final T t) -> after.apply(apply(t));","return null;","org/apache/commons/lang3/function/FailableFunction.java",71,"replaced return value with null for org/apache/commons/lang3/function/FailableFunction::andThen",""
-"return (final V v) -> apply(before.apply(v));","return null;","org/apache/commons/lang3/function/FailableFunction.java",94,"replaced return value with null for org/apache/commons/lang3/function/FailableFunction::compose",""
-"return t -> t;","return null;","org/apache/commons/lang3/function/FailableFunction.java",46,"replaced return value with null for org/apache/commons/lang3/function/FailableFunction::identity",""
-"return (final T t) -> after.apply(apply(t));","return null;","org/apache/commons/lang3/function/FailableFunction.java",71,"replaced return value with null for org/apache/commons/lang3/function/FailableFunction::lambda$andThen$2",""
-"return (final V v) -> apply(before.apply(v));","return null;","org/apache/commons/lang3/function/FailableFunction.java",94,"replaced return value with null for org/apache/commons/lang3/function/FailableFunction::lambda$compose$3",""
-"return t -> t;","return null;","org/apache/commons/lang3/function/FailableFunction.java",46,"replaced return value with null for org/apache/commons/lang3/function/FailableFunction::lambda$identity$1",""
-"return NOP;","return null;","org/apache/commons/lang3/function/FailableFunction.java",58,"replaced return value with null for org/apache/commons/lang3/function/FailableFunction::nop",""

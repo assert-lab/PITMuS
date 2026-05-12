@@ -1,8 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"VerifierFactory.attach(this);","// removed call to attach()","org/apache/bcel/verifier/VerifierFactoryListModel.java",38,"removed call to org/apache/bcel/verifier/VerifierFactory::attach",""
-"update(null); // fill cache.","// fill cache.  // removed call to update()","org/apache/bcel/verifier/VerifierFactoryListModel.java",39,"removed call to org/apache/bcel/verifier/VerifierFactoryListModel::update",""
-"return cache.toArray(new String[cache.size()])[index];","return """";","org/apache/bcel/verifier/VerifierFactoryListModel.java",73,"replaced return value with """" for org/apache/bcel/verifier/VerifierFactoryListModel::getElementAt",""
-"return cache.size();","return 0;","org/apache/bcel/verifier/VerifierFactoryListModel.java",68,"replaced int return with 0 for org/apache/bcel/verifier/VerifierFactoryListModel::getSize",""
-"cache.clear();","// removed call to clear()","org/apache/bcel/verifier/VerifierFactoryListModel.java",46,"removed call to java/util/Set::clear",""
-"final ListDataEvent e = new ListDataEvent(this, ListDataEvent.CONTENTS_CHANGED, 0, num_of_verifiers - 1);","final ListDataEvent e = new ListDataEvent(this, ListDataEvent.CONTENTS_CHANGED, 0, num_of_verifiers + 1);","org/apache/bcel/verifier/VerifierFactoryListModel.java",51,"Replaced integer subtraction with addition",""
-"listener.contentsChanged(e);","// removed call to contentsChanged()","org/apache/bcel/verifier/VerifierFactoryListModel.java",52,"removed call to javax/swing/event/ListDataListener::contentsChanged",""

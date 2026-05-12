@@ -1,5 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"if (trace.getClassName().equals(Validator)) continue;","if (false) continue;","org/jsoup/helper/ValidationException.java",26,"removed conditional - replaced equality check with false",""
-"if (trace.getClassName().equals(Validator)) continue;","if (true) continue;","org/jsoup/helper/ValidationException.java",26,"removed conditional - replaced equality check with true",""
-"setStackTrace(filteredTrace.toArray(new StackTraceElement[0]));","setStackTrace(filteredTrace.toArray(new StackTraceElement[0]));  // removed call to setStackTrace()","org/jsoup/helper/ValidationException.java",30,"removed call to org/jsoup/helper/ValidationException::setStackTrace",""
-"return this;","return null;","org/jsoup/helper/ValidationException.java",32,"replaced return value with null for org/jsoup/helper/ValidationException::fillInStackTrace",""

@@ -1,5 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"if (result instanceof Long) {","if (false) {","org/apache/commons/beanutils/locale/converters/DoubleLocaleConverter.java",218,"removed conditional - replaced equality check with false",""
-"if (result instanceof Long) {","if (true) {","org/apache/commons/beanutils/locale/converters/DoubleLocaleConverter.java",218,"removed conditional - replaced equality check with true",""
-"return new Double(result.doubleValue());","return null;","org/apache/commons/beanutils/locale/converters/DoubleLocaleConverter.java",219,"replaced return value with null for org/apache/commons/beanutils/locale/converters/DoubleLocaleConverter::parse",""
-"return (result);","return null;","org/apache/commons/beanutils/locale/converters/DoubleLocaleConverter.java",221,"replaced return value with null for org/apache/commons/beanutils/locale/converters/DoubleLocaleConverter::parse",""

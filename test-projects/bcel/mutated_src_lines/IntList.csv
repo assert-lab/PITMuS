@@ -1,5 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"if (i == k.intValue()) {","if (false) {","org/apache/bcel/verifier/statics/IntList.java",44,"removed conditional - replaced equality check with false","VerifierArrayAccessTestCase.java|VerifierInvokeTestCase.java|VerifierReturnTestCase.java"
-"if (i == k.intValue()) {","if (true) {","org/apache/bcel/verifier/statics/IntList.java",44,"removed conditional - replaced equality check with true","VerifierArrayAccessTestCase.java|VerifierInvokeTestCase.java|VerifierReturnTestCase.java"
-"return true;","return false;","org/apache/bcel/verifier/statics/IntList.java",45,"replaced boolean return with false for org/apache/bcel/verifier/statics/IntList::contains",""
-"return false;","return true;","org/apache/bcel/verifier/statics/IntList.java",48,"replaced boolean return with true for org/apache/bcel/verifier/statics/IntList::contains","VerifierArrayAccessTestCase.java|VerifierInvokeTestCase.java|VerifierReturnTestCase.java"

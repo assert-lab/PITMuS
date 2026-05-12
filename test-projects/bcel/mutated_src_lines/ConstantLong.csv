@@ -1,7 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"v.visitConstantLong(this);","// removed call to visitConstantLong()","org/apache/bcel/classfile/ConstantLong.java",74,"removed call to org/apache/bcel/classfile/Visitor::visitConstantLong","VerifierArrayAccessTestCase.java|VerifierInvokeTestCase.java"
-"file.writeByte(super.getTag());","file.writeByte(super.getTag());  // removed call to writeByte()","org/apache/bcel/classfile/ConstantLong.java",86,"removed call to java/io/DataOutputStream::writeByte","PerformanceTest.java"
-"file.writeLong(bytes);","// removed call to writeLong()","org/apache/bcel/classfile/ConstantLong.java",87,"removed call to java/io/DataOutputStream::writeLong","PerformanceTest.java"
-"return bytes;","return 0;","org/apache/bcel/classfile/ConstantLong.java",95,"replaced long return with 0 for org/apache/bcel/classfile/ConstantLong::getBytes","ElementValueGenTestCase.java|VerifierArrayAccessTestCase.java|VerifierInvokeTestCase.java"
-"return Long.valueOf(bytes);","return null;","org/apache/bcel/classfile/ConstantLong.java",120,"replaced return value with null for org/apache/bcel/classfile/ConstantLong::getConstantValue",""
-"return super.toString() + ""(bytes = "" + bytes + "")"";","return """";","org/apache/bcel/classfile/ConstantLong.java",112,"replaced return value with """" for org/apache/bcel/classfile/ConstantLong::toString",""

@@ -1,3 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"return hasBody;","return false;","org/jsoup/Connection.java",59,"replaced boolean return with false for org/jsoup/Connection$Method::hasBody",""
-"return hasBody;","return true;","org/jsoup/Connection.java",59,"replaced boolean return with true for org/jsoup/Connection$Method::hasBody",""

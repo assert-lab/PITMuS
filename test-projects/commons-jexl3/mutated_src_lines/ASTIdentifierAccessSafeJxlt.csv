@@ -1,2 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"return true;","return false;","org/apache/commons/jexl3/parser/ASTIdentifierAccessSafeJxlt.java",34,"replaced boolean return with false for org/apache/commons/jexl3/parser/ASTIdentifierAccessSafeJxlt::isSafe","PropertyAccessTest.java"

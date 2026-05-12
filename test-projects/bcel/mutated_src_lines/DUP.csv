@@ -1,5 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"v.visitStackProducer(this);","// removed call to visitStackProducer()","org/apache/bcel/generic/DUP.java",42,"removed call to org/apache/bcel/generic/Visitor::visitStackProducer","VerifierArrayAccessTestCase.java|VerifierInvokeTestCase.java|VerifierReturnTestCase.java"
-"v.visitPushInstruction(this);","// removed call to visitPushInstruction()","org/apache/bcel/generic/DUP.java",43,"removed call to org/apache/bcel/generic/Visitor::visitPushInstruction","VerifierArrayAccessTestCase.java|VerifierInvokeTestCase.java|VerifierReturnTestCase.java"
-"v.visitStackInstruction(this);","// removed call to visitStackInstruction()","org/apache/bcel/generic/DUP.java",44,"removed call to org/apache/bcel/generic/Visitor::visitStackInstruction","VerifierArrayAccessTestCase.java|VerifierInvokeTestCase.java|VerifierReturnTestCase.java"
-"v.visitDUP(this);","// removed call to visitDUP()","org/apache/bcel/generic/DUP.java",45,"removed call to org/apache/bcel/generic/Visitor::visitDUP","VerifierArrayAccessTestCase.java|VerifierInvokeTestCase.java|VerifierReturnTestCase.java"

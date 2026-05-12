@@ -1,3 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"return catchType;","return null;","org/apache/bcel/verifier/structurals/ExceptionHandler.java",47,"replaced return value with null for org/apache/bcel/verifier/structurals/ExceptionHandler::getExceptionType",""
-"return handlerPc;","return null;","org/apache/bcel/verifier/structurals/ExceptionHandler.java",54,"replaced return value with null for org/apache/bcel/verifier/structurals/ExceptionHandler::getHandlerStart",""

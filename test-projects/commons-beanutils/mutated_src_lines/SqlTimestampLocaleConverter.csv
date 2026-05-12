@@ -1,2 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"return new Timestamp(((java.util.Date) super.parse(value, pattern)).getTime());","return null;","org/apache/commons/beanutils/locale/converters/SqlTimestampLocaleConverter.java",218,"replaced return value with null for org/apache/commons/beanutils/locale/converters/SqlTimestampLocaleConverter::parse",""

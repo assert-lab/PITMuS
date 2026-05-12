@@ -1,7 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"if (result == null || result instanceof BigDecimal) {","if (false || result instanceof BigDecimal) {","org/apache/commons/beanutils/locale/converters/BigDecimalLocaleConverter.java",220,"removed conditional - replaced equality check with false",""
-"if (result == null || result instanceof BigDecimal) {","if (true || result instanceof BigDecimal) {","org/apache/commons/beanutils/locale/converters/BigDecimalLocaleConverter.java",220,"removed conditional - replaced equality check with true",""
-"if (result == null || result instanceof BigDecimal) {","if (result == null || false) {","org/apache/commons/beanutils/locale/converters/BigDecimalLocaleConverter.java",220,"removed conditional - replaced equality check with false",""
-"if (result == null || result instanceof BigDecimal) {","if (result == null || true) {","org/apache/commons/beanutils/locale/converters/BigDecimalLocaleConverter.java",220,"removed conditional - replaced equality check with true",""
-"return result;","return null;","org/apache/commons/beanutils/locale/converters/BigDecimalLocaleConverter.java",221,"replaced return value with null for org/apache/commons/beanutils/locale/converters/BigDecimalLocaleConverter::parse",""
-"return new BigDecimal(result.toString());","return null;","org/apache/commons/beanutils/locale/converters/BigDecimalLocaleConverter.java",225,"replaced return value with null for org/apache/commons/beanutils/locale/converters/BigDecimalLocaleConverter::parse",""

@@ -1,5 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"v.visitExceptionThrower(this);","// removed call to visitExceptionThrower()","org/apache/bcel/generic/ARRAYLENGTH.java",56,"removed call to org/apache/bcel/generic/Visitor::visitExceptionThrower",""
-"v.visitStackProducer(this);","// removed call to visitStackProducer()","org/apache/bcel/generic/ARRAYLENGTH.java",57,"removed call to org/apache/bcel/generic/Visitor::visitStackProducer",""
-"v.visitARRAYLENGTH(this);","// removed call to visitARRAYLENGTH()","org/apache/bcel/generic/ARRAYLENGTH.java",58,"removed call to org/apache/bcel/generic/Visitor::visitARRAYLENGTH",""
-"return new Class[] {","return null;","org/apache/bcel/generic/ARRAYLENGTH.java",40,"replaced return value with null for org/apache/bcel/generic/ARRAYLENGTH::getExceptions",""

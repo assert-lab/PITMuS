@@ -1,4 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"_loadedClasses.clear();","// removed call to clear()","org/apache/bcel/util/ClassPathRepository.java",69,"removed call to java/util/Map::clear","ClassPathRepositoryTestCase.java"
-"return _loadedClasses.get(className);","return null;","org/apache/bcel/util/ClassPathRepository.java",61,"replaced return value with null for org/apache/bcel/util/ClassPathRepository::findClass","ClassPathRepositoryTestCase.java"
-"javaClass.setRepository(this);","// removed call to setRepository()","org/apache/bcel/util/ClassPathRepository.java",45,"removed call to org/apache/bcel/classfile/JavaClass::setRepository","ClassPathRepositoryTestCase.java"

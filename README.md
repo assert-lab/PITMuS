@@ -1,41 +1,31 @@
 # PITMuS: PIT Mutations In the Source Code
 
-## Demo Video
-
 [![Watch the demo](https://img.youtube.com/vi/37TtM6UfYMQ/maxresdefault.jpg)](https://youtu.be/37TtM6UfYMQ)
 
-This repository is for two things: extract and inject source-level mutations from PIT (Pitest) XML reports.
+This repository contains two end-to-end scripts that extract and inject source-level mutations from PIT (Pitest) XML reports.
 
-PIT operates at the bytecode level and does not export mutated source code. This tool bridges that gap by parsing PIT's XML output, mapping each mutation back to its source line, and applying the mutation description to produce a mutated source code line.
+PIT operates at the bytecode level and does not export mutated source code. PITMuS bridges that gap by parsing PIT's XML output, mapping each mutation back to its source line (using both the report's bytecode index and `javap` output for precision), and applying the mutation description to produce a mutated source line — and, when needed, a mutated full method body or a fully injected mutant `.java` file.
 
-
-## Demo Video
-
-[![Demo video](https://img.youtube.com/vi/37TtM6UfYMQ/hqdefault.jpg)](https://youtu.be/37TtM6UfYMQ)
-
+The two scripts are **fully independent** of each other; either can be used on its own.
 
 ## Repository Structure
 
 ```
-mutate-source-code/
+PITMuS/
 ├── scripts/
-│   ├── extract.py                      ← creates CSV files with mutated source lines
-│   └── inject.py                       ← injects mutated source lines into source files
-├── PITMuS_dataset/
-│   └── <project-name>/
-│       ├── mutated_methods.csv         ← full method bodies (original + mutated) with Javadoc
-│       └── meta.csv                    ← corresponding metadata (line_no, original_line, mutated_line, source_filepath)
+│   ├── gen_dataset.py                ← end-to-end: PIT report → dataset CSVs
+│   └── inject.py                     ← end-to-end: PIT report → mutant .java files
 └── test-projects/
-    └── <project-name>/
-        ├── src/main/java/              ← source code
+    └── <system>/
+        ├── src/main/java/            ← project source code
         ├── target/pit-reports/mutations.xml
-        ├── mutated_src_lines/          ← generated CSVs (one per source file)
-        │   ├── ClassName1.csv
-        │   ├── ClassName2.csv
-        │   └── ...
-        └── injected_mutants/           ← generated mutant source files
-            ├── ClassName1_line68_mutant1.java
-            ├── ClassName1_line68_mutant2.java
+        ├── target/classes/           ← compiled .class files (used for javap)
+        ├── PITMuS_dataset/           ← created by gen_dataset.py
+        │   ├── mutated_methods.csv
+        │   └── meta.csv
+        └── injected_mutants/         ← created by inject.py
+            ├── ClassName_id1_line95.java
+            ├── ClassName_id2_line95.java
             └── ...
 ```
 
@@ -46,95 +36,79 @@ mutate-source-code/
   ```bash
   pip install -r requirements.txt
   ```
-  (`javalang` for source parsing; `pandas` for the evaluation sampling script.)
-- A JDK on `PATH` (the extractor invokes `javap` to read compiled `.class` files for bytecode-accurate mutation targeting)
-- A Maven project with PIT configured, a generated `mutations.xml` report, and compiled classes under `target/classes/`
-
+  (`javalang` for source parsing.)
+- A JDK on `PATH` (both scripts invoke `javap` to read compiled `.class` files for bytecode-accurate mutation targeting).
+- A Maven project with PIT configured, a generated `mutations.xml` report, and compiled classes under `target/classes/`.
 
 ## Usage
 
-### Step 1: Extract Mutated Source Lines
-
-Run from the repository root:
+### Generate the dataset
 
 ```bash
-python scripts/extract.py <project-name> <mode>
+python scripts/gen_dataset.py <system_path>
 ```
 
-The script supports two modes:
+This reads `<system_path>/target/pit-reports/mutations.xml`, resolves each mutation to its source line, applies the mutation, locates the enclosing method body, and writes two CSVs into `<system_path>/PITMuS_dataset/`.
 
-- **`dataset`** — creates project-level CSVs in `PITMuS_dataset/<project-name>/` (`mutated_methods.csv` and `meta.csv`)
-- **`file-wise`** — creates per-source-file CSVs in `test-projects/<project-name>/mutated_src_lines/`
-
-Examples:
+Example:
 
 ```bash
-python scripts/extract.py joda-time dataset
-python scripts/extract.py joda-time file-wise
+python scripts/gen_dataset.py test-projects/joda-time
 ```
 
-This reads `test-projects/joda-time/target/pit-reports/mutations.xml`, resolves each mutation to its source line (using PIT's `<indexes><index>` bytecode offsets + `javap` output from `target/classes/` to target the exact token), applies the mutation, and writes the output according to the selected mode.
-
-#### Output Format
-
-**Per-source-file CSV** (`mutated_src_lines/<ClassName>.csv`) — one row per mutation:
+#### `mutated_methods.csv` — one row per mutation, full method bodies
 
 | Column | Description |
 |---|---|
-| `mutation_line` | Original source code at the mutated line |
-| `mutated_line` | Source code after applying the mutation |
-| `source_file` | Path to the source file (e.g. `org/joda/time/DateTime.java`) |
-| `line_number` | Line number in the source file |
-| `description` | PIT's mutation description |
-| `test_file` | Test file(s) covering the mutation, separated by `\|` |
-
-**`PITMuS_dataset/<project-name>/mutated_methods.csv`** — one row per mutation, full method bodies:
-
-| Column | Description |
-|---|---|
-| `id` | row identifier, shared with `meta.csv` (see below) |
+| `index_no` | Sequential row identifier (shared with `meta.csv`) |
 | `original_method` | Full body of the method containing the mutated line |
 | `mutated_method` | Same method body with the mutated line substituted |
 | `docstring` | Javadoc block (`/** ... */`) immediately preceding the method, or empty |
 
-**`PITMuS_dataset/<project-name>/meta.csv`** — row-aligned with `mutated_methods.csv` via the shared `id` column:
+#### `meta.csv` — row-aligned with `mutated_methods.csv` via `index_no`
 
 | Column | Description |
 |---|---|
-| `id` | Same id as the corresponding row in `mutated_methods.csv` |
-| `line_no` | Line number in the source file |
-| `original_line` | Original source line |
-| `mutated_line` | Mutated source line |
-| `source_filepath` | Path to the source file |
+| `mutation_line` | Original source line at the mutation site |
+| `mutated_line` | Source line after applying the mutation |
+| `source_file` | Path to the source file (e.g. `org/joda/time/DateTime.java`) |
+| `line_number` | Line number in the source file |
+| `description` | PIT's mutation description |
+| `test_file` | Test file(s) covering the mutation, separated by `\|` |
+| `index_no` | Same id as the corresponding row in `mutated_methods.csv` |
 
-### Step 2: Inject Mutations into Source
+### Inject mutations into source
 
-The injection script supports three modes depending on how many arguments are provided:
+`inject.py` supports four selection modes. Each matching mutation is written as its own full `.java` file in `<system_path>/injected_mutants/`, named `<ClassName>_id<N>_line<L>.java`, where `<N>` is the `index_no` from the dataset.
 
 ```bash
-# Inject all mutations from all files
-python scripts/inject.py <project-name>
+# Whole system — inject every mutation
+python scripts/inject.py <system_path>
 
-# Inject all mutations for a specific source file
-python scripts/inject.py <project-name> <source-file>
+# One specific mutation by its dataset index_no
+python scripts/inject.py <system_path> id <index_no>
 
-# Inject mutations for a specific source file and line number
-python scripts/inject.py <project-name> <source-file> <line-number>
+# Every mutation on a specific method:line
+python scripts/inject.py <system_path> line <class.method:line>
+
+# Every mutation in a specific source file (FQN or filename)
+python scripts/inject.py <system_path> file <class_fqn | file.java>
 ```
 
 Examples:
 
 ```bash
-python scripts/inject.py joda-time
-python scripts/inject.py joda-time PeriodFormatterBuilder.java
-python scripts/inject.py joda-time PeriodFormatterBuilder.java 1377
+python scripts/inject.py test-projects/joda-time
+python scripts/inject.py test-projects/joda-time id 614
+python scripts/inject.py test-projects/joda-time line org.joda.time.DateTime.plus:614
+python scripts/inject.py test-projects/joda-time file org.joda.time.DateTime
 ```
 
-Each mutant is a full copy of the original source file with one line replaced. Output is written to `test-projects/<project-name>/injected_mutants/`.
+The `id` for a given mutation is the same `index_no` that `gen_dataset.py` writes into `meta.csv`, so a typical workflow is to inspect `PITMuS_dataset/meta.csv` and then re-inject any specific mutation by its id. After writing each mutant file, the script also runs a lightweight `javalang` tokenizer check and flags any that fail.
 
 ## Supported Mutators
 
-The extraction script handles all 13 mutators in PIT's STRONGER group (DEFAULTS + `REMOVE_CONDITIONALS` + `EXPERIMENTAL_SWITCH`). 
+Both scripts handle all 13 mutators in PIT's STRONGER group (DEFAULTS + `REMOVE_CONDITIONALS` + `EXPERIMENTAL_SWITCH`).
 
 | Mutator | Example |
 |---|---|
@@ -148,11 +122,10 @@ The extraction script handles all 13 mutators in PIT's STRONGER group (DEFAULTS 
 | Empty / Null / Primitive / True / False Returns | `return x;` → `return null;` / `return true;` / `return Collections.emptyMap();` / etc. |
 | Bitwise / Shift | `&` → `\|`, `<<` → `>>`, etc. |
 
-
 ## Generating a PIT Report
 
 If you need to generate a PIT mutation report for a Maven project, add the following plugin to the project's `pom.xml`. The example below is configured for Apache Commons Lang 3 — update `targetClasses` and `targetTests` to match the subject project's package structure.
- 
+
 ```xml
 <plugin>
   <groupId>org.pitest</groupId>
@@ -185,7 +158,7 @@ The XML report is written to `target/pit-reports/mutations.xml`.
 
 ## License
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache License 2.0 — see the [LICENSE](LICENSE) file for details.
 
 ## Citation
 

@@ -1,6 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"v.visitStackConsumer(this);","// removed call to visitStackConsumer()","org/apache/bcel/generic/CASTORE.java",44,"removed call to org/apache/bcel/generic/Visitor::visitStackConsumer",""
-"v.visitExceptionThrower(this);","// removed call to visitExceptionThrower()","org/apache/bcel/generic/CASTORE.java",45,"removed call to org/apache/bcel/generic/Visitor::visitExceptionThrower",""
-"v.visitTypedInstruction(this);","// removed call to visitTypedInstruction()","org/apache/bcel/generic/CASTORE.java",46,"removed call to org/apache/bcel/generic/Visitor::visitTypedInstruction",""
-"v.visitArrayInstruction(this);","// removed call to visitArrayInstruction()","org/apache/bcel/generic/CASTORE.java",47,"removed call to org/apache/bcel/generic/Visitor::visitArrayInstruction",""
-"v.visitCASTORE(this);","// removed call to visitCASTORE()","org/apache/bcel/generic/CASTORE.java",48,"removed call to org/apache/bcel/generic/Visitor::visitCASTORE",""

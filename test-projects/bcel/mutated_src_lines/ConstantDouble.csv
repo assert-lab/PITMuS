@@ -1,7 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"v.visitConstantDouble(this);","// removed call to visitConstantDouble()","org/apache/bcel/classfile/ConstantDouble.java",74,"removed call to org/apache/bcel/classfile/Visitor::visitConstantDouble",""
-"file.writeByte(super.getTag());","file.writeByte(super.getTag());  // removed call to writeByte()","org/apache/bcel/classfile/ConstantDouble.java",86,"removed call to java/io/DataOutputStream::writeByte",""
-"file.writeDouble(bytes);","// removed call to writeDouble()","org/apache/bcel/classfile/ConstantDouble.java",87,"removed call to java/io/DataOutputStream::writeDouble",""
-"return bytes;","return 0.0d();","org/apache/bcel/classfile/ConstantDouble.java",95,"replaced double return with 0.0d for org/apache/bcel/classfile/ConstantDouble::getBytes","ElementValueGenTestCase.java|GeneratingAnnotatedClassesTestCase.java"
-"return new Double(bytes);","return null;","org/apache/bcel/classfile/ConstantDouble.java",120,"replaced return value with null for org/apache/bcel/classfile/ConstantDouble::getConstantValue",""
-"return super.toString() + ""(bytes = "" + bytes + "")"";","return """";","org/apache/bcel/classfile/ConstantDouble.java",112,"replaced return value with """" for org/apache/bcel/classfile/ConstantDouble::toString",""

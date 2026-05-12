@@ -1,0 +1,604 @@
+"mutation_line","mutated_line","source_file","line_number","description","test_file","index_no"
+"return header(HEADER_ACCEPT, accept);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2591,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::accept","",1
+"return header(HEADER_ACCEPT_CHARSET, acceptCharset);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2380,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::acceptCharset","",2
+"return header(HEADER_ACCEPT_ENCODING, acceptEncoding);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2360,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::acceptEncoding","",3
+"return acceptEncoding(ENCODING_GZIP);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2370,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::acceptGzipEncoding","",4
+"return accept(CONTENT_TYPE_JSON);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2600,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::acceptJson","",5
+"if (value != null && value.getClass().isArray())","if (false && value.getClass().isArray())","com/github/kevinsawicki/http/HttpRequest.java",339,"removed conditional - replaced equality check with false","",6
+"if (value != null && value.getClass().isArray())","if (true && value.getClass().isArray())","com/github/kevinsawicki/http/HttpRequest.java",339,"removed conditional - replaced equality check with true","",7
+"if (value != null && value.getClass().isArray())","if (value != false && value.getClass().isArray())","com/github/kevinsawicki/http/HttpRequest.java",339,"removed conditional - replaced equality check with false","",8
+"if (value != null && value.getClass().isArray())","if (value != true && value.getClass().isArray())","com/github/kevinsawicki/http/HttpRequest.java",339,"removed conditional - replaced equality check with true","",9
+"if (value instanceof Iterable<?>) {","if (false<?>) {","com/github/kevinsawicki/http/HttpRequest.java",342,"removed conditional - replaced equality check with false","",10
+"if (value instanceof Iterable<?>) {","if (true<?>) {","com/github/kevinsawicki/http/HttpRequest.java",342,"removed conditional - replaced equality check with true","",11
+"while (iterator.hasNext()) {","while (false) {","com/github/kevinsawicki/http/HttpRequest.java",344,"removed conditional - replaced equality check with false","",12
+"while (iterator.hasNext()) {","while (true) {","com/github/kevinsawicki/http/HttpRequest.java",344,"removed conditional - replaced equality check with true","",13
+"if (element != null)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",348,"removed conditional - replaced equality check with false","",14
+"if (element != null)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",348,"removed conditional - replaced equality check with true","",15
+"if (iterator.hasNext())","if (false)","com/github/kevinsawicki/http/HttpRequest.java",350,"removed conditional - replaced equality check with false","",16
+"if (iterator.hasNext())","if (true)","com/github/kevinsawicki/http/HttpRequest.java",350,"removed conditional - replaced equality check with true","",17
+"if (value != null)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",356,"removed conditional - replaced equality check with false","",18
+"if (value != null)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",356,"removed conditional - replaced equality check with true","",19
+"return result;","return null;","com/github/kevinsawicki/http/HttpRequest.java",360,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::addParam","",20
+"final int lastChar = result.length() - 1;","final int lastChar = result.length() + 1;","com/github/kevinsawicki/http/HttpRequest.java",329,"Replaced integer subtraction with addition","",21
+"if (queryStart == -1)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",330,"removed conditional - replaced equality check with false","",22
+"if (queryStart == -1)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",330,"removed conditional - replaced equality check with true","",23
+"else if (queryStart < lastChar && baseUrl.charAt(lastChar) != '&')","else if (queryStart <= lastChar && baseUrl.charAt(lastChar) != '&')","com/github/kevinsawicki/http/HttpRequest.java",332,"changed conditional boundary","",24
+"else if (queryStart < lastChar && baseUrl.charAt(lastChar) != '&')","else if (false && baseUrl.charAt(lastChar) != '&')","com/github/kevinsawicki/http/HttpRequest.java",332,"removed conditional - replaced comparison check with false","",25
+"else if (queryStart < lastChar && baseUrl.charAt(lastChar) != '&')","else if (true && baseUrl.charAt(lastChar) != '&')","com/github/kevinsawicki/http/HttpRequest.java",332,"removed conditional - replaced comparison check with true","",26
+"else if (queryStart < lastChar && baseUrl.charAt(lastChar) != '&')","else if (false && baseUrl.charAt(lastChar) != '&')","com/github/kevinsawicki/http/HttpRequest.java",332,"removed conditional - replaced equality check with false","",27
+"else if (queryStart < lastChar && baseUrl.charAt(lastChar) != '&')","else if (true && baseUrl.charAt(lastChar) != '&')","com/github/kevinsawicki/http/HttpRequest.java",332,"removed conditional - replaced equality check with true","",28
+"return result;","return null;","com/github/kevinsawicki/http/HttpRequest.java",334,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::addParamPrefix","",29
+"if (baseUrl.indexOf(':') + 2 == baseUrl.lastIndexOf('/'))","if (baseUrl.indexOf(':') - 2 == baseUrl.lastIndexOf('/'))","com/github/kevinsawicki/http/HttpRequest.java",320,"Replaced integer addition with subtraction","",30
+"if (baseUrl.indexOf(':') + 2 == baseUrl.lastIndexOf('/'))","if (false)","com/github/kevinsawicki/http/HttpRequest.java",320,"removed conditional - replaced equality check with false","",31
+"if (baseUrl.indexOf(':') + 2 == baseUrl.lastIndexOf('/'))","if (true)","com/github/kevinsawicki/http/HttpRequest.java",320,"removed conditional - replaced equality check with true","",32
+"return result;","return null;","com/github/kevinsawicki/http/HttpRequest.java",322,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::addPathSeparator","",33
+"if (params == null || params.isEmpty())","if (false || params.isEmpty())","com/github/kevinsawicki/http/HttpRequest.java",914,"removed conditional - replaced equality check with false","",34
+"if (params == null || params.isEmpty())","if (true || params.isEmpty())","com/github/kevinsawicki/http/HttpRequest.java",914,"removed conditional - replaced equality check with true","",35
+"if (params == null || params.isEmpty())","if (params == false || params.isEmpty())","com/github/kevinsawicki/http/HttpRequest.java",914,"removed conditional - replaced equality check with false","",36
+"if (params == null || params.isEmpty())","if (params == true || params.isEmpty())","com/github/kevinsawicki/http/HttpRequest.java",914,"removed conditional - replaced equality check with true","",37
+"return baseUrl;","return """";","com/github/kevinsawicki/http/HttpRequest.java",915,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::append","",38
+"while (iterator.hasNext()) {","while (false) {","com/github/kevinsawicki/http/HttpRequest.java",927,"removed conditional - replaced equality check with false","",39
+"while (iterator.hasNext()) {","while (true) {","com/github/kevinsawicki/http/HttpRequest.java",927,"removed conditional - replaced equality check with true","",40
+"return result.toString();","return """";","com/github/kevinsawicki/http/HttpRequest.java",933,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::append","",41
+"if (params == null || params.length == 0)","if (false || params.length == 0)","com/github/kevinsawicki/http/HttpRequest.java",949,"removed conditional - replaced equality check with false","",42
+"if (params == null || params.length == 0)","if (true || params.length == 0)","com/github/kevinsawicki/http/HttpRequest.java",949,"removed conditional - replaced equality check with true","",43
+"if (params == null || params.length == 0)","if (params == false || params.length == 0)","com/github/kevinsawicki/http/HttpRequest.java",949,"removed conditional - replaced equality check with false","",44
+"if (params == null || params.length == 0)","if (params == true || params.length == 0)","com/github/kevinsawicki/http/HttpRequest.java",949,"removed conditional - replaced equality check with true","",45
+"return baseUrl;","return """";","com/github/kevinsawicki/http/HttpRequest.java",950,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::append","",46
+"if (params.length % 2 != 0)","if (params.length * 2 != 0)","com/github/kevinsawicki/http/HttpRequest.java",952,"Replaced integer modulus with multiplication","",47
+"if (params.length % 2 != 0)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",952,"removed conditional - replaced equality check with false","",48
+"if (params.length % 2 != 0)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",952,"removed conditional - replaced equality check with true","",49
+"for (int i = 2; i < params.length; i += 2) {","for (int i = 2; i <= params.length; i += 2) {","com/github/kevinsawicki/http/HttpRequest.java",963,"changed conditional boundary","",50
+"for (int i = 2; i < params.length; i += 2) {","for (int i = 2; false; i += 2) {","com/github/kevinsawicki/http/HttpRequest.java",963,"removed conditional - replaced comparison check with false","",51
+"for (int i = 2; i < params.length; i += 2) {","for (int i = 2; true; i += 2) {","com/github/kevinsawicki/http/HttpRequest.java",963,"removed conditional - replaced comparison check with true","",52
+"addParam(params[i], params[i + 1], result);","addParam(params[i], params[i - 1], result);","com/github/kevinsawicki/http/HttpRequest.java",965,"Replaced integer addition with subtraction","",53
+"return result.toString();","return """";","com/github/kevinsawicki/http/HttpRequest.java",968,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::append","",54
+"if (array instanceof Object[])","if (false[])","com/github/kevinsawicki/http/HttpRequest.java",836,"removed conditional - replaced equality check with false","",55
+"if (array instanceof Object[])","if (true[])","com/github/kevinsawicki/http/HttpRequest.java",836,"removed conditional - replaced equality check with true","",56
+"return Arrays.asList((Object[]) array);","return Collections.emptyList();","com/github/kevinsawicki/http/HttpRequest.java",837,"replaced return value with Collections.emptyList for com/github/kevinsawicki/http/HttpRequest::arrayToList","",57
+"if (array instanceof int[])","if (false[])","com/github/kevinsawicki/http/HttpRequest.java",841,"removed conditional - replaced equality check with false","",58
+"if (array instanceof int[])","if (true[])","com/github/kevinsawicki/http/HttpRequest.java",841,"removed conditional - replaced equality check with true","",59
+"else if (array instanceof boolean[])","else if (false[])","com/github/kevinsawicki/http/HttpRequest.java",843,"removed conditional - replaced equality check with false","",60
+"else if (array instanceof boolean[])","else if (true[])","com/github/kevinsawicki/http/HttpRequest.java",843,"removed conditional - replaced equality check with true","",61
+"else if (array instanceof long[])","else if (false[])","com/github/kevinsawicki/http/HttpRequest.java",845,"removed conditional - replaced equality check with false","",62
+"else if (array instanceof long[])","else if (true[])","com/github/kevinsawicki/http/HttpRequest.java",845,"removed conditional - replaced equality check with true","",63
+"else if (array instanceof float[])","else if (false[])","com/github/kevinsawicki/http/HttpRequest.java",847,"removed conditional - replaced equality check with false","",64
+"else if (array instanceof float[])","else if (true[])","com/github/kevinsawicki/http/HttpRequest.java",847,"removed conditional - replaced equality check with true","",65
+"else if (array instanceof double[])","else if (false[])","com/github/kevinsawicki/http/HttpRequest.java",849,"removed conditional - replaced equality check with false","",66
+"else if (array instanceof double[])","else if (true[])","com/github/kevinsawicki/http/HttpRequest.java",849,"removed conditional - replaced equality check with true","",67
+"else if (array instanceof short[])","else if (false[])","com/github/kevinsawicki/http/HttpRequest.java",851,"removed conditional - replaced equality check with false","",68
+"else if (array instanceof short[])","else if (true[])","com/github/kevinsawicki/http/HttpRequest.java",851,"removed conditional - replaced equality check with true","",69
+"else if (array instanceof byte[])","else if (false[])","com/github/kevinsawicki/http/HttpRequest.java",853,"removed conditional - replaced equality check with false","",70
+"else if (array instanceof byte[])","else if (true[])","com/github/kevinsawicki/http/HttpRequest.java",853,"removed conditional - replaced equality check with true","",71
+"else if (array instanceof char[])","else if (false[])","com/github/kevinsawicki/http/HttpRequest.java",855,"removed conditional - replaced equality check with false","",72
+"else if (array instanceof char[])","else if (true[])","com/github/kevinsawicki/http/HttpRequest.java",855,"removed conditional - replaced equality check with true","",73
+"return result;","return Collections.emptyList();","com/github/kevinsawicki/http/HttpRequest.java",857,"replaced return value with Collections.emptyList for com/github/kevinsawicki/http/HttpRequest::arrayToList","",74
+"return header(HEADER_AUTHORIZATION, authorization);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2462,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::authorization","",75
+"return HTTP_BAD_REQUEST == code();","return false;","com/github/kevinsawicki/http/HttpRequest.java",1627,"removed conditional - replaced equality check with false","",76
+"return HTTP_BAD_REQUEST == code();","return true;","com/github/kevinsawicki/http/HttpRequest.java",1627,"removed conditional - replaced equality check with true","",77
+"return HTTP_BAD_REQUEST == code();","return true;","com/github/kevinsawicki/http/HttpRequest.java",1627,"replaced boolean return with true for com/github/kevinsawicki/http/HttpRequest::badRequest","",78
+"return authorization(""Basic "" + Base64.encode(name + ':' + password));","return null;","com/github/kevinsawicki/http/HttpRequest.java",2484,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::basic","",79
+"return body(charset());","return """";","com/github/kevinsawicki/http/HttpRequest.java",1779,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::body","",80
+"return output.toString(getValidCharset(charset));","return """";","com/github/kevinsawicki/http/HttpRequest.java",1765,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::body","",81
+"output.set(body());","output.set(body());  // removed call to set()","com/github/kevinsawicki/http/HttpRequest.java",1791,"removed call to java/util/concurrent/atomic/AtomicReference::set","",82
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",1792,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::body","",83
+"output.set(body(charset));","output.set(body(charset));  // removed call to set()","com/github/kevinsawicki/http/HttpRequest.java",1805,"removed call to java/util/concurrent/atomic/AtomicReference::set","",84
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",1806,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::body","",85
+"return new BufferedInputStream(stream(), bufferSize);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1844,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::buffer","",86
+"return bufferSize;","return 0;","com/github/kevinsawicki/http/HttpRequest.java",1712,"replaced int return with 0 for com/github/kevinsawicki/http/HttpRequest::bufferSize","",87
+"if (size < 1)","if (size <= 1)","com/github/kevinsawicki/http/HttpRequest.java",1698,"changed conditional boundary","",88
+"if (size < 1)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",1698,"removed conditional - replaced comparison check with false","",89
+"if (size < 1)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",1698,"removed conditional - replaced comparison check with true","",90
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",1701,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::bufferSize","",91
+"return bufferedReader(charset());","return null;","com/github/kevinsawicki/http/HttpRequest.java",1938,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::bufferedReader","",92
+"return new BufferedReader(reader(charset), bufferSize);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1926,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::bufferedReader","",93
+"if (size > 0)","if (size >= 0)","com/github/kevinsawicki/http/HttpRequest.java",1745,"changed conditional boundary","",94
+"if (size > 0)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",1745,"removed conditional - replaced comparison check with false","",95
+"if (size > 0)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",1745,"removed conditional - replaced comparison check with true","",96
+"return new ByteArrayOutputStream(size);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1746,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::byteStream","",97
+"return new ByteArrayOutputStream();","return null;","com/github/kevinsawicki/http/HttpRequest.java",1748,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::byteStream","",98
+"return output.toByteArray();","return null;","com/github/kevinsawicki/http/HttpRequest.java",1833,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::bytes","",99
+"return header(HEADER_CACHE_CONTROL);","return """";","com/github/kevinsawicki/http/HttpRequest.java",2416,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::cacheControl","",100
+"return parameter(HEADER_CONTENT_TYPE, PARAM_CHARSET);","return """";","com/github/kevinsawicki/http/HttpRequest.java",2319,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::charset","",101
+"getConnection().setChunkedStreamingMode(size);","getConnection().  // removed call to setChunkedStreamingMode()","com/github/kevinsawicki/http/HttpRequest.java",1682,"removed call to java/net/HttpURLConnection::setChunkedStreamingMode","",102
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",1683,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::chunk","",103
+"if (output == null)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",2685,"removed conditional - replaced equality check with false","",104
+"if (output == null)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",2685,"removed conditional - replaced equality check with true","",105
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",2686,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::closeOutput","",106
+"if (multipart)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",2687,"removed conditional - replaced equality check with false","",107
+"if (multipart)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",2687,"removed conditional - replaced equality check with true","",108
+"if (ignoreCloseExceptions)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",2689,"removed conditional - replaced equality check with false","",109
+"if (ignoreCloseExceptions)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",2689,"removed conditional - replaced equality check with true","",110
+"output.close();","// removed call to close()","com/github/kevinsawicki/http/HttpRequest.java",2691,"removed call to com/github/kevinsawicki/http/HttpRequest$RequestOutputStream::close","",111
+"output.close();","// removed call to close()","com/github/kevinsawicki/http/HttpRequest.java",2696,"removed call to com/github/kevinsawicki/http/HttpRequest$RequestOutputStream::close","",112
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",2698,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::closeOutput","",113
+"return closeOutput();","return null;","com/github/kevinsawicki/http/HttpRequest.java",2710,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::closeOutputQuietly","",114
+"return getConnection().getResponseCode();","return 0;","com/github/kevinsawicki/http/HttpRequest.java",1560,"replaced int return with 0 for com/github/kevinsawicki/http/HttpRequest::code","",115
+"output.set(code());","output.set(code());  // removed call to set()","com/github/kevinsawicki/http/HttpRequest.java",1576,"removed call to java/util/concurrent/atomic/AtomicInteger::set","",116
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",1577,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::code","",117
+"getConnection().setConnectTimeout(timeout);","getConnection().  // removed call to setConnectTimeout()","com/github/kevinsawicki/http/HttpRequest.java",2054,"removed call to java/net/HttpURLConnection::setConnectTimeout","",118
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",2055,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::connectTimeout","",119
+"return header(HEADER_CONTENT_ENCODING);","return """";","com/github/kevinsawicki/http/HttpRequest.java",2389,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::contentEncoding","",120
+"return intHeader(HEADER_CONTENT_LENGTH);","return 0;","com/github/kevinsawicki/http/HttpRequest.java",2560,"replaced int return with 0 for com/github/kevinsawicki/http/HttpRequest::contentLength","",121
+"getConnection().setFixedLengthStreamingMode(contentLength);","getConnection().  // removed call to setFixedLengthStreamingMode()","com/github/kevinsawicki/http/HttpRequest.java",2580,"removed call to java/net/HttpURLConnection::setFixedLengthStreamingMode","",122
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",2581,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::contentLength","",123
+"return contentLength(Integer.parseInt(contentLength));","return null;","com/github/kevinsawicki/http/HttpRequest.java",2570,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::contentLength","",124
+"return header(HEADER_CONTENT_TYPE);","return """";","com/github/kevinsawicki/http/HttpRequest.java",2551,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::contentType","",125
+"return contentType(contentType, null);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2527,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::contentType","",126
+"if (charset != null && charset.length() > 0) {","if (false && charset.length() > 0) {","com/github/kevinsawicki/http/HttpRequest.java",2538,"removed conditional - replaced equality check with false","",127
+"if (charset != null && charset.length() > 0) {","if (true && charset.length() > 0) {","com/github/kevinsawicki/http/HttpRequest.java",2538,"removed conditional - replaced equality check with true","",128
+"if (charset != null && charset.length() > 0) {","if (charset != null && charset.length() >= 0) {","com/github/kevinsawicki/http/HttpRequest.java",2538,"changed conditional boundary","",129
+"if (charset != null && charset.length() > 0) {","if (charset != null && false) {","com/github/kevinsawicki/http/HttpRequest.java",2538,"removed conditional - replaced comparison check with false","",130
+"if (charset != null && charset.length() > 0) {","if (charset != null && true) {","com/github/kevinsawicki/http/HttpRequest.java",2538,"removed conditional - replaced comparison check with true","",131
+"return header(HEADER_CONTENT_TYPE, contentType + separator + charset);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2540,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::contentType","",132
+"return header(HEADER_CONTENT_TYPE, contentType);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2542,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::contentType","",133
+"return new CloseOperation<HttpRequest>(input, ignoreCloseExceptions) {","return null;","com/github/kevinsawicki/http/HttpRequest.java",2613,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::copy","",134
+"return new CloseOperation<HttpRequest>(input, ignoreCloseExceptions) {","return null;","com/github/kevinsawicki/http/HttpRequest.java",2639,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::copy","",135
+"if (httpProxyHost != null)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",1500,"removed conditional - replaced equality check with false","",136
+"if (httpProxyHost != null)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",1500,"removed conditional - replaced equality check with true","",137
+"connection.setRequestMethod(requestMethod);","// removed call to setRequestMethod()","com/github/kevinsawicki/http/HttpRequest.java",1504,"removed call to java/net/HttpURLConnection::setRequestMethod","",138
+"return connection;","return null;","com/github/kevinsawicki/http/HttpRequest.java",1505,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::createConnection","",139
+"return new Proxy(HTTP, new InetSocketAddress(httpProxyHost, httpProxyPort));","return null;","com/github/kevinsawicki/http/HttpRequest.java",1494,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::createProxy","",140
+"return HTTP_CREATED == code();","return false;","com/github/kevinsawicki/http/HttpRequest.java",1597,"removed conditional - replaced equality check with false","",141
+"return HTTP_CREATED == code();","return true;","com/github/kevinsawicki/http/HttpRequest.java",1597,"removed conditional - replaced equality check with true","",142
+"return HTTP_CREATED == code();","return true;","com/github/kevinsawicki/http/HttpRequest.java",1597,"replaced boolean return with true for com/github/kevinsawicki/http/HttpRequest::created","",143
+"return dateHeader(HEADER_DATE);","return 0;","com/github/kevinsawicki/http/HttpRequest.java",2407,"replaced long return with 0 for com/github/kevinsawicki/http/HttpRequest::date","",144
+"return dateHeader(name, -1L);","return 0;","com/github/kevinsawicki/http/HttpRequest.java",2137,"replaced long return with 0 for com/github/kevinsawicki/http/HttpRequest::dateHeader","",145
+"return getConnection().getHeaderFieldDate(name, defaultValue);","return 0;","com/github/kevinsawicki/http/HttpRequest.java",2152,"replaced long return with 0 for com/github/kevinsawicki/http/HttpRequest::dateHeader","",146
+"return new HttpRequest(url, METHOD_DELETE);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1172,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::delete","",147
+"return delete(encode ? encode(url) : url);","return false;","com/github/kevinsawicki/http/HttpRequest.java",1203,"removed conditional - replaced equality check with false","",148
+"return delete(encode ? encode(url) : url);","return true;","com/github/kevinsawicki/http/HttpRequest.java",1203,"removed conditional - replaced equality check with true","",149
+"return delete(encode ? encode(url) : url);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1203,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::delete","",150
+"return delete(encode ? encode(url) : url);","return false;","com/github/kevinsawicki/http/HttpRequest.java",1224,"removed conditional - replaced equality check with false","",151
+"return delete(encode ? encode(url) : url);","return true;","com/github/kevinsawicki/http/HttpRequest.java",1224,"removed conditional - replaced equality check with true","",152
+"return delete(encode ? encode(url) : url);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1224,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::delete","",153
+"return new HttpRequest(url, METHOD_DELETE);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1183,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::delete","",154
+"getConnection().disconnect();","getConnection().  // removed call to disconnect()","com/github/kevinsawicki/http/HttpRequest.java",1671,"removed call to java/net/HttpURLConnection::disconnect","",155
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",1672,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::disconnect","",156
+"return header(HEADER_ETAG);","return """";","com/github/kevinsawicki/http/HttpRequest.java",2425,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::eTag","",157
+"if (port != -1)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",884,"removed conditional - replaced equality check with false","EncodeTest.java",158
+"if (port != -1)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",884,"removed conditional - replaced equality check with true","EncodeTest.java",159
+"if (paramsStart > 0 && paramsStart + 1 < encoded.length())","if (paramsStart >= 0 && paramsStart + 1 < encoded.length())","com/github/kevinsawicki/http/HttpRequest.java",891,"changed conditional boundary","EncodeTest.java",160
+"if (paramsStart > 0 && paramsStart + 1 < encoded.length())","if (false && paramsStart + 1 < encoded.length())","com/github/kevinsawicki/http/HttpRequest.java",891,"removed conditional - replaced comparison check with false","EncodeTest.java",161
+"if (paramsStart > 0 && paramsStart + 1 < encoded.length())","if (true && paramsStart + 1 < encoded.length())","com/github/kevinsawicki/http/HttpRequest.java",891,"removed conditional - replaced comparison check with true","EncodeTest.java",162
+"if (paramsStart > 0 && paramsStart + 1 < encoded.length())","if (paramsStart > 0 && paramsStart - 1 < encoded.length())","com/github/kevinsawicki/http/HttpRequest.java",891,"Replaced integer addition with subtraction","EncodeTest.java",163
+"if (paramsStart > 0 && paramsStart + 1 < encoded.length())","if (paramsStart > 0 && paramsStart + 1 <= encoded.length())","com/github/kevinsawicki/http/HttpRequest.java",891,"changed conditional boundary","EncodeTest.java",164
+"if (paramsStart > 0 && paramsStart + 1 < encoded.length())","if (paramsStart > 0 && false)","com/github/kevinsawicki/http/HttpRequest.java",891,"removed conditional - replaced comparison check with false","EncodeTest.java",165
+"if (paramsStart > 0 && paramsStart + 1 < encoded.length())","if (paramsStart > 0 && true)","com/github/kevinsawicki/http/HttpRequest.java",891,"removed conditional - replaced comparison check with true","EncodeTest.java",166
+"if (paramsStart > 0 && paramsStart + 1 < encoded.length())","if (paramsStart > 0 && paramsStart - 1 < encoded.length())","com/github/kevinsawicki/http/HttpRequest.java",891,"Replaced integer addition with subtraction","EncodeTest.java",167
+"encoded = encoded.substring(0, paramsStart + 1)","encoded = encoded.substring(0, paramsStart - 1)","com/github/kevinsawicki/http/HttpRequest.java",892,"Replaced integer addition with subtraction","EncodeTest.java",168
+"return encoded;","return """";","com/github/kevinsawicki/http/HttpRequest.java",894,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::encode","EncodeTest.java",169
+"return dateHeader(HEADER_EXPIRES);","return 0;","com/github/kevinsawicki/http/HttpRequest.java",2434,"replaced long return with 0 for com/github/kevinsawicki/http/HttpRequest::expires","",170
+"getConnection().setInstanceFollowRedirects(followRedirects);","getConnection().  // removed call to setInstanceFollowRedirects()","com/github/kevinsawicki/http/HttpRequest.java",3256,"removed call to java/net/HttpURLConnection::setInstanceFollowRedirects","",171
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",3257,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::followRedirects","",172
+"return form(name, value, CHARSET_UTF8);","return null;","com/github/kevinsawicki/http/HttpRequest.java",3127,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::form","",173
+"final boolean first = !form;","final boolean first = false;","com/github/kevinsawicki/http/HttpRequest.java",3144,"removed conditional - replaced equality check with false","",174
+"final boolean first = !form;","final boolean first = true;","com/github/kevinsawicki/http/HttpRequest.java",3144,"removed conditional - replaced equality check with true","",175
+"if (first) {","if (false) {","com/github/kevinsawicki/http/HttpRequest.java",3145,"removed conditional - replaced equality check with false","",176
+"if (first) {","if (true) {","com/github/kevinsawicki/http/HttpRequest.java",3145,"removed conditional - replaced equality check with true","",177
+"if (!first)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",3152,"removed conditional - replaced equality check with false","",178
+"if (!first)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",3152,"removed conditional - replaced equality check with true","",179
+"output.write('&');","// removed call to write()","com/github/kevinsawicki/http/HttpRequest.java",3153,"removed call to com/github/kevinsawicki/http/HttpRequest$RequestOutputStream::write","",180
+"output.write('=');","// removed call to write()","com/github/kevinsawicki/http/HttpRequest.java",3155,"removed call to com/github/kevinsawicki/http/HttpRequest$RequestOutputStream::write","",181
+"if (value != null)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",3156,"removed conditional - replaced equality check with false","",182
+"if (value != null)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",3156,"removed conditional - replaced equality check with true","",183
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",3161,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::form","",184
+"return form(entry, CHARSET_UTF8);","return null;","com/github/kevinsawicki/http/HttpRequest.java",3095,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::form","",185
+"return form(entry.getKey(), entry.getValue(), charset);","return null;","com/github/kevinsawicki/http/HttpRequest.java",3111,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::form","",186
+"return form(values, CHARSET_UTF8);","return null;","com/github/kevinsawicki/http/HttpRequest.java",3081,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::form","",187
+"if (!values.isEmpty())","if (!false)","com/github/kevinsawicki/http/HttpRequest.java",3174,"removed conditional - replaced equality check with false","",188
+"if (!values.isEmpty())","if (!true)","com/github/kevinsawicki/http/HttpRequest.java",3174,"removed conditional - replaced equality check with true","",189
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",3177,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::form","",190
+"return new HttpRequest(url, METHOD_GET);","return null;","com/github/kevinsawicki/http/HttpRequest.java",980,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::get","",191
+"return get(encode ? encode(url) : url);","return false;","com/github/kevinsawicki/http/HttpRequest.java",1011,"removed conditional - replaced equality check with false","",192
+"return get(encode ? encode(url) : url);","return true;","com/github/kevinsawicki/http/HttpRequest.java",1011,"removed conditional - replaced equality check with true","",193
+"return get(encode ? encode(url) : url);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1011,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::get","",194
+"return get(encode ? encode(url) : url);","return false;","com/github/kevinsawicki/http/HttpRequest.java",1032,"removed conditional - replaced equality check with false","",195
+"return get(encode ? encode(url) : url);","return true;","com/github/kevinsawicki/http/HttpRequest.java",1032,"removed conditional - replaced equality check with true","",196
+"return get(encode ? encode(url) : url);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1032,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::get","",197
+"return new HttpRequest(url, METHOD_GET);","return null;","com/github/kevinsawicki/http/HttpRequest.java",991,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::get","",198
+"if (connection == null)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",1522,"removed conditional - replaced equality check with false","",199
+"if (connection == null)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",1522,"removed conditional - replaced equality check with true","",200
+"return connection;","return null;","com/github/kevinsawicki/http/HttpRequest.java",1524,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::getConnection","",201
+"if (value == null || value.length() == 0)","if (false || value.length() == 0)","com/github/kevinsawicki/http/HttpRequest.java",2278,"removed conditional - replaced equality check with false","",202
+"if (value == null || value.length() == 0)","if (true || value.length() == 0)","com/github/kevinsawicki/http/HttpRequest.java",2278,"removed conditional - replaced equality check with true","",203
+"if (value == null || value.length() == 0)","if (value == false || value.length() == 0)","com/github/kevinsawicki/http/HttpRequest.java",2278,"removed conditional - replaced equality check with false","",204
+"if (value == null || value.length() == 0)","if (value == true || value.length() == 0)","com/github/kevinsawicki/http/HttpRequest.java",2278,"removed conditional - replaced equality check with true","",205
+"return null;","return """";","com/github/kevinsawicki/http/HttpRequest.java",2279,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::getParam","",206
+"int start = value.indexOf(';') + 1;","int start = value.indexOf(';') - 1;","com/github/kevinsawicki/http/HttpRequest.java",2282,"Replaced integer addition with subtraction","",207
+"if (start == 0 || start == length)","if (false || start == length)","com/github/kevinsawicki/http/HttpRequest.java",2283,"removed conditional - replaced equality check with false","",208
+"if (start == 0 || start == length)","if (true || start == length)","com/github/kevinsawicki/http/HttpRequest.java",2283,"removed conditional - replaced equality check with true","",209
+"if (start == 0 || start == length)","if (start == false || start == length)","com/github/kevinsawicki/http/HttpRequest.java",2283,"removed conditional - replaced equality check with false","",210
+"if (start == 0 || start == length)","if (start == true || start == length)","com/github/kevinsawicki/http/HttpRequest.java",2283,"removed conditional - replaced equality check with true","",211
+"return null;","return """";","com/github/kevinsawicki/http/HttpRequest.java",2284,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::getParam","",212
+"if (end == -1)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",2287,"removed conditional - replaced equality check with false","",213
+"if (end == -1)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",2287,"removed conditional - replaced equality check with true","",214
+"while (start < end) {","while (start <= end) {","com/github/kevinsawicki/http/HttpRequest.java",2290,"changed conditional boundary","",215
+"while (start < end) {","while (false) {","com/github/kevinsawicki/http/HttpRequest.java",2290,"removed conditional - replaced comparison check with false","",216
+"while (start < end) {","while (true) {","com/github/kevinsawicki/http/HttpRequest.java",2290,"removed conditional - replaced comparison check with true","",217
+"if (nameEnd != -1 && nameEnd < end","if (false && nameEnd < end","com/github/kevinsawicki/http/HttpRequest.java",2292,"removed conditional - replaced equality check with false","",218
+"if (nameEnd != -1 && nameEnd < end","if (true && nameEnd < end","com/github/kevinsawicki/http/HttpRequest.java",2292,"removed conditional - replaced equality check with true","",219
+"if (nameEnd != -1 && nameEnd < end","if (nameEnd != -1 && nameEnd <= end","com/github/kevinsawicki/http/HttpRequest.java",2292,"changed conditional boundary","",220
+"if (nameEnd != -1 && nameEnd < end","if (nameEnd != -1 && false","com/github/kevinsawicki/http/HttpRequest.java",2292,"removed conditional - replaced comparison check with false","",221
+"if (nameEnd != -1 && nameEnd < end","if (nameEnd != -1 && true","com/github/kevinsawicki/http/HttpRequest.java",2292,"removed conditional - replaced comparison check with true","",222
+"&& paramName.equals(value.substring(start, nameEnd).trim())) {","&& false) {","com/github/kevinsawicki/http/HttpRequest.java",2293,"removed conditional - replaced equality check with false","",223
+"&& paramName.equals(value.substring(start, nameEnd).trim())) {","&& true) {","com/github/kevinsawicki/http/HttpRequest.java",2293,"removed conditional - replaced equality check with true","",224
+"String paramValue = value.substring(nameEnd + 1, end).trim();","String paramValue = value.substring(nameEnd - 1, end).trim();","com/github/kevinsawicki/http/HttpRequest.java",2294,"Replaced integer addition with subtraction","",225
+"if (valueLength != 0)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",2296,"removed conditional - replaced equality check with false","",226
+"if (valueLength != 0)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",2296,"removed conditional - replaced equality check with true","",227
+"if (valueLength > 2 && '""' == paramValue.charAt(0)","if (valueLength >= 2 && '""' == paramValue.charAt(0)","com/github/kevinsawicki/http/HttpRequest.java",2297,"changed conditional boundary","",228
+"if (valueLength > 2 && '""' == paramValue.charAt(0)","if (false && '""' == paramValue.charAt(0)","com/github/kevinsawicki/http/HttpRequest.java",2297,"removed conditional - replaced comparison check with false","",229
+"if (valueLength > 2 && '""' == paramValue.charAt(0)","if (true && '""' == paramValue.charAt(0)","com/github/kevinsawicki/http/HttpRequest.java",2297,"removed conditional - replaced comparison check with true","",230
+"if (valueLength > 2 && '""' == paramValue.charAt(0)","if (false && '""' == paramValue.charAt(0)","com/github/kevinsawicki/http/HttpRequest.java",2297,"removed conditional - replaced equality check with false","",231
+"if (valueLength > 2 && '""' == paramValue.charAt(0)","if (true && '""' == paramValue.charAt(0)","com/github/kevinsawicki/http/HttpRequest.java",2297,"removed conditional - replaced equality check with true","",232
+"&& '""' == paramValue.charAt(valueLength - 1))","&& '""' == paramValue.charAt(valueLength + 1))","com/github/kevinsawicki/http/HttpRequest.java",2298,"Replaced integer subtraction with addition","",233
+"&& '""' == paramValue.charAt(valueLength - 1))","&& false)","com/github/kevinsawicki/http/HttpRequest.java",2298,"removed conditional - replaced equality check with false","",234
+"&& '""' == paramValue.charAt(valueLength - 1))","&& true)","com/github/kevinsawicki/http/HttpRequest.java",2298,"removed conditional - replaced equality check with true","",235
+"&& '""' == paramValue.charAt(valueLength - 1))","&& '""' == paramValue.charAt(valueLength + 1))","com/github/kevinsawicki/http/HttpRequest.java",2298,"Replaced integer subtraction with addition","",236
+"return paramValue.substring(1, valueLength - 1);","return """";","com/github/kevinsawicki/http/HttpRequest.java",2299,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::getParam","",237
+"return paramValue;","return """";","com/github/kevinsawicki/http/HttpRequest.java",2301,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::getParam","",238
+"start = end + 1;","start = end - 1;","com/github/kevinsawicki/http/HttpRequest.java",2304,"Replaced integer addition with subtraction","",239
+"if (end == -1)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",2306,"removed conditional - replaced equality check with false","",240
+"if (end == -1)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",2306,"removed conditional - replaced equality check with true","",241
+"return null;","return """";","com/github/kevinsawicki/http/HttpRequest.java",2310,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::getParam","",242
+"if (header == null || header.length() == 0)","if (false || header.length() == 0)","com/github/kevinsawicki/http/HttpRequest.java",2232,"removed conditional - replaced equality check with false","",243
+"if (header == null || header.length() == 0)","if (true || header.length() == 0)","com/github/kevinsawicki/http/HttpRequest.java",2232,"removed conditional - replaced equality check with true","",244
+"if (header == null || header.length() == 0)","if (header == false || header.length() == 0)","com/github/kevinsawicki/http/HttpRequest.java",2232,"removed conditional - replaced equality check with false","",245
+"if (header == null || header.length() == 0)","if (header == true || header.length() == 0)","com/github/kevinsawicki/http/HttpRequest.java",2232,"removed conditional - replaced equality check with true","",246
+"int start = header.indexOf(';') + 1;","int start = header.indexOf(';') - 1;","com/github/kevinsawicki/http/HttpRequest.java",2236,"Replaced integer addition with subtraction","",247
+"if (start == 0 || start == headerLength)","if (false || start == headerLength)","com/github/kevinsawicki/http/HttpRequest.java",2237,"removed conditional - replaced equality check with false","",248
+"if (start == 0 || start == headerLength)","if (true || start == headerLength)","com/github/kevinsawicki/http/HttpRequest.java",2237,"removed conditional - replaced equality check with true","",249
+"if (start == 0 || start == headerLength)","if (start == false || start == headerLength)","com/github/kevinsawicki/http/HttpRequest.java",2237,"removed conditional - replaced equality check with false","",250
+"if (start == 0 || start == headerLength)","if (start == true || start == headerLength)","com/github/kevinsawicki/http/HttpRequest.java",2237,"removed conditional - replaced equality check with true","",251
+"if (end == -1)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",2241,"removed conditional - replaced equality check with false","",252
+"if (end == -1)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",2241,"removed conditional - replaced equality check with true","",253
+"while (start < end) {","while (start <= end) {","com/github/kevinsawicki/http/HttpRequest.java",2245,"changed conditional boundary","",254
+"while (start < end) {","while (false) {","com/github/kevinsawicki/http/HttpRequest.java",2245,"removed conditional - replaced comparison check with false","",255
+"while (start < end) {","while (true) {","com/github/kevinsawicki/http/HttpRequest.java",2245,"removed conditional - replaced comparison check with true","",256
+"if (nameEnd != -1 && nameEnd < end) {","if (false && nameEnd < end) {","com/github/kevinsawicki/http/HttpRequest.java",2247,"removed conditional - replaced equality check with false","",257
+"if (nameEnd != -1 && nameEnd < end) {","if (true && nameEnd < end) {","com/github/kevinsawicki/http/HttpRequest.java",2247,"removed conditional - replaced equality check with true","",258
+"if (nameEnd != -1 && nameEnd < end) {","if (nameEnd != -1 && nameEnd <= end) {","com/github/kevinsawicki/http/HttpRequest.java",2247,"changed conditional boundary","",259
+"if (nameEnd != -1 && nameEnd < end) {","if (nameEnd != -1 && false) {","com/github/kevinsawicki/http/HttpRequest.java",2247,"removed conditional - replaced comparison check with false","",260
+"if (nameEnd != -1 && nameEnd < end) {","if (nameEnd != -1 && true) {","com/github/kevinsawicki/http/HttpRequest.java",2247,"removed conditional - replaced comparison check with true","",261
+"if (name.length() > 0) {","if (name.length() >= 0) {","com/github/kevinsawicki/http/HttpRequest.java",2249,"changed conditional boundary","",262
+"if (name.length() > 0) {","if (false) {","com/github/kevinsawicki/http/HttpRequest.java",2249,"removed conditional - replaced comparison check with false","",263
+"if (name.length() > 0) {","if (true) {","com/github/kevinsawicki/http/HttpRequest.java",2249,"removed conditional - replaced comparison check with true","",264
+"String value = header.substring(nameEnd + 1, end).trim();","String value = header.substring(nameEnd - 1, end).trim();","com/github/kevinsawicki/http/HttpRequest.java",2250,"Replaced integer addition with subtraction","",265
+"if (length != 0)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",2252,"removed conditional - replaced equality check with false","",266
+"if (length != 0)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",2252,"removed conditional - replaced equality check with true","",267
+"if (length > 2 && '""' == value.charAt(0)","if (length >= 2 && '""' == value.charAt(0)","com/github/kevinsawicki/http/HttpRequest.java",2253,"changed conditional boundary","",268
+"if (length > 2 && '""' == value.charAt(0)","if (false && '""' == value.charAt(0)","com/github/kevinsawicki/http/HttpRequest.java",2253,"removed conditional - replaced comparison check with false","",269
+"if (length > 2 && '""' == value.charAt(0)","if (true && '""' == value.charAt(0)","com/github/kevinsawicki/http/HttpRequest.java",2253,"removed conditional - replaced comparison check with true","",270
+"if (length > 2 && '""' == value.charAt(0)","if (false && '""' == value.charAt(0)","com/github/kevinsawicki/http/HttpRequest.java",2253,"removed conditional - replaced equality check with false","",271
+"if (length > 2 && '""' == value.charAt(0)","if (true && '""' == value.charAt(0)","com/github/kevinsawicki/http/HttpRequest.java",2253,"removed conditional - replaced equality check with true","",272
+"&& '""' == value.charAt(length - 1))","&& '""' == value.charAt(length + 1))","com/github/kevinsawicki/http/HttpRequest.java",2254,"Replaced integer subtraction with addition","",273
+"&& '""' == value.charAt(length - 1))","&& false)","com/github/kevinsawicki/http/HttpRequest.java",2254,"removed conditional - replaced equality check with false","",274
+"&& '""' == value.charAt(length - 1))","&& true)","com/github/kevinsawicki/http/HttpRequest.java",2254,"removed conditional - replaced equality check with true","",275
+"&& '""' == value.charAt(length - 1))","&& '""' == value.charAt(length + 1))","com/github/kevinsawicki/http/HttpRequest.java",2254,"Replaced integer subtraction with addition","",276
+"start = end + 1;","start = end - 1;","com/github/kevinsawicki/http/HttpRequest.java",2261,"Replaced integer addition with subtraction","",277
+"if (end == -1)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",2263,"removed conditional - replaced equality check with false","",278
+"if (end == -1)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",2263,"removed conditional - replaced equality check with true","",279
+"return params;","return Collections.emptyMap();","com/github/kevinsawicki/http/HttpRequest.java",2267,"replaced return value with Collections.emptyMap for com/github/kevinsawicki/http/HttpRequest::getParams","",280
+"if (TRUSTED_FACTORY == null) {","if (false) {","com/github/kevinsawicki/http/HttpRequest.java",272,"removed conditional - replaced equality check with false","",281
+"if (TRUSTED_FACTORY == null) {","if (true) {","com/github/kevinsawicki/http/HttpRequest.java",272,"removed conditional - replaced equality check with true","",282
+"context.init(null, trustAllCerts, new SecureRandom());","context.init(null, trustAllCerts, new SecureRandom());  // removed call to init()","com/github/kevinsawicki/http/HttpRequest.java",289,"removed call to javax/net/ssl/SSLContext::init","",283
+"return TRUSTED_FACTORY;","return null;","com/github/kevinsawicki/http/HttpRequest.java",299,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::getTrustedFactory","",284
+"if (TRUSTED_VERIFIER == null)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",303,"removed conditional - replaced equality check with false","",285
+"if (TRUSTED_VERIFIER == null)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",303,"removed conditional - replaced equality check with true","",286
+"return TRUSTED_VERIFIER;","return null;","com/github/kevinsawicki/http/HttpRequest.java",311,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::getTrustedVerifier","",287
+"if (charset != null && charset.length() > 0)","if (false && charset.length() > 0)","com/github/kevinsawicki/http/HttpRequest.java",264,"removed conditional - replaced equality check with false","",288
+"if (charset != null && charset.length() > 0)","if (true && charset.length() > 0)","com/github/kevinsawicki/http/HttpRequest.java",264,"removed conditional - replaced equality check with true","",289
+"if (charset != null && charset.length() > 0)","if (charset != null && charset.length() >= 0)","com/github/kevinsawicki/http/HttpRequest.java",264,"changed conditional boundary","",290
+"if (charset != null && charset.length() > 0)","if (charset != null && false)","com/github/kevinsawicki/http/HttpRequest.java",264,"removed conditional - replaced comparison check with false","",291
+"if (charset != null && charset.length() > 0)","if (charset != null && true)","com/github/kevinsawicki/http/HttpRequest.java",264,"removed conditional - replaced comparison check with true","",292
+"return charset;","return """";","com/github/kevinsawicki/http/HttpRequest.java",265,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::getValidCharset","",293
+"return CHARSET_UTF8;","return """";","com/github/kevinsawicki/http/HttpRequest.java",267,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::getValidCharset","",294
+"return new HttpRequest(url, METHOD_HEAD);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1236,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::head","",295
+"return head(encode ? encode(url) : url);","return false;","com/github/kevinsawicki/http/HttpRequest.java",1267,"removed conditional - replaced equality check with false","",296
+"return head(encode ? encode(url) : url);","return true;","com/github/kevinsawicki/http/HttpRequest.java",1267,"removed conditional - replaced equality check with true","",297
+"return head(encode ? encode(url) : url);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1267,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::head","",298
+"return head(encode ? encode(url) : url);","return false;","com/github/kevinsawicki/http/HttpRequest.java",1288,"removed conditional - replaced equality check with false","",299
+"return head(encode ? encode(url) : url);","return true;","com/github/kevinsawicki/http/HttpRequest.java",1288,"removed conditional - replaced equality check with true","",300
+"return head(encode ? encode(url) : url);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1288,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::head","",301
+"return new HttpRequest(url, METHOD_HEAD);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1247,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::head","",302
+"return getConnection().getHeaderField(name);","return """";","com/github/kevinsawicki/http/HttpRequest.java",2114,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::header","",303
+"return header(name, value != null ? value.toString() : null);","return false;","com/github/kevinsawicki/http/HttpRequest.java",2078,"removed conditional - replaced equality check with false","",304
+"return header(name, value != null ? value.toString() : null);","return true;","com/github/kevinsawicki/http/HttpRequest.java",2078,"removed conditional - replaced equality check with true","",305
+"return header(name, value != null ? value.toString() : null);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2078,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::header","",306
+"getConnection().setRequestProperty(name, value);","getConnection().  // removed call to setRequestProperty()","com/github/kevinsawicki/http/HttpRequest.java",2066,"removed call to java/net/HttpURLConnection::setRequestProperty","",307
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",2067,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::header","",308
+"return header(header.getKey(), header.getValue());","return null;","com/github/kevinsawicki/http/HttpRequest.java",2102,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::header","",309
+"return getConnection().getHeaderFields();","return Collections.emptyMap();","com/github/kevinsawicki/http/HttpRequest.java",2125,"replaced return value with Collections.emptyMap for com/github/kevinsawicki/http/HttpRequest::headers","",310
+"if (headers == null || headers.isEmpty())","if (false || headers.isEmpty())","com/github/kevinsawicki/http/HttpRequest.java",2191,"removed conditional - replaced equality check with false","",311
+"if (headers == null || headers.isEmpty())","if (true || headers.isEmpty())","com/github/kevinsawicki/http/HttpRequest.java",2191,"removed conditional - replaced equality check with true","",312
+"if (headers == null || headers.isEmpty())","if (headers == false || headers.isEmpty())","com/github/kevinsawicki/http/HttpRequest.java",2191,"removed conditional - replaced equality check with false","",313
+"if (headers == null || headers.isEmpty())","if (headers == true || headers.isEmpty())","com/github/kevinsawicki/http/HttpRequest.java",2191,"removed conditional - replaced equality check with true","",314
+"return EMPTY_STRINGS;","return null;","com/github/kevinsawicki/http/HttpRequest.java",2192,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::headers","",315
+"if (values != null && !values.isEmpty())","if (false && !values.isEmpty())","com/github/kevinsawicki/http/HttpRequest.java",2195,"removed conditional - replaced equality check with false","",316
+"if (values != null && !values.isEmpty())","if (true && !values.isEmpty())","com/github/kevinsawicki/http/HttpRequest.java",2195,"removed conditional - replaced equality check with true","",317
+"if (values != null && !values.isEmpty())","if (values != false && !values.isEmpty())","com/github/kevinsawicki/http/HttpRequest.java",2195,"removed conditional - replaced equality check with false","",318
+"if (values != null && !values.isEmpty())","if (values != true && !values.isEmpty())","com/github/kevinsawicki/http/HttpRequest.java",2195,"removed conditional - replaced equality check with true","",319
+"return values.toArray(new String[values.size()]);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2196,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::headers","",320
+"return EMPTY_STRINGS;","return null;","com/github/kevinsawicki/http/HttpRequest.java",2198,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::headers","",321
+"if (!headers.isEmpty())","if (!false)","com/github/kevinsawicki/http/HttpRequest.java",2089,"removed conditional - replaced equality check with false","",322
+"if (!headers.isEmpty())","if (!true)","com/github/kevinsawicki/http/HttpRequest.java",2089,"removed conditional - replaced equality check with true","",323
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",2092,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::headers","",324
+"getConnection().setIfModifiedSince(ifModifiedSince);","getConnection().  // removed call to setIfModifiedSince()","com/github/kevinsawicki/http/HttpRequest.java",2506,"removed call to java/net/HttpURLConnection::setIfModifiedSince","",325
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",2507,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::ifModifiedSince","",326
+"return header(HEADER_IF_NONE_MATCH, ifNoneMatch);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2517,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::ifNoneMatch","",327
+"return ignoreCloseExceptions;","return false;","com/github/kevinsawicki/http/HttpRequest.java",1548,"replaced boolean return with false for com/github/kevinsawicki/http/HttpRequest::ignoreCloseExceptions","",328
+"return ignoreCloseExceptions;","return true;","com/github/kevinsawicki/http/HttpRequest.java",1548,"replaced boolean return with true for com/github/kevinsawicki/http/HttpRequest::ignoreCloseExceptions","",329
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",1538,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::ignoreCloseExceptions","",330
+"if (totalSize == -1)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",2670,"removed conditional - replaced equality check with false","",331
+"if (totalSize == -1)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",2670,"removed conditional - replaced equality check with true","",332
+"totalSize += size;","totalSize -= size;","com/github/kevinsawicki/http/HttpRequest.java",2672,"Replaced long addition with subtraction","",333
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",2673,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::incrementTotalSize","",334
+"return intHeader(name, -1);","return 0;","com/github/kevinsawicki/http/HttpRequest.java",2164,"replaced int return with 0 for com/github/kevinsawicki/http/HttpRequest::intHeader","",335
+"return getConnection().getHeaderFieldInt(name, defaultValue);","return 0;","com/github/kevinsawicki/http/HttpRequest.java",2180,"replaced int return with 0 for com/github/kevinsawicki/http/HttpRequest::intHeader","",336
+"return contentLength() == 0;","return false;","com/github/kevinsawicki/http/HttpRequest.java",1817,"removed conditional - replaced equality check with false","",337
+"return contentLength() == 0;","return true;","com/github/kevinsawicki/http/HttpRequest.java",1817,"removed conditional - replaced equality check with true","",338
+"return contentLength() == 0;","return true;","com/github/kevinsawicki/http/HttpRequest.java",1817,"replaced boolean return with true for com/github/kevinsawicki/http/HttpRequest::isBodyEmpty","",339
+"return dateHeader(HEADER_LAST_MODIFIED);","return 0;","com/github/kevinsawicki/http/HttpRequest.java",2443,"replaced long return with 0 for com/github/kevinsawicki/http/HttpRequest::lastModified","",340
+"return header(HEADER_LOCATION);","return """";","com/github/kevinsawicki/http/HttpRequest.java",2452,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::location","",341
+"return getConnection().getResponseMessage();","return """";","com/github/kevinsawicki/http/HttpRequest.java",1659,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::message","",342
+"return getConnection().getRequestMethod();","return """";","com/github/kevinsawicki/http/HttpRequest.java",3228,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::method","",343
+"return HTTP_NO_CONTENT == code();","return false;","com/github/kevinsawicki/http/HttpRequest.java",1607,"removed conditional - replaced equality check with false","",344
+"return HTTP_NO_CONTENT == code();","return true;","com/github/kevinsawicki/http/HttpRequest.java",1607,"removed conditional - replaced equality check with true","",345
+"return HTTP_NO_CONTENT == code();","return true;","com/github/kevinsawicki/http/HttpRequest.java",1607,"replaced boolean return with true for com/github/kevinsawicki/http/HttpRequest::noContent","",346
+"if (hosts != null && hosts.length > 0) {","if (false && hosts.length > 0) {","com/github/kevinsawicki/http/HttpRequest.java",1396,"removed conditional - replaced equality check with false","",347
+"if (hosts != null && hosts.length > 0) {","if (true && hosts.length > 0) {","com/github/kevinsawicki/http/HttpRequest.java",1396,"removed conditional - replaced equality check with true","",348
+"if (hosts != null && hosts.length > 0) {","if (hosts != null && hosts.length >= 0) {","com/github/kevinsawicki/http/HttpRequest.java",1396,"changed conditional boundary","",349
+"if (hosts != null && hosts.length > 0) {","if (hosts != null && false) {","com/github/kevinsawicki/http/HttpRequest.java",1396,"removed conditional - replaced comparison check with false","",350
+"if (hosts != null && hosts.length > 0) {","if (hosts != null && true) {","com/github/kevinsawicki/http/HttpRequest.java",1396,"removed conditional - replaced comparison check with true","",351
+"int last = hosts.length - 1;","int last = hosts.length + 1;","com/github/kevinsawicki/http/HttpRequest.java",1398,"Replaced integer subtraction with addition","",352
+"for (int i = 0; i < last; i++)","for (int i = 0; i <= last; i++)","com/github/kevinsawicki/http/HttpRequest.java",1399,"changed conditional boundary","",353
+"for (int i = 0; i < last; i++)","for (int i = 0; false; i++)","com/github/kevinsawicki/http/HttpRequest.java",1399,"removed conditional - replaced comparison check with false","",354
+"for (int i = 0; i < last; i++)","for (int i = 0; true; i++)","com/github/kevinsawicki/http/HttpRequest.java",1399,"removed conditional - replaced comparison check with true","",355
+"return HTTP_NOT_FOUND == code();","return false;","com/github/kevinsawicki/http/HttpRequest.java",1637,"removed conditional - replaced equality check with false","",356
+"return HTTP_NOT_FOUND == code();","return true;","com/github/kevinsawicki/http/HttpRequest.java",1637,"removed conditional - replaced equality check with true","",357
+"return HTTP_NOT_FOUND == code();","return true;","com/github/kevinsawicki/http/HttpRequest.java",1637,"replaced boolean return with true for com/github/kevinsawicki/http/HttpRequest::notFound","",358
+"return HTTP_NOT_MODIFIED == code();","return false;","com/github/kevinsawicki/http/HttpRequest.java",1647,"removed conditional - replaced equality check with false","",359
+"return HTTP_NOT_MODIFIED == code();","return true;","com/github/kevinsawicki/http/HttpRequest.java",1647,"removed conditional - replaced equality check with true","",360
+"return HTTP_NOT_MODIFIED == code();","return true;","com/github/kevinsawicki/http/HttpRequest.java",1647,"replaced boolean return with true for com/github/kevinsawicki/http/HttpRequest::notModified","",361
+"return HTTP_OK == code();","return false;","com/github/kevinsawicki/http/HttpRequest.java",1587,"removed conditional - replaced equality check with false","",362
+"return HTTP_OK == code();","return true;","com/github/kevinsawicki/http/HttpRequest.java",1587,"removed conditional - replaced equality check with true","",363
+"return HTTP_OK == code();","return true;","com/github/kevinsawicki/http/HttpRequest.java",1587,"replaced boolean return with true for com/github/kevinsawicki/http/HttpRequest::ok","",364
+"if (output != null)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",2723,"removed conditional - replaced equality check with false","",365
+"if (output != null)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",2723,"removed conditional - replaced equality check with true","",366
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",2724,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::openOutput","",367
+"getConnection().setDoOutput(true);","getConnection().  // removed call to setDoOutput()","com/github/kevinsawicki/http/HttpRequest.java",2725,"removed call to java/net/HttpURLConnection::setDoOutput","",368
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",2730,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::openOutput","",369
+"return new HttpRequest(url, METHOD_OPTIONS);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1300,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::options","",370
+"return new HttpRequest(url, METHOD_OPTIONS);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1311,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::options","",371
+"return getParam(header(headerName), paramName);","return """";","com/github/kevinsawicki/http/HttpRequest.java",2209,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::parameter","",372
+"return getParams(header(headerName));","return Collections.emptyMap();","com/github/kevinsawicki/http/HttpRequest.java",2222,"replaced return value with Collections.emptyMap for com/github/kevinsawicki/http/HttpRequest::parameters","",373
+"return part(name, null, part);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2869,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::part","",374
+"return part(name, null, null, part);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2919,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::part","",375
+"return part(name, null, part);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2842,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::part","",376
+"return part(name, null, part);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2792,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::part","",377
+"return part(name, filename, null, part);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2883,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::part","",378
+"return part(name, filename, part != null ? part.toString() : null);","return false;","com/github/kevinsawicki/http/HttpRequest.java",2856,"removed conditional - replaced equality check with false","",379
+"return part(name, filename, part != null ? part.toString() : null);","return true;","com/github/kevinsawicki/http/HttpRequest.java",2856,"removed conditional - replaced equality check with true","",380
+"return part(name, filename, part != null ? part.toString() : null);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2856,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::part","",381
+"return part(name, filename, null, part);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2806,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::part","",382
+"return part(name, filename, contentType, stream);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2906,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::part","",383
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",2943,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::part","",384
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",2829,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::part","",385
+"return send(name).send("": "").send(value).send(CRLF);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2956,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::partHeader","",386
+"return new HttpRequest(url, METHOD_POST);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1044,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::post","",387
+"return post(encode ? encode(url) : url);","return false;","com/github/kevinsawicki/http/HttpRequest.java",1075,"removed conditional - replaced equality check with false","",388
+"return post(encode ? encode(url) : url);","return true;","com/github/kevinsawicki/http/HttpRequest.java",1075,"removed conditional - replaced equality check with true","",389
+"return post(encode ? encode(url) : url);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1075,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::post","",390
+"return post(encode ? encode(url) : url);","return false;","com/github/kevinsawicki/http/HttpRequest.java",1096,"removed conditional - replaced equality check with false","",391
+"return post(encode ? encode(url) : url);","return true;","com/github/kevinsawicki/http/HttpRequest.java",1096,"removed conditional - replaced equality check with true","",392
+"return post(encode ? encode(url) : url);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1096,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::post","",393
+"return new HttpRequest(url, METHOD_POST);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1055,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::post","",394
+"if (callback == null)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",2662,"removed conditional - replaced equality check with false","",395
+"if (callback == null)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",2662,"removed conditional - replaced equality check with true","",396
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",2666,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::progress","",397
+"return header(HEADER_PROXY_AUTHORIZATION, proxyAuthorization);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2472,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::proxyAuthorization","",398
+"return proxyAuthorization(""Basic "" + Base64.encode(name + ':' + password));","return null;","com/github/kevinsawicki/http/HttpRequest.java",2496,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::proxyBasic","",399
+"return new HttpRequest(url, METHOD_PUT);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1108,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::put","",400
+"return put(encode ? encode(url) : url);","return false;","com/github/kevinsawicki/http/HttpRequest.java",1139,"removed conditional - replaced equality check with false","",401
+"return put(encode ? encode(url) : url);","return true;","com/github/kevinsawicki/http/HttpRequest.java",1139,"removed conditional - replaced equality check with true","",402
+"return put(encode ? encode(url) : url);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1139,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::put","",403
+"return put(encode ? encode(url) : url);","return false;","com/github/kevinsawicki/http/HttpRequest.java",1160,"removed conditional - replaced equality check with false","",404
+"return put(encode ? encode(url) : url);","return true;","com/github/kevinsawicki/http/HttpRequest.java",1160,"removed conditional - replaced equality check with true","",405
+"return put(encode ? encode(url) : url);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1160,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::put","",406
+"return new HttpRequest(url, METHOD_PUT);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1119,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::put","",407
+"getConnection().setReadTimeout(timeout);","getConnection().  // removed call to setReadTimeout()","com/github/kevinsawicki/http/HttpRequest.java",2043,"removed call to java/net/HttpURLConnection::setReadTimeout","",408
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",2044,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::readTimeout","",409
+"return reader(charset());","return null;","com/github/kevinsawicki/http/HttpRequest.java",1911,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::reader","",410
+"return new InputStreamReader(stream(), getValidCharset(charset));","return null;","com/github/kevinsawicki/http/HttpRequest.java",1897,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::reader","",411
+"return new CloseOperation<HttpRequest>(output, ignoreCloseExceptions) {","return null;","com/github/kevinsawicki/http/HttpRequest.java",1955,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::receive","",412
+"return copy(buffer(), output);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1974,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::receive","",413
+"return receive((OutputStream) output);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1989,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::receive","",414
+"return new CloseOperation<HttpRequest>(reader, ignoreCloseExceptions) {","return null;","com/github/kevinsawicki/http/HttpRequest.java",2027,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::receive","",415
+"return new CloseOperation<HttpRequest>(reader, ignoreCloseExceptions) {","return null;","com/github/kevinsawicki/http/HttpRequest.java",2002,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::receive","",416
+"return header(HEADER_REFERER, referer);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2339,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::referer","",417
+"return send(stream);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2974,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::send","",418
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",3006,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::send","",419
+"return new FlushOperation<HttpRequest>(writer) {","return null;","com/github/kevinsawicki/http/HttpRequest.java",3026,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::send","",420
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",3052,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::send","",421
+"if (input != null)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",2985,"removed conditional - replaced equality check with false","",422
+"if (input != null)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",2985,"removed conditional - replaced equality check with true","",423
+"return send(new ByteArrayInputStream(input));","return null;","com/github/kevinsawicki/http/HttpRequest.java",2987,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::send","",424
+"return header(HEADER_SERVER);","return """";","com/github/kevinsawicki/http/HttpRequest.java",2398,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::server","",425
+"return HTTP_INTERNAL_ERROR == code();","return false;","com/github/kevinsawicki/http/HttpRequest.java",1617,"removed conditional - replaced equality check with false","",426
+"return HTTP_INTERNAL_ERROR == code();","return true;","com/github/kevinsawicki/http/HttpRequest.java",1617,"removed conditional - replaced equality check with true","",427
+"return HTTP_INTERNAL_ERROR == code();","return true;","com/github/kevinsawicki/http/HttpRequest.java",1617,"replaced boolean return with true for com/github/kevinsawicki/http/HttpRequest::serverError","",428
+"if (connectionFactory == null)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",404,"removed conditional - replaced equality check with false","",429
+"if (connectionFactory == null)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",404,"removed conditional - replaced equality check with true","",430
+"if (value != null)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",1418,"removed conditional - replaced equality check with false","",431
+"if (value != null)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",1418,"removed conditional - replaced equality check with true","",432
+"return AccessController.doPrivileged(action);","return """";","com/github/kevinsawicki/http/HttpRequest.java",1432,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::setProperty","",433
+"if (!multipart) {","if (false) {","com/github/kevinsawicki/http/HttpRequest.java",2740,"removed conditional - replaced equality check with false","",434
+"if (!multipart) {","if (true) {","com/github/kevinsawicki/http/HttpRequest.java",2740,"removed conditional - replaced equality check with true","",435
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",2746,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::startPart","",436
+"if (code() < HTTP_BAD_REQUEST)","if (code() <= HTTP_BAD_REQUEST)","com/github/kevinsawicki/http/HttpRequest.java",1855,"changed conditional boundary","",437
+"if (code() < HTTP_BAD_REQUEST)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",1855,"removed conditional - replaced comparison check with false","",438
+"if (code() < HTTP_BAD_REQUEST)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",1855,"removed conditional - replaced comparison check with true","",439
+"if (stream == null)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",1863,"removed conditional - replaced equality check with false","",440
+"if (stream == null)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",1863,"removed conditional - replaced equality check with true","",441
+"if (contentLength() > 0)","if (contentLength() >= 0)","com/github/kevinsawicki/http/HttpRequest.java",1867,"changed conditional boundary","",442
+"if (contentLength() > 0)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",1867,"removed conditional - replaced comparison check with false","",443
+"if (contentLength() > 0)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",1867,"removed conditional - replaced comparison check with true","",444
+"if (!uncompress || !ENCODING_GZIP.equals(contentEncoding()))","if (false || !ENCODING_GZIP.equals(contentEncoding()))","com/github/kevinsawicki/http/HttpRequest.java",1874,"removed conditional - replaced equality check with false","",445
+"if (!uncompress || !ENCODING_GZIP.equals(contentEncoding()))","if (true || !ENCODING_GZIP.equals(contentEncoding()))","com/github/kevinsawicki/http/HttpRequest.java",1874,"removed conditional - replaced equality check with true","",446
+"if (!uncompress || !ENCODING_GZIP.equals(contentEncoding()))","if (!uncompress || false)","com/github/kevinsawicki/http/HttpRequest.java",1874,"removed conditional - replaced equality check with false","",447
+"if (!uncompress || !ENCODING_GZIP.equals(contentEncoding()))","if (!uncompress || true)","com/github/kevinsawicki/http/HttpRequest.java",1874,"removed conditional - replaced equality check with true","",448
+"return stream;","return null;","com/github/kevinsawicki/http/HttpRequest.java",1875,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::stream","",449
+"return new GZIPInputStream(stream);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1878,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::stream","",450
+"return method() + ' ' + url();","return """";","com/github/kevinsawicki/http/HttpRequest.java",1513,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest::toString","",451
+"return new HttpRequest(url, METHOD_TRACE);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1323,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::trace","",452
+"return new HttpRequest(url, METHOD_TRACE);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1334,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::trace","",453
+"if (connection instanceof HttpsURLConnection)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",3190,"removed conditional - replaced equality check with false","",454
+"if (connection instanceof HttpsURLConnection)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",3190,"removed conditional - replaced equality check with true","",455
+".setSSLSocketFactory(getTrustedFactory());",".setSSLSocketFactory(getTrustedFactory());  // removed call to setSSLSocketFactory()","com/github/kevinsawicki/http/HttpRequest.java",3192,"removed call to javax/net/ssl/HttpsURLConnection::setSSLSocketFactory","",456
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",3193,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::trustAllCerts","",457
+"if (connection instanceof HttpsURLConnection)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",3207,"removed conditional - replaced equality check with false","",458
+"if (connection instanceof HttpsURLConnection)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",3207,"removed conditional - replaced equality check with true","",459
+".setHostnameVerifier(getTrustedVerifier());",".setHostnameVerifier(getTrustedVerifier());  // removed call to setHostnameVerifier()","com/github/kevinsawicki/http/HttpRequest.java",3209,"removed call to javax/net/ssl/HttpsURLConnection::setHostnameVerifier","",460
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",3210,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::trustAllHosts","",461
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",1735,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::uncompress","",462
+"return getConnection().getURL();","return null;","com/github/kevinsawicki/http/HttpRequest.java",3219,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::url","",463
+"getConnection().setUseCaches(useCaches);","getConnection().  // removed call to setUseCaches()","com/github/kevinsawicki/http/HttpRequest.java",2349,"removed call to java/net/HttpURLConnection::setUseCaches","",464
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",2350,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::useCaches","",465
+"if (connection != null)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",3240,"removed conditional - replaced equality check with false","",466
+"if (connection != null)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",3240,"removed conditional - replaced equality check with true","",467
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",3245,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::useProxy","",468
+"return header(HEADER_USER_AGENT, userAgent);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2329,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::userAgent","",469
+"return writePartHeader(name, filename, null);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2759,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::writePartHeader","",470
+"if (filename != null)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",2775,"removed conditional - replaced equality check with false","",471
+"if (filename != null)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",2775,"removed conditional - replaced equality check with true","",472
+"if (contentType != null)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",2779,"removed conditional - replaced equality check with false","",473
+"if (contentType != null)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",2779,"removed conditional - replaced equality check with true","",474
+"return send(CRLF);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2781,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::writePartHeader","",475
+"return new OutputStreamWriter(output, output.encoder.charset());","return null;","com/github/kevinsawicki/http/HttpRequest.java",3064,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest::writer","",476
+"return new X509Certificate[0];","return null;","com/github/kevinsawicki/http/HttpRequest.java",276,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest$1::getAcceptedIssuers","",477
+"return copy(input, writer);","return null;","com/github/kevinsawicki/http/HttpRequest.java",3030,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest$10::run","",478
+"return true;","return false;","com/github/kevinsawicki/http/HttpRequest.java",307,"replaced boolean return with false for com/github/kevinsawicki/http/HttpRequest$2::verify","",479
+"return System.setProperty(name, value);","return """";","com/github/kevinsawicki/http/HttpRequest.java",1422,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest$3::run","",480
+"return System.clearProperty(name);","return """";","com/github/kevinsawicki/http/HttpRequest.java",1429,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest$4::run","",481
+"return receive(output);","return null;","com/github/kevinsawicki/http/HttpRequest.java",1959,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest$5::run","",482
+"while ((read = reader.read(buffer)) != -1) {","while (false) {","com/github/kevinsawicki/http/HttpRequest.java",2008,"removed conditional - replaced equality check with false","",483
+"while ((read = reader.read(buffer)) != -1) {","while (true) {","com/github/kevinsawicki/http/HttpRequest.java",2008,"removed conditional - replaced equality check with true","",484
+"return HttpRequest.this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",2013,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest$6::run","",485
+"return copy(reader, writer);","return null;","com/github/kevinsawicki/http/HttpRequest.java",2031,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest$7::run","",486
+"while ((read = input.read(buffer)) != -1) {","while (false) {","com/github/kevinsawicki/http/HttpRequest.java",2619,"removed conditional - replaced equality check with false","",487
+"while ((read = input.read(buffer)) != -1) {","while (true) {","com/github/kevinsawicki/http/HttpRequest.java",2619,"removed conditional - replaced equality check with true","",488
+"output.write(buffer, 0, read);","// removed call to write()","com/github/kevinsawicki/http/HttpRequest.java",2620,"removed call to java/io/OutputStream::write","",489
+"progress.onUpload(totalWritten, totalSize);","// removed call to onUpload()","com/github/kevinsawicki/http/HttpRequest.java",2622,"removed call to com/github/kevinsawicki/http/HttpRequest$UploadProgress::onUpload","",490
+"return HttpRequest.this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",2624,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest$8::run","",491
+"while ((read = input.read(buffer)) != -1) {","while (false) {","com/github/kevinsawicki/http/HttpRequest.java",2645,"removed conditional - replaced equality check with false","",492
+"while ((read = input.read(buffer)) != -1) {","while (true) {","com/github/kevinsawicki/http/HttpRequest.java",2645,"removed conditional - replaced equality check with true","",493
+"output.write(buffer, 0, read);","// removed call to write()","com/github/kevinsawicki/http/HttpRequest.java",2646,"removed call to java/io/Writer::write","",494
+"progress.onUpload(totalWritten, -1);","// removed call to onUpload()","com/github/kevinsawicki/http/HttpRequest.java",2648,"removed call to com/github/kevinsawicki/http/HttpRequest$UploadProgress::onUpload","",495
+"return HttpRequest.this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",2650,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest$9::run","",496
+"return encodeBytes(bytes);","return """";","com/github/kevinsawicki/http/HttpRequest.java",550,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest$Base64::encode","",497
+"int inBuff = (numSigBytes > 0 ? ((source[srcOffset] << 24) >>> 8) : 0)","int inBuff = (numSigBytes >= 0 ? ((source[srcOffset] << 24) >>> 8) : 0)","com/github/kevinsawicki/http/HttpRequest.java",506,"changed conditional boundary","",498
+"int inBuff = (numSigBytes > 0 ? ((source[srcOffset] << 24) >>> 8) : 0)","int inBuff = (false ? ((source[srcOffset] << 24) >>> 8) : 0)","com/github/kevinsawicki/http/HttpRequest.java",506,"removed conditional - replaced comparison check with false","",499
+"int inBuff = (numSigBytes > 0 ? ((source[srcOffset] << 24) >>> 8) : 0)","int inBuff = (true ? ((source[srcOffset] << 24) >>> 8) : 0)","com/github/kevinsawicki/http/HttpRequest.java",506,"removed conditional - replaced comparison check with true","",500
+"int inBuff = (numSigBytes > 0 ? ((source[srcOffset] << 24) >>> 8) : 0)","int inBuff = (numSigBytes > 0 ? ((source[srcOffset] >> 24) >>> 8) : 0)","com/github/kevinsawicki/http/HttpRequest.java",506,"Replaced Shift Left with Shift Right","",501
+"int inBuff = (numSigBytes > 0 ? ((source[srcOffset] << 24) >>> 8) : 0)","int inBuff = (numSigBytes > 0 ? ((source[srcOffset] << 24) << 8) : 0)","com/github/kevinsawicki/http/HttpRequest.java",506,"Replaced Unsigned Shift Right with Shift Left","",502
+"int inBuff = (numSigBytes > 0 ? ((source[srcOffset] << 24) >>> 8) : 0)","int inBuff = (numSigBytes >= 0 ? ((source[srcOffset] << 24) >>> 8) : 0)","com/github/kevinsawicki/http/HttpRequest.java",506,"changed conditional boundary","",503
+"| (numSigBytes > 1 ? ((source[srcOffset + 1] << 24) >>> 16) : 0)","| (false ? ((source[srcOffset + 1] << 24) >>> 16) : 0)","com/github/kevinsawicki/http/HttpRequest.java",507,"removed conditional - replaced comparison check with false","",504
+"| (numSigBytes > 1 ? ((source[srcOffset + 1] << 24) >>> 16) : 0)","| (true ? ((source[srcOffset + 1] << 24) >>> 16) : 0)","com/github/kevinsawicki/http/HttpRequest.java",507,"removed conditional - replaced comparison check with true","",505
+"| (numSigBytes > 1 ? ((source[srcOffset + 1] << 24) >>> 16) : 0)","| (numSigBytes > 1 ? ((source[srcOffset - 1] << 24) >>> 16) : 0)","com/github/kevinsawicki/http/HttpRequest.java",507,"Replaced integer addition with subtraction","",506
+"int inBuff = (numSigBytes > 0 ? ((source[srcOffset] << 24) >>> 8) : 0)","int inBuff = (numSigBytes > 0 ? ((source[srcOffset] >> 24) >>> 8) : 0)","com/github/kevinsawicki/http/HttpRequest.java",506,"Replaced Shift Left with Shift Right","",507
+"int inBuff = (numSigBytes > 0 ? ((source[srcOffset] << 24) >>> 8) : 0)","int inBuff = (numSigBytes > 0 ? ((source[srcOffset] << 24) << 8) : 0)","com/github/kevinsawicki/http/HttpRequest.java",506,"Replaced Unsigned Shift Right with Shift Left","",508
+"| (numSigBytes > 1 ? ((source[srcOffset + 1] << 24) >>> 16) : 0)","& (numSigBytes > 1 ? ((source[srcOffset + 1] << 24) >>> 16) : 0)","com/github/kevinsawicki/http/HttpRequest.java",507,"Replaced bitwise OR with AND","",509
+"int inBuff = (numSigBytes > 0 ? ((source[srcOffset] << 24) >>> 8) : 0)","int inBuff = (numSigBytes >= 0 ? ((source[srcOffset] << 24) >>> 8) : 0)","com/github/kevinsawicki/http/HttpRequest.java",506,"changed conditional boundary","",510
+"| (numSigBytes > 2 ? ((source[srcOffset + 2] << 24) >>> 24) : 0);","| (false ? ((source[srcOffset + 2] << 24) >>> 24) : 0);","com/github/kevinsawicki/http/HttpRequest.java",508,"removed conditional - replaced comparison check with false","",511
+"| (numSigBytes > 2 ? ((source[srcOffset + 2] << 24) >>> 24) : 0);","| (true ? ((source[srcOffset + 2] << 24) >>> 24) : 0);","com/github/kevinsawicki/http/HttpRequest.java",508,"removed conditional - replaced comparison check with true","",512
+"| (numSigBytes > 1 ? ((source[srcOffset + 1] << 24) >>> 16) : 0)","| (numSigBytes > 1 ? ((source[srcOffset - 1] << 24) >>> 16) : 0)","com/github/kevinsawicki/http/HttpRequest.java",507,"Replaced integer addition with subtraction","",513
+"int inBuff = (numSigBytes > 0 ? ((source[srcOffset] << 24) >>> 8) : 0)","int inBuff = (numSigBytes > 0 ? ((source[srcOffset] >> 24) >>> 8) : 0)","com/github/kevinsawicki/http/HttpRequest.java",506,"Replaced Shift Left with Shift Right","",514
+"int inBuff = (numSigBytes > 0 ? ((source[srcOffset] << 24) >>> 8) : 0)","int inBuff = (numSigBytes > 0 ? ((source[srcOffset] << 24) << 8) : 0)","com/github/kevinsawicki/http/HttpRequest.java",506,"Replaced Unsigned Shift Right with Shift Left","",515
+"| (numSigBytes > 1 ? ((source[srcOffset + 1] << 24) >>> 16) : 0)","& (numSigBytes > 1 ? ((source[srcOffset + 1] << 24) >>> 16) : 0)","com/github/kevinsawicki/http/HttpRequest.java",507,"Replaced bitwise OR with AND","",516
+"switch (numSigBytes) {","switch (numSigBytes) { // switch default changed to first case","com/github/kevinsawicki/http/HttpRequest.java",510,"Changed switch default to be first case","",517
+"destination[destOffset] = ALPHABET[(inBuff >>> 18)];","destination[destOffset] = ALPHABET[(inBuff << 18)];","com/github/kevinsawicki/http/HttpRequest.java",512,"Replaced Unsigned Shift Right with Shift Left","",518
+"destination[destOffset + 1] = ALPHABET[(inBuff >>> 12) & 0x3f];","destination[destOffset - 1] = ALPHABET[(inBuff >>> 12) & 0x3f];","com/github/kevinsawicki/http/HttpRequest.java",513,"Replaced integer addition with subtraction","",519
+"destination[destOffset + 1] = ALPHABET[(inBuff >>> 12) & 0x3f];","destination[destOffset + 1] = ALPHABET[(inBuff << 12) & 0x3f];","com/github/kevinsawicki/http/HttpRequest.java",513,"Replaced Unsigned Shift Right with Shift Left","",520
+"destination[destOffset + 1] = ALPHABET[(inBuff >>> 12) & 0x3f];","destination[destOffset + 1] = ALPHABET[(inBuff >>> 12) | 0x3f];","com/github/kevinsawicki/http/HttpRequest.java",513,"Replaced bitwise AND with OR","",521
+"destination[destOffset + 2] = ALPHABET[(inBuff >>> 6) & 0x3f];","destination[destOffset - 2] = ALPHABET[(inBuff >>> 6) & 0x3f];","com/github/kevinsawicki/http/HttpRequest.java",514,"Replaced integer addition with subtraction","",522
+"destination[destOffset + 2] = ALPHABET[(inBuff >>> 6) & 0x3f];","destination[destOffset + 2] = ALPHABET[(inBuff << 6) & 0x3f];","com/github/kevinsawicki/http/HttpRequest.java",514,"Replaced Unsigned Shift Right with Shift Left","",523
+"destination[destOffset + 2] = ALPHABET[(inBuff >>> 6) & 0x3f];","destination[destOffset + 2] = ALPHABET[(inBuff >>> 6) | 0x3f];","com/github/kevinsawicki/http/HttpRequest.java",514,"Replaced bitwise AND with OR","",524
+"destination[destOffset + 3] = ALPHABET[(inBuff) & 0x3f];","destination[destOffset - 3] = ALPHABET[(inBuff) & 0x3f];","com/github/kevinsawicki/http/HttpRequest.java",515,"Replaced integer addition with subtraction","",525
+"destination[destOffset + 3] = ALPHABET[(inBuff) & 0x3f];","destination[destOffset + 3] = ALPHABET[(inBuff) | 0x3f];","com/github/kevinsawicki/http/HttpRequest.java",515,"Replaced bitwise AND with OR","",526
+"return destination;","return null;","com/github/kevinsawicki/http/HttpRequest.java",516,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest$Base64::encode3to4","",527
+"destination[destOffset] = ALPHABET[(inBuff >>> 18)];","destination[destOffset] = ALPHABET[(inBuff << 18)];","com/github/kevinsawicki/http/HttpRequest.java",519,"Replaced Unsigned Shift Right with Shift Left","",528
+"destination[destOffset + 1] = ALPHABET[(inBuff >>> 12) & 0x3f];","destination[destOffset - 1] = ALPHABET[(inBuff >>> 12) & 0x3f];","com/github/kevinsawicki/http/HttpRequest.java",520,"Replaced integer addition with subtraction","",529
+"destination[destOffset + 1] = ALPHABET[(inBuff >>> 12) & 0x3f];","destination[destOffset + 1] = ALPHABET[(inBuff << 12) & 0x3f];","com/github/kevinsawicki/http/HttpRequest.java",520,"Replaced Unsigned Shift Right with Shift Left","",530
+"destination[destOffset + 1] = ALPHABET[(inBuff >>> 12) & 0x3f];","destination[destOffset + 1] = ALPHABET[(inBuff >>> 12) | 0x3f];","com/github/kevinsawicki/http/HttpRequest.java",520,"Replaced bitwise AND with OR","",531
+"destination[destOffset + 2] = ALPHABET[(inBuff >>> 6) & 0x3f];","destination[destOffset - 2] = ALPHABET[(inBuff >>> 6) & 0x3f];","com/github/kevinsawicki/http/HttpRequest.java",521,"Replaced integer addition with subtraction","",532
+"destination[destOffset + 2] = ALPHABET[(inBuff >>> 6) & 0x3f];","destination[destOffset + 2] = ALPHABET[(inBuff << 6) & 0x3f];","com/github/kevinsawicki/http/HttpRequest.java",521,"Replaced Unsigned Shift Right with Shift Left","",533
+"destination[destOffset + 2] = ALPHABET[(inBuff >>> 6) & 0x3f];","destination[destOffset + 2] = ALPHABET[(inBuff >>> 6) | 0x3f];","com/github/kevinsawicki/http/HttpRequest.java",521,"Replaced bitwise AND with OR","",534
+"destination[destOffset + 3] = EQUALS_SIGN;","destination[destOffset - 3] = EQUALS_SIGN;","com/github/kevinsawicki/http/HttpRequest.java",522,"Replaced integer addition with subtraction","",535
+"return destination;","return null;","com/github/kevinsawicki/http/HttpRequest.java",523,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest$Base64::encode3to4","",536
+"destination[destOffset] = ALPHABET[(inBuff >>> 18)];","destination[destOffset] = ALPHABET[(inBuff << 18)];","com/github/kevinsawicki/http/HttpRequest.java",526,"Replaced Unsigned Shift Right with Shift Left","",537
+"destination[destOffset + 1] = ALPHABET[(inBuff >>> 12) & 0x3f];","destination[destOffset - 1] = ALPHABET[(inBuff >>> 12) & 0x3f];","com/github/kevinsawicki/http/HttpRequest.java",527,"Replaced integer addition with subtraction","",538
+"destination[destOffset + 1] = ALPHABET[(inBuff >>> 12) & 0x3f];","destination[destOffset + 1] = ALPHABET[(inBuff << 12) & 0x3f];","com/github/kevinsawicki/http/HttpRequest.java",527,"Replaced Unsigned Shift Right with Shift Left","",539
+"destination[destOffset + 1] = ALPHABET[(inBuff >>> 12) & 0x3f];","destination[destOffset + 1] = ALPHABET[(inBuff >>> 12) | 0x3f];","com/github/kevinsawicki/http/HttpRequest.java",527,"Replaced bitwise AND with OR","",540
+"destination[destOffset + 2] = EQUALS_SIGN;","destination[destOffset - 2] = EQUALS_SIGN;","com/github/kevinsawicki/http/HttpRequest.java",528,"Replaced integer addition with subtraction","",541
+"destination[destOffset + 3] = EQUALS_SIGN;","destination[destOffset - 3] = EQUALS_SIGN;","com/github/kevinsawicki/http/HttpRequest.java",529,"Replaced integer addition with subtraction","",542
+"return destination;","return null;","com/github/kevinsawicki/http/HttpRequest.java",530,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest$Base64::encode3to4","",543
+"return destination;","return null;","com/github/kevinsawicki/http/HttpRequest.java",533,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest$Base64::encode3to4","",544
+"return encodeBytes(source, 0, source.length);","return """";","com/github/kevinsawicki/http/HttpRequest.java",566,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest$Base64::encodeBytes","",545
+"return new String(encoded, PREFERRED_ENCODING);","return """";","com/github/kevinsawicki/http/HttpRequest.java",588,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest$Base64::encodeBytes","",546
+"return new String(encoded);","return """";","com/github/kevinsawicki/http/HttpRequest.java",590,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest$Base64::encodeBytes","",547
+"if (source == null)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",615,"removed conditional - replaced equality check with false","",548
+"if (source == null)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",615,"removed conditional - replaced equality check with true","",549
+"if (off < 0)","if (off <= 0)","com/github/kevinsawicki/http/HttpRequest.java",618,"changed conditional boundary","",550
+"if (off < 0)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",618,"removed conditional - replaced comparison check with false","",551
+"if (off < 0)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",618,"removed conditional - replaced comparison check with true","",552
+"if (len < 0)","if (len <= 0)","com/github/kevinsawicki/http/HttpRequest.java",622,"changed conditional boundary","",553
+"if (len < 0)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",622,"removed conditional - replaced comparison check with false","",554
+"if (len < 0)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",622,"removed conditional - replaced comparison check with true","",555
+"if (off + len > source.length)","if (off - len > source.length)","com/github/kevinsawicki/http/HttpRequest.java",625,"Replaced integer addition with subtraction","",556
+"if (off + len > source.length)","if (off + len >= source.length)","com/github/kevinsawicki/http/HttpRequest.java",625,"changed conditional boundary","",557
+"if (off + len > source.length)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",625,"removed conditional - replaced comparison check with false","",558
+"if (off + len > source.length)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",625,"removed conditional - replaced comparison check with true","",559
+"int encLen = (len / 3) * 4 + (len % 3 > 0 ? 4 : 0);","int encLen = (len * 3) * 4 + (len % 3 > 0 ? 4 : 0);","com/github/kevinsawicki/http/HttpRequest.java",633,"Replaced integer division with multiplication","",560
+"int encLen = (len / 3) * 4 + (len % 3 > 0 ? 4 : 0);","int encLen = (len / 3) / 4 + (len % 3 > 0 ? 4 : 0);","com/github/kevinsawicki/http/HttpRequest.java",633,"Replaced integer multiplication with division","",561
+"int encLen = (len / 3) * 4 + (len % 3 > 0 ? 4 : 0);","int encLen = (len / 3) * 4 + (len * 3 > 0 ? 4 : 0);","com/github/kevinsawicki/http/HttpRequest.java",633,"Replaced integer modulus with multiplication","",562
+"int encLen = (len / 3) * 4 + (len % 3 > 0 ? 4 : 0);","int encLen = (len / 3) * 4 + (len % 3 >= 0 ? 4 : 0);","com/github/kevinsawicki/http/HttpRequest.java",633,"changed conditional boundary","",563
+"int encLen = (len / 3) * 4 + (len % 3 > 0 ? 4 : 0);","int encLen = (len / 3) * 4 + (false ? 4 : 0);","com/github/kevinsawicki/http/HttpRequest.java",633,"removed conditional - replaced comparison check with false","",564
+"int encLen = (len / 3) * 4 + (len % 3 > 0 ? 4 : 0);","int encLen = (len / 3) * 4 + (true ? 4 : 0);","com/github/kevinsawicki/http/HttpRequest.java",633,"removed conditional - replaced comparison check with true","",565
+"int encLen = (len / 3) * 4 + (len % 3 > 0 ? 4 : 0);","int encLen = (len / 3) * 4 - (len % 3 > 0 ? 4 : 0);","com/github/kevinsawicki/http/HttpRequest.java",633,"Replaced integer addition with subtraction","",566
+"int len2 = len - 2;","int len2 = len + 2;","com/github/kevinsawicki/http/HttpRequest.java",639,"Replaced integer subtraction with addition","",567
+"for (; d < len2; d += 3, e += 4)","for (; d <= len2; d += 3, e += 4)","com/github/kevinsawicki/http/HttpRequest.java",640,"changed conditional boundary","",568
+"for (; d < len2; d += 3, e += 4)","for (; false; d += 3, e += 4)","com/github/kevinsawicki/http/HttpRequest.java",640,"removed conditional - replaced comparison check with false","",569
+"for (; d < len2; d += 3, e += 4)","for (; true; d += 3, e += 4)","com/github/kevinsawicki/http/HttpRequest.java",640,"removed conditional - replaced comparison check with true","",570
+"for (; d < len2; d += 3, e += 4)","for (; d < len2; d -= 3, e += 4)","com/github/kevinsawicki/http/HttpRequest.java",640,"Changed increment from 3 to -3","",571
+"for (; d < len2; d += 3, e += 4)","for (; d < len2; d -= 3, e += 4)","com/github/kevinsawicki/http/HttpRequest.java",640,"Changed increment from 4 to -4","",572
+"for (; d < len2; d += 3, e += 4)","for (; d < len2; d -= 3, e += 4)","com/github/kevinsawicki/http/HttpRequest.java",640,"Replaced integer addition with subtraction","",573
+"if (d < len) {","if (d <= len) {","com/github/kevinsawicki/http/HttpRequest.java",643,"changed conditional boundary","",574
+"if (d < len) {","if (false) {","com/github/kevinsawicki/http/HttpRequest.java",643,"removed conditional - replaced comparison check with false","",575
+"if (d < len) {","if (true) {","com/github/kevinsawicki/http/HttpRequest.java",643,"removed conditional - replaced comparison check with true","",576
+"encode3to4(source, d + off, len - d, outBuff, e);","encode3to4(source, d - off, len - d, outBuff, e);","com/github/kevinsawicki/http/HttpRequest.java",644,"Replaced integer addition with subtraction","",577
+"encode3to4(source, d + off, len - d, outBuff, e);","encode3to4(source, d + off, len + d, outBuff, e);","com/github/kevinsawicki/http/HttpRequest.java",644,"Replaced integer subtraction with addition","",578
+"e += 4;","e -= 4;","com/github/kevinsawicki/http/HttpRequest.java",645,"Changed increment from 4 to -4","",579
+"if (e <= outBuff.length - 1) {","if (e <= outBuff.length + 1) {","com/github/kevinsawicki/http/HttpRequest.java",648,"Replaced integer subtraction with addition","",580
+"if (e <= outBuff.length - 1) {","if (e < outBuff.length - 1) {","com/github/kevinsawicki/http/HttpRequest.java",648,"changed conditional boundary","",581
+"if (e <= outBuff.length - 1) {","if (false) {","com/github/kevinsawicki/http/HttpRequest.java",648,"removed conditional - replaced comparison check with false","",582
+"if (e <= outBuff.length - 1) {","if (true) {","com/github/kevinsawicki/http/HttpRequest.java",648,"removed conditional - replaced comparison check with true","",583
+"System.arraycopy(outBuff, 0, finalOut, 0, e);","// removed call to arraycopy()","com/github/kevinsawicki/http/HttpRequest.java",650,"removed call to java/lang/System::arraycopy","",584
+"return finalOut;","return null;","com/github/kevinsawicki/http/HttpRequest.java",651,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest$Base64::encodeBytesToBytes","",585
+"return outBuff;","return null;","com/github/kevinsawicki/http/HttpRequest.java",653,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest$Base64::encodeBytesToBytes","",586
+"if (closeable instanceof Flushable)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",755,"removed conditional - replaced equality check with false","",587
+"if (closeable instanceof Flushable)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",755,"removed conditional - replaced equality check with true","",588
+"((Flushable) closeable).flush();","((Flushable) closeable).  // removed call to flush()","com/github/kevinsawicki/http/HttpRequest.java",756,"removed call to java/io/Flushable::flush","",589
+"if (ignoreCloseExceptions)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",757,"removed conditional - replaced equality check with false","",590
+"if (ignoreCloseExceptions)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",757,"removed conditional - replaced equality check with true","",591
+"closeable.close();","// removed call to close()","com/github/kevinsawicki/http/HttpRequest.java",759,"removed call to java/io/Closeable::close","",592
+"closeable.close();","// removed call to close()","com/github/kevinsawicki/http/HttpRequest.java",764,"removed call to java/io/Closeable::close","",593
+"return (HttpURLConnection) url.openConnection();","return null;","com/github/kevinsawicki/http/HttpRequest.java",389,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest$ConnectionFactory$1::create","",594
+"return (HttpURLConnection) url.openConnection(proxy);","return null;","com/github/kevinsawicki/http/HttpRequest.java",393,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest$ConnectionFactory$1::create","",595
+"flushable.flush();","// removed call to flush()","com/github/kevinsawicki/http/HttpRequest.java",789,"removed call to java/io/Flushable::flush","",596
+"return (IOException) super.getCause();","return null;","com/github/kevinsawicki/http/HttpRequest.java",680,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest$HttpRequestException::getCause","",597
+"return run();","return null;","com/github/kevinsawicki/http/HttpRequest.java",711,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest$Operation::call","",598
+"done();","// removed call to done()","com/github/kevinsawicki/http/HttpRequest.java",720,"removed call to com/github/kevinsawicki/http/HttpRequest$Operation::done","",599
+"if (!thrown)","if (false)","com/github/kevinsawicki/http/HttpRequest.java",722,"removed conditional - replaced equality check with false","",600
+"if (!thrown)","if (true)","com/github/kevinsawicki/http/HttpRequest.java",722,"removed conditional - replaced equality check with true","",601
+"super.write(bytes.array(), 0, bytes.limit());","super.write(bytes.array(), 0, bytes.limit());  // removed call to write()","com/github/kevinsawicki/http/HttpRequest.java",824,"removed call to java/io/BufferedOutputStream::write","",602
+"return this;","return null;","com/github/kevinsawicki/http/HttpRequest.java",826,"replaced return value with null for com/github/kevinsawicki/http/HttpRequest$RequestOutputStream::write","",603

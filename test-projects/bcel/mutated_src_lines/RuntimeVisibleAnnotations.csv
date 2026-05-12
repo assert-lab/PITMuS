@@ -1,4 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"return (Attribute) clone();","return null;","org/apache/bcel/classfile/RuntimeVisibleAnnotations.java",55,"replaced return value with null for org/apache/bcel/classfile/RuntimeVisibleAnnotations::copy",""
-"super.dump(dos);","// removed call to dump()","org/apache/bcel/classfile/RuntimeVisibleAnnotations.java",61,"removed call to org/apache/bcel/classfile/Annotations::dump","FieldAnnotationsTestCase.java|GeneratingAnnotatedClassesTestCase.java"
-"writeAnnotations(dos);","// removed call to writeAnnotations()","org/apache/bcel/classfile/RuntimeVisibleAnnotations.java",62,"removed call to org/apache/bcel/classfile/RuntimeVisibleAnnotations::writeAnnotations","FieldAnnotationsTestCase.java|GeneratingAnnotatedClassesTestCase.java"

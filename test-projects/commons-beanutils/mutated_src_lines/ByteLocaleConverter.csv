@@ -1,4 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"if (parsed.longValue() != parsed.byteValue()) {","if (false) {","org/apache/commons/beanutils/locale/converters/ByteLocaleConverter.java",219,"removed conditional - replaced equality check with false",""
-"if (parsed.longValue() != parsed.byteValue()) {","if (true) {","org/apache/commons/beanutils/locale/converters/ByteLocaleConverter.java",219,"removed conditional - replaced equality check with true",""
-"return new Byte(parsed.byteValue());","return null;","org/apache/commons/beanutils/locale/converters/ByteLocaleConverter.java",223,"replaced return value with null for org/apache/commons/beanutils/locale/converters/ByteLocaleConverter::parse",""

@@ -1,8 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"if (type != ANNOTATION) {","if (false) {","org/apache/bcel/classfile/AnnotationElementValue.java",35,"removed conditional - replaced equality check with false","GeneratingAnnotatedClassesTestCase.java"
-"if (type != ANNOTATION) {","if (true) {","org/apache/bcel/classfile/AnnotationElementValue.java",35,"removed conditional - replaced equality check with true","GeneratingAnnotatedClassesTestCase.java"
-"dos.writeByte(super.getType()); // u1 type of value (ANNOTATION == '@')","dos.writeByte(super.getType()); // u1 type of value (ANNOTATION == '@')  // removed call to writeByte()","org/apache/bcel/classfile/AnnotationElementValue.java",45,"removed call to java/io/DataOutputStream::writeByte","GeneratingAnnotatedClassesTestCase.java"
-"annotationEntry.dump(dos);","// removed call to dump()","org/apache/bcel/classfile/AnnotationElementValue.java",46,"removed call to org/apache/bcel/classfile/AnnotationEntry::dump","GeneratingAnnotatedClassesTestCase.java"
-"return annotationEntry;","return null;","org/apache/bcel/classfile/AnnotationElementValue.java",63,"replaced return value with null for org/apache/bcel/classfile/AnnotationElementValue::getAnnotationEntry","GeneratingAnnotatedClassesTestCase.java"
-"return annotationEntry.toString();","return """";","org/apache/bcel/classfile/AnnotationElementValue.java",52,"replaced return value with """" for org/apache/bcel/classfile/AnnotationElementValue::stringifyValue",""
-"return stringifyValue();","return """";","org/apache/bcel/classfile/AnnotationElementValue.java",58,"replaced return value with """" for org/apache/bcel/classfile/AnnotationElementValue::toString",""

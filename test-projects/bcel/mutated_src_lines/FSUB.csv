@@ -1,6 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"v.visitTypedInstruction(this);","// removed call to visitTypedInstruction()","org/apache/bcel/generic/FSUB.java",44,"removed call to org/apache/bcel/generic/Visitor::visitTypedInstruction",""
-"v.visitStackProducer(this);","// removed call to visitStackProducer()","org/apache/bcel/generic/FSUB.java",45,"removed call to org/apache/bcel/generic/Visitor::visitStackProducer",""
-"v.visitStackConsumer(this);","// removed call to visitStackConsumer()","org/apache/bcel/generic/FSUB.java",46,"removed call to org/apache/bcel/generic/Visitor::visitStackConsumer",""
-"v.visitArithmeticInstruction(this);","// removed call to visitArithmeticInstruction()","org/apache/bcel/generic/FSUB.java",47,"removed call to org/apache/bcel/generic/Visitor::visitArithmeticInstruction",""
-"v.visitFSUB(this);","// removed call to visitFSUB()","org/apache/bcel/generic/FSUB.java",48,"removed call to org/apache/bcel/generic/Visitor::visitFSUB",""

@@ -1,2 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"return getConvertUtils().convert(value, type);","return null;","org/apache/commons/beanutils/BeanUtilsBean2.java",74,"replaced return value with null for org/apache/commons/beanutils/BeanUtilsBean2::convert","BeanUtils2TestCase.java|BeanUtilsBenchCase.java"

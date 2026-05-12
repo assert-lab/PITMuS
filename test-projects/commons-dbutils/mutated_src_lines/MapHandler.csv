@@ -1,4 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"return rs.next() ? this.convert.toMap(rs) : null;","return false ? this.convert.toMap(rs) : null;","org/apache/commons/dbutils/handlers/MapHandler.java",73,"removed conditional - replaced equality check with false","MapHandlerTest.java"
-"return rs.next() ? this.convert.toMap(rs) : null;","return true ? this.convert.toMap(rs) : null;","org/apache/commons/dbutils/handlers/MapHandler.java",73,"removed conditional - replaced equality check with true","MapHandlerTest.java"
-"return rs.next() ? this.convert.toMap(rs) : null;","return Collections.emptyMap();","org/apache/commons/dbutils/handlers/MapHandler.java",73,"replaced return value with Collections.emptyMap for org/apache/commons/dbutils/handlers/MapHandler::handle","MapHandlerTest.java"

@@ -1,8 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"v.visitNestHost(this);","// removed call to visitNestHost()","org/apache/bcel/classfile/NestHost.java",83,"removed call to org/apache/bcel/classfile/Visitor::visitNestHost",""
-"c.setConstantPool(_constant_pool);","// removed call to setConstantPool()","org/apache/bcel/classfile/NestHost.java",135,"removed call to org/apache/bcel/classfile/NestHost::setConstantPool",""
-"return c;","return null;","org/apache/bcel/classfile/NestHost.java",136,"replaced return value with null for org/apache/bcel/classfile/NestHost::copy",""
-"super.dump(file);","// removed call to dump()","org/apache/bcel/classfile/NestHost.java",95,"removed call to org/apache/bcel/classfile/Attribute::dump",""
-"file.writeShort(hostClassIndex);","// removed call to writeShort()","org/apache/bcel/classfile/NestHost.java",96,"removed call to java/io/DataOutputStream::writeShort",""
-"return hostClassIndex;","return 0;","org/apache/bcel/classfile/NestHost.java",104,"replaced int return with 0 for org/apache/bcel/classfile/NestHost::getHostClassIndex",""
-"return buf.toString();","return """";","org/apache/bcel/classfile/NestHost.java",125,"replaced return value with """" for org/apache/bcel/classfile/NestHost::toString",""

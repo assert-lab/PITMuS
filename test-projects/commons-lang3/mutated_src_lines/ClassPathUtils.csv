@@ -1,5 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"return toFullyQualifiedName(context.getPackage(), resourceName);","return """";","org/apache/commons/lang3/ClassPathUtils.java",59,"replaced return value with """" for org/apache/commons/lang3/ClassPathUtils::toFullyQualifiedName",""
-"return context.getName() + ""."" + resourceName;","return """";","org/apache/commons/lang3/ClassPathUtils.java",81,"replaced return value with """" for org/apache/commons/lang3/ClassPathUtils::toFullyQualifiedName",""
-"return toFullyQualifiedPath(context.getPackage(), resourceName);","return """";","org/apache/commons/lang3/ClassPathUtils.java",103,"replaced return value with """" for org/apache/commons/lang3/ClassPathUtils::toFullyQualifiedPath",""
-"return context.getName().replace('.', '/') + ""/"" + resourceName;","return """";","org/apache/commons/lang3/ClassPathUtils.java",126,"replaced return value with """" for org/apache/commons/lang3/ClassPathUtils::toFullyQualifiedPath",""

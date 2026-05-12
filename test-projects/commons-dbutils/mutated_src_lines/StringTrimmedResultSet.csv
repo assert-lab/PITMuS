@@ -1,7 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"if ((method.getName().equals(""getObject"")","if ((false","org/apache/commons/dbutils/wrappers/StringTrimmedResultSet.java",100,"removed conditional - replaced equality check with false","StringTrimmedResultSetTest.java"
-"if ((method.getName().equals(""getObject"")","if ((true","org/apache/commons/dbutils/wrappers/StringTrimmedResultSet.java",100,"removed conditional - replaced equality check with true","StringTrimmedResultSetTest.java"
-"|| method.getName().equals(""getString""))","|| false)","org/apache/commons/dbutils/wrappers/StringTrimmedResultSet.java",101,"removed conditional - replaced equality check with false","StringTrimmedResultSetTest.java"
-"|| method.getName().equals(""getString""))","|| true)","org/apache/commons/dbutils/wrappers/StringTrimmedResultSet.java",101,"removed conditional - replaced equality check with true","StringTrimmedResultSetTest.java"
-"return result;","return null;","org/apache/commons/dbutils/wrappers/StringTrimmedResultSet.java",106,"replaced return value with null for org/apache/commons/dbutils/wrappers/StringTrimmedResultSet::invoke","StringTrimmedResultSetTest.java"
-"return factory.createResultSet(new StringTrimmedResultSet(rs));","return null;","org/apache/commons/dbutils/wrappers/StringTrimmedResultSet.java",64,"replaced return value with null for org/apache/commons/dbutils/wrappers/StringTrimmedResultSet::wrap","StringTrimmedResultSetTest.java"

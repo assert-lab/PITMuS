@@ -1,5 +1,0 @@
-"mutation_line","mutated_line","source_file","line_number","description","test_file"
-"cVerbose.set(verbose);","// removed call to set()","org/joda/time/tz/ZoneInfoLogger.java",39,"removed call to java/lang/ThreadLocal::set","TestCompiler.java"
-"return cVerbose.get();","return false;","org/joda/time/tz/ZoneInfoLogger.java",35,"replaced boolean return with false for org/joda/time/tz/ZoneInfoLogger::verbose","TestCompiler.java"
-"return cVerbose.get();","return true;","org/joda/time/tz/ZoneInfoLogger.java",35,"replaced boolean return with true for org/joda/time/tz/ZoneInfoLogger::verbose","TestCompiler.java"
-"return Boolean.FALSE;","return Boolean.TRUE;","org/joda/time/tz/ZoneInfoLogger.java",26,"replaced Boolean return with True for org/joda/time/tz/ZoneInfoLogger$1::initialValue","TestCompiler.java"
