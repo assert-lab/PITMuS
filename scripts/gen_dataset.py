@@ -359,9 +359,50 @@ def nth_gt_run(ltoks, count, occ):
     return None
 
 
-def nth_token_in(toks, values, n):
+def _generic_bracket_indices(toks):
+    """Indices of '<'/'>' tokens that are Java generic type brackets rather than
+    comparison/shift operators. A generic opener is a '<' preceded by a type name
+    or a '.' type-witness that opens a balanced group whose contents are type-like
+    (identifiers, '.', ',', '?', '[', ']', 'extends', 'super', nested '<'/'>').
+    Used to keep operator selection aligned with the bytecode occurrence index,
+    which counts only real comparison opcodes (generics produce none)."""
+    generic = set()
+    n = len(toks)
+    type_like = {'.', ',', '?', '[', ']', 'extends', 'super'}
+    for i, tok in enumerate(toks):
+        if tok.value != '<' or i == 0:
+            continue
+        prev = toks[i - 1].value
+        if not (prev == '.' or (prev.isidentifier() and prev[:1].isupper())):
+            continue
+        depth = 0
+        j = i
+        ok = True
+        while j < n:
+            v = toks[j].value
+            if v == '<':
+                depth += 1
+            elif v == '>':
+                depth -= 1
+                if depth == 0:
+                    break
+            elif not (v.isidentifier() or v in type_like):
+                ok = False
+                break
+            j += 1
+        if ok and depth == 0 and j < n:
+            for k in range(i, j + 1):
+                if toks[k].value in ('<', '>'):
+                    generic.add(k)
+    return generic
+
+
+def nth_token_in(toks, values, n, skip=None):
+    skip = skip or set()
     count = 0
-    for t in toks:
+    for i, t in enumerate(toks):
+        if i in skip:
+            continue
         if t.value in values:
             if count == n:
                 return t
@@ -545,13 +586,13 @@ def apply_mutation(line, ltoks, desc, occ=0):
 
     if d == "changed conditional boundary":
         bmap = {">=": ">", "<=": "<", ">": ">=", "<": "<="}
-        t = nth_token_in(ltoks, bmap.keys(), occ)
+        t = nth_token_in(ltoks, bmap.keys(), occ, _generic_bracket_indices(ltoks))
         if t:
             return replace_at(line, t.position[1] - 1, len(t.value), bmap[t.value])
 
     if d == "negated conditional":
         nmap = {"==": "!=", "!=": "==", ">=": "<", "<=": ">", ">": "<=", "<": ">="}
-        t = nth_token_in(ltoks, nmap.keys(), occ)
+        t = nth_token_in(ltoks, nmap.keys(), occ, _generic_bracket_indices(ltoks))
         if t:
             return replace_at(line, t.position[1] - 1, len(t.value), nmap[t.value])
 
