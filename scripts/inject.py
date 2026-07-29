@@ -550,10 +550,17 @@ def apply_mutation(line, ltoks, desc, occ=0):
         }
         old, new = ops.get(m.group(1)), ops.get(m.group(2))
         if old and new:
-            variants = [old, old + "="]
-            if {old, new} == {"+", "-"}:
-                variants.append(old + old)
-            matches = [t for t in ltoks if t.value in variants]
+            # Binary '+'/'-' and compound '+='/'-=' always map to the mutated
+            # opcode (iadd/isub/...). A local i++/--i compiles to `iinc`, which is
+            # NOT one of the opcodes the bytecode `occ` counts, so order increments
+            # AFTER binary/compound operators: they are still matched when alone
+            # (e.g. `size++;`), but no longer shadow a real +/- target on the same
+            # line (e.g. `work[digit++] = value % 10 + '0';`).
+            binary_variants = [old, old + "="]
+            incr_variant = old + old if {old, new} == {"+", "-"} else None
+            matches = [t for t in ltoks if t.value in binary_variants]
+            if incr_variant:
+                matches += [t for t in ltoks if t.value == incr_variant]
             if occ < len(matches):
                 t = matches[occ]
                 if t.value == old:
