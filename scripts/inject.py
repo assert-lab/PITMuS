@@ -343,13 +343,17 @@ def nth_token(toks, value, n):
     return None
 
 
-def nth_gt_run(ltoks, count, occ):
+def nth_gt_run(ltoks, count, occ, skip=None):
+    skip = skip or set()
     matches = 0
     i = 0
     while i + count <= len(ltoks):
         if all(ltoks[i + k].value == ">" for k in range(count)):
             cols = [ltoks[i + k].position[1] for k in range(count)]
             if all(cols[k] + 1 == cols[k + 1] for k in range(count - 1)):
+                if any((i + k) in skip for k in range(count)):
+                    i += count
+                    continue
                 if matches == occ:
                     return ltoks[i]
                 matches += 1
@@ -570,7 +574,7 @@ def apply_mutation(line, ltoks, desc, occ=0):
     if d in shift_map:
         old, new = shift_map[d]
         if old in (">>", ">>>"):
-            t = nth_gt_run(ltoks, len(old), occ)
+            t = nth_gt_run(ltoks, len(old), occ, _generic_bracket_indices(ltoks))
         else:
             t = nth_token(ltoks, old, occ)
         if t:
