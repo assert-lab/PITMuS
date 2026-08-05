@@ -24,10 +24,10 @@ PITMuS/
 │   ├── gen_dataset.py                ← PIT report → dataset CSVs   (main entry point)
 │   └── inject.py                     ← PIT report → mutant .java files (standalone tool)
 ├── blackbox_checks/
-│   ├── evaluate_reconstruction.ipynb ← the 4 oracles (eval0–eval3) that grade a dataset
+│   ├── evaluate_reconstruction.ipynb ← the 4 evaluations (eval0–eval3) that grade a dataset
 │   └── PitmusCompile.java            ← in-JVM batch compiler used by the bytecode oracle
 ├── blackbox_checks_results/
-│   └── <project>_results/            ← per-project oracle output (CSVs + Evaluation-*.txt)
+│   └── <project>_results/            ← per-project evaluation output (CSVs + Evaluation-*.txt)
 ├── test-projects/
 │   └── <project>/
 │       ├── src/main/java/            ← project source
@@ -123,12 +123,12 @@ python scripts/inject.py <system_path> file <class_fqn | file.java> # all in one
 
 After writing each file it runs a `javalang` tokenizer check and flags any that fail with `[INVALID]`.
 
-### 3. `evaluate_reconstruction.ipynb` — the oracles
+### 3. `evaluate_reconstruction.ipynb` — the evaluations
 
 Set `REPO` and `PROJECT` in the config cell, then run top to bottom. It writes into
 `blackbox_checks_results/<project>_results/` and prints a consolidated `Evaluation-<project>_<VERSION>.txt`.
 
-| Oracle | Question | Output |
+| Evaluations | Question | Output |
 |---|---|---|
 | **eval0** XML alignment | does each row point back to the right `<mutation>`? | `eval0_xml_misalign_*.csv` |
 | **eval1** Count | was every XML mutation reconstructed? | `eval1_not_reconstructed_*.csv` |
@@ -136,7 +136,7 @@ Set `REPO` and `PROJECT` in the config cell, then run top to bottom. It writes i
 | **eval3** Bytecode ground truth | does the *compiled* mutant equal PIT's exported `.class`? | `eval3_bytecode_*_broken.csv`, `_other.csv` |
 | **eval4** Report | roll-up of all of the above | `Evaluation-<project>_<VERSION>.txt` |
 
-**eval3 verdicts** (the authoritative oracle): `MATCH`/`EQUIVALENT` = confirmed faithful;
+**eval3 verdicts** (the authoritative evaluation): `MATCH`/`EQUIVALENT` = confirmed faithful;
 `BROKEN` = a genuine reconstruction fault (won't compile for a real reason — this is the only
 bucket in `*_broken.csv`); `UNREPRESENTABLE` = faithful mutant Java source can't legally express
 (e.g. `for(;false;)` → "unreachable statement"); `DIVERGENT` = compiles but bytecode differs
