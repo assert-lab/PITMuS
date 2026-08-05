@@ -1,0 +1,438 @@
+index_no,verdict,description,detail
+317,DISASM_ERR,removed conditional - replaced equality check with false,a=None b=None lambda$forEach$0(Lorg/jsoup/helper/Consumer;Lorg/jsoup/nodes/Node;I)V
+318,DISASM_ERR,removed conditional - replaced equality check with true,a=None b=None lambda$forEach$0(Lorg/jsoup/helper/Consumer;Lorg/jsoup/nodes/Node;I)V
+319,DISASM_ERR,removed call to org/jsoup/helper/Consumer::accept,a=None b=None lambda$forEach$0(Lorg/jsoup/helper/Consumer;Lorg/jsoup/nodes/Node;I)V
+320,DISASM_ERR,removed call to org/jsoup/nodes/Element::appendWholeText,a=None b=None lambda$wholeText$0(Ljava/lang/StringBuilder;Lorg/jsoup/nodes/Node;I)V
+2940,DISASM_ERR,removed call to org/jsoup/helper/Consumer::accept,a=None b=None lambda$forEachNode$0(Lorg/jsoup/helper/Consumer;Lorg/jsoup/nodes/Node;I)V
+26,DIVERGENT,removed conditional - replaced equality check with false,appendNormalisedText(Ljava/lang/StringBuilder;Lorg/jsoup/nodes/TextNode;)V | alen=17 blen=30
+56,DIVERGENT,removed conditional - replaced equality check with false,childElementsList()Ljava/util/List; | alen=50 blen=62
+85,DIVERGENT,removed conditional - replaced equality check with false,closest(Lorg/jsoup/select/Evaluator;)Lorg/jsoup/nodes/Element; | alen=19 blen=22
+101,DIVERGENT,removed conditional - replaced equality check with false,cssSelector()Ljava/lang/String; | alen=109 blen=161
+198,DIVERGENT,removed conditional - replaced equality check with false,hasClass(Ljava/lang/String;)Z | alen=87 blen=149
+265,DIVERGENT,Replaced integer addition with subtraction,insertChildren(ILjava/util/Collection;)Lorg/jsoup/nodes/Element; | alen=41 blen=41
+266,DIVERGENT,Replaced integer addition with subtraction,insertChildren(ILjava/util/Collection;)Lorg/jsoup/nodes/Element; | alen=41 blen=41
+280,DIVERGENT,Replaced integer addition with subtraction,insertChildren(I[Lorg/jsoup/nodes/Node;)Lorg/jsoup/nodes/Element; | alen=30 blen=30
+281,DIVERGENT,Replaced integer addition with subtraction,insertChildren(I[Lorg/jsoup/nodes/Node;)Lorg/jsoup/nodes/Element; | alen=30 blen=30
+297,DIVERGENT,removed conditional - replaced equality check with false,isFormatAsBlock(Lorg/jsoup/nodes/Document$OutputSettings;)Z | alen=15 blen=36
+302,DIVERGENT,removed conditional - replaced equality check with true,isFormatAsBlock(Lorg/jsoup/nodes/Document$OutputSettings;)Z | alen=15 blen=19
+309,DIVERGENT,removed conditional - replaced equality check with false,isInlineable(Lorg/jsoup/nodes/Document$OutputSettings;)Z | alen=18 blen=28
+379,DIVERGENT,removed conditional - replaced equality check with true,outerHtmlTail(Ljava/lang/Appendable;ILorg/jsoup/nodes/Document$OutputSettings;)V | alen=50 blen=53
+384,DIVERGENT,removed conditional - replaced equality check with false,outerHtmlTail(Ljava/lang/Appendable;ILorg/jsoup/nodes/Document$OutputSettings;)V | alen=49 blen=84
+389,DIVERGENT,removed conditional - replaced comparison check with false,outerHtmlTail(Ljava/lang/Appendable;ILorg/jsoup/nodes/Document$OutputSettings;)V | alen=48 blen=72
+430,DIVERGENT,removed conditional - replaced equality check with true,preserveWhitespace(Lorg/jsoup/nodes/Node;)Z | alen=24 blen=25
+509,DIVERGENT,removed conditional - replaced equality check with false,head(Lorg/jsoup/nodes/Node;I)V | alen=29 blen=49
+516,DIVERGENT,removed conditional - replaced equality check with false,head(Lorg/jsoup/nodes/Node;I)V | alen=37 blen=50
+535,DIVERGENT,removed conditional - replaced equality check with false,bufferUp()V | alen=118 blen=229
+576,DIVERGENT,Replaced integer addition with subtraction,cacheString([C[Ljava/lang/String;II)Ljava/lang/String; | alen=65 blen=65
+577,DIVERGENT,Replaced integer addition with subtraction,cacheString([C[Ljava/lang/String;II)Ljava/lang/String; | alen=65 blen=65
+608,DIVERGENT,Changed switch default to be first case,consumeAttributeQuoted(Z)Ljava/lang/String; | alen=39 blen=53
+620,DIVERGENT,Changed switch default to be first case,consumeData()Ljava/lang/String; | alen=39 blen=39
+647,DIVERGENT,removed conditional - replaced comparison check with true,consumeHexSequence()Ljava/lang/String; | alen=50 blen=52
+653,DIVERGENT,removed conditional - replaced comparison check with true,consumeHexSequence()Ljava/lang/String; | alen=50 blen=52
+672,DIVERGENT,removed conditional - replaced comparison check with true,consumeLetterSequence()Ljava/lang/String; | alen=47 blen=49
+678,DIVERGENT,removed conditional - replaced comparison check with true,consumeLetterSequence()Ljava/lang/String; | alen=47 blen=49
+693,DIVERGENT,removed conditional - replaced comparison check with true,consumeLetterThenDigitSequence()Ljava/lang/String; | alen=69 blen=71
+699,DIVERGENT,removed conditional - replaced comparison check with true,consumeLetterThenDigitSequence()Ljava/lang/String; | alen=69 blen=71
+717,DIVERGENT,Changed switch default to be first case,consumeRawData()Ljava/lang/String; | alen=39 blen=39
+820,DIVERGENT,Replaced integer subtraction with addition,lineNumIndex(I)I | alen=21 blen=21
+890,DIVERGENT,removed conditional - replaced comparison check with true,matchesAsciiAlpha()Z | alen=25 blen=27
+930,DIVERGENT,removed conditional - replaced comparison check with true,matchesLetter()Z | alen=28 blen=30
+936,DIVERGENT,removed conditional - replaced comparison check with true,matchesLetter()Z | alen=28 blen=30
+1103,DIVERGENT,removed conditional - replaced equality check with true,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=91 blen=96
+1132,DIVERGENT,Changed switch default to be first case,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=153 blen=379
+1135,DIVERGENT,Changed switch default to be first case,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=153 blen=165
+1140,DIVERGENT,Changed switch default to be first case,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=153 blen=159
+1158,DIVERGENT,removed conditional - replaced equality check with false,exitTableBody(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=25 blen=42
+1160,DIVERGENT,removed conditional - replaced equality check with false,exitTableBody(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=25 blen=37
+1162,DIVERGENT,removed conditional - replaced equality check with false,exitTableBody(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=25 blen=32
+1169,DIVERGENT,Changed switch default to be first case,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=62 blen=163
+1242,DIVERGENT,removed conditional - replaced equality check with false,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=124 blen=144
+1297,DIVERGENT,removed conditional - replaced equality check with false,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=111 blen=123
+1299,DIVERGENT,removed conditional - replaced equality check with false,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=111 blen=118
+1311,DIVERGENT,Changed switch default to be first case,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=270 blen=602
+1347,DIVERGENT,removed conditional - replaced equality check with false,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=266 blen=279
+1355,DIVERGENT,Changed switch default to be first case,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=270 blen=301
+1401,DIVERGENT,Changed switch default to be first case,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=167 blen=315
+1422,DIVERGENT,removed conditional - replaced equality check with false,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=163 blen=185
+1529,DIVERGENT,Changed switch default to be first case,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=144 blen=158
+1593,DIVERGENT,removed conditional - replaced equality check with false,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=45 blen=84
+1614,DIVERGENT,removed conditional - replaced equality check with false,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=50 blen=96
+1616,DIVERGENT,removed conditional - replaced equality check with false,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=50 blen=92
+1677,DIVERGENT,Changed switch default to be first case,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=26 blen=438
+1694,DIVERGENT,removed conditional - replaced equality check with false,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=216 blen=229
+1757,DIVERGENT,removed conditional - replaced equality check with false,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=92 blen=151
+1759,DIVERGENT,removed conditional - replaced equality check with false,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=92 blen=147
+1776,DIVERGENT,removed conditional - replaced equality check with true,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=90 blen=95
+1845,DIVERGENT,Changed switch default to be first case,inBodyEndTag(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=416 blen=598
+1868,DIVERGENT,removed conditional - replaced equality check with false,inBodyEndTag(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=414 blen=436
+2013,DIVERGENT,Changed switch default to be first case,inBodyStartTag(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=1282 blen=2188
+2048,DIVERGENT,removed conditional - replaced equality check with false,inBodyStartTag(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=1278 blen=1356
+2054,DIVERGENT,removed conditional - replaced equality check with true,inBodyStartTag(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=1275 blen=1282
+2066,DIVERGENT,removed conditional - replaced equality check with false,inBodyStartTag(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=1278 blen=1339
+2156,DIVERGENT,removed conditional - replaced equality check with false,inBodyStartTag(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=1278 blen=1317
+2158,DIVERGENT,removed conditional - replaced equality check with false,inBodyStartTag(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=1278 blen=1310
+2160,DIVERGENT,removed conditional - replaced equality check with false,inBodyStartTag(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=1278 blen=1303
+2162,DIVERGENT,removed conditional - replaced equality check with false,inBodyStartTag(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=1278 blen=1296
+2232,DIVERGENT,Changed switch default to be first case,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=70 blen=118
+2338,DIVERGENT,removed conditional - replaced equality check with true,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=278 blen=288
+2344,DIVERGENT,removed conditional - replaced equality check with false,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=281 blen=294
+2408,DIVERGENT,removed conditional - replaced equality check with false,clearStackToContext([Ljava/lang/String;)V | alen=28 blen=52
+2582,DIVERGENT,removed conditional - replaced equality check with false,isContentForTagData(Ljava/lang/String;)Z | alen=4 blen=18
+2633,DIVERGENT,Changed switch default to be first case,parseFragment(Ljava/lang/String;Lorg/jsoup/nodes/Element;Ljava/lang/String;Lorg/jsoup/parser/Parser;)Ljava/util/List; | alen=217 blen=261
+2699,DIVERGENT,removed conditional - replaced equality check with false,reconstructFormattingElements()V | alen=98 blen=187
+2711,DIVERGENT,removed conditional - replaced equality check with false,reconstructFormattingElements()V | alen=98 blen=107
+2767,DIVERGENT,Changed switch default to be first case,resetInsertionMode()Z | alen=248 blen=333
+2800,DIVERGENT,removed conditional - replaced equality check with true,absUrl(Ljava/lang/String;)Ljava/lang/String; | alen=16 blen=28
+2826,DIVERGENT,removed conditional - replaced equality check with true,addChildren(I[Lorg/jsoup/nodes/Node;)V | alen=110 blen=114
+2890,DIVERGENT,removed conditional - replaced equality check with false,doClone(Lorg/jsoup/nodes/Node;)Lorg/jsoup/nodes/Node; | alen=42 blen=63
+2929,DIVERGENT,removed conditional - replaced equality check with false,hasSameValue(Ljava/lang/Object;)Z | alen=19 blen=36
+3029,DIVERGENT,removed conditional - replaced equality check with true,wrap(Ljava/lang/String;)Lorg/jsoup/nodes/Node; | alen=90 blen=164
+3346,DIVERGENT,removed conditional - replaced equality check with false,createHeaderMap(Ljava/net/HttpURLConnection;)Ljava/util/LinkedHashMap; | alen=51 blen=88
+3361,DIVERGENT,removed conditional - replaced equality check with false,execute(Lorg/jsoup/helper/HttpConnection$Request;Lorg/jsoup/helper/HttpConnection$Response;)Lorg/jsoup/helper/HttpConnection$Response; | alen=342 blen=353
+3362,DIVERGENT,removed conditional - replaced equality check with true,execute(Lorg/jsoup/helper/HttpConnection$Request;Lorg/jsoup/helper/HttpConnection$Response;)Lorg/jsoup/helper/HttpConnection$Response; | alen=341 blen=350
+3369,DIVERGENT,removed conditional - replaced equality check with false,execute(Lorg/jsoup/helper/HttpConnection$Request;Lorg/jsoup/helper/HttpConnection$Response;)Lorg/jsoup/helper/HttpConnection$Response; | alen=348 blen=354
+3394,DIVERGENT,replaced return value with null for org/jsoup/helper/HttpConnection$Response::execute,execute(Lorg/jsoup/helper/HttpConnection$Request;Lorg/jsoup/helper/HttpConnection$Response;)Lorg/jsoup/helper/HttpConnection$Response; | alen=348 blen=352
+3396,DIVERGENT,removed conditional - replaced comparison check with false,execute(Lorg/jsoup/helper/HttpConnection$Request;Lorg/jsoup/helper/HttpConnection$Response;)Lorg/jsoup/helper/HttpConnection$Response; | alen=347 blen=356
+3546,DIVERGENT,Changed switch default to be first case,combinator(C)V | alen=103 blen=251
+3597,DIVERGENT,removed conditional - replaced equality check with true,cssNthChild(ZZ)V | alen=110 blen=148
+3606,DIVERGENT,removed conditional - replaced equality check with false,findElements()V | alen=336 blen=783
+3777,DIVERGENT,removed conditional - replaced equality check with true,deduplicate(Lorg/jsoup/parser/ParseSettings;)I | alen=58 blen=67
+3788,DIVERGENT,removed conditional - replaced equality check with false,equals(Ljava/lang/Object;)Z | alen=68 blen=122
+3933,DIVERGENT,removed conditional - replaced comparison check with true,hasNext()Z | alen=27 blen=33
+3992,DIVERGENT,removed conditional - replaced equality check with false,consumeCharacterReference(Ljava/lang/Character;Z)[I | alen=273 blen=320
+3999,DIVERGENT,removed conditional - replaced comparison check with true,consumeCharacterReference(Ljava/lang/Character;Z)[I | alen=274 blen=276
+4014,DIVERGENT,removed conditional - replaced equality check with false,consumeCharacterReference(Ljava/lang/Character;Z)[I | alen=273 blen=285
+4028,DIVERGENT,removed conditional - replaced equality check with false,consumeCharacterReference(Ljava/lang/Character;Z)[I | alen=272 blen=293
+4030,DIVERGENT,removed conditional - replaced equality check with false,consumeCharacterReference(Ljava/lang/Character;Z)[I | alen=272 blen=287
+4106,DIVERGENT,Changed switch default to be first case,transition(Lorg/jsoup/parser/TokeniserState;)V | alen=24 blen=34
+4113,DIVERGENT,removed conditional - replaced equality check with false,unescapeEntities(Z)Ljava/lang/String; | alen=55 blen=66
+4144,DIVERGENT,removed conditional - replaced equality check with false,chompBalanced(CC)Ljava/lang/String; | alen=123 blen=150
+4146,DIVERGENT,removed conditional - replaced equality check with false,chompBalanced(CC)Ljava/lang/String; | alen=123 blen=147
+4169,DIVERGENT,removed conditional - replaced comparison check with true,chompBalanced(CC)Ljava/lang/String; | alen=124 blen=125
+4189,DIVERGENT,removed conditional - replaced equality check with false,consumeCssIdentifier()Ljava/lang/String; | alen=33 blen=44
+4197,DIVERGENT,removed conditional - replaced equality check with false,consumeElementSelector()Ljava/lang/String; | alen=41 blen=55
+4288,DIVERGENT,removed conditional - replaced equality check with true,appendNormalisedWhitespace(Ljava/lang/StringBuilder;Ljava/lang/String;Z)V | alen=50 blen=51
+4307,DIVERGENT,removed conditional - replaced equality check with false,isActuallyWhitespace(I)Z | alen=19 blen=39
+4309,DIVERGENT,removed conditional - replaced equality check with false,isActuallyWhitespace(I)Z | alen=19 blen=36
+4311,DIVERGENT,removed conditional - replaced equality check with false,isActuallyWhitespace(I)Z | alen=19 blen=33
+4313,DIVERGENT,removed conditional - replaced equality check with false,isActuallyWhitespace(I)Z | alen=19 blen=30
+4315,DIVERGENT,removed conditional - replaced equality check with false,isActuallyWhitespace(I)Z | alen=19 blen=27
+4329,DIVERGENT,removed conditional - replaced equality check with false,isBlank(Ljava/lang/String;)Z | alen=24 blen=45
+4341,DIVERGENT,removed conditional - replaced equality check with false,isInvisibleChar(I)Z | alen=7 blen=15
+4346,DIVERGENT,removed conditional - replaced equality check with false,isNumeric(Ljava/lang/String;)Z | alen=24 blen=45
+4358,DIVERGENT,removed conditional - replaced equality check with false,isWhitespace(I)Z | alen=16 blen=32
+4360,DIVERGENT,removed conditional - replaced equality check with false,isWhitespace(I)Z | alen=16 blen=29
+4362,DIVERGENT,removed conditional - replaced equality check with false,isWhitespace(I)Z | alen=16 blen=26
+4364,DIVERGENT,removed conditional - replaced equality check with false,isWhitespace(I)Z | alen=16 blen=23
+4417,DIVERGENT,removed conditional - replaced equality check with false,startsWithNewline(Ljava/lang/String;)Z | alen=14 blen=28
+4447,DIVERGENT,removed conditional - replaced equality check with true,detectCharsetFromBom(Ljava/nio/ByteBuffer;)Lorg/jsoup/helper/DataUtil$BomCharset; | alen=107 blen=111
+4460,DIVERGENT,removed conditional - replaced equality check with true,detectCharsetFromBom(Ljava/nio/ByteBuffer;)Lorg/jsoup/helper/DataUtil$BomCharset; | alen=107 blen=111
+4482,DIVERGENT,removed conditional - replaced equality check with false,load(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Lorg/jsoup/parser/Parser;)Lorg/jsoup/nodes/Document; | alen=54 blen=65
+4507,DIVERGENT,removed conditional - replaced equality check with false,parseInputStream(Ljava/io/InputStream;Ljava/lang/String;Ljava/lang/String;Lorg/jsoup/parser/Parser;)Lorg/jsoup/nodes/Document; | alen=258 blen=267
+4567,DIVERGENT,removed conditional - replaced equality check with false,validateCharset(Ljava/lang/String;)Ljava/lang/String; | alen=29 blen=58
+4618,DIVERGENT,removed conditional - replaced equality check with false,isSafeAttribute(Ljava/lang/String;Lorg/jsoup/nodes/Element;Lorg/jsoup/nodes/Attribute;)Z | alen=81 blen=102
+4722,DIVERGENT,Replaced integer multiplication with division,hashCode()I | alen=17 blen=19
+4723,DIVERGENT,removed conditional - replaced equality check with false,hashCode()I | alen=12 blen=22
+4724,DIVERGENT,removed conditional - replaced equality check with true,hashCode()I | alen=10 blen=23
+4725,DIVERGENT,Replaced integer addition with subtraction,hashCode()I | alen=17 blen=19
+4726,DIVERGENT,replaced int return with 0 for org/jsoup/safety/Safelist$TypedValue::hashCode,hashCode()I | alen=17 blen=21
+4818,DIVERGENT,removed conditional - replaced equality check with true,siblings(Ljava/lang/String;ZZ)Lorg/jsoup/select/Elements; | alen=53 blen=54
+4841,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=67 blen=126
+4914,DIVERGENT,removed conditional - replaced equality check with false,isSelfClosing()Z | alen=3 blen=15
+4942,DIVERGENT,removed conditional - replaced equality check with false,equals(Ljava/lang/Object;)Z | alen=46 blen=93
+4956,DIVERGENT,removed conditional - replaced equality check with false,equals(Ljava/lang/Object;)Z | alen=44 blen=51
+4957,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=44 blen=48
+5021,DIVERGENT,removed conditional - replaced equality check with false,shouldCollapseAttribute(Ljava/lang/String;Ljava/lang/String;Lorg/jsoup/nodes/Document$OutputSettings;)Z | alen=18 blen=33
+5023,DIVERGENT,removed conditional - replaced equality check with false,shouldCollapseAttribute(Ljava/lang/String;Ljava/lang/String;Lorg/jsoup/nodes/Document$OutputSettings;)Z | alen=18 blen=25
+5025,DIVERGENT,removed conditional - replaced equality check with false,shouldCollapseAttribute(Ljava/lang/String;Ljava/lang/String;Lorg/jsoup/nodes/Document$OutputSettings;)Z | alen=17 blen=21
+5027,DIVERGENT,removed conditional - replaced equality check with false,shouldCollapseAttribute(Ljava/lang/String;Ljava/lang/String;Lorg/jsoup/nodes/Document$OutputSettings;)Z | alen=17 blen=21
+5028,DIVERGENT,removed conditional - replaced equality check with true,shouldCollapseAttribute(Ljava/lang/String;Ljava/lang/String;Lorg/jsoup/nodes/Document$OutputSettings;)Z | alen=16 blen=20
+5032,DIVERGENT,removed conditional - replaced equality check with false,body()Lorg/jsoup/nodes/Element; | alen=26 blen=41
+5159,DIVERGENT,Changed switch default to be first case,canEncode(Lorg/jsoup/nodes/Entities$CoreCharset;CLjava/nio/charset/CharsetEncoder;)Z | alen=16 blen=16
+5160,DIVERGENT,changed conditional boundary,canEncode(Lorg/jsoup/nodes/Entities$CoreCharset;CLjava/nio/charset/CharsetEncoder;)Z | alen=18 blen=16
+5161,DIVERGENT,removed conditional - replaced comparison check with false,canEncode(Lorg/jsoup/nodes/Entities$CoreCharset;CLjava/nio/charset/CharsetEncoder;)Z | alen=13 blen=19
+5162,DIVERGENT,removed conditional - replaced comparison check with true,canEncode(Lorg/jsoup/nodes/Entities$CoreCharset;CLjava/nio/charset/CharsetEncoder;)Z | alen=13 blen=16
+5163,DIVERGENT,replaced boolean return with true for org/jsoup/nodes/Entities::canEncode,canEncode(Lorg/jsoup/nodes/Entities$CoreCharset;CLjava/nio/charset/CharsetEncoder;)Z | alen=13 blen=18
+5164,DIVERGENT,replaced boolean return with false for org/jsoup/nodes/Entities::canEncode,canEncode(Lorg/jsoup/nodes/Entities$CoreCharset;CLjava/nio/charset/CharsetEncoder;)Z | alen=18 blen=18
+5165,DIVERGENT,replaced boolean return with false for org/jsoup/nodes/Entities::canEncode,canEncode(Lorg/jsoup/nodes/Entities$CoreCharset;CLjava/nio/charset/CharsetEncoder;)Z | alen=16 blen=18
+5166,DIVERGENT,replaced boolean return with true for org/jsoup/nodes/Entities::canEncode,canEncode(Lorg/jsoup/nodes/Entities$CoreCharset;CLjava/nio/charset/CharsetEncoder;)Z | alen=16 blen=18
+5194,DIVERGENT,Changed switch default to be first case,escape(Ljava/lang/Appendable;Ljava/lang/String;Lorg/jsoup/nodes/Document$OutputSettings;ZZZZ)V | alen=121 blen=267
+5197,DIVERGENT,removed conditional - replaced equality check with false,escape(Ljava/lang/Appendable;Ljava/lang/String;Lorg/jsoup/nodes/Document$OutputSettings;ZZZZ)V | alen=180 blen=201
+5199,DIVERGENT,removed conditional - replaced equality check with false,escape(Ljava/lang/Appendable;Ljava/lang/String;Lorg/jsoup/nodes/Document$OutputSettings;ZZZZ)V | alen=179 blen=196
+5208,DIVERGENT,removed conditional - replaced comparison check with false,escape(Ljava/lang/Appendable;Ljava/lang/String;Lorg/jsoup/nodes/Document$OutputSettings;ZZZZ)V | alen=179 blen=195
+5300,DIVERGENT,removed conditional - replaced equality check with true,outerHtmlHead(Ljava/lang/Appendable;ILorg/jsoup/nodes/Document$OutputSettings;)V | alen=121 blen=124
+5312,DIVERGENT,removed conditional - replaced equality check with true,outerHtmlHead(Ljava/lang/Appendable;ILorg/jsoup/nodes/Document$OutputSettings;)V | alen=120 blen=124
+5316,DIVERGENT,removed conditional - replaced equality check with true,outerHtmlHead(Ljava/lang/Appendable;ILorg/jsoup/nodes/Document$OutputSettings;)V | alen=121 blen=124
+5328,DIVERGENT,removed conditional - replaced equality check with true,outerHtmlHead(Ljava/lang/Appendable;ILorg/jsoup/nodes/Document$OutputSettings;)V | alen=122 blen=124
+5371,DIVERGENT,removed conditional - replaced comparison check with true,filter(Lorg/jsoup/select/NodeFilter;Lorg/jsoup/nodes/Node;)Lorg/jsoup/select/NodeFilter$FilterResult; | alen=103 blen=145
+5372,DIVERGENT,removed conditional - replaced equality check with false,filter(Lorg/jsoup/select/NodeFilter;Lorg/jsoup/nodes/Node;)Lorg/jsoup/select/NodeFilter$FilterResult; | alen=103 blen=112
+5383,DIVERGENT,removed conditional - replaced equality check with false,filter(Lorg/jsoup/select/NodeFilter;Lorg/jsoup/nodes/Node;)Lorg/jsoup/select/NodeFilter$FilterResult; | alen=103 blen=112
+5425,DIVERGENT,removed conditional - replaced comparison check with true,traverse(Lorg/jsoup/select/NodeVisitor;Lorg/jsoup/nodes/Node;)V | alen=92 blen=105
+5554,DIVERGENT,removed conditional - replaced equality check with false,read([BII)I | alen=50 blen=97
+5579,DIVERGENT,removed conditional - replaced comparison check with false,readToByteBuffer(I)Ljava/nio/ByteBuffer; | alen=39 blen=76
+5580,DIVERGENT,removed conditional - replaced comparison check with true,readToByteBuffer(I)Ljava/nio/ByteBuffer; | alen=59 blen=73
+5708,DIVERGENT,removed conditional - replaced equality check with false,name()Ljava/lang/String; | alen=11 blen=21
+5763,DIVERGENT,removed conditional - replaced equality check with false,initialiseParse(Ljava/io/Reader;Ljava/lang/String;Lorg/jsoup/parser/Parser;)V | alen=68 blen=80
+5856,DIVERGENT,Changed switch default to be first case,process(Lorg/jsoup/parser/Token;)Z | alen=24 blen=71
+5865,DIVERGENT,removed conditional - replaced equality check with false,main([Ljava/lang/String;)V | alen=68 blen=75
+5880,DIVERGENT,removed conditional - replaced equality check with false,append(Ljava/lang/String;)V | alen=121 blen=142
+5925,DIVERGENT,Changed switch default to be first case,handleDataDoubleEscapeTag(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;Lorg/jsoup/parser/TokeniserState;Lorg/jsoup/parser/TokeniserState;)V | alen=43 blen=43
+5940,DIVERGENT,Changed switch default to be first case,handleDataEndTag(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;Lorg/jsoup/parser/TokeniserState;)V | alen=56 blen=80
+5960,DIVERGENT,Changed switch default to be first case,readRawData(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;Lorg/jsoup/parser/TokeniserState;Lorg/jsoup/parser/TokeniserState;)V | alen=19 blen=41
+5967,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=18 blen=52
+5975,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=22 blen=80
+6013,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=38 blen=94
+6034,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=19 blen=54
+6059,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=43 blen=69
+6071,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=32 blen=57
+6084,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=32 blen=65
+6112,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=35 blen=80
+6123,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=19 blen=53
+6131,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=22 blen=67
+6143,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=22 blen=75
+6162,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=26 blen=107
+6182,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=22 blen=88
+6193,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=25 blen=107
+6210,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=22 blen=120
+6234,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=33 blen=99
+6250,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=33 blen=99
+6265,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=29 blen=126
+6280,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=18 blen=57
+6290,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=24 blen=39
+6298,DIVERGENT,removed conditional - replaced equality check with false,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=22 blen=29
+6318,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=23 blen=71
+6330,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=26 blen=74
+6341,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=33 blen=62
+6348,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=30 blen=59
+6356,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=30 blen=86
+6366,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=30 blen=83
+6376,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=16 blen=52
+6379,DIVERGENT,removed call to org/jsoup/parser/Tokeniser::error,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=31 blen=35
+6389,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=41 blen=75
+6401,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=35 blen=86
+6429,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=20 blen=104
+6443,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=17 blen=91
+6454,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=22 blen=86
+6463,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=22 blen=86
+6472,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=20 blen=91
+6485,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=17 blen=88
+6497,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=19 blen=103
+6511,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=17 blen=91
+6522,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=22 blen=86
+6531,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=22 blen=86
+6540,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=13 blen=54
+6548,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=18 blen=26
+6553,DIVERGENT,removed conditional - replaced equality check with false,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=24 blen=33
+6559,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=20 blen=34
+6565,DIVERGENT,Changed switch default to be first case,read(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;)V | alen=28 blen=52
+6608,DIVERGENT,removed conditional - replaced equality check with false,formData()Ljava/util/List; | alen=123 blen=141
+6715,DIVERGENT,removed conditional - replaced equality check with false,notEmpty(Ljava/lang/String;)V | alen=9 blen=16
+6719,DIVERGENT,removed conditional - replaced equality check with false,notEmpty(Ljava/lang/String;Ljava/lang/String;)V | alen=9 blen=16
+6723,DIVERGENT,removed conditional - replaced equality check with false,notEmptyParam(Ljava/lang/String;Ljava/lang/String;)V | alen=16 blen=23
+6748,DIVERGENT,removed conditional - replaced equality check with false,isXmlDeclarationData(Ljava/lang/String;)Z | alen=12 blen=22
+6761,DIVERGENT,removed conditional - replaced equality check with true,outerHtmlHead(Ljava/lang/Appendable;ILorg/jsoup/nodes/Document$OutputSettings;)V | alen=29 blen=34
+6805,DIVERGENT,removed conditional - replaced equality check with false,equals(Ljava/lang/Object;)Z | alen=29 blen=54
+6834,DIVERGENT,removed conditional - replaced equality check with false,equals(Ljava/lang/Object;)Z | alen=38 blen=69
+6897,DIVERGENT,removed conditional - replaced equality check with true,<init>(Ljava/lang/String;Ljava/lang/String;Z)V | alen=48 blen=51
+6965,DIVERGENT,removed conditional - replaced equality check with false,matches(Lorg/jsoup/nodes/Element;Lorg/jsoup/nodes/Element;)Z | alen=44 blen=81
+7011,DIVERGENT,removed conditional - replaced equality check with false,matches(Lorg/jsoup/nodes/Element;Lorg/jsoup/nodes/Element;)Z | alen=24 blen=38
+7013,DIVERGENT,removed conditional - replaced equality check with false,matches(Lorg/jsoup/nodes/Element;Lorg/jsoup/nodes/Element;)Z | alen=24 blen=33
+7015,DIVERGENT,removed conditional - replaced equality check with false,matches(Lorg/jsoup/nodes/Element;Lorg/jsoup/nodes/Element;)Z | alen=24 blen=28
+7022,DIVERGENT,removed conditional - replaced equality check with false,matches(Lorg/jsoup/nodes/Element;Lorg/jsoup/nodes/Element;)Z | alen=12 blen=22
+7031,DIVERGENT,removed conditional - replaced equality check with false,matches(Lorg/jsoup/nodes/Element;Lorg/jsoup/nodes/Element;)Z | alen=17 blen=31
+7068,DIVERGENT,removed conditional - replaced equality check with false,matches(Lorg/jsoup/nodes/Element;Lorg/jsoup/nodes/Element;)Z | alen=13 blen=25
+7074,DIVERGENT,removed conditional - replaced equality check with false,matches(Lorg/jsoup/nodes/Element;Lorg/jsoup/nodes/Element;)Z | alen=38 blen=86
+7146,DIVERGENT,removed conditional - replaced equality check with true,head(Lorg/jsoup/nodes/Node;I)V | alen=81 blen=107
+7162,DIVERGENT,removed conditional - replaced equality check with false,applyCookiesToRequest(Lorg/jsoup/helper/HttpConnection$Request;Ljava/net/HttpURLConnection;)V | alen=79 blen=128
+61,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+62,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+86,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+143,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+144,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+209,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+210,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+246,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+247,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+256,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+257,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+325,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+326,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+399,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+444,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+445,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+502,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+503,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+545,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+573,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+574,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+587,UNREPRESENTABLE,removed call to java/io/Reader::close,exception java.io.IOException is never thrown in body of corresponding try statement
+606,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+618,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+627,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+640,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+665,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+686,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+703,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+715,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+724,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+751,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+754,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+755,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+764,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+860,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+861,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+915,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+916,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+942,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+943,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+951,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+952,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+989,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+990,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+1011,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1378,UNREPRESENTABLE,removed call to org/jsoup/parser/HtmlTreeBuilder::error,unreachable statement
+1832,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1945,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1946,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1981,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2026,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2081,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2082,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2185,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2379,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2380,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2391,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2400,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2406,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2429,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2437,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2441,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2457,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2458,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2477,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2478,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2495,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2496,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2619,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2620,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2642,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2657,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2663,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2664,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2673,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2683,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2684,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2725,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2731,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2732,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2759,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2811,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2821,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2822,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2876,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2880,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2881,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+2883,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2969,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2995,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2996,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+3039,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3047,UNREPRESENTABLE,removed call to org/jsoup/nodes/Node::outerHtmlHead,exception java.io.IOException is never thrown in body of corresponding try statement
+3050,UNREPRESENTABLE,removed call to org/jsoup/nodes/Node::outerHtmlTail,exception java.io.IOException is never thrown in body of corresponding try statement
+3075,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3076,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3084,UNREPRESENTABLE,replaced return value with null for org/jsoup/helper/HttpConnection::encodeUrl,exception java.net.MalformedURLException is never thrown in body of corresponding try statement
+3189,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3190,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3212,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3379,UNREPRESENTABLE,removed call to org/jsoup/helper/HttpConnection$Response::writePost,exception java.io.IOException is never thrown in body of corresponding try statement
+3458,UNREPRESENTABLE,removed call to java/io/InputStream::close,exception java.io.IOException is never thrown in body of corresponding try statement
+3556,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+3709,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+3710,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+3738,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3739,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3766,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3767,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3770,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3797,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3798,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3844,UNREPRESENTABLE,removed call to org/jsoup/nodes/Attributes::html,exception java.io.IOException is never thrown in body of corresponding try statement
+3847,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3856,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3857,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3864,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3865,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3884,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3932,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3948,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+3949,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+3957,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+3958,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+4096,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+4097,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+4109,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+4110,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+4214,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+4230,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+4231,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+4235,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+4236,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+4280,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4297,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4298,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4322,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4323,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4335,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4336,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4352,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4353,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4375,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+4376,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+4397,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4398,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4405,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4406,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4434,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+4497,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4498,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4737,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4837,UNREPRESENTABLE,replaced return value with null for org/jsoup/parser/Tag::clone,exception java.lang.CloneNotSupportedException is never thrown in body of corresponding try statement
+4938,UNREPRESENTABLE,replaced return value with null for org/jsoup/nodes/Attribute::clone,exception java.lang.CloneNotSupportedException is never thrown in body of corresponding try statement
+4986,UNREPRESENTABLE,removed call to org/jsoup/nodes/Attribute::html,exception java.io.IOException is never thrown in body of corresponding try statement
+5091,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5092,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+5104,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5174,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5219,UNREPRESENTABLE,removed call to org/jsoup/nodes/Entities::escape,exception java.io.IOException is never thrown in body of corresponding try statement
+5233,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+5234,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+5356,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+5357,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+5403,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+5499,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5500,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+5843,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5851,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5890,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5978,UNREPRESENTABLE,removed call to org/jsoup/parser/CharacterReader::unconsume,unreachable statement
+5982,UNREPRESENTABLE,removed call to org/jsoup/parser/Token$Tag::appendTagName,unreachable statement
+5983,UNREPRESENTABLE,removed call to org/jsoup/parser/Tokeniser::eofError,unreachable statement
+6164,UNREPRESENTABLE,removed call to org/jsoup/parser/CharacterReader::unconsume,unreachable statement
+6178,UNREPRESENTABLE,removed call to org/jsoup/parser/Token$Tag::newAttribute,unreachable statement
+6207,UNREPRESENTABLE,removed call to org/jsoup/parser/Token$Tag::newAttribute,unreachable statement
+6678,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6679,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7050,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7051,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7180,UNREPRESENTABLE,replaced return value with null for org/jsoup/helper/CookieUtil::asUri,exception java.net.URISyntaxException is never thrown in body of corresponding try statement
+7259,UNREPRESENTABLE,removed call to org/jsoup/nodes/XmlDeclaration::getWholeDeclaration,exception java.io.IOException is never thrown in body of corresponding try statement
+7282,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7283,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7295,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7296,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7303,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7304,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7337,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+7349,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+7350,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement

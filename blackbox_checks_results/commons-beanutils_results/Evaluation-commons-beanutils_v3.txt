@@ -1,0 +1,55 @@
+======================================================================
+ PITMuS reconstruction evaluation  --  project: commons-beanutils
+ dataset  : PITMuS_dataset_fresh_generation-v3
+ generated: 2026-08-04 13:27:11
+======================================================================
+total reconstructed mutations (dataset rows): 4279
+
+----------------------------------------------------------------------
+Section 0  XML alignment oracle  (each dataset row points at the right <mutation>)
+----------------------------------------------------------------------
+  rows checked            : 4279
+  xml_line points correct : 4279
+  xml_line WRONG          : 0
+  => OK - all aligned
+  detail csv: eval0_xml_misalign_commons-beanutils_v3.csv
+
+----------------------------------------------------------------------
+Section 1  Count oracle  (every XML mutation was reconstructed)
+----------------------------------------------------------------------
+  XML mutations : 4279
+  dataset rows  : 4279
+  missing       : 0
+  => OK - all reconstructed
+
+----------------------------------------------------------------------
+Section 2  Faithfulness oracle  (the reconstructed edit matches the mutator)
+----------------------------------------------------------------------
+  rows checked : 4279
+    PASS         : 4279
+    FAIL         : 0
+    UNVERIFIABLE : 0
+  detail csv: eval2_faithfulness_commons-beanutils_v3.csv
+
+----------------------------------------------------------------------
+Section 3  Bytecode ground-truth oracle  (recon compiles + matches PIT's exported mutant .class)
+----------------------------------------------------------------------
+  rows checked                          : 4279
+    MATCH      (bytecode identical)     : 162
+    EQUIVALENT (subsequence of PIT)     : 3732
+    => confirmed faithful               : 3894
+    BROKEN     (real fault, won't compile): 0   <- genuine reconstruction faults
+    UNREPRESENTABLE (faithful, illegal Java): 166   <- mutant PIT makes in bytecode but source can't express
+    DIVERGENT  (bytecode differs)       : 219   <- needs review
+  detail csv (genuine faults): eval3_bytecode_commons-beanutils_v3_broken.csv
+  detail csv (other non-faults): eval3_bytecode_commons-beanutils_v3_other.csv
+
+======================================================================
+ OVERALL
+======================================================================
+  faithfulness PASS rate         : 4279/4279
+  bytecode confirmed faithful      : 3894/4279
+  bytecode BROKEN (real faults)    : 0   <- genuine reconstruction faults
+  bytecode UNREPRESENTABLE         : 166   <- faithful, but illegal Java source (not a fault)
+  bytecode DIVERGENT (review)      : 219
+======================================================================

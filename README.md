@@ -2,129 +2,186 @@
 
 [![Watch the demo](https://img.youtube.com/vi/zgHkXnsgciw/maxresdefault.jpg)](https://youtu.be/zgHkXnsgciw)
 
-This repository contains two end-to-end scripts that extract and inject source-level mutations from PIT (Pitest) XML reports.
+PIT (Pitest) mutates Java **bytecode** and never exports mutated *source*. PITMuS bridges that
+gap: it parses PIT's XML report, maps each mutation back to the exact source line (using both the
+report's bytecode `index` and `javap` disassembly for precision), applies the mutation, and emits
+either a **dataset of mutated methods** or **fully injected mutant `.java` files**.
 
-PIT operates at the bytecode level and does not export mutated source code. PITMuS bridges that gap by parsing PIT's XML output, mapping each mutation back to its source line (using both the report's bytecode index and `javap` output for precision), and applying the mutation description to produce a mutated source line — and, when needed, a mutated full method body or a fully injected mutant `.java` file.
+This repo has two layers:
 
-The two scripts are **fully independent** of each other; either can be used on its own.
+1. **Reconstruction** (`scripts/`) — turn a PIT report into source-level mutants.
+2. **Evaluation** (`blackbox_checks/`) — prove the reconstructions are faithful, by compiling them
+   and diffing their bytecode against the mutant `.class` files PIT itself exports.
+
+---
 
 ## Repository Structure
 
 ```
 PITMuS/
 ├── scripts/
-│   ├── gen_dataset.py                ← end-to-end: PIT report → dataset CSVs
-│   └── inject.py                     ← end-to-end: PIT report → mutant .java files
-└── test-projects/
-    └── <system>/
-        ├── src/main/java/            ← project source code
-        ├── target/pit-reports/mutations.xml
-        ├── target/classes/           ← compiled .class files (used for javap)
-        ├── PITMuS_dataset/           ← created by gen_dataset.py
-        │   ├── mutated_methods.csv
-        │   └── meta.csv
-        └── injected_mutants/         ← created by inject.py
-            ├── ClassName_id1_line95.java
-            ├── ClassName_id2_line95.java
-            └── ...
+│   ├── run_pit.sh                    ← runs each project's pit.sh (mvn test + pitest EXPORT)
+│   ├── gen_dataset.py                ← PIT report → dataset CSVs   (main entry point)
+│   └── inject.py                     ← PIT report → mutant .java files (standalone tool)
+├── blackbox_checks/
+│   ├── evaluate_reconstruction.ipynb ← the 4 oracles (eval0–eval3) that grade a dataset
+│   └── PitmusCompile.java            ← in-JVM batch compiler used by the bytecode oracle
+├── blackbox_checks_results/
+│   └── <project>_results/            ← per-project oracle output (CSVs + Evaluation-*.txt)
+├── test-projects/
+│   └── <project>/
+│       ├── src/main/java/            ← project source
+│       ├── pit.sh                    ← mvn test + pitest:mutationCoverage -Dfeatures=+EXPORT
+│       ├── target/pit-reports/
+│       │   ├── mutations.xml         ← PIT's report (INPUT to everything)
+│       │   └── export/               ← PIT's exported mutant .class files (ground truth for eval3)
+│       ├── target/classes/           ← compiled classes (for javap + compile classpath)
+│       ├── PITMuS_dataset_fresh_generation-<VERSION>/   ← created by gen_dataset.py
+│       │   ├── mutated_methods.csv
+│       │   └── meta.csv
+│       └── injected_mutants/         ← created by inject.py
+├── requirements.txt
+├── FINDINGS.md                       ← evaluation write-up (bugs found + fixes)
+└── README.md
 ```
+
+The two `scripts/` tools are **independent** — either works on its own.
+
+---
 
 ## Prerequisites
 
-- Python 3.6+
-- Python dependencies — install with:
-  ```bash
-  pip install -r requirements.txt
-  ```
-  (`javalang` for source parsing.)
-- A JDK on `PATH` (both scripts invoke `javap` to read compiled `.class` files for bytecode-accurate mutation targeting).
-- A Maven project with PIT configured, a generated `mutations.xml` report, and compiled classes under `target/classes/`.
+- **Python 3.6+**, deps via `pip install -r requirements.txt` (`javalang`, `pandas`).
+- **A JDK on `PATH`** — the scripts call `javap` for bytecode-accurate targeting; the evaluation
+  notebook calls `javac`/`javap`.
+- **Maven** — to build subject projects and (optionally) resolve the compile classpath in eval3.
+- Each subject project must have a generated `target/pit-reports/mutations.xml` **and**, for the
+  bytecode oracle, PIT's exported mutants under `target/pit-reports/export/` (see flags below).
 
-## Usage
+---
 
-### Generate the dataset
+## Pipeline / How to Regenerate
+
+```bash
+# 0. Produce PIT reports for every test-project (mvn test + pitest with EXPORT on).
+bash scripts/run_pit.sh
+
+# 1. Reconstruct source-level mutants for one project -> dataset CSVs.
+python scripts/gen_dataset.py test-projects/joda-time
+
+# 2. (optional) Materialize mutant .java files for one project.
+python scripts/inject.py test-projects/joda-time
+
+# 3. Grade the reconstruction: open the notebook, set PROJECT, run top to bottom.
+#    blackbox_checks/evaluate_reconstruction.ipynb
+```
+
+### 1. `gen_dataset.py` — dataset CSVs
 
 ```bash
 python scripts/gen_dataset.py <system_path>
 ```
 
-This reads `<system_path>/target/pit-reports/mutations.xml`, resolves each mutation to its source line, applies the mutation, locates the enclosing method body, and writes two CSVs into `<system_path>/PITMuS_dataset/`.
+Reads `<system_path>/target/pit-reports/mutations.xml`, resolves each mutation to its source line,
+applies it, finds the enclosing method body, and writes two row-aligned CSVs into
+`<system_path>/PITMuS_dataset_fresh_generation-<VERSION>/`.
 
-Example:
-
-```bash
-python scripts/gen_dataset.py test-projects/joda-time
-```
-
-#### `mutated_methods.csv` — one row per mutation, full method bodies
+**`mutated_methods.csv`** — one row per mutation, full method bodies:
 
 | Column | Description |
 |---|---|
-| `index_no` | Sequential row identifier (shared with `meta.csv`) |
+| `index_no` | Sequential id (shared with `meta.csv`) |
 | `original_method` | Full body of the method containing the mutated line |
-| `mutated_method` | Same method body with the mutated line substituted |
-| `docstring` | Javadoc block (`/** ... */`) immediately preceding the method, or empty |
+| `mutated_method` | Same body with the mutated line substituted |
+| `docstring` | Javadoc block preceding the method, or empty |
 
-#### `meta.csv` — row-aligned with `mutated_methods.csv` via `index_no`
+**`meta.csv`** — joined to the above by `index_no`:
 
 | Column | Description |
 |---|---|
 | `mutation_line` | Original source line at the mutation site |
-| `mutated_line` | Source line after applying the mutation |
-| `source_file` | Path to the source file (e.g. `org/joda/time/DateTime.java`) |
-| `line_number` | Line number in the source file |
+| `mutated_line` | Source line after the mutation |
+| `source_file` | Path e.g. `org/joda/time/DateTime.java` |
+| `stmt_start_line` | First line of the (possibly multi-line) mutated statement |
+| `pit_line_number` | Line number PIT reported |
 | `description` | PIT's mutation description |
-| `test_file` | Test file(s) covering the mutation, separated by `\|` |
-| `index_no` | Same id as the corresponding row in `mutated_methods.csv` |
+| `test_file` | Covering test file(s), `\|`-separated |
+| `index_no` | Same id as `mutated_methods.csv` |
+| `xml_line` | Physical line of the source `<mutation>` in `mutations.xml` (traceability) |
 
-### Inject mutations into source
+### 2. `inject.py` — mutant `.java` files
 
-`inject.py` supports four selection modes. Each matching mutation is written as its own full `.java` file in `<system_path>/injected_mutants/`, named `<ClassName>_id<N>_line<L>.java`, where `<N>` is the `index_no` from the dataset.
-
-```bash
-# Whole system — inject every mutation
-python scripts/inject.py <system_path>
-
-# One specific mutation by its dataset index_no
-python scripts/inject.py <system_path> id <index_no>
-
-# Every mutation on a specific method:line
-python scripts/inject.py <system_path> line <class.method:line>
-
-# Every mutation in a specific source file (FQN or filename)
-python scripts/inject.py <system_path> file <class_fqn | file.java>
-```
-
-Examples:
+Writes each selected mutant as a full file in `<system_path>/injected_mutants/`, named
+`<ClassName>_id<N>_line<L>.java` (`<N>` = the `index_no` from the dataset). Four selection modes:
 
 ```bash
-python scripts/inject.py test-projects/joda-time
-python scripts/inject.py test-projects/joda-time id 614
-python scripts/inject.py test-projects/joda-time line org.joda.time.DateTime.plus:614
-python scripts/inject.py test-projects/joda-time file org.joda.time.DateTime
+python scripts/inject.py <system_path>                              # every mutation
+python scripts/inject.py <system_path> id   <index_no>              # one mutation by id
+python scripts/inject.py <system_path> line <class.method:line>     # all on a method:line
+python scripts/inject.py <system_path> file <class_fqn | file.java> # all in one file
 ```
 
-The `id` for a given mutation is the same `index_no` that `gen_dataset.py` writes into `meta.csv`, so a typical workflow is to inspect `PITMuS_dataset/meta.csv` and then re-inject any specific mutation by its id. After writing each mutant file, the script also runs a lightweight `javalang` tokenizer check and flags any that fail.
+After writing each file it runs a `javalang` tokenizer check and flags any that fail with `[INVALID]`.
+
+### 3. `evaluate_reconstruction.ipynb` — the oracles
+
+Set `REPO` and `PROJECT` in the config cell, then run top to bottom. It writes into
+`blackbox_checks_results/<project>_results/` and prints a consolidated `Evaluation-<project>_<VERSION>.txt`.
+
+| Oracle | Question | Output |
+|---|---|---|
+| **eval0** XML alignment | does each row point back to the right `<mutation>`? | `eval0_xml_misalign_*.csv` |
+| **eval1** Count | was every XML mutation reconstructed? | `eval1_not_reconstructed_*.csv` |
+| **eval2** Faithfulness | is the edit correct + still valid Java? (lexical) | `eval2_faithfulness_*.csv` |
+| **eval3** Bytecode ground truth | does the *compiled* mutant equal PIT's exported `.class`? | `eval3_bytecode_*_broken.csv`, `_other.csv` |
+| **eval4** Report | roll-up of all of the above | `Evaluation-<project>_<VERSION>.txt` |
+
+**eval3 verdicts** (the authoritative oracle): `MATCH`/`EQUIVALENT` = confirmed faithful;
+`BROKEN` = a genuine reconstruction fault (won't compile for a real reason — this is the only
+bucket in `*_broken.csv`); `UNREPRESENTABLE` = faithful mutant Java source can't legally express
+(e.g. `for(;false;)` → "unreachable statement"); `DIVERGENT` = compiles but bytecode differs
+(usually the same dead-code encoding difference as `EQUIVALENT`). Everything that isn't `BROKEN`
+lands in `*_other.csv`. eval2 is a cheap lexical net that also catches non-parsing and no-op
+reconstructions and covers rows eval3 can't compile — keep both.
+
+---
+
+## Flags & Knobs Worth Knowing
+
+| Where | Flag | Effect |
+|---|---|---|
+| `pit.sh` / PIT config | `-Dfeatures=+EXPORT` | Exports mutant `.class` files to `target/pit-reports/export/`. **Required for eval3.** |
+| PIT config | `<fullMutationMatrix>true`, `<exportLineCoverage>true` | Richer report (test matrix + line coverage). |
+| `gen_dataset.py` line 20 | `DATASET_VERSION = "v3"` | Stamps the output folder + every eval filename. gen_dataset and the notebook must match. |
+| `gen_dataset.py` (env) | `PITMUS_DEBUG_SKIPS=1` | Prints, to stderr, every mutation it *skipped* and why (single-line methods, unresolved spans, …). |
+| notebook eval3 | `BC_SAMPLE = None` | `None` = check all rows; set an int for a quick sample. |
+| notebook eval3 | `BC_WORKERS`, `BC_CHUNK` | Parallelism (defaults to CPU count) and rows per compile batch. |
+| notebook eval3 | (auto) `target/pitmus-deps.cp` | Cached Maven dependency classpath; without it, deps-referencing reconstructions can be falsely `BROKEN`. Auto-built once via `mvn dependency:build-classpath`. |
+
+---
 
 ## Supported Mutators
 
-Both scripts handle all 13 mutators in PIT's STRONGER group (DEFAULTS + `REMOVE_CONDITIONALS` + `EXPERIMENTAL_SWITCH`).
+Both scripts handle all 13 mutators in PIT's **STRONGER** group (DEFAULTS + `REMOVE_CONDITIONALS`
++ `EXPERIMENTAL_SWITCH`).
 
 | Mutator | Example |
 |---|---|
-| ConditionalsBoundary | `>` → `>=`, etc. |
-| Math | `+` → `-`, `*` → `/`, `%` → `*`, etc. |
+| ConditionalsBoundary | `>` → `>=` |
+| Math | `+` → `-`, `*` → `/`, `%` → `*` |
 | NegateConditionals | `==` → `!=`, `>=` → `<` |
 | RemoveConditionals | `if (x == y)` → `if (true)`, ternary conditions |
-| IncrementsMutator | `i++` → `i--`, `-4` → `4`, etc. |
+| IncrementsMutator | `i++` → `i--`, `-4` → `4` |
 | InvertNegs | removes unary negation |
-| VoidMethodCall | removes the method call entirely |
-| Empty / Null / Primitive / True / False Returns | `return x;` → `return null;` / `return true;` / `return Collections.emptyMap();` / etc. |
-| Bitwise / Shift | `&` → `\|`, `<<` → `>>`, etc. |
+| VoidMethodCall | removes the call |
+| Empty / Null / Primitive / True / False Returns | `return x;` → `return null;` / `true` / `Collections.emptyMap()` |
+| Bitwise / Shift | `&` → `\|`, `<<` → `>>` |
 
-## Generating a PIT Report
+---
 
-If you need to generate a PIT mutation report for a Maven project, add the following plugin to the project's `pom.xml`. The example below is configured for Apache Commons Lang 3 — update `targetClasses` and `targetTests` to match the subject project's package structure.
+## Generating a PIT Report (per project)
+
+Add the plugin to the project's `pom.xml` (update `targetClasses` / `targetTests` to its packages):
 
 ```xml
 <plugin>
@@ -132,37 +189,30 @@ If you need to generate a PIT mutation report for a Maven project, add the follo
   <artifactId>pitest-maven</artifactId>
   <version>1.22.0</version>
   <configuration>
-    <targetClasses>
-      <param>org.apache.commons.lang3.*</param>
-    </targetClasses>
-    <targetTests>
-      <param>org.apache.commons.lang3.*</param>
-    </targetTests>
-    <mutators>
-      <mutator>STRONGER</mutator>
-    </mutators>
+    <targetClasses><param>org.apache.commons.lang3.*</param></targetClasses>
+    <targetTests><param>org.apache.commons.lang3.*</param></targetTests>
+    <mutators><mutator>STRONGER</mutator></mutators>
     <fullMutationMatrix>true</fullMutationMatrix>
     <exportLineCoverage>true</exportLineCoverage>
-    <outputFormats>XML</outputFormats>
+    <outputFormats><param>XML</param></outputFormats>
   </configuration>
 </plugin>
 ```
 
-Then run:
-
 ```bash
-mvn clean test org.pitest:pitest-maven:mutationCoverage
+# EXPORT is what writes target/pit-reports/export/ (needed by the eval3 bytecode oracle).
+mvn clean test org.pitest:pitest-maven:mutationCoverage -Dfeatures=+EXPORT
 ```
 
-The XML report is written to `target/pit-reports/mutations.xml`.
+The report lands at `target/pit-reports/mutations.xml`.
+
+---
 
 ## License
 
-This project is licensed under the Apache License 2.0 — see the [LICENSE](LICENSE) file for details.
+Apache License 2.0 — see [LICENSE](LICENSE).
 
 ## Citation
-
-If you use PITMuS in your work, please cite it:
 
 ```bibtex
 @misc{pitmus,

@@ -1,0 +1,427 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< joda-time:joda-time >-------------------------
+[INFO] Building Joda-Time 2.11.2
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ joda-time ---
+[INFO] Deleting /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/target
+[INFO] 
+[INFO] --- enforcer:3.1.0:enforce (enforce-maven) @ joda-time ---
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ joda-time ---
+[INFO] Copying 2 resources to META-INF
+[INFO] Copying 18 resources
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ joda-time ---
+[WARNING]  Parameter 'optimize' (user property 'maven.compiler.optimize') is deprecated: This property is a no-op in {@code javac}.
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 166 source files to /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/target/classes
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/main/java/org/joda/time/tz/ZoneInfoProvider.java:[24,20] [removal] AccessController in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/main/java/org/joda/time/DateTimeZone.java:[202,8] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/main/java/org/joda/time/DateTimeZone.java:[202,35] [removal] getSecurityManager() in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/main/java/org/joda/time/DateTimeZone.java:[470,8] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/main/java/org/joda/time/DateTimeZone.java:[470,35] [removal] getSecurityManager() in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/main/java/org/joda/time/DateTimeZone.java:[597,8] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/main/java/org/joda/time/DateTimeZone.java:[597,35] [removal] getSecurityManager() in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/main/java/org/joda/time/DateTimeUtils.java:[145,8] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/main/java/org/joda/time/DateTimeUtils.java:[145,35] [removal] getSecurityManager() in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/main/java/org/joda/time/tz/ZoneInfoProvider.java:[210,17] [removal] AccessController in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/main/java/org/joda/time/convert/ConverterManager.java:[230,8] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/main/java/org/joda/time/convert/ConverterManager.java:[230,35] [removal] getSecurityManager() in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/main/java/org/joda/time/convert/ConverterManager.java:[317,8] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/main/java/org/joda/time/convert/ConverterManager.java:[317,35] [removal] getSecurityManager() in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/main/java/org/joda/time/convert/ConverterManager.java:[404,8] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/main/java/org/joda/time/convert/ConverterManager.java:[404,35] [removal] getSecurityManager() in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/main/java/org/joda/time/convert/ConverterManager.java:[491,8] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/main/java/org/joda/time/convert/ConverterManager.java:[491,35] [removal] getSecurityManager() in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/main/java/org/joda/time/convert/ConverterManager.java:[578,8] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/main/java/org/joda/time/convert/ConverterManager.java:[578,35] [removal] getSecurityManager() in System has been deprecated and marked for removal
+[INFO] 
+[INFO] --- exec:3.1.0:java (compile-tzdb) @ joda-time ---
+Writing zoneinfo files
+Fixed negative save values for rule 'Morocco'
+Fixed negative save values for rule 'Morocco'
+Fixed negative save values for rule 'Morocco'
+Fixed negative save values for rule 'Morocco'
+Fixed negative save values for rule 'Morocco'
+Fixed negative save values for rule 'Namibia'
+Fixed negative save values for rule 'Eire'
+Writing ZoneInfoMap
+[INFO] 
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ joda-time ---
+[INFO] Copying 35 resources
+[INFO] 
+[INFO] --- compiler:3.10.1:testCompile (default-testCompile) @ joda-time ---
+[WARNING]  Parameter 'optimize' (user property 'maven.compiler.optimize') is deprecated: This property is a no-op in {@code javac}.
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 159 source files to /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/target/test-classes
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[27,20] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[20,14] [removal] FilePermission in java.io has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[29,20] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeUtils.java:[24,20] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[74,25] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[75,25] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[78,23] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[97,20] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[273,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[274,42] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[274,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[280,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[281,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[321,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[322,42] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[322,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[328,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[329,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[482,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[483,42] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[483,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[489,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[490,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[531,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[532,42] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[532,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[538,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[539,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[633,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[634,42] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[634,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[640,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[641,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[679,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[680,42] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[680,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[686,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[687,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[783,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[784,42] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[784,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[790,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[791,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[830,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[831,42] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[831,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[837,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[838,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[932,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[933,42] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[933,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[939,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[940,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[979,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[980,42] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[980,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[986,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/convert/TestConverterManager.java:[987,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[104,25] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[105,25] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[108,23] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[127,20] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[186,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[187,42] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[187,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[193,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[194,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[555,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[556,42] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[556,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[562,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[563,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[572,33] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[584,51] [removal] FilePermission in java.io has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[572,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[587,42] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[587,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[593,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[594,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[696,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[697,42] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[697,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[703,18] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeZone.java:[704,12] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeUtils.java:[89,25] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeUtils.java:[90,25] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeUtils.java:[93,23] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeUtils.java:[112,20] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeUtils.java:[179,16] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeUtils.java:[180,46] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeUtils.java:[180,22] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeUtils.java:[186,22] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeUtils.java:[187,16] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeUtils.java:[217,16] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeUtils.java:[218,46] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeUtils.java:[218,22] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeUtils.java:[224,22] [removal] setSecurityManager(SecurityManager) in System has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeUtils.java:[225,16] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeUtils.java:[273,16] [removal] Policy in java.security has been deprecated and marked for removal
+[WARNING] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/joda-time/src/test/java/org/joda/time/TestDateTimeUtils.java:[274,46] [removal] SecurityManager in java.lang has been deprecated and marked for removal
+[INFO] 
+[INFO] --- surefire:2.21.0:test (default-test) @ joda-time ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.joda.time.TestInterval_Constructors
+[INFO] Tests run: 60, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 s - in org.joda.time.TestInterval_Constructors
+[INFO] Running org.joda.time.TestDateTimeFieldType
+[INFO] Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in org.joda.time.TestDateTimeFieldType
+[INFO] Running org.joda.time.TestDateTime_Constructors
+[INFO] Tests run: 63, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in org.joda.time.TestDateTime_Constructors
+[INFO] Running org.joda.time.TestMinutes
+[INFO] Tests run: 27, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.joda.time.TestMinutes
+[INFO] Running org.joda.time.TestYearMonthDay_Constructors
+[INFO] Tests run: 30, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in org.joda.time.TestYearMonthDay_Constructors
+[INFO] Running org.joda.time.TestDateMidnight_Basics
+[INFO] Tests run: 58, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s - in org.joda.time.TestDateMidnight_Basics
+[INFO] Running org.joda.time.TestPartial_Match
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestPartial_Match
+[INFO] Running org.joda.time.TestDurationField
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.TestDurationField
+[INFO] Running org.joda.time.TestAbstractPartial
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.TestAbstractPartial
+[INFO] Running org.joda.time.TestYearMonth_Properties
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestYearMonth_Properties
+[INFO] Running org.joda.time.TestDuration_Basics
+[INFO] Tests run: 67, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in org.joda.time.TestDuration_Basics
+[INFO] Running org.joda.time.TestMutableInterval_Updates
+[INFO] Tests run: 37, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.TestMutableInterval_Updates
+[INFO] Running org.joda.time.chrono.TestGJDate
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.chrono.TestGJDate
+[INFO] Running org.joda.time.chrono.TestISOChronology
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in org.joda.time.chrono.TestISOChronology
+[INFO] Running org.joda.time.chrono.TestCopticChronology
+
+TestCopticChronology.testCalendar
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.089 s - in org.joda.time.chrono.TestCopticChronology
+[INFO] Running org.joda.time.chrono.TestLenientChronology
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.chrono.TestLenientChronology
+[INFO] Running org.joda.time.chrono.TestIslamicChronology
+
+TestIslamicChronology.testCalendar
+[INFO] Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.167 s - in org.joda.time.chrono.TestIslamicChronology
+[INFO] Running org.joda.time.chrono.TestBuddhistChronology
+
+TestBuddhistChronology.testCalendar
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.193 s - in org.joda.time.chrono.TestBuddhistChronology
+[INFO] Running org.joda.time.chrono.TestGregorianChronology
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.joda.time.chrono.TestGregorianChronology
+[INFO] Running org.joda.time.chrono.TestEthiopicChronology
+
+TestEthiopicChronology.testCalendar
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.111 s - in org.joda.time.chrono.TestEthiopicChronology
+[INFO] Running org.joda.time.chrono.TestJulianChronology
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.chrono.TestJulianChronology
+[INFO] Running org.joda.time.chrono.TestGJChronology
+[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in org.joda.time.chrono.TestGJChronology
+[INFO] Running org.joda.time.TestStringConvert
+[INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in org.joda.time.TestStringConvert
+[INFO] Running org.joda.time.TestTimeOfDay_Constructors
+[INFO] Tests run: 46, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.joda.time.TestTimeOfDay_Constructors
+[INFO] Running org.joda.time.TestYears
+[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestYears
+[INFO] Running org.joda.time.TestLocalDateTime_Basics
+[INFO] Tests run: 70, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in org.joda.time.TestLocalDateTime_Basics
+[INFO] Running org.joda.time.TestDurationFieldType
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.TestDurationFieldType
+[INFO] Running org.joda.time.TestPartial_Basics
+[INFO] Tests run: 72, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in org.joda.time.TestPartial_Basics
+[INFO] Running org.joda.time.TestLocalDate_Basics
+[INFO] Tests run: 83, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in org.joda.time.TestLocalDate_Basics
+[INFO] Running org.joda.time.TestMinMaxLong
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.joda.time.TestMinMaxLong
+[INFO] Running org.joda.time.TestDateTimeComparator
+[INFO] Tests run: 42, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.TestDateTimeComparator
+[INFO] Running org.joda.time.TestLocalDateTime_Properties
+[INFO] Tests run: 60, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestLocalDateTime_Properties
+[INFO] Running org.joda.time.TestMonths
+[INFO] Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestMonths
+[INFO] Running org.joda.time.TestPeriod_Constructors
+[INFO] Tests run: 108, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.TestPeriod_Constructors
+[INFO] Running org.joda.time.TestSerialization
+[INFO] Tests run: 27, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in org.joda.time.TestSerialization
+[INFO] Running org.joda.time.TestInstant_Basics
+[INFO] Tests run: 35, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestInstant_Basics
+[INFO] Running org.joda.time.TestDays
+[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestDays
+[INFO] Running org.joda.time.TestLocalDateTime_Constructors
+[INFO] Tests run: 57, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.joda.time.TestLocalDateTime_Constructors
+[INFO] Running org.joda.time.TestYearMonthDay_Properties
+[INFO] Tests run: 27, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.joda.time.TestYearMonthDay_Properties
+[INFO] Running org.joda.time.TestMutablePeriod_Constructors
+[INFO] Tests run: 56, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in org.joda.time.TestMutablePeriod_Constructors
+[INFO] Running org.joda.time.TestTimeOfDay_Basics
+[INFO] Tests run: 52, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.TestTimeOfDay_Basics
+[INFO] Running org.joda.time.field.TestOffsetDateTimeField
+[INFO] Tests run: 51, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.field.TestOffsetDateTimeField
+[INFO] Running org.joda.time.field.TestUnsupportedDateTimeField
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.field.TestUnsupportedDateTimeField
+[INFO] Running org.joda.time.field.TestMillisDurationField
+[INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.field.TestMillisDurationField
+[INFO] Running org.joda.time.field.TestPreciseDurationDateTimeField
+[INFO] Tests run: 49, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.field.TestPreciseDurationDateTimeField
+[INFO] Running org.joda.time.field.TestBaseDateTimeField
+[INFO] Tests run: 48, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.field.TestBaseDateTimeField
+[INFO] Running org.joda.time.field.TestFieldUtils
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.field.TestFieldUtils
+[INFO] Running org.joda.time.field.TestScaledDurationField
+[INFO] Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.field.TestScaledDurationField
+[INFO] Running org.joda.time.field.TestPreciseDateTimeField
+[INFO] Tests run: 49, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.field.TestPreciseDateTimeField
+[INFO] Running org.joda.time.field.TestPreciseDurationField
+[INFO] Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.field.TestPreciseDurationField
+[INFO] Running org.joda.time.TestYearMonthDay_Basics
+[INFO] Tests run: 62, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestYearMonthDay_Basics
+[INFO] Running org.joda.time.TestLocalTime_Basics
+[INFO] Tests run: 50, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.joda.time.TestLocalTime_Basics
+[INFO] Running org.joda.time.TestPartial_Properties
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestPartial_Properties
+[INFO] Running org.joda.time.TestPeriodType
+[INFO] Tests run: 40, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.joda.time.TestPeriodType
+[INFO] Running org.joda.time.TestMutableDateTime_Basics
+[INFO] Tests run: 37, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestMutableDateTime_Basics
+[INFO] Running org.joda.time.TestMutableDateTime_Adds
+[INFO] Tests run: 40, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.TestMutableDateTime_Adds
+[INFO] Running org.joda.time.TestBaseSingleFieldPeriod
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestBaseSingleFieldPeriod
+[INFO] Running org.joda.time.TestMutableDateTime_Sets
+[INFO] Tests run: 63, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestMutableDateTime_Sets
+[INFO] Running org.joda.time.TestMonthDay_Constructors
+[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestMonthDay_Constructors
+[INFO] Running org.joda.time.TestPartial_Constructors
+[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestPartial_Constructors
+[INFO] Running org.joda.time.TestDuration_Constructors
+[INFO] Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestDuration_Constructors
+[INFO] Running org.joda.time.TestInterval_Basics
+[INFO] Tests run: 83, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.joda.time.TestInterval_Basics
+[INFO] Running org.joda.time.TestBasePartial
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.TestBasePartial
+[INFO] Running org.joda.time.TestTimeOfDay_Properties
+[INFO] Tests run: 34, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s - in org.joda.time.TestTimeOfDay_Properties
+[INFO] Running org.joda.time.TestDateTimeUtils
+[INFO] Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestDateTimeUtils
+[INFO] Running org.joda.time.TestDateMidnight_Constructors
+[INFO] Tests run: 42, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestDateMidnight_Constructors
+[INFO] Running org.joda.time.TestLocalTime_Constructors
+[INFO] Tests run: 59, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestLocalTime_Constructors
+[INFO] Running org.joda.time.TestMutableInterval_Constructors
+[INFO] Tests run: 51, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.TestMutableInterval_Constructors
+[INFO] Running org.joda.time.TestIllegalFieldValueException
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.TestIllegalFieldValueException
+[INFO] Running org.joda.time.TestYearMonth_Basics
+[INFO] Tests run: 46, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.joda.time.TestYearMonth_Basics
+[INFO] Running org.joda.time.TestHours
+[INFO] Tests run: 27, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.TestHours
+[INFO] Running org.joda.time.format.TestPeriodFormatter
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.format.TestPeriodFormatter
+[INFO] Running org.joda.time.format.TestDateTimeFormat
+[INFO] Tests run: 65, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.068 s - in org.joda.time.format.TestDateTimeFormat
+[INFO] Running org.joda.time.format.TestISOPeriodFormat
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.format.TestISOPeriodFormat
+[INFO] Running org.joda.time.format.TestISODateTimeFormat_Fields
+[INFO] Tests run: 40, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.format.TestISODateTimeFormat_Fields
+[INFO] Running org.joda.time.format.TestISODateTimeFormat
+[INFO] Tests run: 46, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.format.TestISODateTimeFormat
+[INFO] Running org.joda.time.format.TestTextFields
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.format.TestTextFields
+[INFO] Running org.joda.time.format.TestPeriodFormatParsing
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.format.TestPeriodFormatParsing
+[INFO] Running org.joda.time.format.TestDateTimeParserBucket
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.format.TestDateTimeParserBucket
+[INFO] Running org.joda.time.format.TestDateTimeFormatter
+[INFO] Tests run: 76, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 s - in org.joda.time.format.TestDateTimeFormatter
+[INFO] Running org.joda.time.format.TestPeriodFormatterBuilder
+[INFO] Tests run: 81, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in org.joda.time.format.TestPeriodFormatterBuilder
+[INFO] Running org.joda.time.format.TestISODateTimeFormatParsing
+[INFO] Tests run: 39, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.joda.time.format.TestISODateTimeFormatParsing
+[INFO] Running org.joda.time.format.TestPeriodFormat
+[INFO] Tests run: 76, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s - in org.joda.time.format.TestPeriodFormat
+[INFO] Running org.joda.time.format.TestDateTimeFormatterBuilder
+[INFO] Tests run: 57, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in org.joda.time.format.TestDateTimeFormatterBuilder
+[INFO] Running org.joda.time.format.TestISOPeriodFormatParsing
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.joda.time.format.TestISOPeriodFormatParsing
+[INFO] Running org.joda.time.format.TestDateTimeFormatStyle
+[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 s - in org.joda.time.format.TestDateTimeFormatStyle
+[INFO] Running org.joda.time.TestMutableDateTime_Constructors
+[INFO] Tests run: 42, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.joda.time.TestMutableDateTime_Constructors
+[INFO] Running org.joda.time.TestWeeks
+[INFO] Tests run: 27, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestWeeks
+[INFO] Running org.joda.time.TestMonthDay_Basics
+[INFO] Tests run: 73, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.joda.time.TestMonthDay_Basics
+[INFO] Running org.joda.time.TestInstant_Constructors
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.TestInstant_Constructors
+[INFO] Running org.joda.time.TestYearMonth_Constructors
+[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestYearMonth_Constructors
+[INFO] Running org.joda.time.TestSeconds
+[INFO] Tests run: 27, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestSeconds
+[INFO] Running org.joda.time.TestMutablePeriod_Basics
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.TestMutablePeriod_Basics
+[INFO] Running org.joda.time.TestDateTime_Basics
+[INFO] Tests run: 90, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in org.joda.time.TestDateTime_Basics
+[INFO] Running org.joda.time.TestMutablePeriod_Updates
+[INFO] Tests run: 77, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.joda.time.TestMutablePeriod_Updates
+[INFO] Running org.joda.time.TestDateTimeConstants
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.TestDateTimeConstants
+[INFO] Running org.joda.time.TestChronology
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestChronology
+[INFO] Running org.joda.time.TestMutableInterval_Basics
+[INFO] Tests run: 27, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestMutableInterval_Basics
+[INFO] Running org.joda.time.tz.TestFixedDateTimeZone
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.tz.TestFixedDateTimeZone
+[INFO] Running org.joda.time.tz.TestCompiler
+Writing zoneinfo files
+Writing ZoneInfoMap
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in org.joda.time.tz.TestCompiler
+[INFO] Running org.joda.time.tz.TestZoneInfoCompiler
+Unknown line: XYC5w.9eA}*U
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.tz.TestZoneInfoCompiler
+[INFO] Running org.joda.time.tz.TestBuilder
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in org.joda.time.tz.TestBuilder
+[INFO] Running org.joda.time.tz.TestUTCProvider
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.tz.TestUTCProvider
+[INFO] Running org.joda.time.tz.TestCachedDateTimeZone
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.tz.TestCachedDateTimeZone
+[INFO] Running org.joda.time.TestLocalDate_Properties
+[INFO] Tests run: 27, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestLocalDate_Properties
+[INFO] Running org.joda.time.TestPeriod_Basics
+[INFO] Tests run: 81, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.joda.time.TestPeriod_Basics
+[INFO] Running org.joda.time.TestLocalDate_Constructors
+[INFO] Tests run: 54, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestLocalDate_Constructors
+[INFO] Running org.joda.time.TestLocalTime_Properties
+[INFO] Tests run: 39, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.TestLocalTime_Properties
+[INFO] Running org.joda.time.convert.TestDateConverter
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.convert.TestDateConverter
+[INFO] Running org.joda.time.convert.TestCalendarConverter
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in org.joda.time.convert.TestCalendarConverter
+[INFO] Running org.joda.time.convert.TestConverterManager
+[INFO] Tests run: 63, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.convert.TestConverterManager
+[INFO] Running org.joda.time.convert.TestStringConverter
+[INFO] Tests run: 42, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.joda.time.convert.TestStringConverter
+[INFO] Running org.joda.time.convert.TestReadableDurationConverter
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.convert.TestReadableDurationConverter
+[INFO] Running org.joda.time.convert.TestReadableIntervalConverter
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.convert.TestReadableIntervalConverter
+[INFO] Running org.joda.time.convert.TestNullConverter
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.convert.TestNullConverter
+[INFO] Running org.joda.time.convert.TestReadablePartialConverter
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.convert.TestReadablePartialConverter
+[INFO] Running org.joda.time.convert.TestReadablePeriodConverter
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.convert.TestReadablePeriodConverter
+[INFO] Running org.joda.time.convert.TestLongConverter
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.convert.TestLongConverter
+[INFO] Running org.joda.time.convert.TestConverterSet
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.convert.TestConverterSet
+[INFO] Running org.joda.time.convert.TestReadableInstantConverter
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.joda.time.convert.TestReadableInstantConverter
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3882, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.571 s
+[INFO] Finished at: 2026-08-03T20:56:21-05:00
+[INFO] ------------------------------------------------------------------------

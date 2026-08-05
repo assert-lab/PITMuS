@@ -1,0 +1,2 @@
+xml_line,source_file,mutated_class,mutated_method,line_number,mutator,description
+4707,AssembledChronology.java,org.joda.time.chrono.AssembledChronology,setFields,421,org.pitest.mutationtest.engine.gregor.mutators.MathMutator,Replaced bitwise OR with AND

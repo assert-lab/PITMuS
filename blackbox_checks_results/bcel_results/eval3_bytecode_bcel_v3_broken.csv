@@ -1,0 +1,4 @@
+index_no,verdict,description,detail
+2204,BROKEN,Replaced bitwise AND with OR,illegal start of expression
+2205,BROKEN,removed conditional - replaced equality check with false,illegal start of expression
+2206,BROKEN,removed conditional - replaced equality check with true,illegal start of expression

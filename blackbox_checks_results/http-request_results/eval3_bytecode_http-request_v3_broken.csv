@@ -1,0 +1,3 @@
+index_no,verdict,description,detail
+456,BROKEN,removed call to javax/net/ssl/HttpsURLConnection::setSSLSocketFactory,not a statement
+460,BROKEN,removed call to javax/net/ssl/HttpsURLConnection::setHostnameVerifier,not a statement

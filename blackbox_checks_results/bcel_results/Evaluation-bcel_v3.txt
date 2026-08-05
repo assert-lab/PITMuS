@@ -1,0 +1,61 @@
+======================================================================
+ PITMuS reconstruction evaluation  --  project: bcel
+ dataset  : PITMuS_dataset_fresh_generation-v3
+ generated: 2026-08-04 13:09:27
+======================================================================
+total reconstructed mutations (dataset rows): 10782
+
+----------------------------------------------------------------------
+Section 0  XML alignment oracle  (each dataset row points at the right <mutation>)
+----------------------------------------------------------------------
+  rows checked            : 10782
+  xml_line points correct : 10782
+  xml_line WRONG          : 0
+  => OK - all aligned
+  detail csv: eval0_xml_misalign_bcel_v3.csv
+
+----------------------------------------------------------------------
+Section 1  Count oracle  (every XML mutation was reconstructed)
+----------------------------------------------------------------------
+  XML mutations : 10786
+  dataset rows  : 10782
+  missing       : 4
+  => 4 NOT reconstructed
+
+----------------------------------------------------------------------
+Section 2  Faithfulness oracle  (the reconstructed edit matches the mutator)
+----------------------------------------------------------------------
+  rows checked : 10782
+    PASS         : 10773
+    FAIL         : 4
+    UNVERIFIABLE : 5
+  FAIL / UNVERIFIABLE reasons:
+        5  switch default not source-representable
+        3  mutant broke syntax
+        1  operator mutator: could not isolate a single operator change
+  detail csv: eval2_faithfulness_bcel_v3.csv
+
+----------------------------------------------------------------------
+Section 3  Bytecode ground-truth oracle  (recon compiles + matches PIT's exported mutant .class)
+----------------------------------------------------------------------
+  rows checked                          : 10782
+    MATCH      (bytecode identical)     : 1053
+    EQUIVALENT (subsequence of PIT)     : 8778
+    => confirmed faithful               : 9831
+    BROKEN     (real fault, won't compile): 3   <- genuine reconstruction faults
+    UNREPRESENTABLE (faithful, illegal Java): 523   <- mutant PIT makes in bytecode but source can't express
+    DIVERGENT  (bytecode differs)       : 410   <- needs review
+    setup / unverifiable (abstained):
+      DISASM_ERR     15
+  detail csv (genuine faults): eval3_bytecode_bcel_v3_broken.csv
+  detail csv (other non-faults): eval3_bytecode_bcel_v3_other.csv
+
+======================================================================
+ OVERALL
+======================================================================
+  faithfulness PASS rate         : 10773/10782
+  bytecode confirmed faithful      : 9831/10782
+  bytecode BROKEN (real faults)    : 3   <- genuine reconstruction faults
+  bytecode UNREPRESENTABLE         : 523   <- faithful, but illegal Java source (not a fault)
+  bytecode DIVERGENT (review)      : 410
+======================================================================

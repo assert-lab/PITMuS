@@ -1,0 +1,38 @@
+index_no,verdict,xml_line,description,mutation_line,mutated_line
+726,UNVERIFIABLE: switch default not source-representable (reconstruction declined),710,Changed switch default to be first case,switch (val[pos]) {,switch (val[pos]) { // switch default changed to first case
+1132,UNVERIFIABLE: switch default not source-representable (reconstruction declined),5657,Changed switch default to be first case,switch (t.type) {,switch (t.type) { // switch default changed to first case
+1135,UNVERIFIABLE: switch default not source-representable (reconstruction declined),5658,Changed switch default to be first case,switch (startTag.normalName()) {,switch (startTag.normalName()) { // switch default changed to first case
+1140,UNVERIFIABLE: switch default not source-representable (reconstruction declined),5659,Changed switch default to be first case,switch (name) {,switch (name) { // switch default changed to first case
+1311,UNVERIFIABLE: switch default not source-representable (reconstruction declined),4481,Changed switch default to be first case,switch (t.type) {,switch (t.type) { // switch default changed to first case
+1355,UNVERIFIABLE: switch default not source-representable (reconstruction declined),4482,Changed switch default to be first case,switch (name) {,switch (name) { // switch default changed to first case
+1401,UNVERIFIABLE: switch default not source-representable (reconstruction declined),4983,Changed switch default to be first case,switch (t.type) {,switch (t.type) { // switch default changed to first case
+1529,UNVERIFIABLE: switch default not source-representable (reconstruction declined),5307,Changed switch default to be first case,switch (start.normalName()) {,switch (start.normalName()) { // switch default changed to first case
+1845,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1111,Changed switch default to be first case,switch (name) {,switch (name) { // switch default changed to first case
+2013,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1410,Changed switch default to be first case,switch (name) {,switch (name) { // switch default changed to first case
+2232,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1440,Changed switch default to be first case,switch (t.type) {,switch (t.type) { // switch default changed to first case
+2633,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1723,Changed switch default to be first case,switch (contextTag) {,switch (contextTag) { // switch default changed to first case
+2767,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1864,Changed switch default to be first case,switch (name) {,switch (name) { // switch default changed to first case
+4106,UNVERIFIABLE: switch default not source-representable (reconstruction declined),2902,Changed switch default to be first case,switch (newState) {,switch (newState) { // switch default changed to first case
+5212,FAIL: mutant broke syntax (does not parse),4157,removed call to org/jsoup/nodes/Entities::appendEncoded,"default:
+                        if (c < 0x20 || !canEncode(coreCharset, c, encoder))
+                            appendEncoded(accum, escapeMode, codePoint);",// removed call to appendEncoded()
+5928,FAIL: mutant broke syntax (does not parse),5151,removed call to org/jsoup/parser/Tokeniser::transition,"case '\t':
+            case '\n':
+            case '\r':
+            case '\f':
+            case ' ':
+            case '/':
+            case '>':
+                if (t.dataBuffer.toString().equals(""script""))
+                    t.transition(primary);",// removed call to transition()
+6016,FAIL: mutant broke syntax (does not parse),6109,removed call to org/jsoup/parser/Tokeniser::transition,"case '\t':
+                case '\n':
+                case '\r':
+                case '\f':
+                case ' ':
+                    if (t.isAppropriateEndTagToken())
+                        t.transition(BeforeAttributeName);",// removed call to transition()
+6020,FAIL: mutant broke syntax (does not parse),6111,removed call to org/jsoup/parser/Tokeniser::transition,"case '/':
+                    if (t.isAppropriateEndTagToken())
+                        t.transition(SelfClosingStartTag);",// removed call to transition()
+6548,UNVERIFIABLE: switch default not source-representable (reconstruction declined),7321,Changed switch default to be first case,switch (c) {,switch (c) { // switch default changed to first case

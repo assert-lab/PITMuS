@@ -1,0 +1,12 @@
+xml_line,source_file,mutated_class,mutated_method,line_number,mutator,description
+7931,Interpreter.java,org.apache.commons.jexl3.internal.Interpreter,interpret,232,org.pitest.mutationtest.engine.gregor.mutators.MathMutator,Replaced integer subtraction with addition
+7932,Interpreter.java,org.apache.commons.jexl3.internal.Interpreter,interpret,232,org.pitest.mutationtest.engine.gregor.mutators.MathMutator,Replaced integer subtraction with addition
+7933,Interpreter.java,org.apache.commons.jexl3.internal.Interpreter,interpret,232,org.pitest.mutationtest.engine.gregor.mutators.MathMutator,Replaced integer subtraction with addition
+7934,Interpreter.java,org.apache.commons.jexl3.internal.Interpreter,interpret,232,org.pitest.mutationtest.engine.gregor.mutators.MathMutator,Replaced integer subtraction with addition
+7935,Interpreter.java,org.apache.commons.jexl3.internal.Interpreter,interpret,232,org.pitest.mutationtest.engine.gregor.mutators.MathMutator,Replaced integer subtraction with addition
+10058,TemplateEngine.java,org.apache.commons.jexl3.internal.TemplateEngine,parseExpression,822,org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator,removed call to org/apache/commons/jexl3/internal/TemplateEngine$ExpressionBuilder::access$600
+10059,TemplateEngine.java,org.apache.commons.jexl3.internal.TemplateEngine,parseExpression,838,org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator,removed call to org/apache/commons/jexl3/internal/TemplateEngine$ExpressionBuilder::access$600
+10060,TemplateEngine.java,org.apache.commons.jexl3.internal.TemplateEngine,parseExpression,860,org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator,removed call to org/apache/commons/jexl3/internal/TemplateEngine$ExpressionBuilder::access$600
+10061,TemplateEngine.java,org.apache.commons.jexl3.internal.TemplateEngine,parseExpression,914,org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator,removed call to org/apache/commons/jexl3/internal/TemplateEngine$ExpressionBuilder::access$600
+10062,TemplateEngine.java,org.apache.commons.jexl3.internal.TemplateEngine,parseExpression,960,org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator,removed call to org/apache/commons/jexl3/internal/TemplateEngine$ExpressionBuilder::access$600
+12927,TemplateEngine.java,org.apache.commons.jexl3.internal.TemplateEngine$CompositeExpression,prepare,651,org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator,removed call to org/apache/commons/jexl3/internal/TemplateEngine$ExpressionBuilder::access$600

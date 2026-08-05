@@ -1,0 +1,61 @@
+======================================================================
+ PITMuS reconstruction evaluation  --  project: commons-jexl3
+ dataset  : PITMuS_dataset_fresh_generation-v3
+ generated: 2026-08-04 14:00:00
+======================================================================
+total reconstructed mutations (dataset rows): 14019
+
+----------------------------------------------------------------------
+Section 0  XML alignment oracle  (each dataset row points at the right <mutation>)
+----------------------------------------------------------------------
+  rows checked            : 14019
+  xml_line points correct : 14019
+  xml_line WRONG          : 0
+  => OK - all aligned
+  detail csv: eval0_xml_misalign_commons-jexl3_v3.csv
+
+----------------------------------------------------------------------
+Section 1  Count oracle  (every XML mutation was reconstructed)
+----------------------------------------------------------------------
+  XML mutations : 14030
+  dataset rows  : 14019
+  missing       : 11
+  => 11 NOT reconstructed
+
+----------------------------------------------------------------------
+Section 2  Faithfulness oracle  (the reconstructed edit matches the mutator)
+----------------------------------------------------------------------
+  rows checked : 14019
+    PASS         : 13907
+    FAIL         : 6
+    UNVERIFIABLE : 106
+  FAIL / UNVERIFIABLE reasons:
+      106  switch default not source-representable
+        6  operator ~-> contradicts description
+  detail csv: eval2_faithfulness_commons-jexl3_v3.csv
+
+----------------------------------------------------------------------
+Section 3  Bytecode ground-truth oracle  (recon compiles + matches PIT's exported mutant .class)
+----------------------------------------------------------------------
+  rows checked                          : 14019
+    MATCH      (bytecode identical)     : 504
+    EQUIVALENT (subsequence of PIT)     : 5885
+    => confirmed faithful               : 6389
+    BROKEN     (real fault, won't compile): 9   <- genuine reconstruction faults
+    UNREPRESENTABLE (faithful, illegal Java): 184   <- mutant PIT makes in bytecode but source can't express
+    DIVERGENT  (bytecode differs)       : 374   <- needs review
+    setup / unverifiable (abstained):
+      DISASM_ERR     2
+      NOSRC          7061
+  detail csv (genuine faults): eval3_bytecode_commons-jexl3_v3_broken.csv
+  detail csv (other non-faults): eval3_bytecode_commons-jexl3_v3_other.csv
+
+======================================================================
+ OVERALL
+======================================================================
+  faithfulness PASS rate         : 13907/14019
+  bytecode confirmed faithful      : 6389/14019
+  bytecode BROKEN (real faults)    : 9   <- genuine reconstruction faults
+  bytecode UNREPRESENTABLE         : 184   <- faithful, but illegal Java source (not a fault)
+  bytecode DIVERGENT (review)      : 374
+======================================================================

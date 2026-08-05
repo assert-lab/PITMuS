@@ -1,18 +1,15 @@
 #!/bin/bash
 set -u
 
-TEST_PROJECTS_DIR="/home/tasfia/Desktop/EvoAI/demo/PITMuS/test-projects"
+TEST_PROJECTS_DIR="/Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects"
 
 projects=(
     bcel
     commons-beanutils
-    commons-collections4
     commons-dbutils
     commons-jexl3
-    commons-lang3
     http-request
     joda-time
-    JSON-java
     jsoup
 )
 

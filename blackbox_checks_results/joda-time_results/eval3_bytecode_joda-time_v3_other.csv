@@ -1,0 +1,733 @@
+index_no,verdict,description,detail
+39,DIVERGENT,removed conditional - replaced equality check with false,appendPrefix(Ljava/lang/String;Ljava/lang/String;)Lorg/joda/time/format/PeriodFormatterBuilder; | alen=14 blen=25
+49,DIVERGENT,removed conditional - replaced equality check with false,appendPrefix([Ljava/lang/String;[Ljava/lang/String;)Lorg/joda/time/format/PeriodFormatterBuilder; | alen=23 blen=38
+51,DIVERGENT,removed conditional - replaced equality check with false,appendPrefix([Ljava/lang/String;[Ljava/lang/String;)Lorg/joda/time/format/PeriodFormatterBuilder; | alen=23 blen=36
+54,DIVERGENT,removed conditional - replaced comparison check with false,appendPrefix([Ljava/lang/String;[Ljava/lang/String;)Lorg/joda/time/format/PeriodFormatterBuilder; | alen=8 blen=34
+68,DIVERGENT,removed conditional - replaced equality check with false,appendSeparator(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;ZZ)Lorg/joda/time/format/PeriodFormatterBuilder; | alen=107 blen=244
+99,DIVERGENT,removed conditional - replaced equality check with false,appendSuffix(Ljava/lang/String;Ljava/lang/String;)Lorg/joda/time/format/PeriodFormatterBuilder; | alen=14 blen=25
+109,DIVERGENT,removed conditional - replaced equality check with false,appendSuffix(Lorg/joda/time/format/PeriodFormatterBuilder$PeriodFieldAffix;)Lorg/joda/time/format/PeriodFormatterBuilder; | alen=77 blen=129
+111,DIVERGENT,removed conditional - replaced equality check with false,appendSuffix(Lorg/joda/time/format/PeriodFormatterBuilder$PeriodFieldAffix;)Lorg/joda/time/format/PeriodFormatterBuilder; | alen=77 blen=127
+113,DIVERGENT,removed conditional - replaced equality check with false,appendSuffix(Lorg/joda/time/format/PeriodFormatterBuilder$PeriodFieldAffix;)Lorg/joda/time/format/PeriodFormatterBuilder; | alen=64 blen=125
+121,DIVERGENT,removed conditional - replaced equality check with false,appendSuffix([Ljava/lang/String;[Ljava/lang/String;)Lorg/joda/time/format/PeriodFormatterBuilder; | alen=23 blen=38
+123,DIVERGENT,removed conditional - replaced equality check with false,appendSuffix([Ljava/lang/String;[Ljava/lang/String;)Lorg/joda/time/format/PeriodFormatterBuilder; | alen=23 blen=36
+126,DIVERGENT,removed conditional - replaced comparison check with false,appendSuffix([Ljava/lang/String;[Ljava/lang/String;)Lorg/joda/time/format/PeriodFormatterBuilder; | alen=8 blen=34
+140,DIVERGENT,Changed switch default to be first case,createComposite(Ljava/util/List;)[Ljava/lang/Object; | alen=30 blen=55
+166,DIVERGENT,removed conditional - replaced equality check with true,toFormatter(Ljava/util/List;ZZ)Lorg/joda/time/format/PeriodFormatter; | alen=86 blen=89
+268,DIVERGENT,removed conditional - replaced equality check with true,scan(Ljava/lang/String;I)I | alen=31 blen=42
+304,DIVERGENT,removed conditional - replaced equality check with false,countFieldsToPrint(Lorg/joda/time/ReadablePeriod;ILjava/util/Locale;)I | alen=14 blen=25
+333,DIVERGENT,Changed switch default to be first case,getFieldValue(Lorg/joda/time/ReadablePeriod;)J | alen=172 blen=211
+382,DIVERGENT,removed conditional - replaced equality check with false,isSupported(Lorg/joda/time/PeriodType;I)Z | alen=40 blen=55
+473,DIVERGENT,removed conditional - replaced equality check with false,parseInto(Lorg/joda/time/ReadWritablePeriod;Ljava/lang/String;ILjava/util/Locale;)I | alen=341 blen=349
+483,DIVERGENT,removed conditional - replaced comparison check with false,parseInto(Lorg/joda/time/ReadWritablePeriod;Ljava/lang/String;ILjava/util/Locale;)I | alen=339 blen=375
+488,DIVERGENT,removed conditional - replaced comparison check with false,parseInto(Lorg/joda/time/ReadWritablePeriod;Ljava/lang/String;ILjava/util/Locale;)I | alen=333 blen=368
+505,DIVERGENT,removed conditional - replaced equality check with false,parseInto(Lorg/joda/time/ReadWritablePeriod;Ljava/lang/String;ILjava/util/Locale;)I | alen=341 blen=349
+557,DIVERGENT,removed conditional - replaced equality check with false,parseInto(Lorg/joda/time/ReadWritablePeriod;Ljava/lang/String;ILjava/util/Locale;)I | alen=342 blen=348
+589,DIVERGENT,removed conditional - replaced equality check with false,printTo(Ljava/io/Writer;Lorg/joda/time/ReadablePeriod;Ljava/util/Locale;)V | alen=71 blen=79
+617,DIVERGENT,removed conditional - replaced equality check with false,printTo(Ljava/lang/StringBuffer;Lorg/joda/time/ReadablePeriod;Ljava/util/Locale;)V | alen=88 blen=96
+649,DIVERGENT,removed conditional - replaced comparison check with false,finish(Ljava/util/Set;)V | alen=88 blen=103
+661,DIVERGENT,removed conditional - replaced equality check with true,matchesOtherAffix(ILjava/lang/String;I)Z | alen=42 blen=49
+665,DIVERGENT,removed conditional - replaced equality check with true,matchesOtherAffix(ILjava/lang/String;I)Z | alen=46 blen=49
+757,DIVERGENT,removed conditional - replaced equality check with false,<init>(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Lorg/joda/time/format/PeriodPrinter;Lorg/joda/time/format/PeriodParser;ZZ)V | alen=82 blen=89
+811,DIVERGENT,removed conditional - replaced equality check with false,parseInto(Lorg/joda/time/ReadWritablePeriod;Ljava/lang/String;ILjava/util/Locale;)I | alen=103 blen=123
+813,DIVERGENT,removed conditional - replaced equality check with false,parseInto(Lorg/joda/time/ReadWritablePeriod;Ljava/lang/String;ILjava/util/Locale;)I | alen=102 blen=118
+905,DIVERGENT,Changed switch default to be first case,scan(Ljava/lang/String;I)I | alen=41 blen=42
+920,DIVERGENT,removed conditional - replaced comparison check with false,adjustOffset(JZ)J | alen=70 blen=94
+941,DIVERGENT,removed conditional - replaced equality check with false,convertLocalToUTC(JZ)J | alen=88 blen=94
+1005,DIVERGENT,removed conditional - replaced equality check with false,forID(Ljava/lang/String;)Lorg/joda/time/DateTimeZone; | alen=53 blen=81
+1020,DIVERGENT,removed conditional - replaced comparison check with false,forOffsetHoursMinutes(II)Lorg/joda/time/DateTimeZone; | alen=87 blen=153
+1026,DIVERGENT,removed conditional - replaced comparison check with false,forOffsetHoursMinutes(II)Lorg/joda/time/DateTimeZone; | alen=87 blen=132
+1045,DIVERGENT,removed conditional - replaced comparison check with false,forOffsetMillis(I)Lorg/joda/time/DateTimeZone; | alen=22 blen=33
+1068,DIVERGENT,removed conditional - replaced equality check with false,forTimeZone(Ljava/util/TimeZone;)Lorg/joda/time/DateTimeZone; | alen=103 blen=113
+1246,DIVERGENT,removed conditional - replaced equality check with false,validateProvider(Lorg/joda/time/tz/Provider;)Lorg/joda/time/tz/Provider; | alen=33 blen=72
+1329,DIVERGENT,Replaced integer modulus with multiplication,fromDateFields(Ljava/util/Date;)Lorg/joda/time/LocalDateTime; | alen=51 blen=51
+1339,DIVERGENT,Changed switch default to be first case,getField(ILorg/joda/time/Chronology;)Lorg/joda/time/DateTimeField; | alen=17 blen=32
+1351,DIVERGENT,Changed switch default to be first case,getValue(I)I | alen=21 blen=66
+1516,DIVERGENT,removed conditional - replaced equality check with false,withDurationAdded(Lorg/joda/time/ReadableDuration;I)Lorg/joda/time/LocalDateTime; | alen=17 blen=34
+1544,DIVERGENT,removed conditional - replaced equality check with false,withPeriodAdded(Lorg/joda/time/ReadablePeriod;I)Lorg/joda/time/LocalDateTime; | alen=16 blen=29
+1623,DIVERGENT,Changed switch default to be first case,readFrom(Ljava/io/DataInput;Ljava/lang/String;)Lorg/joda/time/DateTimeZone; | alen=13 blen=60
+1634,DIVERGENT,Changed switch default to be first case,readMillis(Ljava/io/DataInput;)J | alen=92 blen=119
+2002,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=55 blen=69
+2004,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=55 blen=61
+2074,DIVERGENT,Replaced integer subtraction with addition,isCachable()Z | alen=65 blen=65
+2315,DIVERGENT,removed conditional - replaced equality check with true,isTransitionFrom(Lorg/joda/time/tz/DateTimeZoneBuilder$Transition;)Z | alen=25 blen=30
+2432,DIVERGENT,removed conditional - replaced equality check with false,parseDataFile(Ljava/io/BufferedReader;Z)V | alen=181 blen=416
+2462,DIVERGENT,removed conditional - replaced equality check with false,parseDataFile(Ljava/io/BufferedReader;Z)V | alen=182 blen=220
+2464,DIVERGENT,removed conditional - replaced equality check with false,parseDataFile(Ljava/io/BufferedReader;Z)V | alen=180 blen=213
+2466,DIVERGENT,removed conditional - replaced equality check with false,parseDataFile(Ljava/io/BufferedReader;Z)V | alen=180 blen=206
+2487,DIVERGENT,removed conditional - replaced equality check with false,parseYear(Ljava/lang/String;I)I | alen=29 blen=57
+2492,DIVERGENT,removed conditional - replaced equality check with false,parseYear(Ljava/lang/String;I)I | alen=29 blen=46
+2501,DIVERGENT,Changed switch default to be first case,parseZoneChar(C)C | alen=8 blen=9
+2513,DIVERGENT,removed conditional - replaced equality check with false,test(Ljava/lang/String;Lorg/joda/time/DateTimeZone;)Z | alen=213 blen=343
+2526,DIVERGENT,removed conditional - replaced equality check with false,test(Ljava/lang/String;Lorg/joda/time/DateTimeZone;)Z | alen=215 blen=243
+2539,DIVERGENT,removed conditional - replaced equality check with false,test(Ljava/lang/String;Lorg/joda/time/DateTimeZone;)Z | alen=213 blen=284
+2664,DIVERGENT,removed conditional - replaced equality check with false,addRule(Lorg/joda/time/tz/ZoneInfoCompiler$Rule;)V | alen=5 blen=27
+2665,DIVERGENT,removed conditional - replaced equality check with true,addRule(Lorg/joda/time/tz/ZoneInfoCompiler$Rule;)V | alen=6 blen=27
+2745,DIVERGENT,Changed switch default to be first case,getField(ILorg/joda/time/Chronology;)Lorg/joda/time/DateTimeField; | alen=17 blen=27
+2751,DIVERGENT,Changed switch default to be first case,getValue(I)I | alen=21 blen=51
+2766,DIVERGENT,removed conditional - replaced equality check with false,isSupported(Lorg/joda/time/DateTimeFieldType;)Z | alen=26 blen=45
+2777,DIVERGENT,removed conditional - replaced equality check with false,isSupported(Lorg/joda/time/DurationFieldType;)Z | alen=22 blen=37
+2923,DIVERGENT,removed conditional - replaced equality check with false,withPeriodAdded(Lorg/joda/time/ReadablePeriod;I)Lorg/joda/time/LocalDate; | alen=44 blen=94
+3093,DIVERGENT,Replaced integer addition with subtraction,parseTwoDigits(Ljava/lang/CharSequence;I)I | alen=22 blen=22
+3094,DIVERGENT,Replaced integer addition with subtraction,parseTwoDigits(Ljava/lang/CharSequence;I)I | alen=22 blen=22
+3250,DIVERGENT,removed conditional - replaced comparison check with false,appendDecimal(Lorg/joda/time/DateTimeFieldType;II)Lorg/joda/time/format/DateTimeFormatterBuilder; | alen=40 blen=59
+3279,DIVERGENT,removed conditional - replaced comparison check with false,appendFraction(Lorg/joda/time/DateTimeFieldType;II)Lorg/joda/time/format/DateTimeFormatterBuilder; | alen=27 blen=38
+3295,DIVERGENT,Changed switch default to be first case,appendLiteral(Ljava/lang/String;)Lorg/joda/time/format/DateTimeFormatterBuilder; | alen=19 blen=36
+3321,DIVERGENT,removed conditional - replaced comparison check with false,appendSignedDecimal(Lorg/joda/time/DateTimeFieldType;II)Lorg/joda/time/format/DateTimeFormatterBuilder; | alen=40 blen=59
+3401,DIVERGENT,removed conditional - replaced equality check with false,getFormatter()Ljava/lang/Object; | alen=42 blen=48
+3408,DIVERGENT,removed conditional - replaced equality check with false,isFormatter(Ljava/lang/Object;)Z | alen=4 blen=17
+3433,DIVERGENT,removed conditional - replaced equality check with false,toFormatter()Lorg/joda/time/format/DateTimeFormatter; | alen=34 blen=44
+3462,DIVERGENT,removed conditional - replaced equality check with false,<init>(Ljava/util/List;)V | alen=108 blen=161
+3470,DIVERGENT,removed conditional - replaced equality check with false,<init>(Ljava/util/List;)V | alen=108 blen=161
+3535,DIVERGENT,removed conditional - replaced equality check with false,parseInto(Lorg/joda/time/format/DateTimeParserBucket;Ljava/lang/CharSequence;I)I | alen=47 blen=55
+3557,DIVERGENT,Changed switch default to be first case,getFractionData(JLorg/joda/time/DateTimeField;)[J | alen=92 blen=175
+3573,DIVERGENT,removed conditional - replaced comparison check with false,parseInto(Lorg/joda/time/format/DateTimeParserBucket;Ljava/lang/CharSequence;I)I | alen=89 blen=114
+3618,DIVERGENT,removed conditional - replaced comparison check with false,printTo(Ljava/lang/Appendable;JLorg/joda/time/Chronology;)V | alen=114 blen=133
+3659,DIVERGENT,removed conditional - replaced comparison check with false,parseInto(Lorg/joda/time/format/DateTimeParserBucket;Ljava/lang/CharSequence;I)I | alen=104 blen=124
+3663,DIVERGENT,removed conditional - replaced comparison check with false,parseInto(Lorg/joda/time/format/DateTimeParserBucket;Ljava/lang/CharSequence;I)I | alen=91 blen=120
+3677,DIVERGENT,removed conditional - replaced comparison check with false,parseInto(Lorg/joda/time/format/DateTimeParserBucket;Ljava/lang/CharSequence;I)I | alen=105 blen=116
+3696,DIVERGENT,removed conditional - replaced equality check with false,parseInto(Lorg/joda/time/format/DateTimeParserBucket;Ljava/lang/CharSequence;I)I | alen=177 blen=185
+3708,DIVERGENT,removed conditional - replaced comparison check with false,parseInto(Lorg/joda/time/format/DateTimeParserBucket;Ljava/lang/CharSequence;I)I | alen=175 blen=208
+3713,DIVERGENT,removed conditional - replaced comparison check with false,parseInto(Lorg/joda/time/format/DateTimeParserBucket;Ljava/lang/CharSequence;I)I | alen=169 blen=199
+3722,DIVERGENT,removed conditional - replaced comparison check with false,parseInto(Lorg/joda/time/format/DateTimeParserBucket;Ljava/lang/CharSequence;I)I | alen=177 blen=191
+3740,DIVERGENT,removed conditional - replaced equality check with false,parseInto(Lorg/joda/time/format/DateTimeParserBucket;Ljava/lang/CharSequence;I)I | alen=178 blen=184
+3846,DIVERGENT,removed conditional - replaced equality check with false,parseInto(Lorg/joda/time/format/DateTimeParserBucket;Ljava/lang/CharSequence;I)I | alen=120 blen=131
+3870,DIVERGENT,removed conditional - replaced equality check with false,parseInto(Lorg/joda/time/format/DateTimeParserBucket;Ljava/lang/CharSequence;I)I | alen=52 blen=63
+3884,DIVERGENT,Changed switch default to be first case,print(JLorg/joda/time/DateTimeZone;Ljava/util/Locale;)Ljava/lang/String; | alen=19 blen=22
+3889,DIVERGENT,removed conditional - replaced comparison check with false,<init>(Ljava/lang/String;Ljava/lang/String;ZII)V | alen=32 blen=50
+3903,DIVERGENT,removed conditional - replaced comparison check with false,digitCount(Ljava/lang/CharSequence;II)I | alen=26 blen=42
+3931,DIVERGENT,removed conditional - replaced equality check with false,parseInto(Lorg/joda/time/format/DateTimeParserBucket;Ljava/lang/CharSequence;I)I | alen=295 blen=305
+4152,DIVERGENT,removed conditional - replaced equality check with false,parseInto(Lorg/joda/time/format/DateTimeParserBucket;Ljava/lang/CharSequence;I)I | alen=240 blen=248
+4163,DIVERGENT,removed conditional - replaced comparison check with false,parseInto(Lorg/joda/time/format/DateTimeParserBucket;Ljava/lang/CharSequence;I)I | alen=240 blen=254
+4173,DIVERGENT,removed conditional - replaced equality check with false,parseInto(Lorg/joda/time/format/DateTimeParserBucket;Ljava/lang/CharSequence;I)I | alen=241 blen=247
+4204,DIVERGENT,removed conditional - replaced comparison check with false,parseInto(Lorg/joda/time/format/DateTimeParserBucket;Ljava/lang/CharSequence;I)I | alen=240 blen=312
+4214,DIVERGENT,removed conditional - replaced comparison check with false,parseInto(Lorg/joda/time/format/DateTimeParserBucket;Ljava/lang/CharSequence;I)I | alen=240 blen=296
+4233,DIVERGENT,Replaced integer addition with subtraction,parseInto(Lorg/joda/time/format/DateTimeParserBucket;Ljava/lang/CharSequence;I)I | alen=243 blen=243
+4235,DIVERGENT,Replaced integer addition with subtraction,parseInto(Lorg/joda/time/format/DateTimeParserBucket;Ljava/lang/CharSequence;I)I | alen=243 blen=243
+4239,DIVERGENT,Replaced integer addition with subtraction,parseInto(Lorg/joda/time/format/DateTimeParserBucket;Ljava/lang/CharSequence;I)I | alen=243 blen=243
+4241,DIVERGENT,Replaced integer addition with subtraction,parseInto(Lorg/joda/time/format/DateTimeParserBucket;Ljava/lang/CharSequence;I)I | alen=243 blen=243
+4259,DIVERGENT,removed conditional - replaced comparison check with false,<init>(Lorg/joda/time/Chronology;Ljava/lang/Object;I)V | alen=27 blen=36
+4281,DIVERGENT,removed conditional - replaced comparison check with false,getDateMidnightMillis(III)J | alen=81 blen=110
+4356,DIVERGENT,Replaced long addition with subtraction,getDayOfWeek(J)I | alen=37 blen=37
+4360,DIVERGENT,Replaced long addition with subtraction,getDayOfWeek(J)I | alen=37 blen=37
+4384,DIVERGENT,Replaced integer subtraction with addition,getFirstWeekOfYearMillis(I)J | alen=32 blen=32
+4395,DIVERGENT,Replaced long addition with subtraction,getMillisOfDay(J)I | alen=18 blen=18
+4455,DIVERGENT,removed conditional - replaced equality check with false,getYearInfo(I)Lorg/joda/time/chrono/BasicChronology$YearInfo; | alen=28 blen=35
+4495,DIVERGENT,removed conditional - replaced equality check with false,fieldDifference(Lorg/joda/time/ReadablePartial;Lorg/joda/time/ReadablePartial;)Lorg/joda/time/Period; | alen=88 blen=189
+4554,DIVERGENT,removed conditional - replaced equality check with false,multipliedBy(I)Lorg/joda/time/Period; | alen=31 blen=53
+4575,DIVERGENT,removed conditional - replaced equality check with false,normalizedStandard(Lorg/joda/time/PeriodType;)Lorg/joda/time/Period; | alen=125 blen=131
+4798,DIVERGENT,removed conditional - replaced equality check with false,forFields(Ljava/util/Collection;ZZ)Lorg/joda/time/format/DateTimeFormatter; | alen=137 blen=306
+4812,DIVERGENT,removed conditional - replaced equality check with false,forFields(Ljava/util/Collection;ZZ)Lorg/joda/time/format/DateTimeFormatter; | alen=128 blen=148
+4845,DIVERGENT,removed conditional - replaced equality check with false,time(Lorg/joda/time/format/DateTimeFormatterBuilder;Ljava/util/Collection;ZZZZ)V | alen=185 blen=197
+4847,DIVERGENT,removed conditional - replaced equality check with false,time(Lorg/joda/time/format/DateTimeFormatterBuilder;Ljava/util/Collection;ZZZZ)V | alen=185 blen=194
+4849,DIVERGENT,removed conditional - replaced equality check with false,time(Lorg/joda/time/format/DateTimeFormatterBuilder;Ljava/util/Collection;ZZZZ)V | alen=185 blen=191
+4864,DIVERGENT,removed conditional - replaced equality check with true,time(Lorg/joda/time/format/DateTimeFormatterBuilder;Ljava/util/Collection;ZZZZ)V | alen=186 blen=187
+4880,DIVERGENT,removed conditional - replaced equality check with true,time(Lorg/joda/time/format/DateTimeFormatterBuilder;Ljava/util/Collection;ZZZZ)V | alen=186 blen=187
+4884,DIVERGENT,removed conditional - replaced equality check with true,time(Lorg/joda/time/format/DateTimeFormatterBuilder;Ljava/util/Collection;ZZZZ)V | alen=186 blen=187
+4891,DIVERGENT,removed conditional - replaced equality check with false,time(Lorg/joda/time/format/DateTimeFormatterBuilder;Ljava/util/Collection;ZZZZ)V | alen=185 blen=194
+4893,DIVERGENT,removed conditional - replaced equality check with false,time(Lorg/joda/time/format/DateTimeFormatterBuilder;Ljava/util/Collection;ZZZZ)V | alen=185 blen=191
+4905,DIVERGENT,removed conditional - replaced equality check with false,time(Lorg/joda/time/format/DateTimeFormatterBuilder;Ljava/util/Collection;ZZZZ)V | alen=185 blen=191
+5111,DIVERGENT,removed conditional - replaced equality check with false,withPeriodAdded(Lorg/joda/time/ReadablePeriod;I)Lorg/joda/time/Partial; | alen=44 blen=93
+5181,DIVERGENT,Replaced integer modulus with multiplication,fromDateFields(Ljava/util/Date;)Lorg/joda/time/LocalTime; | alen=26 blen=26
+5190,DIVERGENT,Changed switch default to be first case,getField(ILorg/joda/time/Chronology;)Lorg/joda/time/DateTimeField; | alen=17 blen=32
+5201,DIVERGENT,Changed switch default to be first case,getValue(I)I | alen=21 blen=66
+5231,DIVERGENT,removed conditional - replaced equality check with false,isSupported(Lorg/joda/time/DateTimeFieldType;)Z | alen=21 blen=30
+5239,DIVERGENT,removed conditional - replaced equality check with false,isSupported(Lorg/joda/time/DurationFieldType;)Z | alen=22 blen=37
+5342,DIVERGENT,removed conditional - replaced equality check with false,withPeriodAdded(Lorg/joda/time/ReadablePeriod;I)Lorg/joda/time/LocalTime; | alen=16 blen=29
+5498,DIVERGENT,removed conditional - replaced equality check with false,withDurationAdded(JI)Lorg/joda/time/DateTime; | alen=16 blen=33
+5504,DIVERGENT,removed conditional - replaced equality check with false,withDurationAdded(Lorg/joda/time/ReadableDuration;I)Lorg/joda/time/DateTime; | alen=10 blen=21
+5534,DIVERGENT,removed conditional - replaced equality check with false,withPeriodAdded(Lorg/joda/time/ReadablePeriod;I)Lorg/joda/time/DateTime; | alen=16 blen=29
+5606,DIVERGENT,Replaced integer subtraction with addition,add(Lorg/joda/time/ReadablePartial;I[II)[I | alen=173 blen=173
+5607,DIVERGENT,Replaced integer subtraction with addition,add(Lorg/joda/time/ReadablePartial;I[II)[I | alen=173 blen=173
+5623,DIVERGENT,Replaced integer subtraction with addition,add(Lorg/joda/time/ReadablePartial;I[II)[I | alen=173 blen=173
+5624,DIVERGENT,Replaced integer subtraction with addition,add(Lorg/joda/time/ReadablePartial;I[II)[I | alen=173 blen=173
+5625,DIVERGENT,Replaced integer subtraction with addition,add(Lorg/joda/time/ReadablePartial;I[II)[I | alen=173 blen=173
+5645,DIVERGENT,Replaced integer subtraction with addition,addWrapPartial(Lorg/joda/time/ReadablePartial;I[II)[I | alen=199 blen=199
+5646,DIVERGENT,Replaced integer subtraction with addition,addWrapPartial(Lorg/joda/time/ReadablePartial;I[II)[I | alen=199 blen=199
+5651,DIVERGENT,Replaced integer subtraction with addition,addWrapPartial(Lorg/joda/time/ReadablePartial;I[II)[I | alen=199 blen=199
+5652,DIVERGENT,Replaced integer subtraction with addition,addWrapPartial(Lorg/joda/time/ReadablePartial;I[II)[I | alen=199 blen=199
+5665,DIVERGENT,Replaced integer subtraction with addition,addWrapPartial(Lorg/joda/time/ReadablePartial;I[II)[I | alen=199 blen=199
+5666,DIVERGENT,Replaced integer subtraction with addition,addWrapPartial(Lorg/joda/time/ReadablePartial;I[II)[I | alen=199 blen=199
+5667,DIVERGENT,Replaced integer subtraction with addition,addWrapPartial(Lorg/joda/time/ReadablePartial;I[II)[I | alen=199 blen=199
+5671,DIVERGENT,Replaced integer subtraction with addition,addWrapPartial(Lorg/joda/time/ReadablePartial;I[II)[I | alen=199 blen=199
+5672,DIVERGENT,Replaced integer subtraction with addition,addWrapPartial(Lorg/joda/time/ReadablePartial;I[II)[I | alen=199 blen=199
+5673,DIVERGENT,Replaced integer subtraction with addition,addWrapPartial(Lorg/joda/time/ReadablePartial;I[II)[I | alen=199 blen=199
+5772,DIVERGENT,removed conditional - replaced equality check with false,createFormatterForPattern(Ljava/lang/String;)Lorg/joda/time/format/DateTimeFormatter; | alen=41 blen=80
+5785,DIVERGENT,removed conditional - replaced equality check with false,createFormatterForStyle(Ljava/lang/String;)Lorg/joda/time/format/DateTimeFormatter; | alen=41 blen=68
+5814,DIVERGENT,Changed switch default to be first case,isNumericToken(Ljava/lang/String;)Z | alen=20 blen=22
+5832,DIVERGENT,Changed switch default to be first case,parsePatternTo(Lorg/joda/time/format/DateTimeFormatterBuilder;Ljava/lang/String;)V | alen=316 blen=584
+5843,DIVERGENT,Changed switch default to be first case,parsePatternTo(Lorg/joda/time/format/DateTimeFormatterBuilder;Ljava/lang/String;)V | alen=316 blen=316
+5854,DIVERGENT,Changed switch default to be first case,parsePatternTo(Lorg/joda/time/format/DateTimeFormatterBuilder;Ljava/lang/String;)V | alen=316 blen=328
+5878,DIVERGENT,removed conditional - replaced comparison check with true,parseToken(Ljava/lang/String;[I)Ljava/lang/String; | alen=119 blen=121
+5927,DIVERGENT,Changed switch default to be first case,selectStyle(C)I | alen=16 blen=24
+5944,DIVERGENT,Changed switch default to be first case,getPattern(Ljava/util/Locale;)Ljava/lang/String; | alen=43 blen=55
+5961,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=37 blen=66
+6001,DIVERGENT,removed conditional - replaced equality check with false,forFields([Lorg/joda/time/DurationFieldType;)Lorg/joda/time/PeriodType; | alen=259 blen=627
+6116,DIVERGENT,Replaced integer subtraction with addition,withFieldRemoved(ILjava/lang/String;)Lorg/joda/time/PeriodType; | alen=110 blen=110
+6287,DIVERGENT,Replaced bitwise OR with AND,setFields()V | alen=469 blen=469
+6508,DIVERGENT,removed conditional - replaced equality check with false,withLocale(Ljava/util/Locale;)Lorg/joda/time/format/DateTimeFormatter; | alen=28 blen=59
+6700,DIVERGENT,Changed switch default to be first case,readResolve()Ljava/lang/Object; | alen=7 blen=19
+6741,DIVERGENT,removed conditional - replaced equality check with false,getDateTimeMillis(IIIIIII)J | alen=79 blen=102
+6785,DIVERGENT,Replaced integer addition with subtraction,hashCode()I | alen=16 blen=16
+6786,DIVERGENT,Replaced integer addition with subtraction,hashCode()I | alen=16 blen=16
+7117,DIVERGENT,removed conditional - replaced comparison check with false,add(JJ)J | alen=155 blen=204
+7161,DIVERGENT,Replaced long subtraction with addition,getDifferenceAsLong(JJ)J | alen=105 blen=105
+7200,DIVERGENT,removed conditional - replaced equality check with false,equals(Ljava/lang/Object;Ljava/lang/Object;)Z | alen=13 blen=20
+7263,DIVERGENT,removed conditional - replaced comparison check with false,safeMultiply(II)I | alen=29 blen=38
+7269,DIVERGENT,Changed switch default to be first case,safeMultiply(JI)J | alen=59 blen=59
+7286,DIVERGENT,removed conditional - replaced equality check with false,safeMultiply(JJ)J | alen=62 blen=110
+7292,DIVERGENT,removed conditional - replaced equality check with false,safeMultiply(JJ)J | alen=60 blen=84
+7297,DIVERGENT,removed conditional - replaced equality check with true,safeMultiply(JJ)J | alen=63 blen=66
+7326,DIVERGENT,removed conditional - replaced comparison check with false,verifyValueBounds(Ljava/lang/String;III)V | alen=15 blen=21
+7332,DIVERGENT,removed conditional - replaced comparison check with false,verifyValueBounds(Lorg/joda/time/DateTimeField;III)V | alen=16 blen=22
+7338,DIVERGENT,removed conditional - replaced comparison check with false,verifyValueBounds(Lorg/joda/time/DateTimeFieldType;III)V | alen=15 blen=21
+7346,DIVERGENT,removed conditional - replaced comparison check with false,getDaysInMonthMaxForSet(JI)I | alen=9 blen=16
+7563,DIVERGENT,Changed switch default to be first case,setMillis(J)V | alen=37 blen=65
+7575,DIVERGENT,removed conditional - replaced comparison check with false,setRounding(Lorg/joda/time/DateTimeField;I)V | alen=36 blen=41
+7760,DIVERGENT,changed conditional boundary,add(Lorg/joda/time/convert/Converter;[Lorg/joda/time/convert/Converter;)Lorg/joda/time/convert/ConverterSet; | alen=95 blen=95
+7765,DIVERGENT,removed conditional - replaced equality check with false,add(Lorg/joda/time/convert/Converter;[Lorg/joda/time/convert/Converter;)Lorg/joda/time/convert/ConverterSet; | alen=89 blen=96
+7766,DIVERGENT,removed conditional - replaced equality check with true,add(Lorg/joda/time/convert/Converter;[Lorg/joda/time/convert/Converter;)Lorg/joda/time/convert/ConverterSet; | alen=93 blen=95
+7767,DIVERGENT,replaced return value with null for org/joda/time/convert/ConverterSet::add,add(Lorg/joda/time/convert/Converter;[Lorg/joda/time/convert/Converter;)Lorg/joda/time/convert/ConverterSet; | alen=95 blen=97
+7768,DIVERGENT,removed conditional - replaced equality check with false,add(Lorg/joda/time/convert/Converter;[Lorg/joda/time/convert/Converter;)Lorg/joda/time/convert/ConverterSet; | alen=55 blen=128
+7769,DIVERGENT,removed conditional - replaced equality check with true,add(Lorg/joda/time/convert/Converter;[Lorg/joda/time/convert/Converter;)Lorg/joda/time/convert/ConverterSet; | alen=88 blen=99
+7770,DIVERGENT,changed conditional boundary,add(Lorg/joda/time/convert/Converter;[Lorg/joda/time/convert/Converter;)Lorg/joda/time/convert/ConverterSet; | alen=95 blen=95
+7773,DIVERGENT,removed conditional - replaced equality check with false,add(Lorg/joda/time/convert/Converter;[Lorg/joda/time/convert/Converter;)Lorg/joda/time/convert/ConverterSet; | alen=85 blen=101
+7774,DIVERGENT,removed conditional - replaced equality check with true,add(Lorg/joda/time/convert/Converter;[Lorg/joda/time/convert/Converter;)Lorg/joda/time/convert/ConverterSet; | alen=87 blen=97
+7775,DIVERGENT,removed conditional - replaced equality check with false,add(Lorg/joda/time/convert/Converter;[Lorg/joda/time/convert/Converter;)Lorg/joda/time/convert/ConverterSet; | alen=89 blen=97
+7776,DIVERGENT,removed conditional - replaced equality check with true,add(Lorg/joda/time/convert/Converter;[Lorg/joda/time/convert/Converter;)Lorg/joda/time/convert/ConverterSet; | alen=93 blen=95
+7777,DIVERGENT,replaced return value with null for org/joda/time/convert/ConverterSet::add,add(Lorg/joda/time/convert/Converter;[Lorg/joda/time/convert/Converter;)Lorg/joda/time/convert/ConverterSet; | alen=92 blen=97
+7778,DIVERGENT,Replaced integer addition with subtraction,add(Lorg/joda/time/convert/Converter;[Lorg/joda/time/convert/Converter;)Lorg/joda/time/convert/ConverterSet; | alen=95 blen=95
+7779,DIVERGENT,removed call to java/lang/System::arraycopy,add(Lorg/joda/time/convert/Converter;[Lorg/joda/time/convert/Converter;)Lorg/joda/time/convert/ConverterSet; | alen=89 blen=99
+7780,DIVERGENT,removed conditional - replaced equality check with false,add(Lorg/joda/time/convert/Converter;[Lorg/joda/time/convert/Converter;)Lorg/joda/time/convert/ConverterSet; | alen=89 blen=96
+7781,DIVERGENT,removed conditional - replaced equality check with true,add(Lorg/joda/time/convert/Converter;[Lorg/joda/time/convert/Converter;)Lorg/joda/time/convert/ConverterSet; | alen=93 blen=95
+7782,DIVERGENT,replaced return value with null for org/joda/time/convert/ConverterSet::add,add(Lorg/joda/time/convert/Converter;[Lorg/joda/time/convert/Converter;)Lorg/joda/time/convert/ConverterSet; | alen=92 blen=97
+7797,DIVERGENT,changed conditional boundary,remove(Lorg/joda/time/convert/Converter;[Lorg/joda/time/convert/Converter;)Lorg/joda/time/convert/ConverterSet; | alen=32 blen=32
+7802,DIVERGENT,replaced return value with null for org/joda/time/convert/ConverterSet::remove,remove(Lorg/joda/time/convert/Converter;[Lorg/joda/time/convert/Converter;)Lorg/joda/time/convert/ConverterSet; | alen=29 blen=34
+7803,DIVERGENT,removed conditional - replaced equality check with false,remove(Lorg/joda/time/convert/Converter;[Lorg/joda/time/convert/Converter;)Lorg/joda/time/convert/ConverterSet; | alen=26 blen=33
+7804,DIVERGENT,removed conditional - replaced equality check with true,remove(Lorg/joda/time/convert/Converter;[Lorg/joda/time/convert/Converter;)Lorg/joda/time/convert/ConverterSet; | alen=30 blen=32
+7805,DIVERGENT,replaced return value with null for org/joda/time/convert/ConverterSet::remove,remove(Lorg/joda/time/convert/Converter;[Lorg/joda/time/convert/Converter;)Lorg/joda/time/convert/ConverterSet; | alen=32 blen=34
+7840,DIVERGENT,Changed increment from -1 to 1,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=167 blen=167
+7841,DIVERGENT,changed conditional boundary,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=167 blen=167
+7844,DIVERGENT,removed conditional - replaced equality check with false,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=162 blen=169
+7845,DIVERGENT,removed conditional - replaced equality check with true,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=144 blen=184
+7846,DIVERGENT,replaced return value with null for org/joda/time/convert/ConverterSet::selectSlow,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=167 blen=169
+7847,DIVERGENT,removed conditional - replaced equality check with false,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=165 blen=175
+7848,DIVERGENT,removed conditional - replaced equality check with true,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=159 blen=167
+7849,DIVERGENT,removed conditional - replaced equality check with false,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=162 blen=173
+7850,DIVERGENT,removed conditional - replaced equality check with true,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=165 blen=167
+7851,DIVERGENT,removed conditional - replaced equality check with false,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=164 blen=168
+7852,DIVERGENT,removed conditional - replaced equality check with true,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=163 blen=167
+7853,DIVERGENT,removed conditional - replaced equality check with false,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=165 blen=288
+7855,DIVERGENT,removed conditional - replaced equality check with false,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=166 blen=168
+7857,DIVERGENT,removed conditional - replaced equality check with false,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=160 blen=168
+7859,DIVERGENT,replaced return value with null for org/joda/time/convert/ConverterSet::selectSlow,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=165 blen=169
+7860,DIVERGENT,Changed increment from -1 to 1,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=167 blen=167
+7861,DIVERGENT,changed conditional boundary,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=167 blen=167
+7864,DIVERGENT,Changed increment from -1 to 1,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=167 blen=167
+7865,DIVERGENT,changed conditional boundary,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=167 blen=167
+7867,DIVERGENT,removed conditional - replaced comparison check with true,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=163 blen=169
+7868,DIVERGENT,removed conditional - replaced equality check with false,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=142 blen=186
+7869,DIVERGENT,removed conditional - replaced equality check with true,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=164 blen=167
+7870,DIVERGENT,removed conditional - replaced equality check with false,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=145 blen=176
+7871,DIVERGENT,removed conditional - replaced equality check with true,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=160 blen=167
+7872,DIVERGENT,Replaced integer subtraction with addition,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=167 blen=167
+7873,DIVERGENT,removed conditional - replaced equality check with false,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=160 blen=168
+7875,DIVERGENT,replaced return value with null for org/joda/time/convert/ConverterSet::selectSlow,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=165 blen=169
+7876,DIVERGENT,changed conditional boundary,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=167 blen=167
+7879,DIVERGENT,removed conditional - replaced equality check with false,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=163 blen=170
+7880,DIVERGENT,removed conditional - replaced equality check with true,selectSlow(Lorg/joda/time/convert/ConverterSet;Ljava/lang/Class;)Lorg/joda/time/convert/Converter; | alen=162 blen=170
+7884,DIVERGENT,removed conditional - replaced equality check with false,compareReverse(Lorg/joda/time/DurationField;Lorg/joda/time/DurationField;)I | alen=24 blen=39
+7888,DIVERGENT,removed conditional - replaced equality check with false,compareReverse(Lorg/joda/time/DurationField;Lorg/joda/time/DurationField;)I | alen=24 blen=31
+7893,DIVERGENT,removed conditional - replaced equality check with false,compareReverse(Lorg/joda/time/DurationField;Lorg/joda/time/DurationField;)I | alen=24 blen=33
+7959,DIVERGENT,removed conditional - replaced equality check with false,obtainSaveField()Lorg/joda/time/format/DateTimeParserBucket$SavedField; | alen=59 blen=68
+8088,DIVERGENT,removed conditional - replaced equality check with false,withDurationAdded(JI)Lorg/joda/time/DateMidnight; | alen=16 blen=33
+8094,DIVERGENT,removed conditional - replaced equality check with false,withDurationAdded(Lorg/joda/time/ReadableDuration;I)Lorg/joda/time/DateMidnight; | alen=10 blen=21
+8118,DIVERGENT,removed conditional - replaced equality check with false,withPeriodAdded(Lorg/joda/time/ReadablePeriod;I)Lorg/joda/time/DateMidnight; | alen=16 blen=29
+8186,DIVERGENT,removed conditional - replaced equality check with false,equals(Ljava/lang/Object;)Z | alen=45 blen=65
+8369,DIVERGENT,removed conditional - replaced equality check with false,getDurationMillis(Ljava/lang/Object;)J | alen=201 blen=212
+8373,DIVERGENT,removed conditional - replaced equality check with false,getDurationMillis(Ljava/lang/Object;)J | alen=201 blen=212
+8378,DIVERGENT,removed conditional - replaced equality check with false,getDurationMillis(Ljava/lang/Object;)J | alen=199 blen=215
+8380,DIVERGENT,Replaced integer subtraction with addition,getDurationMillis(Ljava/lang/Object;)J | alen=206 blen=206
+8397,DIVERGENT,removed conditional - replaced equality check with false,getDurationMillis(Ljava/lang/Object;)J | alen=201 blen=209
+8437,DIVERGENT,removed conditional - replaced equality check with false,setInto(Lorg/joda/time/ReadWritableInterval;Ljava/lang/Object;Lorg/joda/time/Chronology;)V | alen=185 blen=206
+8441,DIVERGENT,removed conditional - replaced equality check with false,setInto(Lorg/joda/time/ReadWritableInterval;Ljava/lang/Object;Lorg/joda/time/Chronology;)V | alen=185 blen=225
+8464,DIVERGENT,removed conditional - replaced equality check with false,add(JJI)J | alen=12 blen=27
+8571,DIVERGENT,removed conditional - replaced equality check with false,convertField(Lorg/joda/time/DateTimeField;Ljava/util/HashMap;)Lorg/joda/time/DateTimeField; | alen=42 blen=75
+8580,DIVERGENT,removed conditional - replaced equality check with false,convertField(Lorg/joda/time/DurationField;Ljava/util/HashMap;)Lorg/joda/time/DurationField; | alen=27 blen=48
+8623,DIVERGENT,removed conditional - replaced equality check with false,hashCode()I | alen=24 blen=41
+8626,DIVERGENT,removed conditional - replaced equality check with false,hashCode()I | alen=24 blen=41
+8657,DIVERGENT,removed call to org/joda/time/chrono/LimitChronology::checkLimits,add(JI)J | alen=18 blen=20
+8658,DIVERGENT,removed call to org/joda/time/chrono/LimitChronology::checkLimits,add(JI)J | alen=18 blen=20
+8660,DIVERGENT,removed call to org/joda/time/chrono/LimitChronology::checkLimits,add(JJ)J | alen=18 blen=20
+8661,DIVERGENT,removed call to org/joda/time/chrono/LimitChronology::checkLimits,add(JJ)J | alen=18 blen=20
+8672,DIVERGENT,removed call to org/joda/time/chrono/LimitChronology::checkLimits,getDifference(JJ)I | alen=16 blen=18
+8673,DIVERGENT,removed call to org/joda/time/chrono/LimitChronology::checkLimits,getDifference(JJ)I | alen=16 blen=18
+8675,DIVERGENT,removed call to org/joda/time/chrono/LimitChronology::checkLimits,getDifferenceAsLong(JJ)J | alen=16 blen=18
+8676,DIVERGENT,removed call to org/joda/time/chrono/LimitChronology::checkLimits,getDifferenceAsLong(JJ)J | alen=16 blen=18
+8744,DIVERGENT,removed conditional - replaced equality check with false,convertField(Lorg/joda/time/DateTimeField;Ljava/util/HashMap;)Lorg/joda/time/DateTimeField; | alen=43 blen=78
+8753,DIVERGENT,removed conditional - replaced equality check with false,convertField(Lorg/joda/time/DurationField;Ljava/util/HashMap;)Lorg/joda/time/DurationField; | alen=28 blen=51
+8870,DIVERGENT,removed conditional - replaced equality check with false,getDifference(JJ)I | alen=23 blen=27
+8871,DIVERGENT,removed conditional - replaced equality check with true,getDifference(JJ)I | alen=23 blen=25
+8872,DIVERGENT,Replaced long addition with subtraction,getDifference(JJ)I | alen=23 blen=23
+8873,DIVERGENT,Replaced long addition with subtraction,getDifference(JJ)I | alen=23 blen=23
+8875,DIVERGENT,removed conditional - replaced equality check with false,getDifferenceAsLong(JJ)J | alen=23 blen=27
+8876,DIVERGENT,removed conditional - replaced equality check with true,getDifferenceAsLong(JJ)J | alen=23 blen=25
+8877,DIVERGENT,Replaced long addition with subtraction,getDifferenceAsLong(JJ)J | alen=23 blen=23
+8878,DIVERGENT,Replaced long addition with subtraction,getDifferenceAsLong(JJ)J | alen=23 blen=23
+8892,DIVERGENT,Replaced long addition with subtraction,getOffsetToAdd(J)I | alen=30 blen=30
+8893,DIVERGENT,Replaced XOR with AND,getOffsetToAdd(J)I | alen=30 blen=30
+8894,DIVERGENT,changed conditional boundary,getOffsetToAdd(J)I | alen=30 blen=30
+8895,DIVERGENT,removed conditional - replaced comparison check with false,getOffsetToAdd(J)I | alen=30 blen=38
+8896,DIVERGENT,removed conditional - replaced comparison check with true,getOffsetToAdd(J)I | alen=30 blen=30
+8897,DIVERGENT,Replaced XOR with AND,getOffsetToAdd(J)I | alen=30 blen=30
+8898,DIVERGENT,changed conditional boundary,getOffsetToAdd(J)I | alen=30 blen=30
+8899,DIVERGENT,removed conditional - replaced comparison check with false,getOffsetToAdd(J)I | alen=30 blen=36
+8900,DIVERGENT,removed conditional - replaced comparison check with true,getOffsetToAdd(J)I | alen=30 blen=30
+8903,DIVERGENT,Replaced XOR with AND,hashCode()I | alen=8 blen=8
+9067,DIVERGENT,removed conditional - replaced equality check with false,isContiguous(Lorg/joda/time/ReadablePartial;)Z | alen=36 blen=46
+9101,DIVERGENT,removed conditional - replaced equality check with false,<init>(Lorg/joda/time/ReadablePartial;Lorg/joda/time/ReadablePartial;Lorg/joda/time/PeriodType;)V | alen=113 blen=247
+9103,DIVERGENT,removed conditional - replaced equality check with false,<init>(Lorg/joda/time/ReadablePartial;Lorg/joda/time/ReadablePartial;Lorg/joda/time/PeriodType;)V | alen=114 blen=116
+9106,DIVERGENT,removed conditional - replaced equality check with true,<init>(Lorg/joda/time/ReadablePartial;Lorg/joda/time/ReadablePartial;Lorg/joda/time/PeriodType;)V | alen=112 blen=115
+9108,DIVERGENT,removed conditional - replaced equality check with true,<init>(Lorg/joda/time/ReadablePartial;Lorg/joda/time/ReadablePartial;Lorg/joda/time/PeriodType;)V | alen=112 blen=115
+9111,DIVERGENT,removed conditional - replaced equality check with false,<init>(Lorg/joda/time/ReadablePartial;Lorg/joda/time/ReadablePartial;Lorg/joda/time/PeriodType;)V | alen=105 blen=121
+9112,DIVERGENT,removed conditional - replaced equality check with true,<init>(Lorg/joda/time/ReadablePartial;Lorg/joda/time/ReadablePartial;Lorg/joda/time/PeriodType;)V | alen=57 blen=179
+9113,DIVERGENT,changed conditional boundary,<init>(Lorg/joda/time/ReadablePartial;Lorg/joda/time/ReadablePartial;Lorg/joda/time/PeriodType;)V | alen=115 blen=115
+9116,DIVERGENT,removed conditional - replaced equality check with false,<init>(Lorg/joda/time/ReadablePartial;Lorg/joda/time/ReadablePartial;Lorg/joda/time/PeriodType;)V | alen=103 blen=121
+9117,DIVERGENT,removed conditional - replaced equality check with true,<init>(Lorg/joda/time/ReadablePartial;Lorg/joda/time/ReadablePartial;Lorg/joda/time/PeriodType;)V | alen=106 blen=119
+9118,DIVERGENT,removed conditional - replaced equality check with false,<init>(Lorg/joda/time/ReadablePartial;Lorg/joda/time/ReadablePartial;Lorg/joda/time/PeriodType;)V | alen=107 blen=121
+9119,DIVERGENT,removed conditional - replaced equality check with true,<init>(Lorg/joda/time/ReadablePartial;Lorg/joda/time/ReadablePartial;Lorg/joda/time/PeriodType;)V | alen=89 blen=139
+9123,DIVERGENT,removed conditional - replaced equality check with false,addFieldInto([ILorg/joda/time/DurationFieldType;I)V | alen=32 blen=37
+9156,DIVERGENT,removed conditional - replaced equality check with false,setFieldInto([ILorg/joda/time/DurationFieldType;I)V | alen=28 blen=33
+9191,DIVERGENT,Changed switch default to be first case,hours(I)Lorg/joda/time/Hours; | alen=9 blen=49
+9330,DIVERGENT,removed conditional - replaced equality check with false,withDurationAdded(JI)Lorg/joda/time/Duration; | alen=18 blen=39
+9336,DIVERGENT,removed conditional - replaced equality check with false,withDurationAdded(Lorg/joda/time/ReadableDuration;I)Lorg/joda/time/Duration; | alen=10 blen=21
+9346,DIVERGENT,Changed switch default to be first case,days(I)Lorg/joda/time/Days; | alen=9 blen=45
+9428,DIVERGENT,removed conditional - replaced equality check with false,abuts(Lorg/joda/time/ReadableInterval;)Z | alen=29 blen=39
+9433,DIVERGENT,removed conditional - replaced equality check with false,abuts(Lorg/joda/time/ReadableInterval;)Z | alen=28 blen=43
+9460,DIVERGENT,removed conditional - replaced equality check with false,parseWithOffset(Ljava/lang/String;)Lorg/joda/time/Interval; | alen=140 blen=152
+9464,DIVERGENT,removed conditional - replaced equality check with false,parseWithOffset(Ljava/lang/String;)Lorg/joda/time/Interval; | alen=140 blen=167
+9633,DIVERGENT,Changed switch default to be first case,seconds(I)Lorg/joda/time/Seconds; | alen=9 blen=29
+9697,DIVERGENT,Changed switch default to be first case,minutes(I)Lorg/joda/time/Minutes; | alen=9 blen=29
+9751,DIVERGENT,Changed switch default to be first case,getField(ILorg/joda/time/Chronology;)Lorg/joda/time/DateTimeField; | alen=17 blen=22
+9806,DIVERGENT,removed conditional - replaced equality check with false,withPeriodAdded(Lorg/joda/time/ReadablePeriod;I)Lorg/joda/time/YearMonth; | alen=44 blen=93
+9862,DIVERGENT,Changed switch default to be first case,months(I)Lorg/joda/time/Months; | alen=9 blen=65
+9971,DIVERGENT,Replaced integer addition with subtraction,getRemainder(I)I | alen=19 blen=19
+9973,DIVERGENT,Replaced integer addition with subtraction,getRemainder(I)I | alen=19 blen=19
+9992,DIVERGENT,Changed switch default to be first case,getField(ILorg/joda/time/Chronology;)Lorg/joda/time/DateTimeField; | alen=17 blen=22
+10045,DIVERGENT,removed conditional - replaced equality check with false,withPeriodAdded(Lorg/joda/time/ReadablePeriod;I)Lorg/joda/time/MonthDay; | alen=44 blen=93
+10073,DIVERGENT,removed conditional - replaced equality check with false,getNameSet(Ljava/util/Locale;Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String; | alen=197 blen=378
+10075,DIVERGENT,removed conditional - replaced equality check with false,getNameSet(Ljava/util/Locale;Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String; | alen=197 blen=376
+10104,DIVERGENT,removed conditional - replaced equality check with false,getNameSet(Ljava/util/Locale;Ljava/lang/String;Ljava/lang/String;Z)[Ljava/lang/String; | alen=166 blen=330
+10106,DIVERGENT,removed conditional - replaced equality check with false,getNameSet(Ljava/util/Locale;Ljava/lang/String;Ljava/lang/String;Z)[Ljava/lang/String; | alen=166 blen=328
+10197,DIVERGENT,Changed switch default to be first case,weeks(I)Lorg/joda/time/Weeks; | alen=9 blen=29
+10300,DIVERGENT,Changed switch default to be first case,getField(ILorg/joda/time/Chronology;)Lorg/joda/time/DateTimeField; | alen=17 blen=27
+10348,DIVERGENT,removed conditional - replaced equality check with false,withPeriodAdded(Lorg/joda/time/ReadablePeriod;I)Lorg/joda/time/YearMonthDay; | alen=44 blen=93
+10383,DIVERGENT,Replaced integer addition with subtraction,calculateFirstDayOfYearMillis(I)J | alen=50 blen=50
+10385,DIVERGENT,Replaced integer addition with subtraction,calculateFirstDayOfYearMillis(I)J | alen=50 blen=50
+10428,DIVERGENT,removed conditional - replaced equality check with false,isLeapYear(I)Z | alen=12 blen=21
+10446,DIVERGENT,removed conditional - replaced equality check with false,between(Lorg/joda/time/ReadableInstant;Lorg/joda/time/ReadableInstant;Lorg/joda/time/DurationFieldType;)I | alen=21 blen=42
+10451,DIVERGENT,removed conditional - replaced equality check with false,between(Lorg/joda/time/ReadablePartial;Lorg/joda/time/ReadablePartial;Lorg/joda/time/ReadablePeriod;)I | alen=68 blen=144
+10526,DIVERGENT,Replaced integer modulus with multiplication,fromDateFields(Ljava/util/Date;)Lorg/joda/time/TimeOfDay; | alen=26 blen=26
+10529,DIVERGENT,Changed switch default to be first case,getField(ILorg/joda/time/Chronology;)Lorg/joda/time/DateTimeField; | alen=17 blen=32
+10576,DIVERGENT,removed conditional - replaced equality check with false,withPeriodAdded(Lorg/joda/time/ReadablePeriod;I)Lorg/joda/time/TimeOfDay; | alen=44 blen=93
+10617,DIVERGENT,removed conditional - replaced equality check with false,equals(Ljava/lang/Object;)Z | alen=35 blen=53
+10623,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=37 blen=40
+10624,DIVERGENT,removed conditional - replaced equality check with false,equals(Ljava/lang/Object;)Z | alen=35 blen=53
+10626,DIVERGENT,removed conditional - replaced equality check with false,equals(Ljava/lang/Object;)Z | alen=32 blen=49
+10627,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=37 blen=40
+10629,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=37 blen=40
+10713,DIVERGENT,Replaced integer subtraction with addition,roundFloor(J)J | alen=25 blen=25
+10788,DIVERGENT,Changed switch default to be first case,years(I)Lorg/joda/time/Years; | alen=9 blen=29
+11038,DIVERGENT,Changed switch default to be first case,getField(Lorg/joda/time/Chronology;)Lorg/joda/time/DateTimeField; | alen=13 blen=123
+11065,DIVERGENT,Changed switch default to be first case,readResolve()Ljava/lang/Object; | alen=7 blen=95
+11066,DIVERGENT,replaced return value with null for org/joda/time/DateTimeFieldType$StandardDateTimeFieldType::readResolve,readResolve()Ljava/lang/Object; | alen=51 blen=53
+11067,DIVERGENT,replaced return value with null for org/joda/time/DateTimeFieldType$StandardDateTimeFieldType::readResolve,readResolve()Ljava/lang/Object; | alen=51 blen=53
+11068,DIVERGENT,replaced return value with null for org/joda/time/DateTimeFieldType$StandardDateTimeFieldType::readResolve,readResolve()Ljava/lang/Object; | alen=51 blen=53
+11069,DIVERGENT,replaced return value with null for org/joda/time/DateTimeFieldType$StandardDateTimeFieldType::readResolve,readResolve()Ljava/lang/Object; | alen=51 blen=53
+11070,DIVERGENT,replaced return value with null for org/joda/time/DateTimeFieldType$StandardDateTimeFieldType::readResolve,readResolve()Ljava/lang/Object; | alen=51 blen=53
+11071,DIVERGENT,replaced return value with null for org/joda/time/DateTimeFieldType$StandardDateTimeFieldType::readResolve,readResolve()Ljava/lang/Object; | alen=51 blen=53
+11072,DIVERGENT,replaced return value with null for org/joda/time/DateTimeFieldType$StandardDateTimeFieldType::readResolve,readResolve()Ljava/lang/Object; | alen=51 blen=53
+11073,DIVERGENT,replaced return value with null for org/joda/time/DateTimeFieldType$StandardDateTimeFieldType::readResolve,readResolve()Ljava/lang/Object; | alen=51 blen=53
+11074,DIVERGENT,replaced return value with null for org/joda/time/DateTimeFieldType$StandardDateTimeFieldType::readResolve,readResolve()Ljava/lang/Object; | alen=51 blen=53
+11075,DIVERGENT,replaced return value with null for org/joda/time/DateTimeFieldType$StandardDateTimeFieldType::readResolve,readResolve()Ljava/lang/Object; | alen=51 blen=53
+11076,DIVERGENT,replaced return value with null for org/joda/time/DateTimeFieldType$StandardDateTimeFieldType::readResolve,readResolve()Ljava/lang/Object; | alen=51 blen=53
+11077,DIVERGENT,replaced return value with null for org/joda/time/DateTimeFieldType$StandardDateTimeFieldType::readResolve,readResolve()Ljava/lang/Object; | alen=51 blen=53
+11078,DIVERGENT,replaced return value with null for org/joda/time/DateTimeFieldType$StandardDateTimeFieldType::readResolve,readResolve()Ljava/lang/Object; | alen=51 blen=53
+11079,DIVERGENT,replaced return value with null for org/joda/time/DateTimeFieldType$StandardDateTimeFieldType::readResolve,readResolve()Ljava/lang/Object; | alen=51 blen=53
+11080,DIVERGENT,replaced return value with null for org/joda/time/DateTimeFieldType$StandardDateTimeFieldType::readResolve,readResolve()Ljava/lang/Object; | alen=51 blen=53
+11081,DIVERGENT,replaced return value with null for org/joda/time/DateTimeFieldType$StandardDateTimeFieldType::readResolve,readResolve()Ljava/lang/Object; | alen=51 blen=53
+11082,DIVERGENT,replaced return value with null for org/joda/time/DateTimeFieldType$StandardDateTimeFieldType::readResolve,readResolve()Ljava/lang/Object; | alen=51 blen=53
+11083,DIVERGENT,replaced return value with null for org/joda/time/DateTimeFieldType$StandardDateTimeFieldType::readResolve,readResolve()Ljava/lang/Object; | alen=51 blen=53
+11084,DIVERGENT,replaced return value with null for org/joda/time/DateTimeFieldType$StandardDateTimeFieldType::readResolve,readResolve()Ljava/lang/Object; | alen=51 blen=53
+11085,DIVERGENT,replaced return value with null for org/joda/time/DateTimeFieldType$StandardDateTimeFieldType::readResolve,readResolve()Ljava/lang/Object; | alen=51 blen=53
+11086,DIVERGENT,replaced return value with null for org/joda/time/DateTimeFieldType$StandardDateTimeFieldType::readResolve,readResolve()Ljava/lang/Object; | alen=51 blen=53
+11087,DIVERGENT,replaced return value with null for org/joda/time/DateTimeFieldType$StandardDateTimeFieldType::readResolve,readResolve()Ljava/lang/Object; | alen=51 blen=53
+11413,DIVERGENT,removed conditional - replaced equality check with false,withLocale(Ljava/util/Locale;)Lorg/joda/time/format/PeriodFormatter; | alen=20 blen=43
+11454,DIVERGENT,replaced return value with null for org/joda/time/tz/ZoneInfoProvider::loadZoneData,loadZoneData(Ljava/lang/String;)Lorg/joda/time/DateTimeZone; | alen=57 blen=59
+11539,DIVERGENT,removed conditional - replaced equality check with false,equals(Ljava/lang/Object;)Z | alen=41 blen=61
+11622,DIVERGENT,removed conditional - replaced equality check with false,<init>(Lorg/joda/time/DurationField;Lorg/joda/time/DurationFieldType;I)V | alen=16 blen=23
+11639,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=28 blen=33
+11683,DIVERGENT,Replaced integer addition with subtraction,get(J)I | alen=24 blen=24
+11685,DIVERGENT,Replaced integer addition with subtraction,get(J)I | alen=24 blen=24
+11757,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=53 blen=98
+11793,DIVERGENT,removed conditional - replaced equality check with false,createInfo(J)Lorg/joda/time/tz/CachedDateTimeZone$Info; | alen=42 blen=66
+11812,DIVERGENT,removed conditional - replaced equality check with false,getInfo(J)Lorg/joda/time/tz/CachedDateTimeZone$Info; | alen=33 blen=42
+11827,DIVERGENT,removed conditional - replaced equality check with false,getNameKey(J)Ljava/lang/String; | alen=24 blen=38
+11836,DIVERGENT,removed conditional - replaced equality check with false,getOffset(J)I | alen=25 blen=39
+11845,DIVERGENT,removed conditional - replaced equality check with false,getStandardOffset(J)I | alen=25 blen=39
+11878,DIVERGENT,Changed switch default to be first case,getField(Lorg/joda/time/Chronology;)Lorg/joda/time/DurationField; | alen=13 blen=68
+11893,DIVERGENT,Changed switch default to be first case,readResolve()Ljava/lang/Object; | alen=7 blen=51
+12264,DIVERGENT,removed conditional - replaced equality check with false,toTimeZone()Ljava/util/TimeZone; | alen=30 blen=40
+12286,DIVERGENT,removed conditional - replaced equality check with false,withDurationAdded(JI)Lorg/joda/time/Instant; | alen=16 blen=33
+12292,DIVERGENT,removed conditional - replaced equality check with false,withDurationAdded(Lorg/joda/time/ReadableDuration;I)Lorg/joda/time/Instant; | alen=10 blen=21
+12318,DIVERGENT,Replaced long addition with subtraction,get(J)I | alen=31 blen=31
+12520,DIVERGENT,removed conditional - replaced comparison check with false,getMaximumValueForSet(JI)I | alen=15 blen=22
+12571,DIVERGENT,removed conditional - replaced comparison check with false,getDifferenceAsLong(JJ)J | alen=53 blen=65
+12580,DIVERGENT,removed conditional - replaced comparison check with true,getDifferenceAsLong(JJ)J | alen=54 blen=60
+12624,DIVERGENT,removed conditional - replaced equality check with false,<init>(Lorg/joda/time/DateTimeFieldType;Lorg/joda/time/DurationField;)V | alen=15 blen=24
+12675,DIVERGENT,replaced boolean return with false for org/joda/time/format/InternalPrinterDateTimePrinter::equals,equals(Ljava/lang/Object;)Z | alen=19 blen=21
+12677,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=14 blen=19
+12680,DIVERGENT,replaced boolean return with true for org/joda/time/format/InternalPrinterDateTimePrinter::equals,equals(Ljava/lang/Object;)Z | alen=19 blen=21
+12811,DIVERGENT,replaced boolean return with false for org/joda/time/format/InternalParserDateTimeParser::equals,equals(Ljava/lang/Object;)Z | alen=19 blen=21
+12813,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=14 blen=19
+12816,DIVERGENT,replaced boolean return with true for org/joda/time/format/InternalParserDateTimeParser::equals,equals(Ljava/lang/Object;)Z | alen=19 blen=21
+12886,DIVERGENT,removed conditional - replaced equality check with true,set(JLjava/lang/String;Ljava/util/Locale;)J | alen=12 blen=17
+13003,DIVERGENT,removed conditional - replaced equality check with false,adjustForMinMax()V | alen=11 blen=23
+13115,DIVERGENT,replaced Boolean return with True for org/joda/time/tz/ZoneInfoLogger$1::initialValue,initialValue()Ljava/lang/Boolean; | alen=2 blen=5
+82,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+193,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+197,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+198,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+211,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+234,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+238,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+341,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+342,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+355,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+356,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+388,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+389,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+414,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+415,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+468,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+706,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+707,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+721,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+722,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+738,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+739,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+748,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+749,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+769,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+809,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+898,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+974,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+975,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1278,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+1279,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+1282,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+1283,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+1667,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1668,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1671,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+1881,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+1882,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+1888,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+1889,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+1924,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1925,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1929,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1930,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1939,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1940,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2072,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2073,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2146,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2147,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2149,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2150,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2158,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2159,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2163,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2164,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+2168,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2169,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2173,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2174,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2179,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2255,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2274,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2275,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+2321,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2337,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2338,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2346,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2347,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2362,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2363,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2365,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2396,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2423,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2424,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2430,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2431,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+2537,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2642,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2643,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2661,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2671,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2846,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2847,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+2850,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2851,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+2929,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2930,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2967,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2968,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2973,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2974,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2980,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2981,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3000,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3001,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3015,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3016,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3020,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3021,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3022,UNREPRESENTABLE,removed call to org/joda/time/format/FormatUtils::appendPaddedInteger,exception java.io.IOException is never thrown in body of corresponding try statement
+3023,UNREPRESENTABLE,removed call to org/joda/time/format/FormatUtils::appendPaddedInteger,exception java.io.IOException is never thrown in body of corresponding try statement
+3049,UNREPRESENTABLE,removed call to org/joda/time/format/FormatUtils::appendUnpaddedInteger,exception java.io.IOException is never thrown in body of corresponding try statement
+3050,UNREPRESENTABLE,removed call to org/joda/time/format/FormatUtils::appendUnpaddedInteger,exception java.io.IOException is never thrown in body of corresponding try statement
+3105,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3106,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3113,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3114,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3122,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3123,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3145,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3146,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3164,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3165,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3171,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3172,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3229,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3230,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3347,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3371,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3372,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3384,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3385,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3467,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3468,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3475,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3476,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3481,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3484,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3515,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3523,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3569,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3601,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3602,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3607,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3608,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3615,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3629,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3630,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3635,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3636,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3644,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3691,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3751,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3752,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3795,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3796,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3803,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3804,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3826,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3842,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3843,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3899,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4147,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4190,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4191,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4502,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4503,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4560,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4561,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4939,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4950,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4951,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4955,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4956,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+5010,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5011,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+5019,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5020,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+5048,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5049,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+5062,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5117,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5118,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+5592,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5610,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5634,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5655,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5755,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5756,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+5828,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5887,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5894,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6006,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6007,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+6046,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6047,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+6054,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6055,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+6096,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6097,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+6106,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6107,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+6462,UNREPRESENTABLE,removed call to org/joda/time/format/DateTimeFormatter::printTo,exception java.io.IOException is never thrown in body of corresponding try statement
+6464,UNREPRESENTABLE,removed call to org/joda/time/format/DateTimeFormatter::printTo,exception java.io.IOException is never thrown in body of corresponding try statement
+6466,UNREPRESENTABLE,removed call to org/joda/time/format/DateTimeFormatter::printTo,exception java.io.IOException is never thrown in body of corresponding try statement
+6486,UNREPRESENTABLE,removed call to org/joda/time/format/DateTimeFormatter::printTo,exception java.io.IOException is never thrown in body of corresponding try statement
+6487,UNREPRESENTABLE,removed call to org/joda/time/format/DateTimeFormatter::printTo,exception java.io.IOException is never thrown in body of corresponding try statement
+6488,UNREPRESENTABLE,removed call to org/joda/time/format/DateTimeFormatter::printTo,exception java.io.IOException is never thrown in body of corresponding try statement
+6489,UNREPRESENTABLE,removed call to org/joda/time/format/DateTimeFormatter::printTo,exception java.io.IOException is never thrown in body of corresponding try statement
+6490,UNREPRESENTABLE,removed call to org/joda/time/format/DateTimeFormatter::printTo,exception java.io.IOException is never thrown in body of corresponding try statement
+6491,UNREPRESENTABLE,removed call to org/joda/time/format/DateTimeFormatter::printTo,exception java.io.IOException is never thrown in body of corresponding try statement
+6550,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6551,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+6648,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6649,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+6817,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6818,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+6860,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6861,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7147,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7148,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7517,UNREPRESENTABLE,replaced return value with null for org/joda/time/MutableDateTime::clone,exception java.lang.CloneNotSupportedException is never thrown in body of corresponding try statement
+7761,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7762,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7771,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7772,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7791,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7792,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7798,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7799,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7810,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+7811,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+7820,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7821,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7827,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7828,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7833,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+7834,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+7842,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7843,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7862,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7863,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7866,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7877,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7878,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7917,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7918,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7922,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7990,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8160,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8161,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8165,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8166,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8184,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8185,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8197,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8198,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8201,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8202,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8205,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8206,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8209,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8210,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8218,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8219,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8225,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8226,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8385,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8386,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8475,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8492,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8493,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8498,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8506,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8531,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8532,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8535,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8536,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8544,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9062,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9063,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+9114,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9115,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+9131,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9132,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+9149,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9150,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+9175,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9176,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+9507,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9508,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+9519,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9523,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9551,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9552,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+9559,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9560,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+9573,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9574,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+9581,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9582,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+9812,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9813,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+10051,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+10052,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+10354,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+10355,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+10458,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+10459,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+10507,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+10508,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+10582,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+10583,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+11110,UNREPRESENTABLE,replaced return value with null for org/joda/time/MutablePeriod::clone,exception java.lang.CloneNotSupportedException is never thrown in body of corresponding try statement
+11251,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+11252,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+11458,UNREPRESENTABLE,removed call to java/io/InputStream::close,exception java.io.IOException is never thrown in body of corresponding try statement
+11460,UNREPRESENTABLE,removed call to java/io/DataInputStream::close,exception java.io.IOException is never thrown in body of corresponding try statement
+11470,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+11471,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+11473,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+11537,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+11538,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+11550,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+11551,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+11554,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+11555,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+11558,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+11559,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+12039,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+12040,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+12172,UNREPRESENTABLE,replaced return value with null for org/joda/time/MutableInterval::clone,exception java.lang.CloneNotSupportedException is never thrown in body of corresponding try statement
+12398,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+12399,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+12430,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+12431,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+12435,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+12436,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+12512,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+12513,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+12572,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+12696,UNREPRESENTABLE,removed call to org/joda/time/format/InternalPrinter::printTo,exception java.io.IOException is never thrown in body of corresponding try statement
+12697,UNREPRESENTABLE,removed call to org/joda/time/format/InternalPrinter::printTo,exception java.io.IOException is never thrown in body of corresponding try statement
+12971,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+13057,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+13058,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+13091,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement

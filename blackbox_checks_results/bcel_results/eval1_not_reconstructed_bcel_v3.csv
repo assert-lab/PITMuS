@@ -1,0 +1,5 @@
+xml_line,source_file,mutated_class,mutated_method,line_number,mutator,description
+9406,VerifyDialog.java,org.apache.bcel.verifier.VerifyDialog$IvjEventHandler,actionPerformed,75,org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator,removed call to org/apache/bcel/verifier/VerifyDialog::access$100
+9407,VerifyDialog.java,org.apache.bcel.verifier.VerifyDialog$IvjEventHandler,actionPerformed,78,org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator,removed call to org/apache/bcel/verifier/VerifyDialog::access$300
+9408,VerifyDialog.java,org.apache.bcel.verifier.VerifyDialog$IvjEventHandler,actionPerformed,81,org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator,removed call to org/apache/bcel/verifier/VerifyDialog::access$500
+9409,VerifyDialog.java,org.apache.bcel.verifier.VerifyDialog$IvjEventHandler,actionPerformed,84,org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator,removed call to org/apache/bcel/verifier/VerifyDialog::access$700

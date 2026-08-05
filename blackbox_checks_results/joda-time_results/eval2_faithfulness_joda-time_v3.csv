@@ -1,0 +1,68 @@
+index_no,verdict,xml_line,description,mutation_line,mutated_line
+253,FAIL: operator ~-> contradicts description,11312,Replaced XOR with AND,return ~position;,return position;
+274,FAIL: operator ~-> contradicts description,11329,Replaced XOR with AND,return ~position;,return position;
+333,UNVERIFIABLE: switch default not source-representable (reconstruction declined),82,Changed switch default to be first case,switch (iPrintZeroSetting) {,switch (iPrintZeroSetting) { // switch default changed to first case
+433,FAIL: operator ~-> contradicts description,174,Replaced XOR with AND,return mustParse ? ~position : position;,return mustParse ? position : position;
+442,FAIL: operator ~-> contradicts description,175,Replaced XOR with AND,return ~position;,return position;
+454,FAIL: operator ~-> contradicts description,176,Replaced XOR with AND,return ~suffixPos;,return suffixPos;
+523,FAIL: operator ~-> contradicts description,189,Replaced XOR with AND,return ~position;,return position;
+673,FAIL: operator ~-> contradicts description,13032,Replaced XOR with AND,return ~position;,return position;
+695,FAIL: operator ~-> contradicts description,10855,Replaced XOR with AND,return ~position;,return position;
+718,FAIL: operator ~-> contradicts description,10876,Replaced XOR with AND,return ~position;,return position;
+734,FAIL: operator ~-> contradicts description,11350,Replaced XOR with AND,return ~position;,return position;
+745,FAIL: operator ~-> contradicts description,11359,Replaced XOR with AND,return ~position;,return position;
+831,FAIL: operator ~-> contradicts description,6008,Replaced XOR with AND,return ~oldPos;,return oldPos;
+840,FAIL: operator ~-> contradicts description,6009,Replaced XOR with AND,return ~oldPos;,return oldPos;
+894,FAIL: operator ~-> contradicts description,12467,Replaced XOR with AND,return ~position;,return position;
+906,FAIL: operator ~-> contradicts description,12476,Replaced XOR with AND,return ~position;,return position;
+1634,UNVERIFIABLE: switch default not source-representable (reconstruction declined),4220,Changed switch default to be first case,switch (v >> 6) {,switch (v >> 6) { // switch default changed to first case
+2012,FAIL: operator ~-> contradicts description,1105,Replaced XOR with AND,i = ~i;,i = i;
+2031,FAIL: operator ~-> contradicts description,1124,Replaced XOR with AND,i = ~i;,i = i;
+2049,FAIL: operator ~-> contradicts description,1142,Replaced XOR with AND,i = ~i;,i = i;
+2096,FAIL: operator ~-> contradicts description,1190,Replaced XOR with AND,i = (i >= 0) ? (i + 1) : ~i;,i = (i >= 0) ? (i + 1) : i;
+2118,FAIL: operator ~-> contradicts description,1211,Replaced XOR with AND,i = ~i;,i = i;
+2480,FAIL: operator ~-> contradicts description,1449,Replaced XOR with AND,if (newPos == ~pos) {,if (newPos == pos) {
+2501,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1471,Changed switch default to be first case,switch (c) {,switch (c) { // switch default changed to first case
+3449,FAIL: operator ~-> contradicts description,12684,Replaced XOR with AND,return ~position;,return position;
+3457,FAIL: operator ~-> contradicts description,12685,Replaced XOR with AND,return ~position;,return position;
+3544,FAIL: operator ~-> contradicts description,12140,Replaced XOR with AND,return ~(expectedPos + 1);,return (expectedPos + 1);
+3549,FAIL: operator ~-> contradicts description,12141,Replaced XOR with AND,return ~newPos;,return newPos;
+3557,UNVERIFIABLE: switch default not source-representable (reconstruction declined),7911,Changed switch default to be first case,switch (maxDigits) {,switch (maxDigits) { // switch default changed to first case
+3586,FAIL: operator ~-> contradicts description,7926,Replaced XOR with AND,return ~position;,return position;
+3591,FAIL: operator ~-> contradicts description,7927,Replaced XOR with AND,return ~position;,return position;
+3672,FAIL: operator ~-> contradicts description,10315,Replaced XOR with AND,parsePos = ~parsePos;,parsePos = parsePos;
+3686,FAIL: operator ~-> contradicts description,10316,Replaced XOR with AND,return ~bestInvalidPos;,return bestInvalidPos;
+3730,FAIL: operator ~-> contradicts description,8707,Replaced XOR with AND,return ~position;,return position;
+3747,FAIL: operator ~-> contradicts description,8712,Replaced XOR with AND,return ~position;,return position;
+3778,FAIL: operator ~-> contradicts description,13049,Replaced XOR with AND,return ~position;,return position;
+3792,FAIL: operator ~-> contradicts description,10900,Replaced XOR with AND,return ~position;,return position;
+3809,FAIL: operator ~-> contradicts description,10902,Replaced XOR with AND,return ~position;,return position;
+3839,FAIL: operator ~-> contradicts description,11023,Replaced XOR with AND,return ~position;,return position;
+3856,FAIL: operator ~-> contradicts description,11025,Replaced XOR with AND,return ~position;,return position;
+3880,FAIL: operator ~-> contradicts description,11819,Replaced XOR with AND,return ~position;,return position;
+3884,UNVERIFIABLE: switch default not source-representable (reconstruction declined),11835,Changed switch default to be first case,switch (iType) {,switch (iType) { // switch default changed to first case
+3945,FAIL: operator ~-> contradicts description,2358,Replaced XOR with AND,return ~position;,return position;
+3951,FAIL: operator ~-> contradicts description,2359,Replaced XOR with AND,return ~position;,return position;
+3958,FAIL: operator ~-> contradicts description,2360,Replaced XOR with AND,return ~position;,return position;
+3963,FAIL: operator ~-> contradicts description,2361,Replaced XOR with AND,return ~position;,return position;
+3988,FAIL: operator ~-> contradicts description,2363,Replaced XOR with AND,return ~position;,return position;
+3993,FAIL: operator ~-> contradicts description,2364,Replaced XOR with AND,return ~position;,return position;
+4015,FAIL: operator ~-> contradicts description,2367,Replaced XOR with AND,return ~position;,return position;
+4020,FAIL: operator ~-> contradicts description,2368,Replaced XOR with AND,return ~position;,return position;
+4044,FAIL: operator ~-> contradicts description,2371,Replaced XOR with AND,return ~position;,return position;
+4144,FAIL: operator ~-> contradicts description,5598,Replaced XOR with AND,return ~position;,return position;
+4171,FAIL: operator ~-> contradicts description,5600,Replaced XOR with AND,return ~position;,return position;
+4186,FAIL: operator ~-> contradicts description,5603,Replaced XOR with AND,return ~position;,return position;
+4209,FAIL: operator ~-> contradicts description,5610,Replaced XOR with AND,return ~position;,return position;
+4219,FAIL: operator ~-> contradicts description,5613,Replaced XOR with AND,return ~position;,return position;
+5814,UNVERIFIABLE: switch default not source-representable (reconstruction declined),4369,Changed switch default to be first case,switch (c) {,switch (c) { // switch default changed to first case
+5832,UNVERIFIABLE: switch default not source-representable (reconstruction declined),4422,Changed switch default to be first case,switch (c) {,switch (c) { // switch default changed to first case
+5854,UNVERIFIABLE: switch default not source-representable (reconstruction declined),4424,Changed switch default to be first case,switch (c) {,switch (c) { // switch default changed to first case
+5944,UNVERIFIABLE: switch default not source-representable (reconstruction declined),12726,Changed switch default to be first case,switch (iType) {,switch (iType) { // switch default changed to first case
+6414,FAIL: operator ~-> contradicts description,4829,Replaced XOR with AND,newPos = ~newPos;,newPos = newPos;
+6442,FAIL: operator ~-> contradicts description,4861,Replaced XOR with AND,newPos = ~newPos;,newPos = newPos;
+6461,FAIL: operator ~-> contradicts description,4875,Replaced XOR with AND,newPos = ~newPos;,newPos = newPos;
+7269,UNVERIFIABLE: switch default not source-representable (reconstruction declined),5491,Changed switch default to be first case,switch (val2) {,switch (val2) { // switch default changed to first case
+7563,UNVERIFIABLE: switch default not source-representable (reconstruction declined),5914,Changed switch default to be first case,switch (iRoundingMode) {,switch (iRoundingMode) { // switch default changed to first case
+7951,FAIL: operator ~-> contradicts description,6398,Replaced XOR with AND,newPos = ~newPos;,newPos = newPos;
+11400,FAIL: operator ~-> contradicts description,10534,Replaced XOR with AND,newPos = ~newPos;,newPos = newPos;
