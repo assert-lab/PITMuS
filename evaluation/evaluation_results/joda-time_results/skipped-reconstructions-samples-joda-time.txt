@@ -1,0 +1,3 @@
+# joda-time: 1 of 13119 mutation(s) skipped (not reconstructed)
+# xml_line <TAB> (source_file:line) mutator=.. index=.. desc=.. <TAB> reason
+4707	(org/joda/time/chrono/AssembledChronology.java:421) mutator=org.pitest.mutationtest.engine.gregor.mutators.MathMutator index=715 desc='Replaced bitwise OR with AND'	reason: mutation not applied (fallback marker; mutator/pattern not matched on line)

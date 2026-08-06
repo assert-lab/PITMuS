@@ -1,2 +1,6 @@
-javalang>=0.13.0
-pandas>=1.0.0
+# Python >= 3.6 (tested on 3.12).
+# Also needs on PATH: JDK 8+ (javac/javap), Maven, PIT (via run_pit.sh).
+
+javalang>=0.13.0    
+notebook>=6.0      
+ipykernel>=6.0
