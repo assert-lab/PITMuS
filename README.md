@@ -53,7 +53,7 @@ PITMuS/                               ← repo root
 │       ├── PITMuS_dataset/           ← created by gen_dataset.py
 │       │   ├── mutated_methods-<project>.csv
 │       │   └── meta-<project>.csv
-│       └── injected_mutants/         ← created by inject.py
+│       └── injected_mutants/         ← created by inject.py (git-ignored)
 │           └── <ClassName>_id<N>_line<L>.java
 ├── pyproject.toml                    ← makes `pitmus` pip-installable
 ├── requirements.txt
