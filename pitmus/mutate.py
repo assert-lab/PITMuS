@@ -1321,7 +1321,105 @@ def _is_concat_plus(ltoks, idx):
     return False
 
 
-def apply_mutation(line, ltoks, desc, occ=0):
+_DECL_STOP = frozenset((
+    'final', 'static', 'public', 'private', 'protected', 'return', 'new',
+    'true', 'false', 'null', 'this', 'super', 'class', 'instanceof',
+    # primitive type names: hitting one means we have walked out of the current
+    # declarator list into a NEW declaration (`int a, int b` / `int a, long b`).
+    'int', 'long', 'short', 'byte', 'char', 'float', 'double', 'boolean', 'void',
+))
+
+
+def int_locals_in_span(lines, span):
+    """Names declared as a plain `int` LOCAL (or `int` parameter) inside `span`,
+    a (start, end, ...) 1-based inclusive line range.
+
+    Used to keep `++`/`--` on an int local out of the additive candidate list.
+    javac compiles `i++` on a plain `int` local to `iinc`, which PIT's math
+    mutator never visits; every other increment form compiles to a real add:
+
+        int i (local)          i++  ->  iinc          NOT a math target
+        field++ / this.f++          ->  iadd          IS  a math target
+        arr[k]++                    ->  iadd          IS  a math target
+        short/byte/char local  s++  ->  iadd          IS  a math target
+        long/double local      l++  ->  ladd/dadd     IS  a math target
+
+    Only the enclosing method span is scanned, so a local correctly shadows a
+    same-named field, and fields (which ARE math targets) are never collected.
+    `int[]` / `int a[]` are skipped: those are array types whose element writes
+    compile to `iadd`.
+    """
+    if not span:
+        return frozenset()
+    s, e = span[0], span[1]
+    if not (0 < s <= e <= len(lines)):
+        return frozenset()
+    try:
+        toks = [t.value for t in javalang.tokenizer.tokenize("\n".join(lines[s - 1:e]))]
+    except Exception:
+        return frozenset()
+    names = set()
+    n = len(toks)
+    i = 0
+    while i < n:
+        if toks[i] != 'int' or (i and toks[i - 1] == '.'):
+            i += 1
+            continue
+        if i + 1 < n and toks[i + 1] == '[':      # int[] xs  -> array type
+            i += 1
+            continue
+        j = i + 1
+        while j < n:
+            nm = toks[j]
+            if not nm.isidentifier() or nm in _DECL_STOP:
+                break
+            nxt = toks[j + 1] if j + 1 < n else ''
+            if nxt == '[':          # `int xs[]` -> C-style array declarator
+                break
+            if nxt.isidentifier():  # `Type name` -> a new declaration, not a
+                break               # continuation of this declarator list
+            names.add(nm)
+            # skip this declarator's initializer to the next ',' / ';' / ')'
+            k, depth = j + 1, 0
+            while k < n:
+                v = toks[k]
+                if v in ('(', '[', '{'):
+                    depth += 1
+                elif v in (')', ']', '}'):
+                    if depth == 0:
+                        break
+                    depth -= 1
+                elif depth == 0 and v in (',', ';'):
+                    break
+                k += 1
+            if k < n and toks[k] == ',':
+                j = k + 1
+                continue
+            break
+        # Resume AT j, not past it: j may itself be the `int` of the next
+        # declaration (`int a, int b`), which still needs collecting.
+        i = max(j, i + 1)
+    return frozenset(names)
+
+
+def _is_iinc_target(ltoks, idx, int_locals):
+    """True if the `++`/`--` at ltoks[idx] compiles to `iinc` (a plain `int`
+    local) rather than to an arithmetic add -- see int_locals_in_span."""
+    if not int_locals:
+        return False
+    # postfix `x++` -> operand is the previous token; prefix `++x` -> the next
+    for oi in (idx - 1, idx + 1):
+        if not (0 <= oi < len(ltoks)) or ltoks[oi].value not in int_locals:
+            continue
+        if oi and ltoks[oi - 1].value == '.':          # this.n++ / obj.n++
+            continue
+        if oi + 1 < len(ltoks) and ltoks[oi + 1].value in ('.', '['):
+            continue                                    # n.x++ / n[k]++
+        return True
+    return False
+
+
+def apply_mutation(line, ltoks, desc, occ=0, int_locals=frozenset()):
     d = desc.strip()
 
     m = re.match(r"Replaced (?:integer|long|float|double) (\w+) with (\w+)", d)
@@ -1341,6 +1439,12 @@ def apply_mutation(line, ltoks, desc, occ=0):
                 # Exclude String-concatenation `+`/`+=`: PIT never mutates it.
                 and not (old == "+" and t.value in ("+", "+=")
                          and _is_concat_plus(ltoks, i))
+                # Exclude `++`/`--` on a plain `int` local: javac compiles those
+                # to `iinc`, which PIT's math mutator never visits, so counting
+                # them shifts `occ` onto the wrong operator (mutating `i++`
+                # instead of the real `sum + x`).
+                and not (t.value == old + old
+                         and _is_iinc_target(ltoks, i, int_locals))
             ]
             if occ < len(matches):
                 t = matches[occ]
@@ -1779,7 +1883,7 @@ class _AdjTok:
 
 
 def apply_mutation_multiline(lines, stmt_tokens, desc, occ, stmt_start, stmt_end,
-                             mut_line=None):
+                             mut_line=None, int_locals=frozenset()):
     """Apply `desc` to the multi-line statement on lines [stmt_start..stmt_end] by
     feeding `apply_mutation` the joined statement text with token positions adjusted
     to index into that joined string. Returns (stmt_start, stmt_end, new_text) or None.
@@ -1815,7 +1919,7 @@ def apply_mutation_multiline(lines, stmt_tokens, desc, occ, stmt_start, stmt_end
         win_hi = line_starts[rel + 1] if rel + 1 < len(line_starts) else len(joined) + 1
         seen = 0
         for g in range(len(adjusted) + 4):
-            out = apply_mutation(joined, adjusted, desc, g)
+            out = apply_mutation(joined, adjusted, desc, g, int_locals)
             if out is None or out.endswith(fallback_marker) or out.strip() == joined.strip():
                 break
             cs = next((k for k in range(min(len(joined), len(out))) if joined[k] != out[k]),
@@ -1825,7 +1929,7 @@ def apply_mutation_multiline(lines, stmt_tokens, desc, occ, stmt_start, stmt_end
                     return (stmt_start, stmt_end, out)
                 seen += 1
 
-    result = apply_mutation(joined, adjusted, desc, occ)
+    result = apply_mutation(joined, adjusted, desc, occ, int_locals)
 
     if result.endswith(fallback_marker):
         return None
@@ -1834,26 +1938,33 @@ def apply_mutation_multiline(lines, stmt_tokens, desc, occ, stmt_start, stmt_end
     return (stmt_start, stmt_end, result)
 
 
-def apply_mutation_with_fallback(lines, all_tokens, lineno, desc, occ=0):
+def apply_mutation_with_fallback(lines, all_tokens, lineno, desc, occ=0, spans=None):
     """Returns (start_line, end_line, mutated_text). For single-line mutations
     start == end and mutated_text is one line. For multi-line, mutated_text replaces
-    the content of lines [start..end] and may itself contain newlines."""
+    the content of lines [start..end] and may itself contain newlines.
+
+    `spans` is the method-span list from load_source(); pass it so additive
+    mutators can tell an `int`-local `i++` (compiled to `iinc`, never a math
+    target) from a field/array/wide increment (compiled to a real add). Omitting
+    it only costs that precision -- see int_locals_in_span."""
     if not (0 < lineno <= len(lines)):
         return lineno, lineno, ""
     fallback_marker = "// MUTATED: " + desc.strip()
+    int_locals = (int_locals_in_span(lines, find_span_for_line(spans, lineno))
+                  if spans else frozenset())
 
     s, e = find_statement_span(lines, lineno)
     if e > s:
         stmt_tokens = [t for t in all_tokens
                        if t.position and s <= t.position[0] <= e]
         ml = apply_mutation_multiline(lines, stmt_tokens, desc, occ, s, e,
-                                      mut_line=lineno)
+                                      mut_line=lineno, int_locals=int_locals)
         if ml is not None:
             return ml
 
     line = lines[lineno - 1]
     ltoks = tokens_on_line(all_tokens, lineno)
-    result = apply_mutation(line, ltoks, desc, occ)
+    result = apply_mutation(line, ltoks, desc, occ, int_locals)
     if not result.endswith(fallback_marker) and result.strip() != line.strip():
         return lineno, lineno, result
 
@@ -1863,7 +1974,7 @@ def apply_mutation_with_fallback(lines, all_tokens, lineno, desc, occ=0):
             continue
         tline = lines[target - 1]
         ttoks = tokens_on_line(all_tokens, target)
-        tresult = apply_mutation(tline, ttoks, desc, 0)
+        tresult = apply_mutation(tline, ttoks, desc, 0, int_locals)
         if tresult.endswith(fallback_marker):
             continue
         if tresult.strip() == tline.strip():
@@ -1946,6 +2057,7 @@ __all__ = [
     "apply_mutation_multiline",
     "apply_mutation_with_fallback",
     "extract_javadoc",
+    "int_locals_in_span",
     "extract_method_spans",
     "extract_test_files",
     "find_span_for_line",

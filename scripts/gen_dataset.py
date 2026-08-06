@@ -128,7 +128,7 @@ def iter_mutations(system_path):
                 stmt_start, stmt_end, raw_mutated_text = sw_result
             else:
                 stmt_start, stmt_end, raw_mutated_text = apply_mutation_with_fallback(
-                    lines, tokens, lineno, desc, occ,
+                    lines, tokens, lineno, desc, occ, spans,
                 )
             if not (0 < stmt_start <= len(lines)) or not (0 < stmt_end <= len(lines)):
                 emit_skip(mut, rel_src, lineno, desc, bc_index, "statement bounds out of range (could not locate statement)")

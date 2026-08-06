@@ -203,7 +203,7 @@ def iter_mutations(system_path):
             if not (0 < lineno <= len(lines)):
                 continue
             stmt_start, stmt_end, raw_mutated_text = apply_mutation_with_fallback(
-                lines, tokens, lineno, desc, occ,
+                lines, tokens, lineno, desc, occ, spans,
             )
             if not (0 < stmt_start <= len(lines)) or not (0 < stmt_end <= len(lines)):
                 continue
