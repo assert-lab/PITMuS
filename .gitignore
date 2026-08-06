@@ -13,6 +13,7 @@ venv/
 
 # --- generated build outputs / caches ---
 **/target/
+**/injected_mutants/
 **/surefire-reports/
 **/.gradle/
 **/build/

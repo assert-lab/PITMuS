@@ -9,7 +9,8 @@ description = "PITMuS: reconstruct PIT bytecode mutations as Java source"
 readme = "README.md"
 requires-python = ">=3.6"
 license = { text = "Apache-2.0" }
-dependencies = ["javalang>=0.13.0", "pandas>=1.0.0"]
+dependencies = ["javalang>=0.13.0"]
 
 [tool.setuptools]
-packages = ["pitmus"]
+packages = ["shared"]
+package-dir = { "" = "PITMuS" }

@@ -1,6 +1,12 @@
 # PITMuS: PIT Mutations In the Source Code
 
-[![Watch the demo](https://img.youtube.com/vi/zgHkXnsgciw/maxresdefault.jpg)](https://youtu.be/zgHkXnsgciw)
+<p>
+  <a href="https://youtu.be/zgHkXnsgciw">
+    <img src="https://img.youtube.com/vi/zgHkXnsgciw/hqdefault.jpg" alt="Watch the demo" width="480">
+  </a>
+  <br>
+  <a href="https://youtu.be/zgHkXnsgciw">▶ Watch the demo</a>
+</p>
 
 PIT (Pitest) mutates Java **bytecode** and never exports mutated *source*. PITMuS bridges that
 gap: it parses PIT's XML report, maps each mutation back to the exact source line (using both the
@@ -9,9 +15,10 @@ either a **dataset of mutated methods** or **fully injected mutant `.java` files
 
 This repo has two layers:
 
-1. **Reconstruction** — turn a PIT report into source-level mutants. The engine is the `pitmus/`
-   package; `scripts/gen_dataset.py` and `scripts/inject.py` are thin CLIs over it.
-2. **Evaluation** (`blackbox_checks/`) — prove the reconstructions are faithful, by compiling them
+1. **Reconstruction** — turn a PIT report into source-level mutants. Everything lives under the
+   `PITMuS/` folder: the engine is the `PITMuS/shared/` package, and `PITMuS/gen_dataset.py` and
+   `PITMuS/inject.py` are thin CLIs over it.
+2. **Evaluation** (`evaluation/`) — prove the reconstructions are faithful, by compiling them
    and diffing their bytecode against the mutant `.class` files PIT itself exports.
 
 ---
@@ -19,21 +26,22 @@ This repo has two layers:
 ## Repository Structure
 
 ```
-PITMuS/
-├── pitmus/                           ← the reconstruction engine (importable package)
-│   ├── __init__.py                   ← public API (re-exports pitmus.mutate)
-│   ├── mutate.py                     ← statement location + mutator application
-│   └── version.py                    ← DATASET_VERSION (single source of truth)
-├── scripts/                          ← thin CLIs over the package
+PITMuS/                               ← repo root
+├── PITMuS/                           ← reconstruction tool: CLIs + shared engine
+│   ├── shared/                       ← the reconstruction engine (importable package)
+│   │   ├── __init__.py               ← public API (re-exports shared.mutate)
+│   │   ├── mutate.py                 ← statement location + mutator application
+│   │   └── version.py                ← dataset output-folder name (single source of truth)
 │   ├── run_pit.sh                    ← runs each project's pit.sh (mvn test + pitest EXPORT)
 │   ├── gen_dataset.py                ← PIT report → dataset CSVs   (main entry point)
 │   ├── inject.py                     ← PIT report → mutant .java files (standalone tool)
-│   └── pitmus_config.py              ← deprecated shim → pitmus.version
-├── blackbox_checks/
+│   └── pitmus_config.py              ← deprecated shim → shared.version
+├── evaluation/
 │   ├── evaluate_reconstruction.ipynb ← the 4 evaluations (eval0–eval3) that grade a dataset
-│   └── PitmusCompile.java            ← in-JVM batch compiler used by the bytecode oracle
-├── blackbox_checks_results/
-│   └── <project>_results/            ← per-project evaluation output (CSVs + Evaluation-*.txt)
+│   ├── PitmusCompile.java            ← in-JVM batch compiler used by the bytecode oracle
+│   └── evaluation_results/
+│       └── <project>_results/        ← per-project evaluation output (CSVs + Evaluation-*.txt
+│                                        + skipped-reconstructions-samples-<project>.txt)
 ├── test-projects/
 │   └── <project>/
 │       ├── src/main/java/            ← project source
@@ -42,17 +50,18 @@ PITMuS/
 │       │   ├── mutations.xml         ← PIT's report (INPUT to everything)
 │       │   └── export/               ← PIT's exported mutant .class files (ground truth for eval3)
 │       ├── target/classes/           ← compiled classes (for javap + compile classpath)
-│       ├── PITMuS_dataset_fresh_generation-<VERSION>/   ← created by gen_dataset.py
-│       │   ├── mutated_methods.csv
-│       │   └── meta.csv
+│       ├── PITMuS_dataset/           ← created by gen_dataset.py
+│       │   ├── mutated_methods-<project>.csv
+│       │   └── meta-<project>.csv
 │       └── injected_mutants/         ← created by inject.py
+│           └── <ClassName>_id<N>_line<L>.java
 ├── pyproject.toml                    ← makes `pitmus` pip-installable
 ├── requirements.txt
 └── README.md
 ```
 
-Both `scripts/` tools are **independent front-ends** — either works on its own — but they share
-one reconstruction engine (`pitmus/mutate.py`), so a fix to how a mutation is reconstructed
+Both CLIs in `PITMuS/` are **independent front-ends** — either works on its own — but they share
+one reconstruction engine (`PITMuS/shared/mutate.py`), so a fix to how a mutation is reconstructed
 applies to the dataset and the injected `.java` files alike. They previously carried separate
 copies of that logic, which drifted.
 
@@ -60,9 +69,10 @@ copies of that logic, which drifted.
 
 ## Prerequisites
 
-- **Python 3.6+**, deps via `pip install -r requirements.txt` (`javalang`, `pandas`).
-  The `scripts/` CLIs put the repo root on `sys.path` themselves, so they run straight from a
-  clone with nothing installed. To `import pitmus` from elsewhere (a notebook, your own code),
+- **Python 3.6+** (tested on 3.12), deps via `pip install -r requirements.txt` (`javalang` for
+  reconstruction; `notebook` + `ipykernel` to run the evaluations).
+  The `PITMuS/` CLIs put their own folder on `sys.path` themselves, so they run straight from a
+  clone with nothing installed. To `import shared` from elsewhere (a notebook, your own code),
   install it instead: `pip install -e .`
 - **A JDK on `PATH`** — the scripts call `javap` for bytecode-accurate targeting; the evaluation
   notebook calls `javac`/`javap`.
@@ -76,65 +86,42 @@ copies of that logic, which drifted.
 
 ```bash
 # 0. Produce PIT reports for every test-project (mvn test + pitest with EXPORT on).
-bash scripts/run_pit.sh
+bash PITMuS/run_pit.sh
 
 # 1. Reconstruct source-level mutants for one project -> dataset CSVs.
-python scripts/gen_dataset.py test-projects/joda-time
+python PITMuS/gen_dataset.py test-projects/joda-time
 
 # 2. (optional) Materialize mutant .java files for one project.
-python scripts/inject.py test-projects/joda-time
+python PITMuS/inject.py test-projects/joda-time
 
 # 3. Grade the reconstruction: open the notebook, set PROJECT, run top to bottom.
-#    blackbox_checks/evaluate_reconstruction.ipynb
+#    evaluation/evaluate_reconstruction.ipynb
 ```
 
-> `scripts/run_pit.sh` currently hardcodes `TEST_PROJECTS_DIR` to an absolute path — set it to
+> `PITMuS/run_pit.sh` currently hardcodes `TEST_PROJECTS_DIR` to an absolute path — set it to
 > your own `test-projects/` before running step 0.
 
-### Using the engine directly
-
-The reconstruction logic is importable, so you can reconstruct a mutation without going through
-either CLI:
-
-```python
-from pitmus import load_source, apply_mutation_with_fallback
-
-lines, tokens, spans = load_source("src/main/java/org/joda/time/DateTime.java")
-
-# PIT reported this <description> at this <lineNumber>; occ = which instance on the line.
-start, end, mutated = apply_mutation_with_fallback(
-    lines, tokens, 616, "negated conditional", occ=0, spans=spans,
-)
-print(start, end)       # 616 616  -- a multi-line statement returns a wider span
-print(mutated)
-# return (newChronology != getChronology() ? this : new DateTime(getMillis(), newChronology));
-```
-
-Pass `spans` when you have it: some mutators need the enclosing method's declarations to pick the
-right operator — e.g. `i++` on a plain `int` local compiles to `iinc`, which PIT's math mutator
-never targets, whereas `field++` / `arr[k]++` / a `long` local compile to a real add and *are*
-targets. Omitting `spans` only costs that precision.
 
 ### 1. `gen_dataset.py` — dataset CSVs
 
 ```bash
-python scripts/gen_dataset.py <system_path>
+python PITMuS/gen_dataset.py <system_path>
 ```
 
 Reads `<system_path>/target/pit-reports/mutations.xml`, resolves each mutation to its source line,
 applies it, finds the enclosing method body, and writes two row-aligned CSVs into
-`<system_path>/PITMuS_dataset_fresh_generation-<VERSION>/`.
+`<system_path>/PITMuS_dataset/`.
 
-**`mutated_methods.csv`** — one row per mutation, full method bodies:
+**`mutated_methods-<project>.csv`** — one row per mutation, full method bodies:
 
 | Column | Description |
 |---|---|
-| `index_no` | Sequential id (shared with `meta.csv`) |
+| `index_no` | Sequential id (shared with `meta-<project>.csv`) |
 | `original_method` | Full body of the method containing the mutated line |
 | `mutated_method` | Same body with the mutated line substituted |
 | `docstring` | Javadoc block preceding the method, or empty |
 
-**`meta.csv`** — joined to the above by `index_no`:
+**`meta-<project>.csv`** — joined to the above by `index_no`:
 
 | Column | Description |
 |---|---|
@@ -145,7 +132,7 @@ applies it, finds the enclosing method body, and writes two row-aligned CSVs int
 | `pit_line_number` | Line number PIT reported |
 | `description` | PIT's mutation description |
 | `test_file` | Covering test file(s), `\|`-separated |
-| `index_no` | Same id as `mutated_methods.csv` |
+| `index_no` | Same id as `mutated_methods-<project>.csv` |
 | `xml_line` | Physical line of the source `<mutation>` in `mutations.xml` (traceability) |
 
 ### 2. `inject.py` — mutant `.java` files
@@ -154,10 +141,10 @@ Writes each selected mutant as a full file in `<system_path>/injected_mutants/`,
 `<ClassName>_id<N>_line<L>.java` (`<N>` = the `index_no` from the dataset). Four selection modes:
 
 ```bash
-python scripts/inject.py <system_path>                              # every mutation
-python scripts/inject.py <system_path> id   <index_no>              # one mutation by id
-python scripts/inject.py <system_path> line <class.method:line>     # all on a method:line
-python scripts/inject.py <system_path> file <class_fqn | file.java> # all in one file
+python PITMuS/inject.py <system_path>                              # every mutation
+python PITMuS/inject.py <system_path> id   <index_no>              # one mutation by id
+python PITMuS/inject.py <system_path> line <class.method:line>     # all on a method:line
+python PITMuS/inject.py <system_path> file <class_fqn | file.java> # all in one file
 ```
 
 After writing each file it runs a `javalang` tokenizer check and flags any that fail with `[INVALID]`.
@@ -165,7 +152,7 @@ After writing each file it runs a `javalang` tokenizer check and flags any that 
 ### 3. `evaluate_reconstruction.ipynb` — the evaluations
 
 Set `REPO` and `PROJECT` in the config cell, then run top to bottom. It writes into
-`blackbox_checks_results/<project>_results/` and prints a consolidated `Evaluation-<project>_<VERSION>.txt`.
+`evaluation/evaluation_results/<project>_results/` and prints a consolidated `Evaluation-<project>_<VERSION>.txt`.
 
 | Evaluations | Question | Output |
 |---|---|---|
@@ -191,7 +178,7 @@ reconstructions and covers rows eval3 can't compile — keep both.
 |---|---|---|
 | `pit.sh` / PIT config | `-Dfeatures=+EXPORT` | Exports mutant `.class` files to `target/pit-reports/export/`. **Required for eval3.** |
 | PIT config | `<fullMutationMatrix>true`, `<exportLineCoverage>true` | Richer report (test matrix + line coverage). |
-| `pitmus/version.py` | `DATASET_VERSION = "v3"` | Stamps the output folder + every eval filename. `gen_dataset.py` reads it via `dataset_dirname()`; the notebook still hardcodes its own copy, so keep the two in step. |
+| `PITMuS/shared/version.py` | `dataset_dirname()` | Single source of truth for the dataset output-folder name (`PITMuS_dataset`). `gen_dataset.py` reads it; the notebook hardcodes the same name, so keep the two in step. |
 | `gen_dataset.py` (env) | `PITMUS_DEBUG_SKIPS=1` | Prints, to stderr, every mutation it *skipped* and why (single-line methods, unresolved spans, …). |
 | notebook eval3 | `BC_SAMPLE = None` | `None` = check all rows; set an int for a quick sample. |
 | notebook eval3 | `BC_WORKERS`, `BC_CHUNK` | Parallelism (defaults to CPU count) and rows per compile batch. |
@@ -215,6 +202,26 @@ The engine handles all 13 mutators in PIT's **STRONGER** group (DEFAULTS + `REMO
 | VoidMethodCall | removes the call |
 | Empty / Null / Primitive / True / False Returns | `return x;` → `return null;` / `true` / `Collections.emptyMap()` |
 | Bitwise / Shift | `&` → `\|`, `<<` → `>>` |
+
+### What PITMuS does *not* reconstruct
+
+A mutation is skipped when its bytecode target has **no matching token in the source line** —
+the operation is compiler-synthesized, so there is nothing to edit. This is rare (34 of ~51k
+mutations across 7 projects, ~0.06%) and covers two cases:
+
+- **`VoidMethodCall` on synthetic `access$NNN` accessors** — bridge methods the compiler generates
+  for inner-class member access; no such call exists in source.
+- **`Math` on compiler-generated arithmetic** — byte-level math (string-switch hashing, boxing,
+  index math) with no source operator.
+
+Everything on real, hand-written expressions is reconstructed. `gen_dataset.py` logs each skip to
+`evaluation/evaluation_results/<project>_results/skipped-reconstructions-samples-<project>.txt`.
+
+> **Note — the JDK version affects the mutation set.** PIT mutates *bytecode*, and `javac` compiles
+> the same source differently across Java versions (e.g. string concat via `StringBuilder` vs
+> `invokedynamic` in Java 9+, `access$NNN` accessors dropped by Java 11+ nestmates). So the **same
+> source can yield a different `mutations.xml` on a different JDK** — reconstruct with the same JDK
+> used to run PIT.
 
 ---
 
