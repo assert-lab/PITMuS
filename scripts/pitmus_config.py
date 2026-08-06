@@ -1,13 +1,14 @@
-# Single source of truth for the dataset/output version.
-#
-# Change DATASET_VERSION here and everything downstream moves together:
-#   - scripts/gen_dataset.py         writes into PITMuS_dataset_fresh_generation-<VERSION>/
-#   - blackbox_checks/evaluate_reconstruction.ipynb  reads that folder and stamps
-#     <VERSION> into every eval*/Evaluation-* output filename.
+"""Deprecated: moved to `pitmus.version`.
 
-DATASET_VERSION = "v1"
+Kept as a shim so any existing import keeps working. New code should use::
 
+    from pitmus import DATASET_VERSION, dataset_dirname
+"""
+import sys
+from pathlib import Path
 
-def dataset_dirname():
-    """Folder (under a test-project) that holds the generated dataset CSVs."""
-    return f"PITMuS_dataset_fresh_generation-{DATASET_VERSION}"
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from pitmus.version import DATASET_VERSION, dataset_dirname   # noqa: F401,E402
+
+__all__ = ["DATASET_VERSION", "dataset_dirname"]
