@@ -1,140 +1,0 @@
-[INFO] Scanning for projects...
-[INFO] 
-[INFO] --------------< org.apache.commons:commons-collections4 >---------------
-[INFO] Building Apache Commons Collections 4.4
-[INFO]   from pom.xml
-[INFO] --------------------------------[ jar ]---------------------------------
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/3.1.1/maven-jar-plugin-3.1.1.pom
-Progress (1): 787 BProgress (1): 1.7 kBProgress (1): 3.9 kBProgress (1): 6.3 kBProgress (1): 6.7 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/3.1.1/maven-jar-plugin-3.1.1.pom (6.7 kB at 33 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/3.1.1/maven-jar-plugin-3.1.1.jar
-Progress (1): 0.9/27 kBProgress (1): 2.3/27 kBProgress (1): 3.6/27 kBProgress (1): 5.0/27 kBProgress (1): 6.4/27 kBProgress (1): 7.7/27 kBProgress (1): 9.1/27 kBProgress (1): 10/27 kB Progress (1): 12/27 kBProgress (1): 13/27 kBProgress (1): 15/27 kBProgress (1): 16/27 kBProgress (1): 17/27 kBProgress (1): 19/27 kBProgress (1): 20/27 kBProgress (1): 21/27 kBProgress (1): 23/27 kBProgress (1): 24/27 kBProgress (1): 26/27 kBProgress (1): 27/27 kBProgress (1): 27 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/3.1.1/maven-jar-plugin-3.1.1.jar (27 kB at 693 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/animal-sniffer-maven-plugin/1.17/animal-sniffer-maven-plugin-1.17.pom
-Progress (1): 779 BProgress (1): 1.5 kBProgress (1): 4.6 kBProgress (1): 5.6 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/animal-sniffer-maven-plugin/1.17/animal-sniffer-maven-plugin-1.17.pom (5.6 kB at 75 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/animal-sniffer-parent/1.17/animal-sniffer-parent-1.17.pom
-Progress (1): 771 BProgress (1): 1.5 kBProgress (1): 3.2 kBProgress (1): 7.0 kBProgress (1): 8.4 kBProgress (1): 8.6 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/animal-sniffer-parent/1.17/animal-sniffer-parent-1.17.pom (8.6 kB at 166 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/animal-sniffer-maven-plugin/1.17/animal-sniffer-maven-plugin-1.17.jar
-Progress (1): 0.9/34 kBProgress (1): 2.3/34 kBProgress (1): 3.6/34 kBProgress (1): 5.0/34 kBProgress (1): 6.4/34 kBProgress (1): 7.7/34 kBProgress (1): 9.1/34 kBProgress (1): 10/34 kB Progress (1): 12/34 kBProgress (1): 13/34 kBProgress (1): 17/34 kBProgress (1): 22/34 kBProgress (1): 24/34 kBProgress (1): 28/34 kBProgress (1): 33/34 kBProgress (1): 34 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/animal-sniffer-maven-plugin/1.17/animal-sniffer-maven-plugin-1.17.jar (34 kB at 556 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/jacoco/jacoco-maven-plugin/0.8.4/jacoco-maven-plugin-0.8.4.pom
-Progress (1): 862 BProgress (1): 3.5 kBProgress (1): 4.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/jacoco/jacoco-maven-plugin/0.8.4/jacoco-maven-plugin-0.8.4.pom (4.4 kB at 90 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.build/0.8.4/org.jacoco.build-0.8.4.pom
-Progress (1): 760 BProgress (1): 2.7 kBProgress (1): 4.6 kBProgress (1): 8.9 kBProgress (1): 13 kB Progress (1): 17 kBProgress (1): 19 kBProgress (1): 20 kBProgress (1): 23 kBProgress (1): 26 kBProgress (1): 31 kBProgress (1): 36 kBProgress (1): 39 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.build/0.8.4/org.jacoco.build-0.8.4.pom (39 kB at 758 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/jacoco/jacoco-maven-plugin/0.8.4/jacoco-maven-plugin-0.8.4.jar
-Progress (1): 3.8/53 kBProgress (1): 7.7/53 kBProgress (1): 12/53 kB Progress (1): 16/53 kBProgress (1): 20/53 kBProgress (1): 25/53 kBProgress (1): 29/53 kBProgress (1): 33/53 kBProgress (1): 37/53 kBProgress (1): 42/53 kBProgress (1): 46/53 kBProgress (1): 50/53 kBProgress (1): 53 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/jacoco/jacoco-maven-plugin/0.8.4/jacoco-maven-plugin-0.8.4.jar (53 kB at 1.2 MB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.8.0/maven-compiler-plugin-3.8.0.pom
-Progress (1): 756 BProgress (1): 2.2 kBProgress (1): 4.3 kBProgress (1): 8.1 kBProgress (1): 10 kB Progress (1): 12 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.8.0/maven-compiler-plugin-3.8.0.pom (12 kB at 289 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/32/maven-plugins-32.pom
-Progress (1): 756 BProgress (1): 2.3 kBProgress (1): 4.7 kBProgress (1): 7.6 kBProgress (1): 10.0 kBProgress (1): 11 kB                     Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/32/maven-plugins-32.pom (11 kB at 261 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/32/maven-parent-32.pom
-Progress (1): 801 BProgress (1): 2.1 kBProgress (1): 5.2 kBProgress (1): 9.7 kBProgress (1): 14 kB Progress (1): 19 kBProgress (1): 23 kBProgress (1): 24 kBProgress (1): 26 kBProgress (1): 28 kBProgress (1): 32 kBProgress (1): 35 kBProgress (1): 38 kBProgress (1): 41 kBProgress (1): 43 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/32/maven-parent-32.pom (43 kB at 867 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/20/apache-20.pom
-Progress (1): 754 BProgress (1): 2.1 kBProgress (1): 3.9 kBProgress (1): 8.3 kBProgress (1): 13 kB Progress (1): 16 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/20/apache-20.pom (16 kB at 466 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.8.0/maven-compiler-plugin-3.8.0.jar
-Progress (1): 3.8/62 kBProgress (1): 4.1/62 kBProgress (1): 8.3/62 kBProgress (1): 13/62 kB Progress (1): 17/62 kBProgress (1): 21/62 kBProgress (1): 25/62 kBProgress (1): 29/62 kBProgress (1): 45/62 kBProgress (1): 61/62 kBProgress (1): 62 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.8.0/maven-compiler-plugin-3.8.0.jar (62 kB at 1.7 MB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/2.22.1/maven-surefire-plugin-2.22.1.pom
-Progress (1): 822 BProgress (1): 2.8 kBProgress (1): 5.0 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/2.22.1/maven-surefire-plugin-2.22.1.pom (5.0 kB at 122 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/2.22.1/surefire-2.22.1.pom
-Progress (1): 788 BProgress (1): 2.4 kBProgress (1): 4.0 kBProgress (1): 9.0 kBProgress (1): 13 kB Progress (1): 16 kBProgress (1): 19 kBProgress (1): 22 kBProgress (1): 25 kBProgress (1): 26 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/2.22.1/surefire-2.22.1.pom (26 kB at 679 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/2.22.1/maven-surefire-plugin-2.22.1.jar
-Progress (1): 7.7/41 kBProgress (1): 16/41 kB Progress (1): 25/41 kBProgress (1): 41 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/2.22.1/maven-surefire-plugin-2.22.1.jar (41 kB at 992 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/easymock/easymock/4.0.2/easymock-4.0.2.pom
-Progress (1): 1.1 kBProgress (1): 3.4 kBProgress (1): 6.8 kBProgress (1): 9.0 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/easymock/easymock/4.0.2/easymock-4.0.2.pom (9.0 kB at 200 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/easymock/easymock-parent/4.0.2/easymock-parent-4.0.2.pom
-Progress (1): 972 BProgress (1): 2.8 kBProgress (1): 5.7 kBProgress (1): 9.0 kBProgress (1): 13 kB Progress (1): 16 kBProgress (1): 19 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/easymock/easymock-parent/4.0.2/easymock-parent-4.0.2.pom (19 kB at 395 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/objenesis/objenesis/3.0.1/objenesis-3.0.1.pom
-Progress (1): 788 BProgress (1): 2.6 kBProgress (1): 3.5 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/objenesis/objenesis/3.0.1/objenesis-3.0.1.pom (3.5 kB at 71 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/objenesis/objenesis-parent/3.0.1/objenesis-parent-3.0.1.pom
-Progress (1): 769 BProgress (1): 2.4 kBProgress (1): 4.3 kBProgress (1): 7.6 kBProgress (1): 7.7 kBProgress (1): 10 kB Progress (1): 14 kBProgress (1): 17 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/objenesis/objenesis-parent/3.0.1/objenesis-parent-3.0.1.pom (17 kB at 429 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.pom
-Progress (1): 739 BProgress (1): 2.1 kBProgress (1): 5.4 kBProgress (1): 8.8 kBProgress (1): 12 kB Progress (1): 15 kBProgress (1): 16 kBProgress (1): 18 kBProgress (1): 21 kBProgress (1): 25 kBProgress (1): 27 kBProgress (1): 28 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.pom (28 kB at 676 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/easymock/easymock/4.0.2/easymock-4.0.2.jar
-Progress (1): 7.7/565 kBProgress (1): 8.2/565 kBProgress (1): 25/565 kB Progress (1): 41/565 kBProgress (1): 57/565 kBProgress (1): 74/565 kBProgress (1): 90/565 kBProgress (1): 106/565 kBProgress (1): 123/565 kBProgress (1): 131/565 kBProgress (1): 147/565 kBProgress (1): 164/565 kBProgress (1): 180/565 kBProgress (1): 197/565 kBProgress (1): 213/565 kBProgress (1): 229/565 kBProgress (1): 246/565 kBProgress (1): 262/565 kBProgress (1): 279/565 kBProgress (1): 295/565 kBProgress (1): 311/565 kBProgress (1): 328/565 kBProgress (1): 344/565 kBProgress (1): 360/565 kBProgress (1): 377/565 kBProgress (1): 393/565 kBProgress (1): 410/565 kBProgress (1): 426/565 kBProgress (1): 442/565 kBProgress (1): 459/565 kBProgress (1): 475/565 kBProgress (1): 492/565 kBProgress (1): 508/565 kBProgress (1): 524/565 kBProgress (1): 541/565 kBProgress (1): 557/565 kBProgress (1): 565 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/easymock/easymock/4.0.2/easymock-4.0.2.jar (565 kB at 4.8 MB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/objenesis/objenesis/3.0.1/objenesis-3.0.1.jar
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar
-Progress (1): 7.7/61 kBProgress (1): 16/61 kB Progress (1): 32/61 kBProgress (1): 49/61 kBProgress (1): 61 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/objenesis/objenesis/3.0.1/objenesis-3.0.1.jar (61 kB at 1.1 MB/s)
-Progress (1): 0.9/504 kBProgress (1): 2.3/504 kBProgress (1): 3.6/504 kBProgress (1): 5.0/504 kBProgress (1): 6.4/504 kBProgress (1): 7.7/504 kBProgress (1): 9.1/504 kBProgress (1): 10/504 kB Progress (1): 12/504 kBProgress (1): 13/504 kBProgress (1): 15/504 kBProgress (1): 16/504 kBProgress (1): 17/504 kBProgress (1): 19/504 kBProgress (1): 20/504 kBProgress (1): 21/504 kBProgress (1): 23/504 kBProgress (1): 24/504 kBProgress (1): 26/504 kBProgress (1): 27/504 kBProgress (1): 28/504 kBProgress (1): 30/504 kBProgress (1): 31/504 kBProgress (1): 32/504 kBProgress (1): 34/504 kBProgress (1): 35/504 kBProgress (1): 36/504 kBProgress (1): 38/504 kBProgress (1): 39/504 kBProgress (1): 41/504 kBProgress (1): 42/504 kBProgress (1): 43/504 kBProgress (1): 45/504 kBProgress (1): 46/504 kBProgress (1): 47/504 kBProgress (1): 49/504 kBProgress (1): 50/504 kBProgress (1): 52/504 kBProgress (1): 53/504 kBProgress (1): 54/504 kBProgress (1): 56/504 kBProgress (1): 60/504 kBProgress (1): 64/504 kBProgress (1): 68/504 kBProgress (1): 73/504 kBProgress (1): 77/504 kBProgress (1): 81/504 kBProgress (1): 85/504 kBProgress (1): 89/504 kBProgress (1): 94/504 kBProgress (1): 98/504 kBProgress (1): 102/504 kBProgress (1): 106/504 kBProgress (1): 111/504 kBProgress (1): 115/504 kBProgress (1): 119/504 kBProgress (1): 122/504 kBProgress (1): 127/504 kBProgress (1): 131/504 kBProgress (1): 135/504 kBProgress (1): 139/504 kBProgress (1): 144/504 kBProgress (1): 148/504 kBProgress (1): 152/504 kBProgress (1): 156/504 kBProgress (1): 160/504 kBProgress (1): 165/504 kBProgress (1): 169/504 kBProgress (1): 173/504 kBProgress (1): 177/504 kBProgress (1): 182/504 kBProgress (1): 186/504 kBProgress (1): 190/504 kBProgress (1): 194/504 kBProgress (1): 199/504 kBProgress (1): 203/504 kBProgress (1): 207/504 kBProgress (1): 211/504 kBProgress (1): 215/504 kBProgress (1): 220/504 kBProgress (1): 224/504 kBProgress (1): 240/504 kBProgress (1): 253/504 kBProgress (1): 270/504 kBProgress (1): 286/504 kBProgress (1): 303/504 kBProgress (1): 319/504 kBProgress (1): 335/504 kBProgress (1): 352/504 kBProgress (1): 368/504 kBProgress (1): 385/504 kBProgress (1): 401/504 kBProgress (1): 417/504 kBProgress (1): 434/504 kBProgress (1): 450/504 kBProgress (1): 466/504 kBProgress (1): 483/504 kBProgress (1): 499/504 kBProgress (1): 504 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar (504 kB at 3.1 MB/s)
-[INFO] 
-[INFO] --- clean:3.1.0:clean (default-clean) @ commons-collections4 ---
-[INFO] 
-[INFO] --- enforcer:3.0.0-M2:enforce (enforce-maven-version) @ commons-collections4 ---
-[INFO] 
-[INFO] --- enforcer:3.0.0-M2:enforce (enforce-maven-3) @ commons-collections4 ---
-[INFO] 
-[INFO] --- apache-rat:0.13:check (rat-check) @ commons-collections4 ---
-[INFO] RAT will not execute since it is configured to be skipped via system property 'rat.skip'.
-[INFO] 
-[INFO] --- build-helper:3.0.0:parse-version (parse-version) @ commons-collections4 ---
-[INFO] 
-[INFO] --- antrun:1.8:run (javadoc.resources) @ commons-collections4 ---
-[INFO] Executing tasks
-
-main:
-     [copy] Copying 2 files to /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/commons-collections4/target/apidocs/META-INF
-[INFO] Executed tasks
-[INFO] 
-[INFO] --- remote-resources:1.5:process (process-resource-bundles) @ commons-collections4 ---
-[INFO] 
-[INFO] --- buildnumber:1.4:create (default) @ commons-collections4 ---
-[INFO] Executing: /bin/sh -c cd '/Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/commons-collections4' && 'git' 'rev-parse' '--verify' 'HEAD'
-[INFO] Working directory: /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/commons-collections4
-[INFO] Storing buildNumber: 40d8b781ed87d90e53ad6ed8705956cd5cd7a3be at timestamp: 1784231700772
-[INFO] Storing buildScmBranch: main
-[INFO] 
-[INFO] --- resources:3.1.0:resources (default-resources) @ commons-collections4 ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/commons-collections4/src/main/resources
-[INFO] Copying 2 resources to META-INF
-[INFO] 
-[INFO] --- compiler:3.8.0:compile (default-compile) @ commons-collections4 ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 326 source files to /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/commons-collections4/target/classes
-[INFO] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/commons-collections4/src/main/java/org/apache/commons/collections4/collection/IndexedCollection.java: Some input files use or override a deprecated API.
-[INFO] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/commons-collections4/src/main/java/org/apache/commons/collections4/collection/IndexedCollection.java: Recompile with -Xlint:deprecation for details.
-[INFO] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/commons-collections4/src/main/java/org/apache/commons/collections4/functors/InstantiateTransformer.java: Some input files use unchecked or unsafe operations.
-[INFO] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/commons-collections4/src/main/java/org/apache/commons/collections4/functors/InstantiateTransformer.java: Recompile with -Xlint:unchecked for details.
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/commons-collections4/src/main/java/org/apache/commons/collections4/trie/AbstractPatriciaTrie.java:[1154,21] lastEntry() in org.apache.commons.collections4.trie.AbstractPatriciaTrie cannot implement lastEntry() in java.util.SequencedMap
-  attempting to assign weaker access privileges; was public
-[ERROR] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/commons-collections4/src/main/java/org/apache/commons/collections4/trie/AbstractPatriciaTrie.java:[743,21] firstEntry() in org.apache.commons.collections4.trie.AbstractPatriciaTrie cannot implement firstEntry() in java.util.SequencedMap
-  attempting to assign weaker access privileges; was public
-[ERROR] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/commons-collections4/src/main/java/org/apache/commons/collections4/trie/PatriciaTrie.java:[65,8] lastEntry() in org.apache.commons.collections4.trie.AbstractPatriciaTrie cannot implement lastEntry() in java.util.SequencedMap
-  attempting to assign weaker access privileges; was public
-[ERROR] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/commons-collections4/src/main/java/org/apache/commons/collections4/list/AbstractLinkedList.java:[347,20] addLast(E) in org.apache.commons.collections4.list.AbstractLinkedList cannot implement addLast(E) in java.util.List
-  return type boolean is not compatible with void
-[ERROR] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/commons-collections4/src/main/java/org/apache/commons/collections4/list/AbstractLinkedList.java:[342,20] addFirst(E) in org.apache.commons.collections4.list.AbstractLinkedList cannot implement addFirst(E) in java.util.List
-  return type boolean is not compatible with void
-[ERROR] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/commons-collections4/src/main/java/org/apache/commons/collections4/list/NodeCachingLinkedList.java:[44,8] addLast(E) in org.apache.commons.collections4.list.AbstractLinkedList cannot implement addLast(E) in java.util.List
-  return type boolean is not compatible with void
-[ERROR] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/commons-collections4/src/main/java/org/apache/commons/collections4/list/CursorableLinkedList.java:[61,8] addLast(E) in org.apache.commons.collections4.list.AbstractLinkedList cannot implement addLast(E) in java.util.List
-  return type boolean is not compatible with void
-[INFO] 7 errors 
-[INFO] -------------------------------------------------------------
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  3.594 s
-[INFO] Finished at: 2026-07-16T14:55:02-05:00
-[INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.0:compile (default-compile) on project commons-collections4: Compilation failure: Compilation failure: 
-[ERROR] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/commons-collections4/src/main/java/org/apache/commons/collections4/trie/AbstractPatriciaTrie.java:[1154,21] lastEntry() in org.apache.commons.collections4.trie.AbstractPatriciaTrie cannot implement lastEntry() in java.util.SequencedMap
-[ERROR]   attempting to assign weaker access privileges; was public
-[ERROR] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/commons-collections4/src/main/java/org/apache/commons/collections4/trie/AbstractPatriciaTrie.java:[743,21] firstEntry() in org.apache.commons.collections4.trie.AbstractPatriciaTrie cannot implement firstEntry() in java.util.SequencedMap
-[ERROR]   attempting to assign weaker access privileges; was public
-[ERROR] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/commons-collections4/src/main/java/org/apache/commons/collections4/trie/PatriciaTrie.java:[65,8] lastEntry() in org.apache.commons.collections4.trie.AbstractPatriciaTrie cannot implement lastEntry() in java.util.SequencedMap
-[ERROR]   attempting to assign weaker access privileges; was public
-[ERROR] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/commons-collections4/src/main/java/org/apache/commons/collections4/list/AbstractLinkedList.java:[347,20] addLast(E) in org.apache.commons.collections4.list.AbstractLinkedList cannot implement addLast(E) in java.util.List
-[ERROR]   return type boolean is not compatible with void
-[ERROR] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/commons-collections4/src/main/java/org/apache/commons/collections4/list/AbstractLinkedList.java:[342,20] addFirst(E) in org.apache.commons.collections4.list.AbstractLinkedList cannot implement addFirst(E) in java.util.List
-[ERROR]   return type boolean is not compatible with void
-[ERROR] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/commons-collections4/src/main/java/org/apache/commons/collections4/list/NodeCachingLinkedList.java:[44,8] addLast(E) in org.apache.commons.collections4.list.AbstractLinkedList cannot implement addLast(E) in java.util.List
-[ERROR]   return type boolean is not compatible with void
-[ERROR] /Users/nulfat/Documents/Projects/PhD/PITMuS/PITMuS/test-projects/commons-collections4/src/main/java/org/apache/commons/collections4/list/CursorableLinkedList.java:[61,8] addLast(E) in org.apache.commons.collections4.list.AbstractLinkedList cannot implement addLast(E) in java.util.List
-[ERROR]   return type boolean is not compatible with void
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
