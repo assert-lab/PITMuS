@@ -9,7 +9,8 @@ either a **dataset of mutated methods** or **fully injected mutant `.java` files
 
 This repo has two layers:
 
-1. **Reconstruction** (`scripts/`) — turn a PIT report into source-level mutants.
+1. **Reconstruction** — turn a PIT report into source-level mutants. The engine is the `pitmus/`
+   package; `scripts/gen_dataset.py` and `scripts/inject.py` are thin CLIs over it.
 2. **Evaluation** (`blackbox_checks/`) — prove the reconstructions are faithful, by compiling them
    and diffing their bytecode against the mutant `.class` files PIT itself exports.
 
@@ -19,10 +20,15 @@ This repo has two layers:
 
 ```
 PITMuS/
-├── scripts/
+├── pitmus/                           ← the reconstruction engine (importable package)
+│   ├── __init__.py                   ← public API (re-exports pitmus.mutate)
+│   ├── mutate.py                     ← statement location + mutator application
+│   └── version.py                    ← DATASET_VERSION (single source of truth)
+├── scripts/                          ← thin CLIs over the package
 │   ├── run_pit.sh                    ← runs each project's pit.sh (mvn test + pitest EXPORT)
 │   ├── gen_dataset.py                ← PIT report → dataset CSVs   (main entry point)
-│   └── inject.py                     ← PIT report → mutant .java files (standalone tool)
+│   ├── inject.py                     ← PIT report → mutant .java files (standalone tool)
+│   └── pitmus_config.py              ← deprecated shim → pitmus.version
 ├── blackbox_checks/
 │   ├── evaluate_reconstruction.ipynb ← the 4 evaluations (eval0–eval3) that grade a dataset
 │   └── PitmusCompile.java            ← in-JVM batch compiler used by the bytecode oracle
@@ -40,18 +46,24 @@ PITMuS/
 │       │   ├── mutated_methods.csv
 │       │   └── meta.csv
 │       └── injected_mutants/         ← created by inject.py
+├── pyproject.toml                    ← makes `pitmus` pip-installable
 ├── requirements.txt
-├── FINDINGS.md                       ← evaluation write-up (bugs found + fixes)
 └── README.md
 ```
 
-The two `scripts/` tools are **independent** — either works on its own.
+Both `scripts/` tools are **independent front-ends** — either works on its own — but they share
+one reconstruction engine (`pitmus/mutate.py`), so a fix to how a mutation is reconstructed
+applies to the dataset and the injected `.java` files alike. They previously carried separate
+copies of that logic, which drifted.
 
 ---
 
 ## Prerequisites
 
 - **Python 3.6+**, deps via `pip install -r requirements.txt` (`javalang`, `pandas`).
+  The `scripts/` CLIs put the repo root on `sys.path` themselves, so they run straight from a
+  clone with nothing installed. To `import pitmus` from elsewhere (a notebook, your own code),
+  install it instead: `pip install -e .`
 - **A JDK on `PATH`** — the scripts call `javap` for bytecode-accurate targeting; the evaluation
   notebook calls `javac`/`javap`.
 - **Maven** — to build subject projects and (optionally) resolve the compile classpath in eval3.
@@ -75,6 +87,33 @@ python scripts/inject.py test-projects/joda-time
 # 3. Grade the reconstruction: open the notebook, set PROJECT, run top to bottom.
 #    blackbox_checks/evaluate_reconstruction.ipynb
 ```
+
+> `scripts/run_pit.sh` currently hardcodes `TEST_PROJECTS_DIR` to an absolute path — set it to
+> your own `test-projects/` before running step 0.
+
+### Using the engine directly
+
+The reconstruction logic is importable, so you can reconstruct a mutation without going through
+either CLI:
+
+```python
+from pitmus import load_source, apply_mutation_with_fallback
+
+lines, tokens, spans = load_source("src/main/java/org/joda/time/DateTime.java")
+
+# PIT reported this <description> at this <lineNumber>; occ = which instance on the line.
+start, end, mutated = apply_mutation_with_fallback(
+    lines, tokens, 616, "negated conditional", occ=0, spans=spans,
+)
+print(start, end)       # 616 616  -- a multi-line statement returns a wider span
+print(mutated)
+# return (newChronology != getChronology() ? this : new DateTime(getMillis(), newChronology));
+```
+
+Pass `spans` when you have it: some mutators need the enclosing method's declarations to pick the
+right operator — e.g. `i++` on a plain `int` local compiles to `iinc`, which PIT's math mutator
+never targets, whereas `field++` / `arr[k]++` / a `long` local compile to a real add and *are*
+targets. Omitting `spans` only costs that precision.
 
 ### 1. `gen_dataset.py` — dataset CSVs
 
@@ -152,7 +191,7 @@ reconstructions and covers rows eval3 can't compile — keep both.
 |---|---|---|
 | `pit.sh` / PIT config | `-Dfeatures=+EXPORT` | Exports mutant `.class` files to `target/pit-reports/export/`. **Required for eval3.** |
 | PIT config | `<fullMutationMatrix>true`, `<exportLineCoverage>true` | Richer report (test matrix + line coverage). |
-| `gen_dataset.py` line 20 | `DATASET_VERSION = "v3"` | Stamps the output folder + every eval filename. gen_dataset and the notebook must match. |
+| `pitmus/version.py` | `DATASET_VERSION = "v3"` | Stamps the output folder + every eval filename. `gen_dataset.py` reads it via `dataset_dirname()`; the notebook still hardcodes its own copy, so keep the two in step. |
 | `gen_dataset.py` (env) | `PITMUS_DEBUG_SKIPS=1` | Prints, to stderr, every mutation it *skipped* and why (single-line methods, unresolved spans, …). |
 | notebook eval3 | `BC_SAMPLE = None` | `None` = check all rows; set an int for a quick sample. |
 | notebook eval3 | `BC_WORKERS`, `BC_CHUNK` | Parallelism (defaults to CPU count) and rows per compile batch. |
@@ -162,7 +201,7 @@ reconstructions and covers rows eval3 can't compile — keep both.
 
 ## Supported Mutators
 
-Both scripts handle all 13 mutators in PIT's **STRONGER** group (DEFAULTS + `REMOVE_CONDITIONALS`
+The engine handles all 13 mutators in PIT's **STRONGER** group (DEFAULTS + `REMOVE_CONDITIONALS`
 + `EXPERIMENTAL_SWITCH`).
 
 | Mutator | Example |
