@@ -1,0 +1,41 @@
+index_no,verdict,description,detail
+34,DIVERGENT,removed conditional - replaced equality check with false,append(Ljava/lang/CharSequence;Ljava/util/Map;)Ljava/lang/String; | alen=60 blen=144
+42,DIVERGENT,removed conditional - replaced equality check with false,append(Ljava/lang/CharSequence;[Ljava/lang/Object;)Ljava/lang/String; | alen=66 blen=106
+168,DIVERGENT,Replaced integer addition with subtraction,encode(Ljava/lang/CharSequence;)Ljava/lang/String; | alen=97 blen=97
+202,DIVERGENT,removed conditional - replaced equality check with false,getParam(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String; | alen=107 blen=209
+208,DIVERGENT,removed conditional - replaced equality check with false,getParam(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String; | alen=107 blen=196
+243,DIVERGENT,removed conditional - replaced equality check with false,getParams(Ljava/lang/String;)Ljava/util/Map; | alen=119 blen=236
+248,DIVERGENT,removed conditional - replaced equality check with false,getParams(Ljava/lang/String;)Ljava/util/Map; | alen=119 blen=223
+311,DIVERGENT,removed conditional - replaced equality check with false,headers(Ljava/lang/String;)[Ljava/lang/String; | alen=27 blen=64
+445,DIVERGENT,removed conditional - replaced equality check with false,stream()Ljava/io/InputStream; | alen=59 blen=78
+485,DIVERGENT,replaced return value with null for com/github/kevinsawicki/http/HttpRequest$6::run,run()Lcom/github/kevinsawicki/http/HttpRequest; | alen=29 blen=32
+516,DIVERGENT,Replaced bitwise OR with AND,encode3to4([BII[BI)[B | alen=166 blen=166
+517,DIVERGENT,Changed switch default to be first case,encode3to4([BII[BI)[B | alen=82 blen=200
+12,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+39,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+40,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+51,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+52,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+111,UNREPRESENTABLE,removed call to com/github/kevinsawicki/http/HttpRequest$RequestOutputStream::close,exception java.io.IOException is never thrown in body of corresponding try statement
+114,UNREPRESENTABLE,replaced return value with null for com/github/kevinsawicki/http/HttpRequest::closeOutputQuietly,exception java.io.IOException is never thrown in body of corresponding try statement
+216,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+217,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+255,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+256,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+354,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+355,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+411,UNREPRESENTABLE,replaced return value with null for com/github/kevinsawicki/http/HttpRequest::reader,exception java.io.UnsupportedEncodingException is never thrown in body of corresponding try statement
+413,UNREPRESENTABLE,replaced return value with null for com/github/kevinsawicki/http/HttpRequest::receive,exception java.io.IOException is never thrown in body of corresponding try statement
+450,UNREPRESENTABLE,replaced return value with null for com/github/kevinsawicki/http/HttpRequest::stream,exception java.io.IOException is never thrown in body of corresponding try statement
+483,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+484,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+487,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+488,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+492,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+493,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+546,UNREPRESENTABLE,"replaced return value with """" for com/github/kevinsawicki/http/HttpRequest$Base64::encodeBytes",exception java.io.UnsupportedEncodingException is never thrown in body of corresponding try statement
+569,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+570,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+592,UNREPRESENTABLE,removed call to java/io/Closeable::close,exception java.io.IOException is never thrown in body of corresponding try statement
+598,UNREPRESENTABLE,replaced return value with null for com/github/kevinsawicki/http/HttpRequest$Operation::call,exception java.io.IOException is never thrown in body of corresponding try statement
+599,UNREPRESENTABLE,removed call to com/github/kevinsawicki/http/HttpRequest$Operation::done,exception java.io.IOException is never thrown in body of corresponding try statement

@@ -1,0 +1,70 @@
+index_no,verdict,description,detail
+93,DIVERGENT,replaced return value with null for org/apache/commons/dbutils/BaseResultSetHandler::handle,handle(Ljava/sql/ResultSet;)Ljava/lang/Object; | alen=24 blen=27
+491,DIVERGENT,removed conditional - replaced equality check with false,callSetter(Ljava/lang/Object;Ljava/beans/PropertyDescriptor;Ljava/lang/Object;)V | alen=138 blen=314
+501,DIVERGENT,removed conditional - replaced equality check with false,isCompatibleType(Ljava/lang/Object;Ljava/lang/Class;)Z | alen=14 blen=27
+503,DIVERGENT,removed conditional - replaced equality check with false,isCompatibleType(Ljava/lang/Object;Ljava/lang/Class;)Z | alen=12 blen=23
+514,DIVERGENT,removed conditional - replaced equality check with false,mapColumnsToProperties(Ljava/sql/ResultSetMetaData;[Ljava/beans/PropertyDescriptor;)[I | alen=62 blen=71
+560,DIVERGENT,removed conditional - replaced equality check with false,toBeanList(Ljava/sql/ResultSet;Ljava/lang/Class;)Ljava/util/List; | alen=32 blen=36
+575,DIVERGENT,removed call to org/apache/commons/dbutils/DbUtils::closeQuietly,closeQuietly(Ljava/sql/Connection;Ljava/sql/Statement;Ljava/sql/ResultSet;)V | alen=11 blen=27
+576,DIVERGENT,removed call to org/apache/commons/dbutils/DbUtils::closeQuietly,closeQuietly(Ljava/sql/Connection;Ljava/sql/Statement;Ljava/sql/ResultSet;)V | alen=11 blen=27
+577,DIVERGENT,removed call to org/apache/commons/dbutils/DbUtils::closeQuietly,closeQuietly(Ljava/sql/Connection;Ljava/sql/Statement;Ljava/sql/ResultSet;)V | alen=11 blen=27
+578,DIVERGENT,removed call to org/apache/commons/dbutils/DbUtils::closeQuietly,closeQuietly(Ljava/sql/Connection;Ljava/sql/Statement;Ljava/sql/ResultSet;)V | alen=11 blen=27
+625,DIVERGENT,removed conditional - replaced equality check with true,getParentLogger()Ljava/util/logging/Logger; | alen=43 blen=54
+794,DIVERGENT,removed conditional - replaced equality check with false,mapColumnsToProperties(Ljava/sql/ResultSetMetaData;[Ljava/beans/PropertyDescriptor;)[I | alen=63 blen=72
+801,DIVERGENT,removed conditional - replaced equality check with false,mapColumnsToProperties(Ljava/sql/ResultSetMetaData;[Ljava/beans/PropertyDescriptor;)[I | alen=62 blen=77
+817,DIVERGENT,removed conditional - replaced equality check with false,toMap(Ljava/sql/ResultSet;)Ljava/util/Map; | alen=39 blen=48
+867,DIVERGENT,removed conditional - replaced equality check with false,invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object; | alen=20 blen=33
+871,DIVERGENT,removed conditional - replaced equality check with false,invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object; | alen=21 blen=32
+872,DIVERGENT,removed conditional - replaced equality check with true,invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object; | alen=20 blen=25
+876,DIVERGENT,removed conditional - replaced equality check with false,match(Ljava/lang/Class;)Z | alen=4 blen=18
+888,DIVERGENT,removed conditional - replaced equality check with false,match(Ljava/lang/Class;)Z | alen=4 blen=18
+894,DIVERGENT,removed conditional - replaced equality check with false,match(Ljava/lang/Class;)Z | alen=4 blen=18
+900,DIVERGENT,removed conditional - replaced equality check with false,match(Ljava/lang/Class;)Z | alen=4 blen=18
+906,DIVERGENT,removed conditional - replaced equality check with false,match(Ljava/lang/Class;)Z | alen=4 blen=18
+912,DIVERGENT,removed conditional - replaced equality check with false,match(Ljava/lang/Class;)Z | alen=4 blen=18
+924,DIVERGENT,removed conditional - replaced equality check with false,match(Ljava/lang/Class;)Z | alen=4 blen=18
+227,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+228,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+254,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+255,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+317,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+318,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+377,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+436,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+454,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+455,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+460,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+461,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+465,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+479,UNREPRESENTABLE,removed call to org/apache/commons/dbutils/AbstractQueryRunner::configureStatement,exception java.sql.SQLException is never thrown in body of corresponding try statement
+482,UNREPRESENTABLE,removed call to org/apache/commons/dbutils/AbstractQueryRunner::configureStatement,exception java.sql.SQLException is never thrown in body of corresponding try statement
+512,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+513,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+521,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+533,UNREPRESENTABLE,replaced return value with null for org/apache/commons/dbutils/BeanProcessor::newInstance,exception java.lang.InstantiationException is never thrown in body of corresponding try statement
+536,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+537,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+561,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+572,UNREPRESENTABLE,removed call to org/apache/commons/dbutils/DbUtils::close,exception java.sql.SQLException is never thrown in body of corresponding try statement
+579,UNREPRESENTABLE,removed call to org/apache/commons/dbutils/DbUtils::close,exception java.sql.SQLException is never thrown in body of corresponding try statement
+580,UNREPRESENTABLE,removed call to org/apache/commons/dbutils/DbUtils::close,exception java.sql.SQLException is never thrown in body of corresponding try statement
+585,UNREPRESENTABLE,removed call to org/apache/commons/dbutils/DbUtils::commitAndClose,exception java.sql.SQLException is never thrown in body of corresponding try statement
+600,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+609,UNREPRESENTABLE,removed call to org/apache/commons/dbutils/DbUtils::printStackTrace,exception java.sql.SQLException is never thrown in body of corresponding try statement
+618,UNREPRESENTABLE,removed call to org/apache/commons/dbutils/DbUtils::rollbackAndClose,exception java.sql.SQLException is never thrown in body of corresponding try statement
+626,UNREPRESENTABLE,replaced return value with null for org/apache/commons/dbutils/DbUtils$DriverProxy::getParentLogger,exception java.lang.IllegalAccessException is never thrown in body of corresponding try statement
+792,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+793,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+799,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+808,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+809,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+815,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+816,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+839,UNREPRESENTABLE,removed conditional - replaced equality check with false,exception java.sql.SQLException is never thrown in body of corresponding try statement
+840,UNREPRESENTABLE,removed conditional - replaced equality check with true,exception java.sql.SQLException is never thrown in body of corresponding try statement
+841,UNREPRESENTABLE,replaced boolean return with true for org/apache/commons/dbutils/ResultSetIterator::hasNext,exception java.sql.SQLException is never thrown in body of corresponding try statement
+847,UNREPRESENTABLE,removed call to java/sql/ResultSet::deleteRow,exception java.sql.SQLException is never thrown in body of corresponding try statement
+938,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+939,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+945,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+946,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement

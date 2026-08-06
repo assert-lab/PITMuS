@@ -1,0 +1,55 @@
+======================================================================
+ PITMuS reconstruction evaluation  --  project: http-request
+ dataset  : PITMuS_dataset_fresh_generation-v3
+ generated: 2026-08-04 14:18:41
+======================================================================
+total reconstructed mutations (dataset rows): 603
+
+----------------------------------------------------------------------
+Section 0  XML alignment oracle  (each dataset row points at the right <mutation>)
+----------------------------------------------------------------------
+  rows checked            : 603
+  xml_line points correct : 603
+  xml_line WRONG          : 0
+  => OK - all aligned
+  detail csv: eval0_xml_misalign_http-request_v3.csv
+
+----------------------------------------------------------------------
+Section 1  Count oracle  (every XML mutation was reconstructed)
+----------------------------------------------------------------------
+  XML mutations : 603
+  dataset rows  : 603
+  missing       : 0
+  => OK - all reconstructed
+
+----------------------------------------------------------------------
+Section 2  Faithfulness oracle  (the reconstructed edit matches the mutator)
+----------------------------------------------------------------------
+  rows checked : 603
+    PASS         : 603
+    FAIL         : 0
+    UNVERIFIABLE : 0
+  detail csv: eval2_faithfulness_http-request_v3.csv
+
+----------------------------------------------------------------------
+Section 3  Bytecode ground-truth oracle  (recon compiles + matches PIT's exported mutant .class)
+----------------------------------------------------------------------
+  rows checked                          : 603
+    MATCH      (bytecode identical)     : 91
+    EQUIVALENT (subsequence of PIT)     : 470
+    => confirmed faithful               : 561
+    BROKEN     (real fault, won't compile): 2   <- genuine reconstruction faults
+    UNREPRESENTABLE (faithful, illegal Java): 28   <- mutant PIT makes in bytecode but source can't express
+    DIVERGENT  (bytecode differs)       : 12   <- needs review
+  detail csv (genuine faults): eval3_bytecode_http-request_v3_broken.csv
+  detail csv (other non-faults): eval3_bytecode_http-request_v3_other.csv
+
+======================================================================
+ OVERALL
+======================================================================
+  faithfulness PASS rate         : 603/603
+  bytecode confirmed faithful      : 561/603
+  bytecode BROKEN (real faults)    : 2   <- genuine reconstruction faults
+  bytecode UNREPRESENTABLE         : 28   <- faithful, but illegal Java source (not a fault)
+  bytecode DIVERGENT (review)      : 12
+======================================================================

@@ -1,3 +1,2 @@
-#!/bin/bash
-mvn clean test 2>&1 | tee mvn.log
-mvn pitest:mutationCoverage 2>&1 | tee pit.log
+mvn clean test-compile 2>&1 | tee mvn.log
+mvn pitest:mutationCoverage -Dfeatures=+EXPORT -DexcludedTestClasses='<failing.test.Class>' 2>&1 | tee pit.log

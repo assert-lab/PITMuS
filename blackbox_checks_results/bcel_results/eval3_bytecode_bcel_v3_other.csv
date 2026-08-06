@@ -1,0 +1,949 @@
+index_no,verdict,description,detail
+2480,DISASM_ERR,Replaced integer subtraction with addition,a=None b=None lambda$getLocalVariables$0(Lorg/apache/bcel/generic/LocalVariableGen;Lorg/apache/bcel/generic/LocalVariableGen;)I
+2481,DISASM_ERR,replaced int return with 0 for org/apache/bcel/generic/MethodGen::lambda$getLocalVariables$0,a=None b=None lambda$getLocalVariables$0(Lorg/apache/bcel/generic/LocalVariableGen;Lorg/apache/bcel/generic/LocalVariableGen;)I
+4634,DISASM_ERR,removed call to org/apache/bcel/verifier/VerifierAppFrame::classNamesJList_valueChanged,a=None b=None lambda$jbInit$0(Ljavax/swing/event/ListSelectionEvent;)V
+4635,DISASM_ERR,removed call to org/apache/bcel/verifier/VerifierAppFrame::newFileMenuItem_actionPerformed,a=None b=None lambda$jbInit$1(Ljava/awt/event/ActionEvent;)V
+4636,DISASM_ERR,removed call to org/apache/bcel/verifier/VerifierAppFrame::pass3aJList_valueChanged,a=None b=None lambda$jbInit$2(Ljavax/swing/event/ListSelectionEvent;)V
+4637,DISASM_ERR,removed call to org/apache/bcel/verifier/VerifierAppFrame::pass3bJList_valueChanged,a=None b=None lambda$jbInit$3(Ljavax/swing/event/ListSelectionEvent;)V
+4638,DISASM_ERR,removed call to org/apache/bcel/verifier/VerifierAppFrame::whatisMenuItem_actionPerformed,a=None b=None lambda$jbInit$4(Ljava/awt/event/ActionEvent;)V
+4639,DISASM_ERR,removed call to org/apache/bcel/verifier/VerifierAppFrame::aboutMenuItem_actionPerformed,a=None b=None lambda$jbInit$5(Ljava/awt/event/ActionEvent;)V
+5935,DISASM_ERR,removed conditional - replaced equality check with false,a=None b=None lambda$static$0(Ljava/io/File;Ljava/lang/String;)Z
+5936,DISASM_ERR,removed conditional - replaced equality check with true,a=None b=None lambda$static$0(Ljava/io/File;Ljava/lang/String;)Z
+5937,DISASM_ERR,removed conditional - replaced equality check with false,a=None b=None lambda$static$0(Ljava/io/File;Ljava/lang/String;)Z
+5938,DISASM_ERR,removed conditional - replaced equality check with true,a=None b=None lambda$static$0(Ljava/io/File;Ljava/lang/String;)Z
+5939,DISASM_ERR,replaced boolean return with true for org/apache/bcel/util/ClassPath::lambda$static$0,a=None b=None lambda$static$0(Ljava/io/File;Ljava/lang/String;)Z
+5940,DISASM_ERR,replaced boolean return with false for org/apache/bcel/util/ClassPath::lambda$static$1,a=None b=None lambda$static$1(Ljava/io/File;Ljava/lang/String;)Z
+5941,DISASM_ERR,replaced boolean return with true for org/apache/bcel/util/ClassPath::lambda$static$1,a=None b=None lambda$static$1(Ljava/io/File;Ljava/lang/String;)Z
+12,DIVERGENT,removed conditional - replaced equality check with false,arrayrefOfArrayType(Lorg/apache/bcel/generic/Instruction;Lorg/apache/bcel/generic/Type;)Z | alen=20 blen=46
+14,DIVERGENT,removed conditional - replaced equality check with false,arrayrefOfArrayType(Lorg/apache/bcel/generic/Instruction;Lorg/apache/bcel/generic/Type;)Z | alen=19 blen=40
+38,DIVERGENT,removed conditional - replaced equality check with false,visitAALOAD(Lorg/apache/bcel/generic/AALOAD;)V | alen=35 blen=62
+42,DIVERGENT,removed conditional - replaced equality check with false,visitAASTORE(Lorg/apache/bcel/generic/AASTORE;)V | alen=58 blen=80
+47,DIVERGENT,removed conditional - replaced equality check with false,visitAASTORE(Lorg/apache/bcel/generic/AASTORE;)V | alen=56 blen=83
+53,DIVERGENT,removed conditional - replaced equality check with false,visitARETURN(Lorg/apache/bcel/generic/ARETURN;)V | alen=25 blen=52
+57,DIVERGENT,removed conditional - replaced equality check with false,visitASTORE(Lorg/apache/bcel/generic/ASTORE;)V | alen=21 blen=56
+59,DIVERGENT,removed conditional - replaced equality check with false,visitASTORE(Lorg/apache/bcel/generic/ASTORE;)V | alen=21 blen=48
+62,DIVERGENT,removed conditional - replaced equality check with false,visitATHROW(Lorg/apache/bcel/generic/ATHROW;)V | alen=76 blen=113
+64,DIVERGENT,removed conditional - replaced equality check with false,visitATHROW(Lorg/apache/bcel/generic/ATHROW;)V | alen=75 blen=103
+71,DIVERGENT,removed conditional - replaced equality check with false,visitATHROW(Lorg/apache/bcel/generic/ATHROW;)V | alen=77 blen=103
+77,DIVERGENT,removed conditional - replaced equality check with false,visitBALOAD(Lorg/apache/bcel/generic/BALOAD;)V | alen=41 blen=79
+79,DIVERGENT,removed conditional - replaced equality check with false,visitBALOAD(Lorg/apache/bcel/generic/BALOAD;)V | alen=41 blen=69
+86,DIVERGENT,removed conditional - replaced equality check with false,visitBASTORE(Lorg/apache/bcel/generic/BASTORE;)V | alen=50 blen=88
+88,DIVERGENT,removed conditional - replaced equality check with false,visitBASTORE(Lorg/apache/bcel/generic/BASTORE;)V | alen=50 blen=78
+99,DIVERGENT,removed conditional - replaced equality check with false,visitCHECKCAST(Lorg/apache/bcel/generic/CHECKCAST;)V | alen=41 blen=62
+102,DIVERGENT,removed conditional - replaced equality check with false,visitCHECKCAST(Lorg/apache/bcel/generic/CHECKCAST;)V | alen=41 blen=62
+106,DIVERGENT,removed conditional - replaced comparison check with false,visitCPInstruction(Lorg/apache/bcel/generic/CPInstruction;)V | alen=23 blen=32
+129,DIVERGENT,removed conditional - replaced equality check with false,visitDALOAD(Lorg/apache/bcel/generic/DALOAD;)V | alen=56 blen=84
+141,DIVERGENT,removed conditional - replaced equality check with false,visitDASTORE(Lorg/apache/bcel/generic/DASTORE;)V | alen=77 blen=105
+254,DIVERGENT,removed conditional - replaced equality check with false,visitFALOAD(Lorg/apache/bcel/generic/FALOAD;)V | alen=56 blen=84
+266,DIVERGENT,removed conditional - replaced equality check with false,visitFASTORE(Lorg/apache/bcel/generic/FASTORE;)V | alen=77 blen=105
+314,DIVERGENT,removed conditional - replaced equality check with false,visitFieldInstruction(Lorg/apache/bcel/generic/FieldInstruction;)V | alen=64 blen=93
+322,DIVERGENT,removed conditional - replaced equality check with false,visitGETFIELD(Lorg/apache/bcel/generic/GETFIELD;)V | alen=247 blen=272
+324,DIVERGENT,removed conditional - replaced equality check with false,visitGETFIELD(Lorg/apache/bcel/generic/GETFIELD;)V | alen=247 blen=268
+344,DIVERGENT,removed conditional - replaced equality check with false,visitGETFIELD(Lorg/apache/bcel/generic/GETFIELD;)V | alen=246 blen=257
+350,DIVERGENT,removed conditional - replaced equality check with false,visitGETFIELD(Lorg/apache/bcel/generic/GETFIELD;)V | alen=247 blen=269
+353,DIVERGENT,removed conditional - replaced equality check with false,visitGETFIELD(Lorg/apache/bcel/generic/GETFIELD;)V | alen=246 blen=257
+387,DIVERGENT,removed conditional - replaced equality check with false,visitIALOAD(Lorg/apache/bcel/generic/IALOAD;)V | alen=56 blen=84
+405,DIVERGENT,removed conditional - replaced equality check with false,visitIASTORE(Lorg/apache/bcel/generic/IASTORE;)V | alen=77 blen=105
+435,DIVERGENT,removed conditional - replaced equality check with false,visitIFNONNULL(Lorg/apache/bcel/generic/IFNONNULL;)V | alen=23 blen=50
+439,DIVERGENT,removed conditional - replaced equality check with false,visitIFNULL(Lorg/apache/bcel/generic/IFNULL;)V | alen=23 blen=50
+443,DIVERGENT,removed conditional - replaced equality check with false,visitIF_ACMPEQ(Lorg/apache/bcel/generic/IF_ACMPEQ;)V | alen=38 blen=65
+446,DIVERGENT,removed conditional - replaced equality check with false,visitIF_ACMPEQ(Lorg/apache/bcel/generic/IF_ACMPEQ;)V | alen=37 blen=65
+449,DIVERGENT,removed conditional - replaced equality check with false,visitIF_ACMPNE(Lorg/apache/bcel/generic/IF_ACMPNE;)V | alen=38 blen=65
+452,DIVERGENT,removed conditional - replaced equality check with false,visitIF_ACMPNE(Lorg/apache/bcel/generic/IF_ACMPNE;)V | alen=37 blen=65
+508,DIVERGENT,removed conditional - replaced equality check with false,visitINSTANCEOF(Lorg/apache/bcel/generic/INSTANCEOF;)V | alen=41 blen=62
+511,DIVERGENT,removed conditional - replaced equality check with false,visitINSTANCEOF(Lorg/apache/bcel/generic/INSTANCEOF;)V | alen=41 blen=62
+528,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKEINTERFACE(Lorg/apache/bcel/generic/INVOKEINTERFACE;)V | alen=212 blen=231
+546,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKEINTERFACE(Lorg/apache/bcel/generic/INVOKEINTERFACE;)V | alen=212 blen=234
+550,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKEINTERFACE(Lorg/apache/bcel/generic/INVOKEINTERFACE;)V | alen=212 blen=244
+552,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKEINTERFACE(Lorg/apache/bcel/generic/INVOKEINTERFACE;)V | alen=209 blen=236
+553,DIVERGENT,removed conditional - replaced equality check with true,visitINVOKEINTERFACE(Lorg/apache/bcel/generic/INVOKEINTERFACE;)V | alen=198 blen=218
+564,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKESPECIAL(Lorg/apache/bcel/generic/INVOKESPECIAL;)V | alen=281 blen=296
+578,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKESPECIAL(Lorg/apache/bcel/generic/INVOKESPECIAL;)V | alen=288 blen=307
+599,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKESPECIAL(Lorg/apache/bcel/generic/INVOKESPECIAL;)V | alen=288 blen=310
+602,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKESPECIAL(Lorg/apache/bcel/generic/INVOKESPECIAL;)V | alen=262 blen=338
+603,DIVERGENT,removed conditional - replaced equality check with true,visitINVOKESPECIAL(Lorg/apache/bcel/generic/INVOKESPECIAL;)V | alen=252 blen=323
+605,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKESPECIAL(Lorg/apache/bcel/generic/INVOKESPECIAL;)V | alen=288 blen=320
+607,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKESPECIAL(Lorg/apache/bcel/generic/INVOKESPECIAL;)V | alen=285 blen=312
+608,DIVERGENT,removed conditional - replaced equality check with true,visitINVOKESPECIAL(Lorg/apache/bcel/generic/INVOKESPECIAL;)V | alen=274 blen=294
+610,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKESPECIAL(Lorg/apache/bcel/generic/INVOKESPECIAL;)V | alen=288 blen=311
+627,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKESTATIC(Lorg/apache/bcel/generic/INVOKESTATIC;)V | alen=154 blen=173
+657,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKEVIRTUAL(Lorg/apache/bcel/generic/INVOKEVIRTUAL;)V | alen=236 blen=255
+678,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKEVIRTUAL(Lorg/apache/bcel/generic/INVOKEVIRTUAL;)V | alen=236 blen=258
+682,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKEVIRTUAL(Lorg/apache/bcel/generic/INVOKEVIRTUAL;)V | alen=236 blen=268
+684,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKEVIRTUAL(Lorg/apache/bcel/generic/INVOKEVIRTUAL;)V | alen=233 blen=260
+685,DIVERGENT,removed conditional - replaced equality check with true,visitINVOKEVIRTUAL(Lorg/apache/bcel/generic/INVOKEVIRTUAL;)V | alen=222 blen=242
+753,DIVERGENT,removed conditional - replaced equality check with false,visitLALOAD(Lorg/apache/bcel/generic/LALOAD;)V | alen=56 blen=84
+771,DIVERGENT,removed conditional - replaced equality check with false,visitLASTORE(Lorg/apache/bcel/generic/LASTORE;)V | alen=77 blen=105
+783,DIVERGENT,removed conditional - replaced equality check with false,visitLDC(Lorg/apache/bcel/generic/LDC;)V | alen=29 blen=62
+792,DIVERGENT,removed conditional - replaced equality check with false,visitLDC2_W(Lorg/apache/bcel/generic/LDC2_W;)V | alen=23 blen=48
+797,DIVERGENT,removed conditional - replaced equality check with false,visitLDC_W(Lorg/apache/bcel/generic/LDC_W;)V | alen=29 blen=62
+884,DIVERGENT,removed conditional - replaced equality check with false,visitLoadInstruction(Lorg/apache/bcel/generic/LoadInstruction;)V | alen=122 blen=198
+885,DIVERGENT,removed conditional - replaced equality check with true,visitLoadInstruction(Lorg/apache/bcel/generic/LoadInstruction;)V | alen=112 blen=184
+889,DIVERGENT,removed conditional - replaced equality check with false,visitLoadInstruction(Lorg/apache/bcel/generic/LoadInstruction;)V | alen=143 blen=175
+904,DIVERGENT,removed conditional - replaced equality check with false,visitMONITORENTER(Lorg/apache/bcel/generic/MONITORENTER;)V | alen=16 blen=43
+907,DIVERGENT,removed conditional - replaced equality check with false,visitMONITOREXIT(Lorg/apache/bcel/generic/MONITOREXIT;)V | alen=16 blen=43
+916,DIVERGENT,removed conditional - replaced equality check with false,visitNEW(Lorg/apache/bcel/generic/NEW;)V | alen=10 blen=73
+917,DIVERGENT,removed conditional - replaced equality check with true,visitNEW(Lorg/apache/bcel/generic/NEW;)V | alen=58 blen=134
+918,DIVERGENT,removed conditional - replaced equality check with false,visitNEW(Lorg/apache/bcel/generic/NEW;)V | alen=63 blen=84
+934,DIVERGENT,removed conditional - replaced equality check with false,visitPUTFIELD(Lorg/apache/bcel/generic/PUTFIELD;)V | alen=291 blen=316
+936,DIVERGENT,removed conditional - replaced equality check with false,visitPUTFIELD(Lorg/apache/bcel/generic/PUTFIELD;)V | alen=291 blen=312
+945,DIVERGENT,removed conditional - replaced equality check with false,visitPUTFIELD(Lorg/apache/bcel/generic/PUTFIELD;)V | alen=291 blen=310
+959,DIVERGENT,removed conditional - replaced equality check with false,visitPUTFIELD(Lorg/apache/bcel/generic/PUTFIELD;)V | alen=290 blen=320
+967,DIVERGENT,removed conditional - replaced equality check with false,visitPUTFIELD(Lorg/apache/bcel/generic/PUTFIELD;)V | alen=290 blen=301
+973,DIVERGENT,removed conditional - replaced equality check with false,visitPUTFIELD(Lorg/apache/bcel/generic/PUTFIELD;)V | alen=291 blen=313
+976,DIVERGENT,removed conditional - replaced equality check with false,visitPUTFIELD(Lorg/apache/bcel/generic/PUTFIELD;)V | alen=290 blen=323
+978,DIVERGENT,removed conditional - replaced equality check with false,visitPUTFIELD(Lorg/apache/bcel/generic/PUTFIELD;)V | alen=290 blen=317
+990,DIVERGENT,removed conditional - replaced equality check with false,visitPUTSTATIC(Lorg/apache/bcel/generic/PUTSTATIC;)V | alen=180 blen=199
+1004,DIVERGENT,removed conditional - replaced equality check with false,visitPUTSTATIC(Lorg/apache/bcel/generic/PUTSTATIC;)V | alen=179 blen=209
+1010,DIVERGENT,removed conditional - replaced equality check with false,visitRET(Lorg/apache/bcel/generic/RET;)V | alen=27 blen=54
+1019,DIVERGENT,removed conditional - replaced equality check with false,visitRETURN(Lorg/apache/bcel/generic/RETURN;)V | alen=13 blen=25
+1022,DIVERGENT,removed conditional - replaced equality check with false,visitReturnInstruction(Lorg/apache/bcel/generic/ReturnInstruction;)V | alen=103 blen=119
+1042,DIVERGENT,removed conditional - replaced equality check with false,visitReturnInstruction(Lorg/apache/bcel/generic/ReturnInstruction;)V | alen=101 blen=128
+1046,DIVERGENT,removed conditional - replaced equality check with false,visitReturnInstruction(Lorg/apache/bcel/generic/ReturnInstruction;)V | alen=100 blen=144
+1052,DIVERGENT,removed conditional - replaced equality check with false,visitSALOAD(Lorg/apache/bcel/generic/SALOAD;)V | alen=56 blen=84
+1064,DIVERGENT,removed conditional - replaced equality check with false,visitSASTORE(Lorg/apache/bcel/generic/SASTORE;)V | alen=77 blen=105
+1082,DIVERGENT,removed conditional - replaced equality check with false,visitStoreInstruction(Lorg/apache/bcel/generic/StoreInstruction;)V | alen=39 blen=112
+1083,DIVERGENT,removed conditional - replaced equality check with true,visitStoreInstruction(Lorg/apache/bcel/generic/StoreInstruction;)V | alen=34 blen=102
+1084,DIVERGENT,removed conditional - replaced equality check with false,visitStoreInstruction(Lorg/apache/bcel/generic/StoreInstruction;)V | alen=60 blen=102
+1087,DIVERGENT,removed conditional - replaced equality check with false,visitStoreInstruction(Lorg/apache/bcel/generic/StoreInstruction;)V | alen=65 blen=95
+1089,DIVERGENT,removed conditional - replaced equality check with false,visitStoreInstruction(Lorg/apache/bcel/generic/StoreInstruction;)V | alen=65 blen=91
+1103,DIVERGENT,removed conditional - replaced equality check with false,accessToString(IZ)Ljava/lang/String; | alen=37 blen=47
+1123,DIVERGENT,removed conditional - replaced equality check with false,codeToString(Lorg/apache/bcel/util/ByteSequence;Lorg/apache/bcel/classfile/ConstantPool;Z)Ljava/lang/String; | alen=686 blen=694
+1137,DIVERGENT,Changed switch default to be first case,codeToString(Lorg/apache/bcel/util/ByteSequence;Lorg/apache/bcel/classfile/ConstantPool;Z)Ljava/lang/String; | alen=689 blen=1340
+1198,DIVERGENT,Changed switch default to be first case,codeToString(Lorg/apache/bcel/util/ByteSequence;Lorg/apache/bcel/classfile/ConstantPool;Z)Ljava/lang/String; | alen=676 blen=703
+1210,DIVERGENT,removed conditional - replaced comparison check with false,codeToString([BLorg/apache/bcel/classfile/ConstantPool;IIZ)Ljava/lang/String; | alen=92 blen=98
+1225,DIVERGENT,Changed switch default to be first case,convertString(Ljava/lang/String;)Ljava/lang/String; | alen=37 blen=81
+1227,DIVERGENT,Changed switch default to be first case,countBrackets(Ljava/lang/String;)I | alen=76 blen=98
+1280,DIVERGENT,Changed switch default to be first case,getSignature(Ljava/lang/String;)Ljava/lang/String; | alen=105 blen=144
+1309,DIVERGENT,removed conditional - replaced comparison check with true,isJavaIdentifierPart(C)Z | alen=23 blen=25
+1315,DIVERGENT,removed conditional - replaced comparison check with true,isJavaIdentifierPart(C)Z | alen=23 blen=25
+1358,DIVERGENT,removed conditional - replaced equality check with false,methodSignatureToString(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLorg/apache/bcel/classfile/LocalVariableTable;)Ljava/lang/String; | alen=147 blen=161
+1463,DIVERGENT,Changed switch default to be first case,typeOfSignature(Ljava/lang/String;)B | alen=35 blen=66
+1497,DIVERGENT,Changed switch default to be first case,typeSignatureToString(Ljava/lang/String;Z)Ljava/lang/String; | alen=37 blen=839
+1603,DIVERGENT,removed conditional - replaced comparison check with true,read()I | alen=61 blen=63
+1675,DIVERGENT,removed conditional - replaced equality check with false,final_methods_are_not_overridden()V | alen=119 blen=186
+1676,DIVERGENT,removed conditional - replaced equality check with true,final_methods_are_not_overridden()V | alen=118 blen=185
+1685,DIVERGENT,removed conditional - replaced comparison check with false,getLocalVariablesInfo(I)Lorg/apache/bcel/verifier/statics/LocalVariablesInfo; | alen=21 blen=30
+1730,DIVERGENT,removed conditional - replaced equality check with false,validMethodName(Ljava/lang/String;Z)Z | alen=15 blen=30
+1739,DIVERGENT,removed conditional - replaced comparison check with false,checkIndex(Lorg/apache/bcel/classfile/Node;ILjava/lang/Class;)V | alen=61 blen=116
+1749,DIVERGENT,removed conditional - replaced equality check with false,visitCode(Lorg/apache/bcel/classfile/Code;)V | alen=75 blen=726
+1750,DIVERGENT,removed conditional - replaced equality check with true,visitCode(Lorg/apache/bcel/classfile/Code;)V | alen=667 blen=1554
+1779,DIVERGENT,removed conditional - replaced equality check with false,visitCode(Lorg/apache/bcel/classfile/Code;)V | alen=688 blen=739
+1794,DIVERGENT,removed conditional - replaced equality check with false,visitCode(Lorg/apache/bcel/classfile/Code;)V | alen=690 blen=700
+1846,DIVERGENT,removed conditional - replaced comparison check with false,visitConstantValue(Lorg/apache/bcel/classfile/ConstantValue;)V | alen=182 blen=336
+1865,DIVERGENT,removed conditional - replaced equality check with false,visitConstantValue(Lorg/apache/bcel/classfile/ConstantValue;)V | alen=180 blen=213
+1867,DIVERGENT,removed conditional - replaced equality check with false,visitConstantValue(Lorg/apache/bcel/classfile/ConstantValue;)V | alen=180 blen=206
+1869,DIVERGENT,removed conditional - replaced equality check with false,visitConstantValue(Lorg/apache/bcel/classfile/ConstantValue;)V | alen=180 blen=199
+1871,DIVERGENT,removed conditional - replaced equality check with false,visitConstantValue(Lorg/apache/bcel/classfile/ConstantValue;)V | alen=180 blen=192
+1935,DIVERGENT,removed conditional - replaced equality check with false,visitField(Lorg/apache/bcel/classfile/Field;)V | alen=328 blen=371
+1942,DIVERGENT,removed conditional - replaced equality check with false,visitField(Lorg/apache/bcel/classfile/Field;)V | alen=328 blen=362
+1959,DIVERGENT,removed conditional - replaced equality check with false,visitJavaClass(Lorg/apache/bcel/classfile/JavaClass;)V | alen=141 blen=188
+2039,DIVERGENT,removed conditional - replaced equality check with false,visitMethod(Lorg/apache/bcel/classfile/Method;)V | alen=702 blen=722
+2041,DIVERGENT,removed conditional - replaced equality check with false,visitMethod(Lorg/apache/bcel/classfile/Method;)V | alen=702 blen=718
+2043,DIVERGENT,removed conditional - replaced equality check with false,visitMethod(Lorg/apache/bcel/classfile/Method;)V | alen=702 blen=714
+2045,DIVERGENT,removed conditional - replaced equality check with false,visitMethod(Lorg/apache/bcel/classfile/Method;)V | alen=702 blen=710
+2055,DIVERGENT,removed conditional - replaced equality check with false,visitMethod(Lorg/apache/bcel/classfile/Method;)V | alen=672 blen=728
+2056,DIVERGENT,removed conditional - replaced equality check with true,visitMethod(Lorg/apache/bcel/classfile/Method;)V | alen=684 blen=743
+2057,DIVERGENT,removed conditional - replaced equality check with false,visitMethod(Lorg/apache/bcel/classfile/Method;)V | alen=702 blen=718
+2059,DIVERGENT,removed conditional - replaced equality check with false,visitMethod(Lorg/apache/bcel/classfile/Method;)V | alen=702 blen=714
+2061,DIVERGENT,removed conditional - replaced equality check with false,visitMethod(Lorg/apache/bcel/classfile/Method;)V | alen=702 blen=710
+2069,DIVERGENT,removed conditional - replaced equality check with false,visitMethod(Lorg/apache/bcel/classfile/Method;)V | alen=702 blen=730
+2071,DIVERGENT,removed conditional - replaced equality check with false,visitMethod(Lorg/apache/bcel/classfile/Method;)V | alen=702 blen=726
+2073,DIVERGENT,removed conditional - replaced equality check with false,visitMethod(Lorg/apache/bcel/classfile/Method;)V | alen=702 blen=722
+2075,DIVERGENT,removed conditional - replaced equality check with false,visitMethod(Lorg/apache/bcel/classfile/Method;)V | alen=702 blen=718
+2077,DIVERGENT,removed conditional - replaced equality check with false,visitMethod(Lorg/apache/bcel/classfile/Method;)V | alen=702 blen=714
+2079,DIVERGENT,removed conditional - replaced equality check with false,visitMethod(Lorg/apache/bcel/classfile/Method;)V | alen=702 blen=710
+2090,DIVERGENT,removed conditional - replaced equality check with false,visitMethod(Lorg/apache/bcel/classfile/Method;)V | alen=702 blen=750
+2099,DIVERGENT,removed conditional - replaced equality check with false,visitMethod(Lorg/apache/bcel/classfile/Method;)V | alen=702 blen=741
+2106,DIVERGENT,removed conditional - replaced equality check with false,visitMethod(Lorg/apache/bcel/classfile/Method;)V | alen=702 blen=710
+2122,DIVERGENT,removed conditional - replaced equality check with false,visitSourceFile(Lorg/apache/bcel/classfile/SourceFile;)V | alen=91 blen=114
+2124,DIVERGENT,removed conditional - replaced equality check with false,visitSourceFile(Lorg/apache/bcel/classfile/SourceFile;)V | alen=91 blen=109
+2126,DIVERGENT,removed conditional - replaced equality check with false,visitSourceFile(Lorg/apache/bcel/classfile/SourceFile;)V | alen=91 blen=104
+2177,DIVERGENT,removed conditional - replaced equality check with false,<init>(ILorg/apache/bcel/generic/Type;[Lorg/apache/bcel/generic/Type;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/apache/bcel/generic/InstructionList;Lorg/apache/bcel/generic/ConstantPoolGen;)V | alen=180 blen=192
+2236,DIVERGENT,removed conditional - replaced equality check with false,addExceptionHandler(Lorg/apache/bcel/generic/InstructionHandle;Lorg/apache/bcel/generic/InstructionHandle;Lorg/apache/bcel/generic/InstructionHandle;Lorg/apache/bcel/generic/ObjectType;)Lorg/apache/bcel/generic/CodeExceptionGen; | alen=24 blen=45
+2238,DIVERGENT,removed conditional - replaced equality check with false,addExceptionHandler(Lorg/apache/bcel/generic/InstructionHandle;Lorg/apache/bcel/generic/InstructionHandle;Lorg/apache/bcel/generic/InstructionHandle;Lorg/apache/bcel/generic/ObjectType;)Lorg/apache/bcel/generic/CodeExceptionGen; | alen=24 blen=43
+2311,DIVERGENT,removed conditional - replaced equality check with false,getAnnotationsOnParameter(I)Ljava/util/List; | alen=14 blen=24
+2390,DIVERGENT,removed conditional - replaced equality check with false,getMaxStack(Lorg/apache/bcel/generic/ConstantPoolGen;Lorg/apache/bcel/generic/InstructionList;[Lorg/apache/bcel/generic/CodeExceptionGen;)I | alen=155 blen=176
+2392,DIVERGENT,removed conditional - replaced equality check with false,getMaxStack(Lorg/apache/bcel/generic/ConstantPoolGen;Lorg/apache/bcel/generic/InstructionList;[Lorg/apache/bcel/generic/CodeExceptionGen;)I | alen=155 blen=164
+2399,DIVERGENT,removed conditional - replaced equality check with false,getMaxStack(Lorg/apache/bcel/generic/ConstantPoolGen;Lorg/apache/bcel/generic/InstructionList;[Lorg/apache/bcel/generic/CodeExceptionGen;)I | alen=155 blen=174
+2401,DIVERGENT,removed conditional - replaced equality check with false,getMaxStack(Lorg/apache/bcel/generic/ConstantPoolGen;Lorg/apache/bcel/generic/InstructionList;[Lorg/apache/bcel/generic/CodeExceptionGen;)I | alen=155 blen=169
+2437,DIVERGENT,Replaced integer addition with subtraction,getMethod()Lorg/apache/bcel/classfile/Method; | alen=244 blen=244
+2438,DIVERGENT,Replaced integer addition with subtraction,getMethod()Lorg/apache/bcel/classfile/Method; | alen=244 blen=244
+2512,DIVERGENT,removed conditional - replaced equality check with false,setMaxLocals()V | alen=78 blen=90
+2514,DIVERGENT,removed conditional - replaced equality check with false,setMaxLocals()V | alen=78 blen=86
+2525,DIVERGENT,removed conditional - replaced equality check with false,toString()Ljava/lang/String; | alen=79 blen=99
+2527,DIVERGENT,removed conditional - replaced equality check with false,toString()Ljava/lang/String; | alen=79 blen=94
+2595,DIVERGENT,removed conditional - replaced equality check with false,do_verify()Lorg/apache/bcel/verifier/VerificationResult; | alen=129 blen=227
+2620,DIVERGENT,removed conditional - replaced equality check with false,pass3StaticInstructionChecks()V | alen=82 blen=104
+2634,DIVERGENT,removed conditional - replaced equality check with false,pass3StaticInstructionOperandsChecks()V | alen=91 blen=122
+2658,DIVERGENT,removed conditional - replaced comparison check with false,indexValid(Lorg/apache/bcel/generic/Instruction;I)V | alen=19 blen=28
+2671,DIVERGENT,removed conditional - replaced equality check with false,objarrayequals([Ljava/lang/Object;[Ljava/lang/Object;)Z | alen=17 blen=28
+2672,DIVERGENT,removed conditional - replaced equality check with true,objarrayequals([Ljava/lang/Object;[Ljava/lang/Object;)Z | alen=17 blen=31
+2685,DIVERGENT,removed conditional - replaced equality check with false,visitANEWARRAY(Lorg/apache/bcel/generic/ANEWARRAY;)V | alen=51 blen=72
+2704,DIVERGENT,removed conditional - replaced equality check with false,visitCHECKCAST(Lorg/apache/bcel/generic/CHECKCAST;)V | alen=25 blen=46
+2744,DIVERGENT,removed conditional - replaced equality check with false,visitFieldInstruction(Lorg/apache/bcel/generic/FieldInstruction;)V | alen=191 blen=211
+2767,DIVERGENT,removed conditional - replaced equality check with false,visitGETSTATIC(Lorg/apache/bcel/generic/GETSTATIC;)V | alen=88 blen=111
+2789,DIVERGENT,removed conditional - replaced equality check with false,visitINSTANCEOF(Lorg/apache/bcel/generic/INSTANCEOF;)V | alen=25 blen=46
+2807,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKESPECIAL(Lorg/apache/bcel/generic/INVOKESPECIAL;)V | alen=160 blen=276
+2825,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKESTATIC(Lorg/apache/bcel/generic/INVOKESTATIC;)V | alen=76 blen=102
+2831,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKEVIRTUAL(Lorg/apache/bcel/generic/INVOKEVIRTUAL;)V | alen=73 blen=97
+2844,DIVERGENT,removed conditional - replaced equality check with false,visitInvokeInstruction(Lorg/apache/bcel/generic/InvokeInstruction;)V | alen=231 blen=313
+2846,DIVERGENT,removed conditional - replaced equality check with false,visitInvokeInstruction(Lorg/apache/bcel/generic/InvokeInstruction;)V | alen=160 blen=309
+2850,DIVERGENT,removed conditional - replaced equality check with false,visitInvokeInstruction(Lorg/apache/bcel/generic/InvokeInstruction;)V | alen=189 blen=254
+2851,DIVERGENT,removed conditional - replaced equality check with true,visitInvokeInstruction(Lorg/apache/bcel/generic/InvokeInstruction;)V | alen=217 blen=292
+2855,DIVERGENT,removed conditional - replaced equality check with false,visitInvokeInstruction(Lorg/apache/bcel/generic/InvokeInstruction;)V | alen=231 blen=239
+2858,DIVERGENT,removed conditional - replaced equality check with false,visitInvokeInstruction(Lorg/apache/bcel/generic/InvokeInstruction;)V | alen=229 blen=248
+2863,DIVERGENT,removed conditional - replaced equality check with false,visitInvokeInstruction(Lorg/apache/bcel/generic/InvokeInstruction;)V | alen=231 blen=252
+2890,DIVERGENT,removed conditional - replaced equality check with false,visitLDC(Lorg/apache/bcel/generic/LDC;)V | alen=48 blen=76
+2898,DIVERGENT,removed conditional - replaced equality check with false,visitLDC2_W(Lorg/apache/bcel/generic/LDC2_W;)V | alen=43 blen=67
+2941,DIVERGENT,removed conditional - replaced equality check with false,visitMULTIANEWARRAY(Lorg/apache/bcel/generic/MULTIANEWARRAY;)V | alen=72 blen=93
+2956,DIVERGENT,removed conditional - replaced equality check with false,visitNEW(Lorg/apache/bcel/generic/NEW;)V | alen=25 blen=77
+2957,DIVERGENT,removed conditional - replaced equality check with true,visitNEW(Lorg/apache/bcel/generic/NEW;)V | alen=40 blen=97
+2962,DIVERGENT,removed conditional - replaced equality check with false,visitNEWARRAY(Lorg/apache/bcel/generic/NEWARRAY;)V | alen=29 blen=57
+2985,DIVERGENT,removed conditional - replaced equality check with false,visitPUTSTATIC(Lorg/apache/bcel/generic/PUTSTATIC;)V | alen=157 blen=208
+2988,DIVERGENT,removed conditional - replaced equality check with false,visitPUTSTATIC(Lorg/apache/bcel/generic/PUTSTATIC;)V | alen=164 blen=187
+2993,DIVERGENT,removed conditional - replaced equality check with false,visitPUTSTATIC(Lorg/apache/bcel/generic/PUTSTATIC;)V | alen=163 blen=195
+3128,DIVERGENT,removed conditional - replaced comparison check with false,findHandle([Lorg/apache/bcel/generic/InstructionHandle;[III)Lorg/apache/bcel/generic/InstructionHandle; | alen=37 blen=41
+3196,DIVERGENT,removed conditional - replaced equality check with false,move(Lorg/apache/bcel/generic/InstructionHandle;Lorg/apache/bcel/generic/InstructionHandle;Lorg/apache/bcel/generic/InstructionHandle;)V | alen=172 blen=349
+3200,DIVERGENT,removed conditional - replaced equality check with false,move(Lorg/apache/bcel/generic/InstructionHandle;Lorg/apache/bcel/generic/InstructionHandle;Lorg/apache/bcel/generic/InstructionHandle;)V | alen=171 blen=317
+3289,DIVERGENT,removed conditional - replaced equality check with false,setPositions(Z)V | alen=216 blen=252
+3295,DIVERGENT,Changed switch default to be first case,setPositions(Z)V | alen=219 blen=221
+3440,DIVERGENT,removed conditional - replaced equality check with false,getMapEntrySize()I | alen=162 blen=175
+3441,DIVERGENT,removed conditional - replaced equality check with true,getMapEntrySize()I | alen=162 blen=172
+3446,DIVERGENT,removed conditional - replaced equality check with false,getMapEntrySize()I | alen=162 blen=175
+3447,DIVERGENT,removed conditional - replaced equality check with true,getMapEntrySize()I | alen=162 blen=172
+3466,DIVERGENT,removed conditional - replaced equality check with false,getMapEntrySize()I | alen=164 blen=175
+3467,DIVERGENT,removed conditional - replaced equality check with true,getMapEntrySize()I | alen=164 blen=172
+3472,DIVERGENT,removed conditional - replaced equality check with false,getMapEntrySize()I | alen=164 blen=175
+3473,DIVERGENT,removed conditional - replaced equality check with true,getMapEntrySize()I | alen=164 blen=172
+3475,DIVERGENT,removed conditional - replaced equality check with false,getMapEntrySize()I | alen=164 blen=175
+3476,DIVERGENT,removed conditional - replaced equality check with true,getMapEntrySize()I | alen=164 blen=172
+3484,DIVERGENT,removed conditional - replaced comparison check with false,setByteCodeOffset(I)V | alen=104 blen=228
+3725,DIVERGENT,removed conditional - replaced equality check with false,visitGETFIELD(Lorg/apache/bcel/generic/GETFIELD;)V | alen=28 blen=51
+3727,DIVERGENT,removed conditional - replaced equality check with false,visitGETFIELD(Lorg/apache/bcel/generic/GETFIELD;)V | alen=28 blen=45
+3729,DIVERGENT,removed conditional - replaced equality check with false,visitGETFIELD(Lorg/apache/bcel/generic/GETFIELD;)V | alen=28 blen=39
+3734,DIVERGENT,removed conditional - replaced equality check with false,visitGETSTATIC(Lorg/apache/bcel/generic/GETSTATIC;)V | alen=24 blen=47
+3736,DIVERGENT,removed conditional - replaced equality check with false,visitGETSTATIC(Lorg/apache/bcel/generic/GETSTATIC;)V | alen=24 blen=41
+3738,DIVERGENT,removed conditional - replaced equality check with false,visitGETSTATIC(Lorg/apache/bcel/generic/GETSTATIC;)V | alen=24 blen=35
+3763,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKEDYNAMIC(Lorg/apache/bcel/generic/INVOKEDYNAMIC;)V | alen=45 blen=68
+3765,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKEDYNAMIC(Lorg/apache/bcel/generic/INVOKEDYNAMIC;)V | alen=45 blen=62
+3767,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKEDYNAMIC(Lorg/apache/bcel/generic/INVOKEDYNAMIC;)V | alen=45 blen=56
+3777,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKEINTERFACE(Lorg/apache/bcel/generic/INVOKEINTERFACE;)V | alen=49 blen=72
+3779,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKEINTERFACE(Lorg/apache/bcel/generic/INVOKEINTERFACE;)V | alen=49 blen=66
+3781,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKEINTERFACE(Lorg/apache/bcel/generic/INVOKEINTERFACE;)V | alen=49 blen=60
+3798,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKESPECIAL(Lorg/apache/bcel/generic/INVOKESPECIAL;)V | alen=79 blen=102
+3800,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKESPECIAL(Lorg/apache/bcel/generic/INVOKESPECIAL;)V | alen=79 blen=96
+3802,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKESPECIAL(Lorg/apache/bcel/generic/INVOKESPECIAL;)V | alen=79 blen=90
+3812,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKESTATIC(Lorg/apache/bcel/generic/INVOKESTATIC;)V | alen=45 blen=68
+3814,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKESTATIC(Lorg/apache/bcel/generic/INVOKESTATIC;)V | alen=45 blen=62
+3816,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKESTATIC(Lorg/apache/bcel/generic/INVOKESTATIC;)V | alen=45 blen=56
+3826,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKEVIRTUAL(Lorg/apache/bcel/generic/INVOKEVIRTUAL;)V | alen=49 blen=72
+3828,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKEVIRTUAL(Lorg/apache/bcel/generic/INVOKEVIRTUAL;)V | alen=49 blen=66
+3830,DIVERGENT,removed conditional - replaced equality check with false,visitINVOKEVIRTUAL(Lorg/apache/bcel/generic/INVOKEVIRTUAL;)V | alen=49 blen=60
+3972,DIVERGENT,Changed switch default to be first case,addConstant(Lorg/apache/bcel/classfile/Constant;Lorg/apache/bcel/generic/ConstantPoolGen;)I | alen=177 blen=358
+3981,DIVERGENT,Changed switch default to be first case,addConstant(Lorg/apache/bcel/classfile/Constant;Lorg/apache/bcel/generic/ConstantPoolGen;)I | alen=165 blen=187
+4136,DIVERGENT,Changed switch default to be first case,createAppend(Lorg/apache/bcel/generic/Type;)Lorg/apache/bcel/generic/Instruction; | alen=34 blen=47
+4139,DIVERGENT,Changed switch default to be first case,createArrayLoad(Lorg/apache/bcel/generic/Type;)Lorg/apache/bcel/generic/ArrayInstruction; | alen=17 blen=45
+4148,DIVERGENT,Changed switch default to be first case,createArrayStore(Lorg/apache/bcel/generic/Type;)Lorg/apache/bcel/generic/ArrayInstruction; | alen=17 blen=45
+4157,DIVERGENT,Changed switch default to be first case,createBinaryDoubleOp(C)Lorg/apache/bcel/generic/ArithmeticInstruction; | alen=16 blen=32
+4163,DIVERGENT,Changed switch default to be first case,createBinaryFloatOp(C)Lorg/apache/bcel/generic/ArithmeticInstruction; | alen=16 blen=32
+4169,DIVERGENT,Changed switch default to be first case,createBinaryIntOp(CLjava/lang/String;)Lorg/apache/bcel/generic/ArithmeticInstruction; | alen=16 blen=68
+4182,DIVERGENT,Changed switch default to be first case,createBinaryLongOp(CLjava/lang/String;)Lorg/apache/bcel/generic/ArithmeticInstruction; | alen=16 blen=68
+4195,DIVERGENT,Changed switch default to be first case,createBinaryOperation(Ljava/lang/String;Lorg/apache/bcel/generic/Type;)Lorg/apache/bcel/generic/ArithmeticInstruction; | alen=23 blen=39
+4200,DIVERGENT,Changed switch default to be first case,createBranchInstruction(SLorg/apache/bcel/generic/InstructionHandle;)Lorg/apache/bcel/generic/BranchInstruction; | alen=19 blen=190
+4266,DIVERGENT,Changed switch default to be first case,createFieldAccess(Ljava/lang/String;Ljava/lang/String;Lorg/apache/bcel/generic/Type;S)Lorg/apache/bcel/generic/FieldInstruction; | alen=29 blen=59
+4293,DIVERGENT,Changed switch default to be first case,createInvoke(Ljava/lang/String;Ljava/lang/String;Lorg/apache/bcel/generic/Type;[Lorg/apache/bcel/generic/Type;SZ)Lorg/apache/bcel/generic/InvokeInstruction; | alen=90 blen=134
+4301,DIVERGENT,Changed switch default to be first case,createLoad(Lorg/apache/bcel/generic/Type;I)Lorg/apache/bcel/generic/LocalVariableInstruction; | alen=20 blen=56
+4321,DIVERGENT,Changed switch default to be first case,createNull(Lorg/apache/bcel/generic/Type;)Lorg/apache/bcel/generic/Instruction; | alen=17 blen=37
+4334,DIVERGENT,Changed switch default to be first case,createReturn(Lorg/apache/bcel/generic/Type;)Lorg/apache/bcel/generic/ReturnInstruction; | alen=17 blen=37
+4341,DIVERGENT,Changed switch default to be first case,createStore(Lorg/apache/bcel/generic/Type;I)Lorg/apache/bcel/generic/LocalVariableInstruction; | alen=20 blen=56
+4640,DIVERGENT,removed conditional - replaced equality check with false,newFileMenuItem_actionPerformed(Ljava/awt/event/ActionEvent;)V | alen=16 blen=29
+4734,DIVERGENT,removed conditional - replaced equality check with false,codeToHTML(Lorg/apache/bcel/util/ByteSequence;I)Ljava/lang/String; | alen=761 blen=769
+4745,DIVERGENT,Changed switch default to be first case,codeToHTML(Lorg/apache/bcel/util/ByteSequence;I)Ljava/lang/String; | alen=764 blen=1495
+4795,DIVERGENT,Changed switch default to be first case,codeToHTML(Lorg/apache/bcel/util/ByteSequence;I)Ljava/lang/String; | alen=751 blen=778
+4810,DIVERGENT,Changed switch default to be first case,findGotos(Lorg/apache/bcel/util/ByteSequence;Lorg/apache/bcel/classfile/Code;)V | alen=133 blen=372
+4905,DIVERGENT,removed conditional - replaced equality check with false,firstCommonSuperclass(Lorg/apache/bcel/generic/ReferenceType;)Lorg/apache/bcel/generic/ReferenceType; | alen=139 blen=260
+4913,DIVERGENT,removed conditional - replaced equality check with true,firstCommonSuperclass(Lorg/apache/bcel/generic/ReferenceType;)Lorg/apache/bcel/generic/ReferenceType; | alen=139 blen=142
+4917,DIVERGENT,removed conditional - replaced equality check with true,firstCommonSuperclass(Lorg/apache/bcel/generic/ReferenceType;)Lorg/apache/bcel/generic/ReferenceType; | alen=139 blen=142
+4919,DIVERGENT,removed conditional - replaced equality check with false,firstCommonSuperclass(Lorg/apache/bcel/generic/ReferenceType;)Lorg/apache/bcel/generic/ReferenceType; | alen=140 blen=217
+4950,DIVERGENT,removed conditional - replaced equality check with false,getFirstCommonSuperclass(Lorg/apache/bcel/generic/ReferenceType;)Lorg/apache/bcel/generic/ReferenceType; | alen=177 blen=298
+4958,DIVERGENT,removed conditional - replaced equality check with true,getFirstCommonSuperclass(Lorg/apache/bcel/generic/ReferenceType;)Lorg/apache/bcel/generic/ReferenceType; | alen=177 blen=180
+4962,DIVERGENT,removed conditional - replaced equality check with true,getFirstCommonSuperclass(Lorg/apache/bcel/generic/ReferenceType;)Lorg/apache/bcel/generic/ReferenceType; | alen=177 blen=180
+4964,DIVERGENT,removed conditional - replaced equality check with false,getFirstCommonSuperclass(Lorg/apache/bcel/generic/ReferenceType;)Lorg/apache/bcel/generic/ReferenceType; | alen=178 blen=255
+4976,DIVERGENT,removed conditional - replaced equality check with true,isAssignmentCompatibleWith(Lorg/apache/bcel/generic/Type;)Z | alen=178 blen=402
+5216,DIVERGENT,removed conditional - replaced equality check with false,actionPerformed(Ljava/awt/event/ActionEvent;)V | alen=31 blen=46
+5217,DIVERGENT,removed conditional - replaced equality check with true,actionPerformed(Ljava/awt/event/ActionEvent;)V | alen=35 blen=41
+5218,DIVERGENT,removed conditional - replaced equality check with false,actionPerformed(Ljava/awt/event/ActionEvent;)V | alen=31 blen=46
+5219,DIVERGENT,removed conditional - replaced equality check with true,actionPerformed(Ljava/awt/event/ActionEvent;)V | alen=35 blen=41
+5220,DIVERGENT,removed conditional - replaced equality check with false,actionPerformed(Ljava/awt/event/ActionEvent;)V | alen=31 blen=46
+5221,DIVERGENT,removed conditional - replaced equality check with true,actionPerformed(Ljava/awt/event/ActionEvent;)V | alen=35 blen=41
+5223,DIVERGENT,removed conditional - replaced equality check with true,actionPerformed(Ljava/awt/event/ActionEvent;)V | alen=35 blen=41
+5405,DIVERGENT,Changed switch default to be first case,getSize()I | alen=7 blen=9
+5455,DIVERGENT,removed conditional - replaced equality check with false,getType(Ljava/lang/String;)Lorg/apache/bcel/generic/Type; | alen=53 blen=77
+5470,DIVERGENT,removed conditional - replaced equality check with false,getTypeSize(Ljava/lang/String;)I | alen=54 blen=68
+5485,DIVERGENT,removed conditional - replaced equality check with false,normalizeForStackOrLocal()Lorg/apache/bcel/generic/Type; | alen=13 blen=29
+5487,DIVERGENT,removed conditional - replaced equality check with false,normalizeForStackOrLocal()Lorg/apache/bcel/generic/Type; | alen=13 blen=25
+5489,DIVERGENT,removed conditional - replaced equality check with false,normalizeForStackOrLocal()Lorg/apache/bcel/generic/Type; | alen=13 blen=21
+5497,DIVERGENT,removed conditional - replaced equality check with false,toString()Ljava/lang/String; | alen=12 blen=26
+5570,DIVERGENT,removed conditional - replaced equality check with false,circulationPump(Lorg/apache/bcel/generic/MethodGen;Lorg/apache/bcel/verifier/structurals/ControlFlowGraph;Lorg/apache/bcel/verifier/structurals/InstructionContext;Lorg/apache/bcel/verifier/structurals/Frame;Lorg/apache/bcel/verifier/structurals/InstConstraintVisitor;Lorg/apache/bcel/verifier/structurals/ExecutionVisitor;)V | alen=422 blen=428
+5571,DIVERGENT,removed conditional - replaced equality check with true,circulationPump(Lorg/apache/bcel/generic/MethodGen;Lorg/apache/bcel/verifier/structurals/ControlFlowGraph;Lorg/apache/bcel/verifier/structurals/InstructionContext;Lorg/apache/bcel/verifier/structurals/Frame;Lorg/apache/bcel/verifier/structurals/InstConstraintVisitor;Lorg/apache/bcel/verifier/structurals/ExecutionVisitor;)V | alen=422 blen=427
+5578,DIVERGENT,removed conditional - replaced equality check with false,do_verify()Lorg/apache/bcel/verifier/VerificationResult; | alen=267 blen=433
+5580,DIVERGENT,removed conditional - replaced equality check with false,do_verify()Lorg/apache/bcel/verifier/VerificationResult; | alen=267 blen=428
+5593,DIVERGENT,removed conditional - replaced equality check with false,do_verify()Lorg/apache/bcel/verifier/VerificationResult; | alen=265 blen=289
+5595,DIVERGENT,removed conditional - replaced equality check with false,do_verify()Lorg/apache/bcel/verifier/VerificationResult; | alen=265 blen=283
+5782,DIVERGENT,Changed switch default to be first case,visitAllocationInstruction(Lorg/apache/bcel/generic/AllocationInstruction;)V | alen=50 blen=124
+5788,DIVERGENT,removed conditional - replaced comparison check with false,visitArrayInstruction(Lorg/apache/bcel/generic/ArrayInstruction;)V | alen=23 blen=38
+5789,DIVERGENT,removed conditional - replaced comparison check with true,visitArrayInstruction(Lorg/apache/bcel/generic/ArrayInstruction;)V | alen=23 blen=35
+5839,DIVERGENT,removed conditional - replaced comparison check with false,visitLocalVariableInstruction(Lorg/apache/bcel/generic/LocalVariableInstruction;)V | alen=52 blen=67
+5840,DIVERGENT,removed conditional - replaced comparison check with true,visitLocalVariableInstruction(Lorg/apache/bcel/generic/LocalVariableInstruction;)V | alen=52 blen=64
+5856,DIVERGENT,removed conditional - replaced equality check with false,<init>(Ljava/lang/String;)V | alen=112 blen=124
+5861,DIVERGENT,removed conditional - replaced equality check with false,addJdkModules(Ljava/lang/String;Ljava/util/List;)V | alen=61 blen=70
+5879,DIVERGENT,replaced return value with null for org/apache/bcel/util/ClassPath::getBytes,getBytes(Ljava/lang/String;Ljava/lang/String;)[B | alen=66 blen=68
+6111,DIVERGENT,removed conditional - replaced equality check with true,mergeInFrames(Lorg/apache/bcel/verifier/structurals/Frame;)Z | alen=42 blen=46
+6117,DIVERGENT,removed conditional - replaced comparison check with false,predecessor(I)Ljava/lang/Object; | alen=17 blen=27
+6313,DIVERGENT,Changed switch default to be first case,getType(Lorg/apache/bcel/generic/ConstantPoolGen;)Lorg/apache/bcel/generic/Type; | alen=18 blen=34
+6327,DIVERGENT,removed conditional - replaced comparison check with true,initFromFile(Lorg/apache/bcel/util/ByteSequence;Z)V | alen=56 blen=58
+6345,DIVERGENT,removed conditional - replaced comparison check with false,setIndex(I)V | alen=47 blen=79
+6366,DIVERGENT,removed conditional - replaced comparison check with true,toString(Z)Ljava/lang/String; | alen=31 blen=33
+6390,DIVERGENT,Changed switch default to be first case,addConstant()I | alen=26 blen=95
+6483,DIVERGENT,Replaced integer addition with subtraction,calculateLength()I | alen=34 blen=34
+6484,DIVERGENT,Replaced integer addition with subtraction,calculateLength()I | alen=34 blen=34
+6510,DIVERGENT,Replaced integer addition with subtraction,getInternalLength()I | alen=21 blen=21
+6511,DIVERGENT,Replaced integer addition with subtraction,getInternalLength()I | alen=21 blen=21
+6550,DIVERGENT,removed conditional - replaced equality check with false,<init>(Lorg/apache/bcel/classfile/JavaClass;)V | alen=188 blen=195
+6625,DIVERGENT,removed conditional - replaced equality check with false,equals(Ljava/lang/Object;)Z | alen=2 blen=15
+6626,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=9 blen=22
+6640,DIVERGENT,removed conditional - replaced equality check with false,merge(Lorg/apache/bcel/verifier/structurals/OperandStack;)V | alen=169 blen=345
+6647,DIVERGENT,removed conditional - replaced equality check with false,merge(Lorg/apache/bcel/verifier/structurals/OperandStack;)V | alen=168 blen=188
+6651,DIVERGENT,removed conditional - replaced equality check with false,merge(Lorg/apache/bcel/verifier/structurals/OperandStack;)V | alen=163 blen=196
+6655,DIVERGENT,removed conditional - replaced equality check with false,merge(Lorg/apache/bcel/verifier/structurals/OperandStack;)V | alen=168 blen=180
+6659,DIVERGENT,removed conditional - replaced equality check with false,merge(Lorg/apache/bcel/verifier/structurals/OperandStack;)V | alen=168 blen=187
+6678,DIVERGENT,removed conditional - replaced equality check with false,push(Lorg/apache/bcel/generic/Type;)V | alen=53 blen=94
+6680,DIVERGENT,removed conditional - replaced equality check with false,push(Lorg/apache/bcel/generic/Type;)V | alen=53 blen=90
+6682,DIVERGENT,removed conditional - replaced equality check with false,push(Lorg/apache/bcel/generic/Type;)V | alen=53 blen=86
+6705,DIVERGENT,removed conditional - replaced equality check with false,identStart(I)Z | alen=7 blen=14
+6722,DIVERGENT,removed conditional - replaced equality check with false,matchGJIdent(Lorg/apache/bcel/classfile/Signature$MyByteArrayInputStream;Ljava/lang/StringBuilder;)V | alen=102 blen=111
+6761,DIVERGENT,removed conditional - replaced equality check with false,matchIdent(Lorg/apache/bcel/classfile/Signature$MyByteArrayInputStream;Ljava/lang/StringBuilder;)V | alen=108 blen=116
+6762,DIVERGENT,removed conditional - replaced equality check with true,matchIdent(Lorg/apache/bcel/classfile/Signature$MyByteArrayInputStream;Ljava/lang/StringBuilder;)V | alen=106 blen=112
+6764,DIVERGENT,removed conditional - replaced equality check with true,matchIdent(Lorg/apache/bcel/classfile/Signature$MyByteArrayInputStream;Ljava/lang/StringBuilder;)V | alen=110 blen=112
+6784,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=35 blen=64
+6811,DIVERGENT,removed conditional - replaced equality check with false,merge(Lorg/apache/bcel/verifier/structurals/LocalVariables;I)V | alen=158 blen=176
+6815,DIVERGENT,removed conditional - replaced equality check with false,merge(Lorg/apache/bcel/verifier/structurals/LocalVariables;I)V | alen=154 blen=182
+6823,DIVERGENT,removed conditional - replaced equality check with false,merge(Lorg/apache/bcel/verifier/structurals/LocalVariables;I)V | alen=158 blen=173
+6833,DIVERGENT,removed conditional - replaced equality check with false,merge(Lorg/apache/bcel/verifier/structurals/LocalVariables;I)V | alen=154 blen=169
+6835,DIVERGENT,removed conditional - replaced equality check with false,set(ILorg/apache/bcel/generic/Type;)V | alen=29 blen=47
+6837,DIVERGENT,removed conditional - replaced equality check with false,set(ILorg/apache/bcel/generic/Type;)V | alen=29 blen=43
+6839,DIVERGENT,removed conditional - replaced equality check with false,set(ILorg/apache/bcel/generic/Type;)V | alen=29 blen=39
+6920,DIVERGENT,removed conditional - replaced equality check with false,addEnteringJsrInstruction(Lorg/apache/bcel/generic/InstructionHandle;)V | alen=39 blen=84
+6923,DIVERGENT,removed conditional - replaced equality check with true,addEnteringJsrInstruction(Lorg/apache/bcel/generic/InstructionHandle;)V | alen=38 blen=77
+6936,DIVERGENT,removed conditional - replaced equality check with false,getAccessedLocalsIndices()[I | alen=97 blen=108
+7077,DIVERGENT,removed conditional - replaced comparison check with false,getSourceLine(I)I | alen=69 blen=81
+7131,DIVERGENT,Replaced integer subtraction with addition,matchIsOrdered(I)Z | alen=25 blen=25
+7132,DIVERGENT,Replaced integer subtraction with addition,matchIsOrdered(I)Z | alen=25 blen=25
+7154,DIVERGENT,removed conditional - replaced comparison check with false,sort(II)V | alen=85 blen=99
+7165,DIVERGENT,removed conditional - replaced comparison check with false,<init>(ILjava/lang/String;Lorg/apache/bcel/generic/Type;Lorg/apache/bcel/generic/InstructionHandle;Lorg/apache/bcel/generic/InstructionHandle;)V | alen=43 blen=70
+7175,DIVERGENT,removed conditional - replaced equality check with false,containsTarget(Lorg/apache/bcel/generic/InstructionHandle;)Z | alen=8 blen=17
+7183,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=22 blen=49
+7296,DIVERGENT,Changed switch default to be first case,writeAttribute(Lorg/apache/bcel/classfile/Attribute;Ljava/lang/String;I)V | alen=98 blen=1118
+7337,DIVERGENT,removed conditional - replaced equality check with false,<init>(Ljava/io/InputStream;Ljava/lang/String;)V | alen=36 blen=50
+7440,DIVERGENT,Changed switch default to be first case,toHTML(Ljava/lang/String;)Ljava/lang/String; | alen=30 blen=63
+7450,DIVERGENT,removed conditional - replaced equality check with false,<init>(Ljava/io/DataInput;)V | alen=33 blen=39
+7457,DIVERGENT,Changed switch default to be first case,constantToString(Lorg/apache/bcel/classfile/Constant;)Ljava/lang/String; | alen=23 blen=449
+7476,DIVERGENT,Changed switch default to be first case,escape(Ljava/lang/String;)Ljava/lang/String; | alen=38 blen=78
+7479,DIVERGENT,removed conditional - replaced comparison check with false,getConstant(I)Lorg/apache/bcel/classfile/Constant; | alen=25 blen=35
+7491,DIVERGENT,Changed switch default to be first case,getConstantString(IB)Ljava/lang/String; | alen=32 blen=69
+7534,DIVERGENT,Changed switch default to be first case,readInstruction(Lorg/apache/bcel/util/ByteSequence;)Lorg/apache/bcel/generic/Instruction; | alen=74 blen=1171
+7621,DIVERGENT,Changed switch default to be first case,readAttribute(Ljava/io/DataInput;Lorg/apache/bcel/classfile/ConstantPool;)Lorg/apache/bcel/classfile/Attribute; | alen=73 blen=429
+7692,DIVERGENT,removed conditional - replaced equality check with false,setWide()V | alen=45 blen=54
+7697,DIVERGENT,removed conditional - replaced equality check with false,setWide()V | alen=45 blen=54
+7833,DIVERGENT,removed conditional - replaced equality check with false,<init>(Lorg/apache/bcel/generic/ConstantPoolGen;Ljava/lang/Number;)V | alen=70 blen=145
+7835,DIVERGENT,removed conditional - replaced equality check with false,<init>(Lorg/apache/bcel/generic/ConstantPoolGen;Ljava/lang/Number;)V | alen=70 blen=141
+7850,DIVERGENT,removed conditional - replaced equality check with true,<init>(Lorg/apache/bcel/generic/ConstantPoolGen;Z)V | alen=7 blen=13
+7856,DIVERGENT,Changed switch default to be first case,dump(Ljava/io/DataOutputStream;)V | alen=25 blen=26
+7888,DIVERGENT,Changed switch default to be first case,stringifyValue()Ljava/lang/String; | alen=31 blen=217
+7926,DIVERGENT,Changed switch default to be first case,writeConstant(I)V | alen=141 blen=1280
+8029,DIVERGENT,removed conditional - replaced comparison check with false,<init>(BILorg/apache/bcel/classfile/ConstantPool;)V | alen=30 blen=42
+8044,DIVERGENT,removed conditional - replaced equality check with false,hasIndex()Z | alen=8 blen=18
+8060,DIVERGENT,removed conditional - replaced comparison check with false,setType(B)V | alen=19 blen=27
+8201,DIVERGENT,Changed switch default to be first case,getType(Lorg/apache/bcel/generic/ConstantPoolGen;)Lorg/apache/bcel/generic/Type; | alen=22 blen=34
+8206,DIVERGENT,Changed switch default to be first case,getValue(Lorg/apache/bcel/generic/ConstantPoolGen;)Ljava/lang/Object; | alen=27 blen=101
+8226,DIVERGENT,removed conditional - replaced equality check with false,containsTarget(Lorg/apache/bcel/generic/InstructionHandle;)Z | alen=12 blen=25
+8228,DIVERGENT,removed conditional - replaced equality check with false,containsTarget(Lorg/apache/bcel/generic/InstructionHandle;)Z | alen=12 blen=21
+8279,DIVERGENT,removed conditional - replaced equality check with false,toString()Ljava/lang/String; | alen=87 blen=106
+8281,DIVERGENT,removed conditional - replaced equality check with false,toString()Ljava/lang/String; | alen=87 blen=101
+8331,DIVERGENT,Changed switch default to be first case,<init>(Lorg/apache/bcel/classfile/SimpleElementValue;Lorg/apache/bcel/generic/ConstantPoolGen;Z)V | alen=35 blen=172
+8335,DIVERGENT,Changed switch default to be first case,dump(Ljava/io/DataOutputStream;)V | alen=25 blen=26
+8345,DIVERGENT,Changed switch default to be first case,stringifyValue()Ljava/lang/String; | alen=27 blen=223
+8412,DIVERGENT,removed conditional - replaced equality check with false,subclassOf(Lorg/apache/bcel/generic/ObjectType;)Z | alen=11 blen=25
+8438,DIVERGENT,removed conditional - replaced equality check with false,toString()Ljava/lang/String; | alen=60 blen=120
+8449,DIVERGENT,removed conditional - replaced comparison check with false,<init>(Lorg/apache/bcel/generic/Type;I)V | alen=74 blen=159
+8454,DIVERGENT,Changed switch default to be first case,<init>(Lorg/apache/bcel/generic/Type;I)V | alen=64 blen=89
+8528,DIVERGENT,removed conditional - replaced equality check with false,search(Ljava/lang/String;Lorg/apache/bcel/generic/InstructionHandle;Lorg/apache/bcel/util/InstructionFinder$CodeConstraint;)Ljava/util/Iterator; | alen=90 blen=100
+8648,DIVERGENT,Changed switch default to be first case,readConstant(Ljava/io/DataInput;)Lorg/apache/bcel/classfile/Constant; | alen=20 blen=164
+8700,DIVERGENT,removed conditional - replaced comparison check with false,add(ILjava/lang/String;IILorg/apache/bcel/generic/Type;)V | alen=48 blen=85
+8715,DIVERGENT,removed conditional - replaced comparison check with false,getLocalVariableInfo(I)Lorg/apache/bcel/verifier/statics/LocalVariableInfo; | alen=15 blen=24
+8721,DIVERGENT,Changed switch default to be first case,copy(Lorg/apache/bcel/classfile/ElementValue;Lorg/apache/bcel/generic/ConstantPoolGen;Z)Lorg/apache/bcel/generic/ElementValueGen; | alen=26 blen=82
+8729,DIVERGENT,Changed switch default to be first case,readElementValue(Ljava/io/DataInput;Lorg/apache/bcel/generic/ConstantPoolGen;)Lorg/apache/bcel/generic/ElementValueGen; | alen=33 blen=276
+8764,DIVERGENT,replaced return value with null for org/apache/bcel/classfile/ConstantUtf8::getCachedInstance,getCachedInstance(Ljava/lang/String;)Lorg/apache/bcel/classfile/ConstantUtf8; | alen=55 blen=57
+8765,DIVERGENT,replaced return value with null for org/apache/bcel/classfile/ConstantUtf8::getCachedInstance,getCachedInstance(Ljava/lang/String;)Lorg/apache/bcel/classfile/ConstantUtf8; | alen=55 blen=57
+8811,DIVERGENT,replaced return value with null for org/apache/bcel/util/AbstractClassPathRepository::loadClass,loadClass(Ljava/io/InputStream;Ljava/lang/String;)Lorg/apache/bcel/classfile/JavaClass; | alen=70 blen=72
+8822,DIVERGENT,replaced return value with null for org/apache/bcel/util/AbstractClassPathRepository::loadClass,loadClass(Ljava/lang/Class;)Lorg/apache/bcel/classfile/JavaClass; | alen=59 blen=64
+8823,DIVERGENT,removed conditional - replaced equality check with false,loadClass(Ljava/lang/String;)Lorg/apache/bcel/classfile/JavaClass; | alen=54 blen=95
+8902,DIVERGENT,removed conditional - replaced comparison check with false,<init>(B)V | alen=21 blen=28
+8912,DIVERGENT,Changed switch default to be first case,getType(B)Lorg/apache/bcel/generic/BasicType; | alen=16 blen=48
+9052,DIVERGENT,removed conditional - replaced equality check with false,getClassLoader()Ljava/lang/ClassLoader; | alen=25 blen=45
+9067,DIVERGENT,removed conditional - replaced equality check with false,runMain(Ljava/lang/String;[Ljava/lang/String;)V | alen=62 blen=82
+9090,DIVERGENT,removed conditional - replaced equality check with false,toStringShared(Z)Ljava/lang/String; | alen=38 blen=57
+9091,DIVERGENT,removed conditional - replaced equality check with true,toStringShared(Z)Ljava/lang/String; | alen=38 blen=54
+9094,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=18 blen=41
+9273,DIVERGENT,removed conditional - replaced equality check with false,consumeStack(Lorg/apache/bcel/generic/ConstantPoolGen;)I | alen=20 blen=31
+9304,DIVERGENT,removed conditional - replaced equality check with false,toString()Ljava/lang/String; | alen=79 blen=93
+9331,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=24 blen=53
+9333,DIVERGENT,removed conditional - replaced equality check with false,equals(Ljava/lang/Object;)Z | alen=26 blen=40
+9348,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=19 blen=44
+9408,DIVERGENT,Changed switch default to be first case,createExceptions(Lorg/apache/bcel/ExceptionConst$EXCS;[Ljava/lang/Class;)[Ljava/lang/Class; | alen=21 blen=51
+9409,DIVERGENT,replaced return value with null for org/apache/bcel/ExceptionConst::createExceptions,createExceptions(Lorg/apache/bcel/ExceptionConst$EXCS;[Ljava/lang/Class;)[Ljava/lang/Class; | alen=35 blen=37
+9410,DIVERGENT,replaced return value with null for org/apache/bcel/ExceptionConst::createExceptions,createExceptions(Lorg/apache/bcel/ExceptionConst$EXCS;[Ljava/lang/Class;)[Ljava/lang/Class; | alen=35 blen=37
+9411,DIVERGENT,replaced return value with null for org/apache/bcel/ExceptionConst::createExceptions,createExceptions(Lorg/apache/bcel/ExceptionConst$EXCS;[Ljava/lang/Class;)[Ljava/lang/Class; | alen=35 blen=37
+9412,DIVERGENT,replaced return value with null for org/apache/bcel/ExceptionConst::createExceptions,createExceptions(Lorg/apache/bcel/ExceptionConst$EXCS;[Ljava/lang/Class;)[Ljava/lang/Class; | alen=35 blen=37
+9413,DIVERGENT,replaced return value with null for org/apache/bcel/ExceptionConst::createExceptions,createExceptions(Lorg/apache/bcel/ExceptionConst$EXCS;[Ljava/lang/Class;)[Ljava/lang/Class; | alen=35 blen=37
+9441,DIVERGENT,Changed switch default to be first case,readElementValue(Ljava/io/DataInput;Lorg/apache/bcel/classfile/ConstantPool;)Lorg/apache/bcel/classfile/ElementValue; | alen=27 blen=134
+9585,DIVERGENT,removed conditional - replaced equality check with false,setInstruction(Lorg/apache/bcel/generic/Instruction;)V | alen=17 blen=44
+9586,DIVERGENT,removed conditional - replaced equality check with true,setInstruction(Lorg/apache/bcel/generic/Instruction;)V | alen=8 blen=29
+9639,DIVERGENT,replaced return value with null for org/apache/bcel/util/ClassLoaderRepository::loadClass,loadClass(Ljava/lang/String;)Lorg/apache/bcel/classfile/JavaClass; | alen=87 blen=89
+9771,DIVERGENT,Changed switch default to be first case,getType(Lorg/apache/bcel/generic/ConstantPoolGen;)Lorg/apache/bcel/generic/Type; | alen=22 blen=26
+9774,DIVERGENT,Changed switch default to be first case,getValue(Lorg/apache/bcel/generic/ConstantPoolGen;)Ljava/lang/Number; | alen=27 blen=42
+9859,DIVERGENT,Changed switch default to be first case,getType(Lorg/apache/bcel/generic/ConstantPoolGen;)Lorg/apache/bcel/generic/Type; | alen=19 blen=47
+9906,DIVERGENT,Changed switch default to be first case,getType()Lorg/apache/bcel/generic/Type; | alen=19 blen=39
+9940,DIVERGENT,Changed switch default to be first case,getType(Lorg/apache/bcel/generic/ConstantPoolGen;)Lorg/apache/bcel/generic/Type; | alen=19 blen=43
+9970,DIVERGENT,Changed switch default to be first case,toString()Ljava/lang/String; | alen=28 blen=126
+10068,DIVERGENT,removed conditional - replaced equality check with false,equals(Ljava/lang/Object;)Z | alen=2 blen=13
+10069,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=7 blen=20
+10136,DIVERGENT,removed conditional - replaced equality check with true,toString()Ljava/lang/String; | alen=21 blen=29
+10137,DIVERGENT,"replaced return value with """" for org/apache/bcel/verifier/statics/StringRepresentation::toString",toString()Ljava/lang/String; | alen=26 blen=29
+10138,DIVERGENT,Replaced integer addition with subtraction,toString(Lorg/apache/bcel/classfile/Node;)Ljava/lang/String; | alen=30 blen=30
+10139,DIVERGENT,"replaced return value with """" for org/apache/bcel/verifier/statics/StringRepresentation::toString",toString(Lorg/apache/bcel/classfile/Node;)Ljava/lang/String; | alen=30 blen=32
+10280,DIVERGENT,Changed switch default to be first case,getType(Lorg/apache/bcel/generic/ConstantPoolGen;)Lorg/apache/bcel/generic/Type; | alen=19 blen=31
+69,UNREPRESENTABLE,removed conditional - replaced equality check with false,exception java.lang.ClassNotFoundException is never thrown in body of corresponding try statement
+70,UNREPRESENTABLE,removed conditional - replaced equality check with true,exception java.lang.ClassNotFoundException is never thrown in body of corresponding try statement
+524,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+525,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+556,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+557,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+574,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+575,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+623,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+641,UNREPRESENTABLE,removed conditional - replaced equality check with false,exception java.lang.ClassNotFoundException is never thrown in body of corresponding try statement
+642,UNREPRESENTABLE,removed conditional - replaced equality check with true,exception java.lang.ClassNotFoundException is never thrown in body of corresponding try statement
+653,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+654,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+911,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+921,UNREPRESENTABLE,removed conditional - replaced equality check with false,exception java.lang.ClassNotFoundException is never thrown in body of corresponding try statement
+922,UNREPRESENTABLE,removed conditional - replaced equality check with true,exception java.lang.ClassNotFoundException is never thrown in body of corresponding try statement
+1095,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1096,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1132,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1133,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1145,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1146,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1157,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1158,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1196,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1203,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1204,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1206,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1207,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1237,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1238,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1244,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1245,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1259,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1260,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1270,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1271,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1278,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1292,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1293,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1334,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+1335,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+1352,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+1353,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+1392,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1393,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1409,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+1410,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+1415,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1416,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1444,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1445,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1449,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1450,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1483,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+1484,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+1490,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+1491,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+1546,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+1547,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+1573,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+1574,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+1583,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+1584,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+1617,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1618,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1642,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1656,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+1669,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+1709,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1710,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1719,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1720,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1760,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+1769,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1777,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1889,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2196,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2197,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2202,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2295,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2300,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2328,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2329,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2334,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2335,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2342,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2343,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2349,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2350,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2356,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2357,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2378,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2379,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+2492,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2498,UNREPRESENTABLE,removed call to org/apache/bcel/generic/InstructionList::delete,exception org.apache.bcel.generic.TargetLostException is never thrown in body of corresponding try statement
+2510,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2511,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+2612,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2613,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+2628,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2664,UNREPRESENTABLE,replaced int return with 0 for org/apache/bcel/verifier/statics/Pass3aVerifier$InstOperandConstraintVisitor::max_locals,exception java.lang.ClassNotFoundException is never thrown in body of corresponding try statement
+2669,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2670,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2809,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2915,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3006,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3007,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3014,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3025,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3075,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+3076,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+3081,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+3082,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+3085,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+3086,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+3093,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3106,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+3107,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+3111,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3112,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3129,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3130,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+3131,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+3135,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+3136,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+3141,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+3142,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+3150,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3151,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3155,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3156,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3204,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+3205,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+3220,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+3230,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3258,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+3259,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+3261,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+3262,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+3271,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+3279,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+3291,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+3292,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+3299,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+3300,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+3302,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+3303,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+3310,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+3311,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+3363,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3368,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3369,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3371,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3375,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3376,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3378,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3379,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3598,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3599,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3608,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3609,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3759,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3760,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3773,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3774,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3794,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3795,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3808,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3809,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3822,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3823,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3898,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3899,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3915,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4074,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4075,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4086,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4087,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4095,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4096,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4108,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4109,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4130,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4131,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4372,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4390,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4391,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4393,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4394,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4396,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4430,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+4431,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+4443,UNREPRESENTABLE,removed call to org/apache/bcel/classfile/JavaClass::dump,exception java.io.IOException is never thrown in body of corresponding try statement
+4445,UNREPRESENTABLE,removed call to java/io/DataOutputStream::close,exception java.io.IOException is never thrown in body of corresponding try statement
+4457,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4458,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4477,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+4478,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+4492,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+4493,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+4526,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4527,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4556,UNREPRESENTABLE,removed call to org/apache/bcel/verifier/VerifierAppFrame::verify,exception java.lang.ClassNotFoundException is never thrown in body of corresponding try statement
+4648,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4649,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4664,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4665,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4710,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4711,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4722,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4723,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4729,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4730,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4743,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4744,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4753,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4754,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4762,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4763,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4766,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4767,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4781,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4782,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4793,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4808,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4816,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4817,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4828,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4838,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4851,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4852,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4865,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4866,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4875,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4876,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+4887,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+4888,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+5206,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5236,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5237,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+5249,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5250,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+5260,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5261,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+5350,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5351,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+5383,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+5384,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+5391,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+5392,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+5456,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+5471,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+5480,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5481,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+5506,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+5507,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+5513,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5546,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5547,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+5552,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5553,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+5564,UNREPRESENTABLE,removed conditional - replaced equality check with false,exception java.lang.ClassNotFoundException is never thrown in body of corresponding try statement
+5565,UNREPRESENTABLE,removed conditional - replaced equality check with true,exception java.lang.ClassNotFoundException is never thrown in body of corresponding try statement
+5591,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5592,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+5664,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5665,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+5676,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5677,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+5687,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5688,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+5718,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5719,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+5724,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5725,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+5732,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5733,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+5754,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+5755,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+5774,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5794,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5795,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+5802,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+5803,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+5844,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+5845,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+5917,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+5973,UNREPRESENTABLE,"replaced return value with """" for org/apache/bcel/util/ClassPath$Dir$1::getPath",exception java.io.IOException is never thrown in body of corresponding try statement
+5983,UNREPRESENTABLE,replaced return value with null for org/apache/bcel/util/ClassPath$JrtModule::getResourceAsStream,exception java.io.IOException is never thrown in body of corresponding try statement
+5988,UNREPRESENTABLE,replaced long return with 0 for org/apache/bcel/util/ClassPath$JrtModule$1::getSize,exception java.io.IOException is never thrown in body of corresponding try statement
+5989,UNREPRESENTABLE,replaced long return with 0 for org/apache/bcel/util/ClassPath$JrtModule$1::getTime,exception java.io.IOException is never thrown in body of corresponding try statement
+5991,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6014,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6015,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+6028,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6029,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+6080,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6081,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+6094,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6095,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+6152,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6153,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+6474,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6475,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+6477,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6478,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+6492,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6493,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+6495,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6496,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+6560,UNREPRESENTABLE,replaced return value with null for org/apache/bcel/generic/ClassGen::clone,exception java.lang.CloneNotSupportedException is never thrown in body of corresponding try statement
+6583,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6584,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+6633,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6645,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6674,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6675,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+6691,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6692,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+6696,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6697,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+6749,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+6750,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+6756,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6777,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6780,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6781,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+6790,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6791,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+6800,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6808,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6844,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6845,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+6856,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+6857,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+6872,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+6989,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+6990,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7007,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7008,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7016,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7035,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7036,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7043,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7047,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7048,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7078,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7088,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7089,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7114,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7115,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7119,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7120,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7129,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7130,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7141,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7142,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7145,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7146,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7155,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7174,UNREPRESENTABLE,replaced return value with null for org/apache/bcel/generic/LocalVariableGen::clone,exception java.lang.CloneNotSupportedException is never thrown in body of corresponding try statement
+7230,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7231,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7237,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7238,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7241,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7250,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7251,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7260,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7267,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7268,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7279,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7316,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7317,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7361,UNREPRESENTABLE,removed call to java/io/DataInputStream::close,exception java.io.IOException is never thrown in body of corresponding try statement
+7364,UNREPRESENTABLE,removed call to java/util/zip/ZipFile::close,exception java.io.IOException is never thrown in body of corresponding try statement
+7369,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7382,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7387,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7390,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7398,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7399,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7423,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7438,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7439,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7444,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7448,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7460,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7467,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7474,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7475,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7497,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7498,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7553,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7554,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7556,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7557,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7559,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7560,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7562,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7563,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7565,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7569,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7570,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7572,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7573,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7575,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7576,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7578,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7579,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7616,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7781,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7788,UNREPRESENTABLE,removed call to org/apache/bcel/verifier/Verifier::verifyType,exception java.lang.ClassNotFoundException is never thrown in body of corresponding try statement
+7797,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7904,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7905,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7918,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7919,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+7930,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+7931,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8009,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8024,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8036,UNREPRESENTABLE,replaced return value with null for org/apache/bcel/classfile/StackMapType::copy,exception java.lang.CloneNotSupportedException is never thrown in body of corresponding try statement
+8067,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8071,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8072,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8096,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8097,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8105,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8106,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8108,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8109,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8164,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8165,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8178,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8225,UNREPRESENTABLE,replaced return value with null for org/apache/bcel/generic/CodeExceptionGen::clone,exception java.lang.CloneNotSupportedException is never thrown in body of corresponding try statement
+8296,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8311,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8312,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8320,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8321,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8386,UNREPRESENTABLE,replaced return value with null for org/apache/bcel/Repository::lookupClassFile,exception java.io.IOException is never thrown in body of corresponding try statement
+8457,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8458,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8489,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8503,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8511,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8512,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8516,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8563,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8567,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8568,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8582,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8583,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8590,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8604,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8605,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8616,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8620,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8621,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8634,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8635,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8641,UNREPRESENTABLE,replaced return value with null for org/apache/bcel/classfile/Constant::clone,exception java.lang.CloneNotSupportedException is never thrown in body of corresponding try statement
+8642,UNREPRESENTABLE,replaced return value with null for org/apache/bcel/classfile/Constant::copy,exception java.lang.CloneNotSupportedException is never thrown in body of corresponding try statement
+8671,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8689,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8690,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8697,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8743,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8744,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8814,UNREPRESENTABLE,removed call to java/io/InputStream::close,exception java.io.IOException is never thrown in body of corresponding try statement
+8830,UNREPRESENTABLE,replaced return value with null for org/apache/bcel/util/AbstractClassPathRepository::loadClass,exception java.io.IOException is never thrown in body of corresponding try statement
+8847,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8848,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8886,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8887,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8894,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+8895,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+8968,UNREPRESENTABLE,replaced return value with null for org/apache/bcel/classfile/MethodParameter::copy,exception java.lang.CloneNotSupportedException is never thrown in body of corresponding try statement
+9011,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9015,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9016,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+9024,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9025,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+9028,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9074,UNREPRESENTABLE,replaced return value with null for org/apache/bcel/classfile/LocalVariable::copy,exception java.lang.CloneNotSupportedException is never thrown in body of corresponding try statement
+9113,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9119,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9120,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+9151,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9153,UNREPRESENTABLE,replaced return value with null for org/apache/bcel/classfile/BootstrapMethod::copy,exception java.lang.CloneNotSupportedException is never thrown in body of corresponding try statement
+9165,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9187,UNREPRESENTABLE,replaced return value with null for org/apache/bcel/classfile/InnerClass::copy,exception java.lang.CloneNotSupportedException is never thrown in body of corresponding try statement
+9240,UNREPRESENTABLE,replaced return value with null for org/apache/bcel/classfile/CodeException::copy,exception java.lang.CloneNotSupportedException is never thrown in body of corresponding try statement
+9268,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9447,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9448,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+9453,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9482,UNREPRESENTABLE,replaced return value with null for org/apache/bcel/generic/LineNumberGen::clone,exception java.lang.CloneNotSupportedException is never thrown in body of corresponding try statement
+9501,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+9502,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+9507,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9511,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9512,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+9642,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+9643,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+9644,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+9645,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+9646,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+9647,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+9654,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9657,UNREPRESENTABLE,replaced return value with null for org/apache/bcel/classfile/ModuleExports::copy,exception java.lang.CloneNotSupportedException is never thrown in body of corresponding try statement
+9666,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9669,UNREPRESENTABLE,replaced return value with null for org/apache/bcel/classfile/ModuleOpens::copy,exception java.lang.CloneNotSupportedException is never thrown in body of corresponding try statement
+9778,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9781,UNREPRESENTABLE,replaced return value with null for org/apache/bcel/classfile/ModuleProvides::copy,exception java.lang.CloneNotSupportedException is never thrown in body of corresponding try statement
+9789,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9829,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+9848,UNREPRESENTABLE,replaced return value with null for org/apache/bcel/generic/FieldGenOrMethodGen::clone,exception java.lang.CloneNotSupportedException is never thrown in body of corresponding try statement
+9897,UNREPRESENTABLE,replaced return value with null for org/apache/bcel/classfile/ModuleRequires::copy,exception java.lang.CloneNotSupportedException is never thrown in body of corresponding try statement
+9924,UNREPRESENTABLE,replaced return value with null for org/apache/bcel/classfile/LineNumber::copy,exception java.lang.CloneNotSupportedException is never thrown in body of corresponding try statement
+9956,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement

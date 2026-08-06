@@ -1,0 +1,386 @@
+index_no,verdict,description,detail
+58,DIVERGENT,removed conditional - replaced equality check with false,getIndexedProperty(Ljava/lang/Object;Ljava/lang/String;I)Ljava/lang/Object; | alen=238 blen=245
+88,DIVERGENT,removed conditional - replaced equality check with false,getIndexedProperty(Ljava/lang/Object;Ljava/lang/String;I)Ljava/lang/Object; | alen=232 blen=268
+89,DIVERGENT,removed conditional - replaced equality check with true,getIndexedProperty(Ljava/lang/Object;Ljava/lang/String;I)Ljava/lang/Object; | alen=218 blen=247
+189,DIVERGENT,removed conditional - replaced equality check with false,getPropertyOfMapBean(Ljava/util/Map;Ljava/lang/String;)Ljava/lang/Object; | alen=44 blen=51
+193,DIVERGENT,removed conditional - replaced equality check with false,getPropertyOfMapBean(Ljava/util/Map;Ljava/lang/String;)Ljava/lang/Object; | alen=41 blen=59
+364,DIVERGENT,removed conditional - replaced equality check with false,setIndexedProperty(Ljava/lang/Object;Ljava/lang/String;ILjava/lang/Object;)V | alen=268 blen=275
+462,DIVERGENT,removed conditional - replaced equality check with false,setPropertyOfMapBean(Ljava/util/Map;Ljava/lang/String;Ljava/lang/Object;)V | alen=46 blen=54
+466,DIVERGENT,removed conditional - replaced equality check with false,setPropertyOfMapBean(Ljava/util/Map;Ljava/lang/String;Ljava/lang/Object;)V | alen=43 blen=61
+728,DIVERGENT,removed conditional - replaced equality check with false,setMethodAccessible(Ljava/lang/reflect/Method;)V | alen=56 blen=80
+730,DIVERGENT,removed conditional - replaced equality check with false,setMethodAccessible(Ljava/lang/reflect/Method;)V | alen=56 blen=74
+732,DIVERGENT,removed conditional - replaced equality check with false,setMethodAccessible(Ljava/lang/reflect/Method;)V | alen=56 blen=68
+755,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=30 blen=69
+800,DIVERGENT,removed conditional - replaced equality check with false,convert(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object; | alen=122 blen=130
+842,DIVERGENT,removed conditional - replaced equality check with false,lookup(Ljava/lang/Class;Ljava/lang/Class;)Lorg/apache/commons/beanutils/Converter; | alen=66 blen=76
+851,DIVERGENT,removed conditional - replaced equality check with false,lookup(Ljava/lang/Class;Ljava/lang/Class;)Lorg/apache/commons/beanutils/Converter; | alen=66 blen=76
+1034,DIVERGENT,removed conditional - replaced equality check with false,createOtherProperty(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object; | alen=45 blen=109
+1036,DIVERGENT,removed conditional - replaced equality check with false,createOtherProperty(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object; | alen=30 blen=105
+1038,DIVERGENT,removed conditional - replaced equality check with false,createOtherProperty(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object; | alen=30 blen=101
+1040,DIVERGENT,removed conditional - replaced equality check with false,createOtherProperty(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object; | alen=30 blen=97
+1071,DIVERGENT,removed conditional - replaced equality check with false,createProperty(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object; | alen=53 blen=92
+1145,DIVERGENT,removed conditional - replaced equality check with false,isAssignable(Ljava/lang/Class;Ljava/lang/Class;)Z | alen=52 blen=121
+1353,DIVERGENT,removed conditional - replaced equality check with false,populate(Ljava/lang/Object;Ljava/util/Map;)V | alen=50 blen=133
+1434,DIVERGENT,removed conditional - replaced equality check with false,setProperty(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)V | alen=446 blen=476
+1492,DIVERGENT,removed conditional - replaced comparison check with false,parse(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;Ljava/text/NumberFormat;)Ljava/lang/Number; | alen=93 blen=108
+1494,DIVERGENT,removed conditional - replaced equality check with false,parse(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;Ljava/text/NumberFormat;)Ljava/lang/Number; | alen=91 blen=101
+1549,DIVERGENT,removed conditional - replaced equality check with false,toNumber(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Number;)Ljava/lang/Object; | alen=373 blen=411
+1596,DIVERGENT,removed conditional - replaced equality check with false,getIndex(Ljava/lang/String;)I | alen=81 blen=162
+1604,DIVERGENT,removed conditional - replaced equality check with false,getIndex(Ljava/lang/String;)I | alen=80 blen=149
+1619,DIVERGENT,removed conditional - replaced equality check with false,getKey(Ljava/lang/String;)Ljava/lang/String; | alen=49 blen=90
+1627,DIVERGENT,removed conditional - replaced equality check with false,getKey(Ljava/lang/String;)Ljava/lang/String; | alen=48 blen=77
+1640,DIVERGENT,removed conditional - replaced equality check with false,getProperty(Ljava/lang/String;)Ljava/lang/String; | alen=38 blen=68
+1651,DIVERGENT,removed conditional - replaced equality check with false,getProperty(Ljava/lang/String;)Ljava/lang/String; | alen=37 blen=48
+1657,DIVERGENT,removed conditional - replaced equality check with false,hasNested(Ljava/lang/String;)Z | alen=13 blen=26
+1665,DIVERGENT,removed conditional - replaced equality check with false,isIndexed(Ljava/lang/String;)Z | alen=32 blen=58
+1673,DIVERGENT,removed conditional - replaced equality check with false,isIndexed(Ljava/lang/String;)Z | alen=31 blen=45
+1682,DIVERGENT,removed conditional - replaced equality check with false,isMapped(Ljava/lang/String;)Z | alen=32 blen=58
+1690,DIVERGENT,removed conditional - replaced equality check with false,isMapped(Ljava/lang/String;)Z | alen=31 blen=45
+1699,DIVERGENT,removed conditional - replaced equality check with false,next(Ljava/lang/String;)Ljava/lang/String; | alen=66 blen=122
+1727,DIVERGENT,removed conditional - replaced equality check with false,remove(Ljava/lang/String;)Ljava/lang/String; | alen=29 blen=55
+1745,DIVERGENT,removed conditional - replaced equality check with false,addAll(ILjava/util/Collection;)Z | alen=49 blen=113
+1761,DIVERGENT,removed conditional - replaced equality check with false,addAll(Ljava/util/Collection;)Z | alen=28 blen=63
+1787,DIVERGENT,removed conditional - replaced equality check with false,setElementDynaClass(Lorg/apache/commons/beanutils/DynaClass;)V | alen=74 blen=87
+1789,DIVERGENT,changed conditional boundary,setElementDynaClass(Lorg/apache/commons/beanutils/DynaClass;)V | alen=81 blen=81
+1790,DIVERGENT,removed conditional - replaced comparison check with false,setElementDynaClass(Lorg/apache/commons/beanutils/DynaClass;)V | alen=73 blen=87
+1792,DIVERGENT,removed conditional - replaced equality check with false,setElementDynaClass(Lorg/apache/commons/beanutils/DynaClass;)V | alen=65 blen=96
+1793,DIVERGENT,removed conditional - replaced equality check with true,setElementDynaClass(Lorg/apache/commons/beanutils/DynaClass;)V | alen=53 blen=110
+1794,DIVERGENT,removed conditional - replaced equality check with false,setElementDynaClass(Lorg/apache/commons/beanutils/DynaClass;)V | alen=66 blen=96
+1795,DIVERGENT,removed conditional - replaced equality check with true,setElementDynaClass(Lorg/apache/commons/beanutils/DynaClass;)V | alen=68 blen=89
+1796,DIVERGENT,removed conditional - replaced equality check with false,setElementType(Ljava/lang/Class;)V | alen=114 blen=127
+1798,DIVERGENT,removed conditional - replaced equality check with false,setElementType(Ljava/lang/Class;)V | alen=111 blen=130
+1799,DIVERGENT,removed conditional - replaced equality check with true,setElementType(Ljava/lang/Class;)V | alen=118 blen=121
+1800,DIVERGENT,removed conditional - replaced equality check with false,setElementType(Ljava/lang/Class;)V | alen=114 blen=124
+1801,DIVERGENT,removed conditional - replaced equality check with true,setElementType(Ljava/lang/Class;)V | alen=116 blen=121
+1802,DIVERGENT,removed conditional - replaced equality check with false,setElementType(Ljava/lang/Class;)V | alen=111 blen=131
+1803,DIVERGENT,removed conditional - replaced equality check with true,setElementType(Ljava/lang/Class;)V | alen=119 blen=121
+1804,DIVERGENT,changed conditional boundary,setElementType(Ljava/lang/Class;)V | alen=121 blen=121
+1805,DIVERGENT,removed conditional - replaced comparison check with false,setElementType(Ljava/lang/Class;)V | alen=113 blen=127
+1806,DIVERGENT,removed conditional - replaced comparison check with true,setElementType(Ljava/lang/Class;)V | alen=118 blen=121
+1807,DIVERGENT,removed conditional - replaced equality check with false,setElementType(Ljava/lang/Class;)V | alen=108 blen=134
+1808,DIVERGENT,removed conditional - replaced equality check with true,setElementType(Ljava/lang/Class;)V | alen=94 blen=152
+1809,DIVERGENT,removed conditional - replaced equality check with false,setElementType(Ljava/lang/Class;)V | alen=109 blen=134
+1810,DIVERGENT,removed conditional - replaced equality check with true,setElementType(Ljava/lang/Class;)V | alen=106 blen=135
+1811,DIVERGENT,removed conditional - replaced equality check with false,setElementType(Ljava/lang/Class;)V | alen=109 blen=133
+1812,DIVERGENT,removed conditional - replaced equality check with true,setElementType(Ljava/lang/Class;)V | alen=104 blen=139
+1813,DIVERGENT,removed conditional - replaced equality check with false,setElementType(Ljava/lang/Class;)V | alen=109 blen=133
+1814,DIVERGENT,removed conditional - replaced equality check with true,setElementType(Ljava/lang/Class;)V | alen=116 blen=121
+1828,DIVERGENT,removed conditional - replaced equality check with false,toArray([Ljava/lang/Object;)[Ljava/lang/Object; | alen=96 blen=207
+1858,DIVERGENT,removed conditional - replaced equality check with false,transform(Ljava/lang/Object;)Lorg/apache/commons/beanutils/DynaBean; | alen=85 blen=191
+1859,DIVERGENT,removed conditional - replaced equality check with true,transform(Ljava/lang/Object;)Lorg/apache/commons/beanutils/DynaBean; | alen=98 blen=163
+1860,DIVERGENT,removed conditional - replaced equality check with false,transform(Ljava/lang/Object;)Lorg/apache/commons/beanutils/DynaBean; | alen=122 blen=137
+1861,DIVERGENT,removed conditional - replaced equality check with true,transform(Ljava/lang/Object;)Lorg/apache/commons/beanutils/DynaBean; | alen=127 blen=130
+1862,DIVERGENT,removed call to org/apache/commons/beanutils/LazyDynaList::setElementDynaClass,transform(Ljava/lang/Object;)Lorg/apache/commons/beanutils/DynaBean; | alen=125 blen=131
+1863,DIVERGENT,removed conditional - replaced equality check with false,transform(Ljava/lang/Object;)Lorg/apache/commons/beanutils/DynaBean; | alen=123 blen=135
+1864,DIVERGENT,removed conditional - replaced equality check with true,transform(Ljava/lang/Object;)Lorg/apache/commons/beanutils/DynaBean; | alen=127 blen=130
+1865,DIVERGENT,removed call to org/apache/commons/beanutils/LazyDynaList::setElementType,transform(Ljava/lang/Object;)Lorg/apache/commons/beanutils/DynaBean; | alen=126 blen=131
+1866,DIVERGENT,removed conditional - replaced equality check with false,transform(Ljava/lang/Object;)Lorg/apache/commons/beanutils/DynaBean; | alen=120 blen=135
+1867,DIVERGENT,removed conditional - replaced equality check with true,transform(Ljava/lang/Object;)Lorg/apache/commons/beanutils/DynaBean; | alen=110 blen=145
+1868,DIVERGENT,removed conditional - replaced equality check with false,transform(Ljava/lang/Object;)Lorg/apache/commons/beanutils/DynaBean; | alen=121 blen=135
+1869,DIVERGENT,removed conditional - replaced equality check with true,transform(Ljava/lang/Object;)Lorg/apache/commons/beanutils/DynaBean; | alen=119 blen=134
+1870,DIVERGENT,removed conditional - replaced equality check with false,transform(Ljava/lang/Object;)Lorg/apache/commons/beanutils/DynaBean; | alen=120 blen=140
+1871,DIVERGENT,removed conditional - replaced equality check with true,transform(Ljava/lang/Object;)Lorg/apache/commons/beanutils/DynaBean; | alen=116 blen=144
+1872,DIVERGENT,removed conditional - replaced equality check with false,transform(Ljava/lang/Object;)Lorg/apache/commons/beanutils/DynaBean; | alen=120 blen=140
+1873,DIVERGENT,removed conditional - replaced equality check with true,transform(Ljava/lang/Object;)Lorg/apache/commons/beanutils/DynaBean; | alen=126 blen=130
+1874,DIVERGENT,removed conditional - replaced equality check with false,transform(Ljava/lang/Object;)Lorg/apache/commons/beanutils/DynaBean; | alen=105 blen=162
+1875,DIVERGENT,removed conditional - replaced equality check with true,transform(Ljava/lang/Object;)Lorg/apache/commons/beanutils/DynaBean; | alen=127 blen=130
+1876,DIVERGENT,removed conditional - replaced equality check with false,transform(Ljava/lang/Object;)Lorg/apache/commons/beanutils/DynaBean; | alen=108 blen=155
+1877,DIVERGENT,removed conditional - replaced equality check with true,transform(Ljava/lang/Object;)Lorg/apache/commons/beanutils/DynaBean; | alen=125 blen=130
+1878,DIVERGENT,replaced return value with null for org/apache/commons/beanutils/LazyDynaList::transform,transform(Ljava/lang/Object;)Lorg/apache/commons/beanutils/DynaBean; | alen=130 blen=132
+1955,DIVERGENT,removed conditional - replaced comparison check with false,parse(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;Ljava/text/DateFormat;)Ljava/util/Calendar; | alen=86 blen=105
+1957,DIVERGENT,removed conditional - replaced equality check with false,parse(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;Ljava/text/DateFormat;)Ljava/util/Calendar; | alen=84 blen=98
+2075,DIVERGENT,removed conditional - replaced equality check with false,isAssignable(Ljava/lang/Class;Ljava/lang/Class;)Z | alen=52 blen=113
+2145,DIVERGENT,removed conditional - replaced equality check with false,equals(Ljava/lang/Object;)Z | alen=55 blen=63
+2147,DIVERGENT,removed conditional - replaced equality check with false,equals(Ljava/lang/Object;)Z | alen=59 blen=69
+2148,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=59 blen=70
+2149,DIVERGENT,removed conditional - replaced equality check with false,equals(Ljava/lang/Object;)Z | alen=55 blen=65
+2150,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=55 blen=62
+2151,DIVERGENT,removed conditional - replaced equality check with false,equals(Ljava/lang/Object;)Z | alen=55 blen=63
+2153,DIVERGENT,removed conditional - replaced equality check with false,equals(Ljava/lang/Object;)Z | alen=59 blen=69
+2154,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=59 blen=70
+2155,DIVERGENT,removed conditional - replaced equality check with false,equals(Ljava/lang/Object;)Z | alen=55 blen=65
+2156,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=55 blen=62
+2157,DIVERGENT,removed conditional - replaced equality check with false,equals(Ljava/lang/Object;)Z | alen=55 blen=63
+2194,DIVERGENT,Changed switch default to be first case,readAnyClass(Ljava/io/ObjectInputStream;)Ljava/lang/Class; | alen=17 blen=45
+2204,DIVERGENT,removed conditional - replaced equality check with false,readObject(Ljava/io/ObjectInputStream;)V | alen=16 blen=24
+2209,DIVERGENT,removed conditional - replaced equality check with false,toString()Ljava/lang/String; | alen=38 blen=46
+2237,DIVERGENT,removed conditional - replaced equality check with false,writeObject(Ljava/io/ObjectOutputStream;)V | alen=16 blen=24
+2356,DIVERGENT,removed conditional - replaced equality check with false,clear()V | alen=17 blen=46
+2368,DIVERGENT,replaced boolean return with false for org/apache/commons/beanutils/WeakFastHashMap::containsKey,containsKey(Ljava/lang/Object;)Z | alen=22 blen=27
+2369,DIVERGENT,replaced boolean return with true for org/apache/commons/beanutils/WeakFastHashMap::containsKey,containsKey(Ljava/lang/Object;)Z | alen=22 blen=27
+2374,DIVERGENT,replaced boolean return with false for org/apache/commons/beanutils/WeakFastHashMap::containsValue,containsValue(Ljava/lang/Object;)Z | alen=22 blen=27
+2375,DIVERGENT,replaced boolean return with true for org/apache/commons/beanutils/WeakFastHashMap::containsValue,containsValue(Ljava/lang/Object;)Z | alen=22 blen=27
+2384,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=127 blen=297
+2396,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=129 blen=132
+2405,DIVERGENT,replaced boolean return with true for org/apache/commons/beanutils/WeakFastHashMap::equals,equals(Ljava/lang/Object;)Z | alen=132 blen=134
+2411,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=129 blen=132
+2413,DIVERGENT,replaced boolean return with true for org/apache/commons/beanutils/WeakFastHashMap::equals,equals(Ljava/lang/Object;)Z | alen=132 blen=134
+2417,DIVERGENT,replaced boolean return with true for org/apache/commons/beanutils/WeakFastHashMap::equals,equals(Ljava/lang/Object;)Z | alen=132 blen=134
+2418,DIVERGENT,replaced boolean return with false for org/apache/commons/beanutils/WeakFastHashMap::equals,equals(Ljava/lang/Object;)Z | alen=132 blen=134
+2423,DIVERGENT,replaced return value with null for org/apache/commons/beanutils/WeakFastHashMap::get,get(Ljava/lang/Object;)Ljava/lang/Object; | alen=22 blen=27
+2431,DIVERGENT,replaced int return with 0 for org/apache/commons/beanutils/WeakFastHashMap::hashCode,hashCode()I | alen=59 blen=61
+2436,DIVERGENT,replaced boolean return with false for org/apache/commons/beanutils/WeakFastHashMap::isEmpty,isEmpty()Z | alen=21 blen=25
+2437,DIVERGENT,replaced boolean return with true for org/apache/commons/beanutils/WeakFastHashMap::isEmpty,isEmpty()Z | alen=21 blen=25
+2441,DIVERGENT,replaced return value with null for org/apache/commons/beanutils/WeakFastHashMap::put,put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; | alen=47 blen=49
+2442,DIVERGENT,replaced return value with null for org/apache/commons/beanutils/WeakFastHashMap::put,put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; | alen=43 blen=49
+2443,DIVERGENT,removed conditional - replaced equality check with false,putAll(Ljava/util/Map;)V | alen=18 blen=62
+2447,DIVERGENT,removed conditional - replaced equality check with false,remove(Ljava/lang/Object;)Ljava/lang/Object; | alen=17 blen=60
+2449,DIVERGENT,replaced return value with null for org/apache/commons/beanutils/WeakFastHashMap::remove,remove(Ljava/lang/Object;)Ljava/lang/Object; | alen=45 blen=47
+2450,DIVERGENT,replaced return value with null for org/apache/commons/beanutils/WeakFastHashMap::remove,remove(Ljava/lang/Object;)Ljava/lang/Object; | alen=42 blen=47
+2454,DIVERGENT,replaced int return with 0 for org/apache/commons/beanutils/WeakFastHashMap::size,size()I | alen=21 blen=25
+2456,DIVERGENT,removed conditional - replaced equality check with false,clear()V | alen=21 blen=61
+2457,DIVERGENT,removed conditional - replaced equality check with true,clear()V | alen=21 blen=62
+2463,DIVERGENT,replaced boolean return with false for org/apache/commons/beanutils/WeakFastHashMap$CollectionView::contains,contains(Ljava/lang/Object;)Z | alen=27 blen=35
+2464,DIVERGENT,replaced boolean return with true for org/apache/commons/beanutils/WeakFastHashMap$CollectionView::contains,contains(Ljava/lang/Object;)Z | alen=27 blen=35
+2469,DIVERGENT,replaced boolean return with false for org/apache/commons/beanutils/WeakFastHashMap$CollectionView::containsAll,containsAll(Ljava/util/Collection;)Z | alen=27 blen=35
+2470,DIVERGENT,replaced boolean return with true for org/apache/commons/beanutils/WeakFastHashMap$CollectionView::containsAll,containsAll(Ljava/util/Collection;)Z | alen=27 blen=35
+2477,DIVERGENT,replaced boolean return with false for org/apache/commons/beanutils/WeakFastHashMap$CollectionView::equals,equals(Ljava/lang/Object;)Z | alen=32 blen=40
+2478,DIVERGENT,replaced boolean return with true for org/apache/commons/beanutils/WeakFastHashMap$CollectionView::equals,equals(Ljava/lang/Object;)Z | alen=32 blen=40
+2482,DIVERGENT,replaced int return with 0 for org/apache/commons/beanutils/WeakFastHashMap$CollectionView::hashCode,hashCode()I | alen=26 blen=33
+2487,DIVERGENT,replaced boolean return with false for org/apache/commons/beanutils/WeakFastHashMap$CollectionView::isEmpty,isEmpty()Z | alen=26 blen=33
+2488,DIVERGENT,replaced boolean return with true for org/apache/commons/beanutils/WeakFastHashMap$CollectionView::isEmpty,isEmpty()Z | alen=26 blen=33
+2490,DIVERGENT,removed conditional - replaced equality check with false,remove(Ljava/lang/Object;)Z | alen=21 blen=82
+2492,DIVERGENT,replaced boolean return with false for org/apache/commons/beanutils/WeakFastHashMap$CollectionView::remove,remove(Ljava/lang/Object;)Z | alen=57 blen=59
+2493,DIVERGENT,replaced boolean return with true for org/apache/commons/beanutils/WeakFastHashMap$CollectionView::remove,remove(Ljava/lang/Object;)Z | alen=57 blen=59
+2494,DIVERGENT,replaced boolean return with false for org/apache/commons/beanutils/WeakFastHashMap$CollectionView::remove,remove(Ljava/lang/Object;)Z | alen=51 blen=59
+2495,DIVERGENT,replaced boolean return with true for org/apache/commons/beanutils/WeakFastHashMap$CollectionView::remove,remove(Ljava/lang/Object;)Z | alen=51 blen=59
+2496,DIVERGENT,removed conditional - replaced equality check with false,removeAll(Ljava/util/Collection;)Z | alen=21 blen=82
+2498,DIVERGENT,replaced boolean return with false for org/apache/commons/beanutils/WeakFastHashMap$CollectionView::removeAll,removeAll(Ljava/util/Collection;)Z | alen=57 blen=59
+2499,DIVERGENT,replaced boolean return with true for org/apache/commons/beanutils/WeakFastHashMap$CollectionView::removeAll,removeAll(Ljava/util/Collection;)Z | alen=57 blen=59
+2500,DIVERGENT,replaced boolean return with false for org/apache/commons/beanutils/WeakFastHashMap$CollectionView::removeAll,removeAll(Ljava/util/Collection;)Z | alen=51 blen=59
+2501,DIVERGENT,replaced boolean return with true for org/apache/commons/beanutils/WeakFastHashMap$CollectionView::removeAll,removeAll(Ljava/util/Collection;)Z | alen=51 blen=59
+2502,DIVERGENT,removed conditional - replaced equality check with false,retainAll(Ljava/util/Collection;)Z | alen=21 blen=82
+2504,DIVERGENT,replaced boolean return with false for org/apache/commons/beanutils/WeakFastHashMap$CollectionView::retainAll,retainAll(Ljava/util/Collection;)Z | alen=57 blen=59
+2505,DIVERGENT,replaced boolean return with true for org/apache/commons/beanutils/WeakFastHashMap$CollectionView::retainAll,retainAll(Ljava/util/Collection;)Z | alen=57 blen=59
+2506,DIVERGENT,replaced boolean return with false for org/apache/commons/beanutils/WeakFastHashMap$CollectionView::retainAll,retainAll(Ljava/util/Collection;)Z | alen=51 blen=59
+2507,DIVERGENT,replaced boolean return with true for org/apache/commons/beanutils/WeakFastHashMap$CollectionView::retainAll,retainAll(Ljava/util/Collection;)Z | alen=51 blen=59
+2511,DIVERGENT,replaced int return with 0 for org/apache/commons/beanutils/WeakFastHashMap$CollectionView::size,size()I | alen=26 blen=33
+2515,DIVERGENT,replaced return value with null for org/apache/commons/beanutils/WeakFastHashMap$CollectionView::toArray,toArray()[Ljava/lang/Object; | alen=26 blen=33
+2519,DIVERGENT,replaced return value with null for org/apache/commons/beanutils/WeakFastHashMap$CollectionView::toArray,toArray([Ljava/lang/Object;)[Ljava/lang/Object; | alen=27 blen=35
+2713,DIVERGENT,removed conditional - replaced equality check with false,handleMissing(Ljava/lang/Class;)Ljava/lang/Object; | alen=121 blen=184
+2721,DIVERGENT,removed conditional - replaced equality check with false,handleMissing(Ljava/lang/Class;)Ljava/lang/Object; | alen=119 blen=151
+2744,DIVERGENT,removed conditional - replaced equality check with false,toString(Ljava/lang/Class;)Ljava/lang/String; | alen=71 blen=98
+2746,DIVERGENT,removed conditional - replaced equality check with false,toString(Ljava/lang/Class;)Ljava/lang/String; | alen=71 blen=92
+2767,DIVERGENT,removed conditional - replaced equality check with false,convertToCollection(Ljava/lang/Class;Ljava/lang/Object;)Ljava/util/Collection; | alen=29 blen=45
+2769,DIVERGENT,removed conditional - replaced equality check with false,convertToCollection(Ljava/lang/Class;Ljava/lang/Object;)Ljava/util/Collection; | alen=12 blen=41
+2823,DIVERGENT,removed conditional - replaced equality check with false,parseElements(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/List; | alen=178 blen=257
+2836,DIVERGENT,"replaced return value with """" for org/apache/commons/beanutils/converters/ArrayConverter::toString",toString()Ljava/lang/String; | alen=36 blen=39
+2837,DIVERGENT,removed conditional - replaced equality check with false,<init>(Ljava/lang/String;Ljava/lang/Class;)V | alen=138 blen=272
+2849,DIVERGENT,removed conditional - replaced equality check with false,<init>(Ljava/lang/String;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V | alen=72 blen=125
+2857,DIVERGENT,removed conditional - replaced equality check with false,<init>(Ljava/lang/String;Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;)V | alen=38 blen=61
+2900,DIVERGENT,removed conditional - replaced equality check with false,internalGetMethod(Ljava/lang/Class;Ljava/lang/String;I)Ljava/lang/reflect/Method; | alen=79 blen=103
+2961,DIVERGENT,removed conditional - replaced equality check with false,primitiveToWrapper(Ljava/lang/Class;)Ljava/lang/Class; | alen=47 blen=94
+3041,DIVERGENT,removed conditional - replaced equality check with false,newInstance()Lorg/apache/commons/beanutils/DynaBean; | alen=25 blen=65
+3042,DIVERGENT,removed conditional - replaced equality check with true,newInstance()Lorg/apache/commons/beanutils/DynaBean; | alen=44 blen=46
+3043,DIVERGENT,removed call to org/apache/commons/beanutils/LazyDynaMap::add,newInstance()Lorg/apache/commons/beanutils/DynaBean; | alen=43 blen=47
+3044,DIVERGENT,replaced return value with null for org/apache/commons/beanutils/LazyDynaMap::newInstance,newInstance()Lorg/apache/commons/beanutils/DynaBean; | alen=46 blen=48
+3131,DIVERGENT,removed conditional - replaced comparison check with true,convertPattern(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String; | alen=81 blen=83
+3165,DIVERGENT,removed conditional - replaced equality check with false,createDynaProperty(Ljava/sql/ResultSetMetaData;I)Lorg/apache/commons/beanutils/DynaProperty; | alen=89 blen=98
+3175,DIVERGENT,Changed switch default to be first case,createDynaProperty(Ljava/sql/ResultSetMetaData;I)Lorg/apache/commons/beanutils/DynaProperty; | alen=80 blen=103
+3255,DIVERGENT,removed conditional - replaced equality check with false,remove(Ljava/lang/String;)V | alen=51 blen=63
+3285,DIVERGENT,removed conditional - replaced equality check with false,keySet()Ljava/util/Set; | alen=50 blen=56
+3300,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=26 blen=67
+3303,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=24 blen=31
+3308,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=21 blen=31
+3462,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=24 blen=49
+3469,DIVERGENT,Replaced integer multiplication with division,hashCode()I | alen=20 blen=22
+3470,DIVERGENT,Replaced integer addition with subtraction,hashCode()I | alen=20 blen=22
+3471,DIVERGENT,Replaced integer multiplication with division,hashCode()I | alen=20 blen=22
+3472,DIVERGENT,Replaced integer addition with subtraction,hashCode()I | alen=20 blen=22
+3473,DIVERGENT,replaced int return with 0 for org/apache/commons/beanutils/WrapDynaClass$CacheKey::hashCode,hashCode()I | alen=20 blen=24
+3514,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=36 blen=71
+3530,DIVERGENT,replaced int return with 0 for org/apache/commons/beanutils/BeanComparator::hashCode,hashCode()I | alen=6 blen=8
+3552,DIVERGENT,removed conditional - replaced equality check with true,handleIndexedPropertyDescriptors(Ljava/lang/Class;[Ljava/beans/PropertyDescriptor;)V | alen=148 blen=152
+3577,DIVERGENT,removed conditional - replaced equality check with false,evaluateValue(Ljava/lang/Object;Ljava/lang/Object;)Z | alen=10 blen=20
+3631,DIVERGENT,removed conditional - replaced equality check with false,parse(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object; | alen=65 blen=127
+3633,DIVERGENT,removed conditional - replaced equality check with false,parse(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object; | alen=42 blen=123
+3635,DIVERGENT,removed conditional - replaced equality check with false,parse(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object; | alen=42 blen=119
+3637,DIVERGENT,removed conditional - replaced equality check with false,parse(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object; | alen=42 blen=115
+3641,DIVERGENT,removed conditional - replaced equality check with false,parse(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object; | alen=65 blen=95
+3643,DIVERGENT,removed conditional - replaced equality check with false,parse(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object; | alen=48 blen=91
+3788,DIVERGENT,removed conditional - replaced equality check with false,parseElements(Ljava/lang/String;)Ljava/util/List; | alen=101 blen=129
+3963,DIVERGENT,removed conditional - replaced equality check with false,convertToType(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object; | alen=63 blen=74
+4025,DIVERGENT,removed conditional - replaced equality check with false,execute(Ljava/lang/Object;)V | alen=76 blen=122
+4026,DIVERGENT,removed conditional - replaced equality check with true,execute(Ljava/lang/Object;)V | alen=72 blen=119
+4027,DIVERGENT,removed conditional - replaced equality check with false,execute(Ljava/lang/Object;)V | alen=83 blen=108
+4028,DIVERGENT,removed conditional - replaced equality check with true,execute(Ljava/lang/Object;)V | alen=88 blen=100
+4029,DIVERGENT,removed conditional - replaced equality check with false,execute(Ljava/lang/Object;)V | alen=83 blen=108
+4030,DIVERGENT,removed conditional - replaced equality check with true,execute(Ljava/lang/Object;)V | alen=88 blen=100
+4031,DIVERGENT,removed conditional - replaced equality check with false,execute(Ljava/lang/Object;)V | alen=83 blen=108
+4032,DIVERGENT,removed conditional - replaced equality check with true,execute(Ljava/lang/Object;)V | alen=88 blen=100
+4033,DIVERGENT,removed conditional - replaced equality check with false,execute(Ljava/lang/Object;)V | alen=83 blen=108
+4034,DIVERGENT,removed conditional - replaced equality check with true,execute(Ljava/lang/Object;)V | alen=88 blen=100
+4066,DIVERGENT,removed conditional - replaced comparison check with false,copy(Ljava/sql/ResultSet;)V | alen=49 blen=59
+4125,DIVERGENT,removed conditional - replaced comparison check with false,parse(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object; | alen=45 blen=55
+4162,DIVERGENT,removed conditional - replaced equality check with false,parse(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object; | alen=37 blen=76
+4174,DIVERGENT,removed conditional - replaced equality check with false,convertToType(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object; | alen=19 blen=32
+4180,DIVERGENT,removed conditional - replaced equality check with false,parse(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object; | alen=39 blen=82
+4210,DIVERGENT,removed conditional - replaced equality check with false,parse(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object; | alen=29 blen=58
+4216,DIVERGENT,removed conditional - replaced equality check with false,convertToType(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object; | alen=14 blen=26
+4222,DIVERGENT,removed conditional - replaced equality check with false,parse(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object; | alen=17 blen=32
+22,UNREPRESENTABLE,removed call to org/apache/commons/beanutils/PropertyUtilsBean::setSimpleProperty,exception java.lang.NoSuchMethodException is never thrown in body of corresponding try statement
+30,UNREPRESENTABLE,removed call to org/apache/commons/beanutils/PropertyUtilsBean::setSimpleProperty,exception java.lang.NoSuchMethodException is never thrown in body of corresponding try statement
+46,UNREPRESENTABLE,removed call to org/apache/commons/beanutils/BeanIntrospector::introspect,exception java.beans.IntrospectionException is never thrown in body of corresponding try statement
+81,UNREPRESENTABLE,replaced return value with null for org/apache/commons/beanutils/PropertyUtilsBean::getIndexedProperty,exception java.lang.reflect.InvocationTargetException is never thrown in body of corresponding try statement
+137,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+138,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+159,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+160,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+202,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+203,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+256,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+266,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+276,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+286,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+297,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+298,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+330,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+331,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+439,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+440,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+529,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+530,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+532,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+542,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+543,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+546,UNREPRESENTABLE,replaced return value with null for org/apache/commons/beanutils/MethodUtils::getAccessibleMethodFromSuperclass,exception java.lang.NoSuchMethodException is never thrown in body of corresponding try statement
+563,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+649,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+650,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+657,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+658,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+671,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+672,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+685,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+686,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+699,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+700,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+811,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+812,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1128,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1141,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1283,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1284,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1288,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+1289,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+1301,UNREPRESENTABLE,removed call to org/apache/commons/beanutils/PropertyUtilsBean::setIndexedProperty,exception java.lang.NoSuchMethodException is never thrown in body of corresponding try statement
+1304,UNREPRESENTABLE,removed call to org/apache/commons/beanutils/PropertyUtilsBean::setMappedProperty,exception java.lang.NoSuchMethodException is never thrown in body of corresponding try statement
+1305,UNREPRESENTABLE,removed call to org/apache/commons/beanutils/PropertyUtilsBean::setSimpleProperty,exception java.lang.NoSuchMethodException is never thrown in body of corresponding try statement
+1330,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1331,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1368,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1369,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1373,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+1374,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+1444,UNREPRESENTABLE,removed call to org/apache/commons/beanutils/PropertyUtilsBean::setProperty,exception java.lang.NoSuchMethodException is never thrown in body of corresponding try statement
+1602,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1603,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1625,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1626,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1646,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1647,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1671,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1672,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1688,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1689,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1705,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1706,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1782,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1821,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1822,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1841,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1842,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1855,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1856,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+1972,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+1973,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2243,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2244,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+2335,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2336,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2340,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2341,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+2547,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2548,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+2584,UNREPRESENTABLE,replaced return value with null for org/apache/commons/beanutils/BeanMap::get,exception java.lang.IllegalAccessException is never thrown in body of corresponding try statement
+2624,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2636,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2637,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+2738,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2739,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+2742,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2783,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2784,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2798,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+2799,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+2896,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+2897,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
+2942,UNREPRESENTABLE,replaced return value with null for org/apache/commons/beanutils/MappedPropertyDescriptor$MappedMethodReference::reLoadClass,exception java.lang.ClassNotFoundException is never thrown in body of corresponding try statement
+2943,UNREPRESENTABLE,replaced return value with null for org/apache/commons/beanutils/MappedPropertyDescriptor$MappedMethodReference::reLoadClass,exception java.lang.ClassNotFoundException is never thrown in body of corresponding try statement
+3056,UNREPRESENTABLE,replaced return value with null for org/apache/commons/beanutils/ConstructorUtils::getAccessibleConstructor,exception java.lang.NoSuchMethodException is never thrown in body of corresponding try statement
+3069,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3083,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3084,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3097,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3098,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3118,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3119,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3206,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3207,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3253,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3254,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3333,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3334,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3435,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3436,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3437,UNREPRESENTABLE,removed conditional - replaced equality check with false,unreachable statement
+3687,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3688,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3694,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3695,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3711,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3712,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3718,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3719,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3735,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3736,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3742,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3743,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3759,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3760,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3766,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3767,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3807,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3808,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3814,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3815,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3831,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3832,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3838,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3839,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3855,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3856,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3862,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3863,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3879,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3880,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3886,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3887,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3909,UNREPRESENTABLE,replaced return value with null for org/apache/commons/beanutils/BasicDynaClass::newInstance,exception java.lang.reflect.InvocationTargetException is never thrown in body of corresponding try statement
+3947,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3948,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3951,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3952,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3974,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
+3975,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement
+3986,UNREPRESENTABLE,replaced return value with null for org/apache/commons/beanutils/ResultSetIterator::get,exception java.sql.SQLException is never thrown in body of corresponding try statement
+3988,UNREPRESENTABLE,removed call to org/apache/commons/beanutils/ResultSetIterator::advance,exception java.sql.SQLException is never thrown in body of corresponding try statement
+3992,UNREPRESENTABLE,removed call to org/apache/commons/beanutils/ResultSetIterator::advance,exception java.sql.SQLException is never thrown in body of corresponding try statement
+3998,UNREPRESENTABLE,removed call to java/sql/ResultSet::updateObject,exception java.sql.SQLException is never thrown in body of corresponding try statement
+4016,UNREPRESENTABLE,removed call to org/apache/commons/beanutils/PropertyUtilsBean::setIndexedProperty,exception java.lang.reflect.InvocationTargetException is never thrown in body of corresponding try statement
+4017,UNREPRESENTABLE,removed call to org/apache/commons/beanutils/PropertyUtilsBean::setSimpleProperty,exception java.lang.reflect.InvocationTargetException is never thrown in body of corresponding try statement
+4018,UNREPRESENTABLE,removed call to org/apache/commons/beanutils/PropertyUtilsBean::setMappedProperty,exception java.lang.reflect.InvocationTargetException is never thrown in body of corresponding try statement
+4024,UNREPRESENTABLE,removed call to org/apache/commons/beanutils/PropertyUtils::setProperty,exception java.lang.IllegalAccessException is never thrown in body of corresponding try statement
+4101,UNREPRESENTABLE,removed call to java/beans/PropertyDescriptor::setWriteMethod,exception java.beans.IntrospectionException is never thrown in body of corresponding try statement
+4149,UNREPRESENTABLE,replaced return value with null for org/apache/commons/beanutils/converters/ClassConverter::convertToType,exception java.lang.ClassNotFoundException is never thrown in body of corresponding try statement
+4272,UNREPRESENTABLE,removed call to org/apache/commons/beanutils/BeanUtils::copyProperty,exception java.lang.reflect.InvocationTargetException is never thrown in body of corresponding try statement

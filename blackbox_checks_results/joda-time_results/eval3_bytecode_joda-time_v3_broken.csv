@@ -1,0 +1,11 @@
+index_no,verdict,description,detail
+2256,BROKEN,removed conditional - replaced equality check with true,variable next might not have been initialized
+3836,BROKEN,Replaced integer addition with subtraction,bad operand types for binary operator '-'   first type:  java.lang.String   second type: char
+6159,BROKEN,removed conditional - replaced equality check with true,variable base might not have been initialized
+6166,BROKEN,removed conditional - replaced equality check with true,variable base might not have been initialized
+6173,BROKEN,removed conditional - replaced equality check with true,variable base might not have been initialized
+6206,BROKEN,removed conditional - replaced equality check with true,variable f might not have been initialized
+6230,BROKEN,removed conditional - replaced equality check with true,variable f might not have been initialized
+6304,BROKEN,removed conditional - replaced equality check with true,variable f might not have been initialized
+6328,BROKEN,removed conditional - replaced equality check with true,variable f might not have been initialized
+8562,BROKEN,removed conditional - replaced equality check with true,variable limit might not have been initialized

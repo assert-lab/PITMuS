@@ -1,0 +1,58 @@
+======================================================================
+ PITMuS reconstruction evaluation  --  project: joda-time
+ dataset  : PITMuS_dataset_fresh_generation-v3
+ generated: 2026-08-04 15:02:52
+======================================================================
+total reconstructed mutations (dataset rows): 13118
+
+----------------------------------------------------------------------
+Section 0  XML alignment oracle  (each dataset row points at the right <mutation>)
+----------------------------------------------------------------------
+  rows checked            : 13118
+  xml_line points correct : 13118
+  xml_line WRONG          : 0
+  => OK - all aligned
+  detail csv: eval0_xml_misalign_joda-time_v3.csv
+
+----------------------------------------------------------------------
+Section 1  Count oracle  (every XML mutation was reconstructed)
+----------------------------------------------------------------------
+  XML mutations : 13119
+  dataset rows  : 13118
+  missing       : 1
+  => 1 NOT reconstructed
+
+----------------------------------------------------------------------
+Section 2  Faithfulness oracle  (the reconstructed edit matches the mutator)
+----------------------------------------------------------------------
+  rows checked : 13118
+    PASS         : 13051
+    FAIL         : 56
+    UNVERIFIABLE : 11
+  FAIL / UNVERIFIABLE reasons:
+       56  operator ~-> contradicts description
+       11  switch default not source-representable
+  detail csv: eval2_faithfulness_joda-time_v3.csv
+
+----------------------------------------------------------------------
+Section 3  Bytecode ground-truth oracle  (recon compiles + matches PIT's exported mutant .class)
+----------------------------------------------------------------------
+  rows checked                          : 13118
+    MATCH      (bytecode identical)     : 2131
+    EQUIVALENT (subsequence of PIT)     : 10245
+    => confirmed faithful               : 12376
+    BROKEN     (real fault, won't compile): 10   <- genuine reconstruction faults
+    UNREPRESENTABLE (faithful, illegal Java): 338   <- mutant PIT makes in bytecode but source can't express
+    DIVERGENT  (bytecode differs)       : 394   <- needs review
+  detail csv (genuine faults): eval3_bytecode_joda-time_v3_broken.csv
+  detail csv (other non-faults): eval3_bytecode_joda-time_v3_other.csv
+
+======================================================================
+ OVERALL
+======================================================================
+  faithfulness PASS rate         : 13051/13118
+  bytecode confirmed faithful      : 12376/13118
+  bytecode BROKEN (real faults)    : 10   <- genuine reconstruction faults
+  bytecode UNREPRESENTABLE         : 338   <- faithful, but illegal Java source (not a fault)
+  bytecode DIVERGENT (review)      : 394
+======================================================================

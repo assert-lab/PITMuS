@@ -1,0 +1,14 @@
+index_no,verdict,description,detail
+58,BROKEN,removed conditional - replaced equality check with false,variable children might not have been initialized
+1476,BROKEN,removed conditional - replaced equality check with false,not a statement
+1477,BROKEN,removed conditional - replaced equality check with true,not a statement
+1883,BROKEN,removed conditional - replaced equality check with false,not a statement
+1884,BROKEN,removed conditional - replaced equality check with true,not a statement
+2062,BROKEN,removed conditional - replaced equality check with true,variable body might not have been initialized
+3415,BROKEN,removed conditional - replaced equality check with false,not a statement
+3416,BROKEN,removed conditional - replaced equality check with true,not a statement
+4435,BROKEN,removed conditional - replaced equality check with true,variable len might not have been initialized
+5212,BROKEN,removed call to org/jsoup/nodes/Entities::appendEncoded,'else' without 'if'
+5928,BROKEN,removed call to org/jsoup/parser/Tokeniser::transition,"case, default, or '}' expected"
+6016,BROKEN,removed call to org/jsoup/parser/Tokeniser::transition,"case, default, or '}' expected"
+6020,BROKEN,removed call to org/jsoup/parser/Tokeniser::transition,'else' without 'if'
