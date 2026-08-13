@@ -1,10 +1,1 @@
 index_no,verdict,description,detail
-10163,BROKEN,removed conditional - replaced comparison check with true,variable c might not have been initialized
-10295,BROKEN,removed conditional - replaced comparison check with true,variable size might not have been initialized
-10305,BROKEN,removed conditional - replaced comparison check with true,variable size might not have been initialized
-10800,BROKEN,removed conditional - replaced equality check with false,not a statement
-10801,BROKEN,removed conditional - replaced equality check with true,not a statement
-10952,BROKEN,removed conditional - replaced equality check with true,variable line might not have been initialized
-13752,BROKEN,removed conditional - replaced comparison check with false,variable ch might not have been initialized
-13753,BROKEN,removed conditional - replaced comparison check with true,variable ch might not have been initialized
-13805,BROKEN,removed conditional - replaced equality check with true,variable line might not have been initialized

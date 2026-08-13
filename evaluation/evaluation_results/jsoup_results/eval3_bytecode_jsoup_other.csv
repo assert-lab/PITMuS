@@ -1,9 +1,9 @@
 index_no,verdict,description,detail
-317,DISASM_ERR,removed conditional - replaced equality check with false,a=None b=None lambda$forEach$0(Lorg/jsoup/helper/Consumer;Lorg/jsoup/nodes/Node;I)V
-318,DISASM_ERR,removed conditional - replaced equality check with true,a=None b=None lambda$forEach$0(Lorg/jsoup/helper/Consumer;Lorg/jsoup/nodes/Node;I)V
-319,DISASM_ERR,removed call to org/jsoup/helper/Consumer::accept,a=None b=None lambda$forEach$0(Lorg/jsoup/helper/Consumer;Lorg/jsoup/nodes/Node;I)V
-320,DISASM_ERR,removed call to org/jsoup/nodes/Element::appendWholeText,a=None b=None lambda$wholeText$0(Ljava/lang/StringBuilder;Lorg/jsoup/nodes/Node;I)V
-2940,DISASM_ERR,removed call to org/jsoup/helper/Consumer::accept,a=None b=None lambda$forEachNode$0(Lorg/jsoup/helper/Consumer;Lorg/jsoup/nodes/Node;I)V
+317,DISASM_ERR,removed conditional - replaced equality check with false,a=None b=ok lambda$forEach$0(Lorg/jsoup/helper/Consumer;Lorg/jsoup/nodes/Node;I)V
+318,DISASM_ERR,removed conditional - replaced equality check with true,a=None b=ok lambda$forEach$0(Lorg/jsoup/helper/Consumer;Lorg/jsoup/nodes/Node;I)V
+319,DISASM_ERR,removed call to org/jsoup/helper/Consumer::accept,a=None b=ok lambda$forEach$0(Lorg/jsoup/helper/Consumer;Lorg/jsoup/nodes/Node;I)V
+320,DISASM_ERR,removed call to org/jsoup/nodes/Element::appendWholeText,a=None b=ok lambda$wholeText$0(Ljava/lang/StringBuilder;Lorg/jsoup/nodes/Node;I)V
+2940,DISASM_ERR,removed call to org/jsoup/helper/Consumer::accept,a=None b=ok lambda$forEachNode$0(Lorg/jsoup/helper/Consumer;Lorg/jsoup/nodes/Node;I)V
 26,DIVERGENT,removed conditional - replaced equality check with false,appendNormalisedText(Ljava/lang/StringBuilder;Lorg/jsoup/nodes/TextNode;)V | alen=17 blen=30
 56,DIVERGENT,removed conditional - replaced equality check with false,childElementsList()Ljava/util/List; | alen=50 blen=62
 85,DIVERGENT,removed conditional - replaced equality check with false,closest(Lorg/jsoup/select/Evaluator;)Lorg/jsoup/nodes/Element; | alen=19 blen=22
@@ -58,7 +58,6 @@ index_no,verdict,description,detail
 1593,DIVERGENT,removed conditional - replaced equality check with false,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=45 blen=84
 1614,DIVERGENT,removed conditional - replaced equality check with false,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=50 blen=96
 1616,DIVERGENT,removed conditional - replaced equality check with false,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=50 blen=92
-1677,DIVERGENT,Changed switch default to be first case,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=26 blen=438
 1694,DIVERGENT,removed conditional - replaced equality check with false,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=216 blen=229
 1757,DIVERGENT,removed conditional - replaced equality check with false,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=92 blen=151
 1759,DIVERGENT,removed conditional - replaced equality check with false,process(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z | alen=92 blen=147
@@ -173,7 +172,7 @@ index_no,verdict,description,detail
 5580,DIVERGENT,removed conditional - replaced comparison check with true,readToByteBuffer(I)Ljava/nio/ByteBuffer; | alen=59 blen=73
 5708,DIVERGENT,removed conditional - replaced equality check with false,name()Ljava/lang/String; | alen=11 blen=21
 5763,DIVERGENT,removed conditional - replaced equality check with false,initialiseParse(Ljava/io/Reader;Ljava/lang/String;Lorg/jsoup/parser/Parser;)V | alen=68 blen=80
-5856,DIVERGENT,Changed switch default to be first case,process(Lorg/jsoup/parser/Token;)Z | alen=24 blen=71
+5856,DIVERGENT,Changed switch default to be first case,process(Lorg/jsoup/parser/Token;)Z | alen=23 blen=71
 5865,DIVERGENT,removed conditional - replaced equality check with false,main([Ljava/lang/String;)V | alen=68 blen=75
 5880,DIVERGENT,removed conditional - replaced equality check with false,append(Ljava/lang/String;)V | alen=121 blen=142
 5925,DIVERGENT,Changed switch default to be first case,handleDataDoubleEscapeTag(Lorg/jsoup/parser/Tokeniser;Lorg/jsoup/parser/CharacterReader;Lorg/jsoup/parser/TokeniserState;Lorg/jsoup/parser/TokeniserState;)V | alen=43 blen=43
@@ -291,6 +290,7 @@ index_no,verdict,description,detail
 990,UNREPRESENTABLE,removed conditional - replaced equality check with true,unreachable statement
 1011,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
 1378,UNREPRESENTABLE,removed call to org/jsoup/parser/HtmlTreeBuilder::error,unreachable statement
+1677,UNREPRESENTABLE,Changed switch default to be first case,unreachable statement
 1832,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
 1945,UNREPRESENTABLE,removed conditional - replaced comparison check with false,unreachable statement
 1946,UNREPRESENTABLE,removed conditional - replaced comparison check with true,unreachable statement

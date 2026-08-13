@@ -225,7 +225,11 @@ def _find_switch_block(lines, pit_line):
 def _parse_switch_segments(lines, s_idx, e_idx):
     """Split the switch body into ordered segments:
         {labels:[str], body:[str], is_default:bool, first_body_line:int|None}
-    Inline `case X: stmt` is split. Returns (segments, reason)."""
+    Inline `case X: stmt` is split. Returns (segments, reason).
+
+    `first_label_line` is tracked alongside `first_body_line` because compilers
+    disagree about which of the two a switch jump target maps to in the
+    LineNumberTable -- see seg_containing() in reconstruct_switch_default()."""
     for k in range(s_idx + 1, e_idx):
         if re.search(r'\bswitch\s*\(', lines[k]):
             return None, "nested switch"
@@ -248,10 +252,13 @@ def _parse_switch_segments(lines, s_idx, e_idx):
             trailing = m.group(2).strip()
             if cur is None or cur["body_started"]:
                 cur = {"labels": [], "body": [], "is_default": False,
-                       "body_started": False, "first_body_line": None}
+                       "body_started": False, "first_body_line": None,
+                       "first_label_line": None}
                 segments.append(cur)
             indent = re.match(r'\s*', raw).group(0)
             cur["labels"].append(indent + m.group(1).strip() + ":")
+            if cur["first_label_line"] is None:
+                cur["first_label_line"] = k + 1
             if is_def:
                 cur["is_default"] = True
             if trailing:
@@ -324,15 +331,26 @@ def reconstruct_switch_default(lines, pit_line, regions):
     if not caseg:
         return None
 
+    # A switch jump target may be attributed either to the `case`/`default` label
+    # line or to the first line of the body, depending on which compiler produced
+    # the LineNumberTable. Spanning each segment from its label makes both
+    # attributions resolve to the same segment. Keying on the body line alone --
+    # as this did originally -- silently degraded every switch-default row in a
+    # project the moment it was rebuilt with a different JDK.
+    def seg_start(g):
+        if g["first_label_line"] is not None:
+            return g["first_label_line"]
+        return g["first_body_line"]
+
     def seg_containing(ln0):
         for gi, g in enumerate(segs):
-            start = g["first_body_line"]
+            start = seg_start(g)
             if start is None:
                 continue
             nxt = None
             for h in segs[gi + 1:]:
-                if h["first_body_line"] is not None:
-                    nxt = h["first_body_line"]
+                if seg_start(h) is not None:
+                    nxt = seg_start(h)
                     break
             end = (nxt - 1) if nxt else e_idx
             if start <= ln0 <= end:
@@ -381,9 +399,15 @@ def reconstruct_switch_default(lines, pit_line, regions):
     return (s_idx + 1, e_idx + 1, text)
 
 
-def load_source(path):
+def load_source(path, with_origin=False):
+    """Read a Java file into (lines, tokens, spans).
+
+    With ``with_origin=True`` a fourth element reports how the method spans were
+    obtained -- see extract_method_spans(). ``"none"`` means the file could not be
+    read structurally at all, which callers must not confuse with "has no methods".
+    """
     if not os.path.exists(path):
-        return [], [], []
+        return ([], [], [], "none") if with_origin else ([], [], [])
     with open(path, encoding="utf-8", errors="replace") as f:
         source = f.read()
     lines = source.splitlines()
@@ -394,8 +418,8 @@ def load_source(path):
         tokens = list(javalang.tokenizer.tokenize(safe))
     except (LexerError, StopIteration, Exception):
         tokens = []
-    spans = extract_method_spans(safe, lines)
-    return lines, tokens, spans
+    spans, origin = extract_method_spans(safe, lines, with_origin=True)
+    return (lines, tokens, spans, origin) if with_origin else (lines, tokens, spans)
 
 
 def _find_method_end(lines, start_line):
@@ -481,11 +505,164 @@ def _first_body_line(node):
     return None
 
 
-def extract_method_spans(source, lines):
+def _mask_literals_and_comments(lines):
+    """Blank out comment bodies and string/char/text-block *contents*.
+
+    Returns a parallel list of lines with delimiters kept but their contents
+    replaced by spaces, so a scanner can look for declaration syntax without
+    tripping over a brace or parenthesis that lives inside a literal or comment.
+    """
+    masked = []
+    in_block = in_text_block = False
+    for line in lines:
+        out = []
+        i, n = 0, len(line)
+        in_str = in_char = False
+        while i < n:
+            c = line[i]
+            nxt = line[i + 1] if i + 1 < n else ""
+            nxt2 = line[i + 2] if i + 2 < n else ""
+            if in_block:
+                if c == "*" and nxt == "/":
+                    out.append("  "); i += 2; in_block = False
+                else:
+                    out.append(" "); i += 1
+            elif in_text_block:
+                if c == '"' and nxt == '"' and nxt2 == '"':
+                    out.append('"""'); i += 3; in_text_block = False
+                else:
+                    out.append(" "); i += 1
+            elif in_str or in_char:
+                closer = '"' if in_str else "'"
+                if c == "\\":
+                    out.append(" " if i + 1 >= n else "  "); i += 2
+                elif c == closer:
+                    out.append(c); i += 1; in_str = in_char = False
+                else:
+                    out.append(" "); i += 1
+            elif c == "/" and nxt == "/":
+                out.append(" " * (n - i)); i = n
+            elif c == "/" and nxt == "*":
+                out.append("  "); i += 2; in_block = True
+            elif c == '"' and nxt == '"' and nxt2 == '"':
+                out.append('"""'); i += 3; in_text_block = True
+            elif c == '"':
+                out.append(c); i += 1; in_str = True
+            elif c == "'":
+                out.append(c); i += 1; in_char = True
+            else:
+                out.append(c); i += 1
+        masked.append("".join(out))
+    return masked
+
+
+# Keywords that can head a `<name>(...) {` block but are not declarations.
+_NON_DECL_NAMES = frozenset({
+    "if", "for", "while", "switch", "catch", "synchronized", "try", "do", "else",
+    "return", "new", "assert", "case", "default", "finally", "yield", "record",
+})
+# Constructs that may *contain* a `(...) {` but are not a method declaration.
+_NON_DECL_TOKENS = re.compile(r"\b(?:new|class|interface|enum|record)\b|->")
+
+
+def _lexical_span_from_header(lines, parts):
+    """Turn accumulated pre-`{` text into a (start, end, name) span, or None.
+
+    `parts` is [(line_index, text)] covering everything since the last `;`, `{`
+    or `}` -- i.e. exactly one declaration header, however many lines it spans.
+    """
+    text = re.sub(r"\s+", " ", " ".join(t for _i, t in parts)).strip()
+    if not text or _NON_DECL_TOKENS.search(text):
+        return None
+
+    # A declaration header ends at the parameter list, optionally + `throws ...`.
+    m = re.search(r"\)\s*(?:throws\s+[\w.$,\s]+)?$", text)
+    if not m:
+        return None
+    core = text[:text.rindex(")", 0, m.end()) + 1]
+
+    depth = 0
+    open_i = -1
+    for i in range(len(core) - 1, -1, -1):
+        if core[i] == ")":
+            depth += 1
+        elif core[i] == "(":
+            depth -= 1
+            if depth == 0:
+                open_i = i
+                break
+    if open_i < 0:
+        return None
+
+    name_m = re.search(r"([A-Za-z_$][\w$]*)\s*$", core[:open_i])
+    if not name_m or name_m.group(1) in _NON_DECL_NAMES:
+        return None
+    if "=" in core[:name_m.start(1)]:
+        return None  # a field initializer, not a declaration
+
+    # Start at the declaration itself, not at a preceding annotation line, so the
+    # span matches what the AST path would have produced.
+    first_non_empty = decl_line = None
+    for idx, t in parts:
+        stripped = t.strip()
+        if not stripped:
+            continue
+        if first_non_empty is None:
+            first_non_empty = idx + 1
+        if not stripped.startswith("@"):
+            decl_line = idx + 1
+            break
+    start = decl_line or first_non_empty
+    if start is None:
+        return None
+    end = _find_method_end(lines, start)
+    return (start, end, name_m.group(1)) if end else None
+
+
+def _lexical_method_spans(lines):
+    """Recover method/constructor spans without an AST, by brace balancing.
+
+    Used only when the parser cannot read the file at all (a newer Java level
+    than javalang supports). Deliberately conservative: control structures,
+    type declarations, initializers, lambdas and anonymous classes are all
+    rejected, so a missing span is far more likely than a wrong one.
+    """
+    spans = []
+    seen = set()
+    parts = []
+    for idx, mline in enumerate(_mask_literals_and_comments(lines)):
+        pos = 0
+        for col, ch in enumerate(mline):
+            if ch not in ";{}":
+                continue
+            if ch == "{":
+                parts.append((idx, mline[pos:col]))
+                span = _lexical_span_from_header(lines, parts)
+                if span and (span[0], span[1]) not in seen:
+                    spans.append(span)
+                    seen.add((span[0], span[1]))
+            parts = []
+            pos = col + 1
+        parts.append((idx, mline[pos:]))
+    return sorted(spans)
+
+
+def extract_method_spans(source, lines, with_origin=False):
+    """Method/constructor/anonymous-class spans as (start, end, name).
+
+    With ``with_origin=True`` also returns how the spans were obtained:
+    ``"ast"`` (parsed), ``"lexical"`` (parser failed, brace-balanced fallback) or
+    ``"none"`` (parser failed and nothing was recoverable). Callers need that
+    distinction: an empty span list means "this file has no methods" under
+    ``"ast"``, but "we cannot see its methods" under ``"none"``.
+    """
     try:
         tree = javalang.parse.parse(source)
     except Exception:
-        return []
+        fallback = _lexical_method_spans(lines)
+        if not with_origin:
+            return fallback
+        return fallback, ("lexical" if fallback else "none")
     spans = []
     seen = set()
     for path, node in tree.filter(javalang.tree.MethodDeclaration):
@@ -545,7 +722,7 @@ def extract_method_spans(source, lines):
                 spans.append((start, end, "<lambda>"))
                 seen.add((start, end))
     spans.sort()
-    return spans
+    return (spans, "ast") if with_origin else spans
 
 
 def find_span_for_line(spans, lineno):
@@ -1767,6 +1944,71 @@ def apply_mutation(line, ltoks, desc, occ=0, int_locals=frozenset()):
     return line + " // MUTATED: " + d
 
 
+def _leaves_block_comment_open(lines, start, end):
+    """True when the text of lines[start..end] (1-based, inclusive) ends inside `/*`."""
+    in_str = in_char = in_block = False
+    for idx in range(start - 1, min(end, len(lines))):
+        line = lines[idx]
+        j, L = 0, len(line)
+        while j < L:
+            c = line[j]
+            nxt = line[j + 1] if j + 1 < L else ''
+            if in_block:
+                if c == '*' and nxt == '/':
+                    in_block = False
+                    j += 2
+                    continue
+                j += 1
+            elif in_str:
+                if c == '\\':
+                    j += 2
+                    continue
+                if c == '"':
+                    in_str = False
+                j += 1
+            elif in_char:
+                if c == '\\':
+                    j += 2
+                    continue
+                if c == "'":
+                    in_char = False
+                j += 1
+            elif c == '/' and nxt == '/':
+                break
+            elif c == '/' and nxt == '*':
+                in_block = True
+                j += 2
+            elif c == '"':
+                in_str = True
+                j += 1
+            elif c == "'":
+                in_char = True
+                j += 1
+            else:
+                j += 1
+    return in_block
+
+
+def _close_open_comment(lines, start, end):
+    """Extend `end` until the span no longer ends inside an unterminated `/*`.
+
+    A statement can be followed on its own line by a block comment that continues
+    below it:
+
+        int target = bi.getPosition() + bi.getIndex(); /*
+                                     * Byte code position: relative -> absolute.
+                                     */
+
+    The statement really does end at the `;`, but cutting the span there emits Java
+    that opens a comment and never closes it -- so the row does not compile. Pull the
+    remaining comment lines in.
+    """
+    n = len(lines)
+    while end < n and _leaves_block_comment_open(lines, start, end):
+        end += 1
+    return end
+
+
 def find_statement_span(lines, target):
     """1-based inclusive [start, end] line range of the smallest Java statement
     containing line `target`. For single-line statements returns (target, target)."""
@@ -1791,6 +2033,19 @@ def find_statement_span(lines, target):
                 s -= 1
                 continue
             break
+        # A *trailing inline* block comment is not a boundary: `..., null /* note */`
+        # is an ordinary continuation line of an argument list. Only a comment that
+        # owns its line (Javadoc, or the tail of a multi-line block) separates a
+        # declaration from what precedes it. Strip trailing inline comments and judge
+        # the code underneath; keep looping for `f(/*a*/ x) /*b*/`.
+        while prev.endswith('*/'):
+            open_i = prev.rfind('/*')
+            if open_i < 0:
+                break            # comment opened on an earlier line -> real boundary
+            before = prev[:open_i].rstrip()
+            if not before:
+                break            # the line is only a comment -> real boundary
+            prev = before
         if prev[-1] in (';', '{', '}'):
             break
         # Do not walk across a Javadoc/block comment or an annotation into a
@@ -1862,12 +2117,12 @@ def find_statement_span(lines, target):
             elif c == ']':
                 brack -= 1
             elif c == ';' and paren == 0 and brack == 0 and brace == 0:
-                return s, i + 1
+                return s, _close_open_comment(lines, s, i + 1)
             elif c == '{' and paren == 0 and brack == 0:
                 if expr_stmt:
                     brace += 1
                 else:
-                    return s, i + 1
+                    return s, _close_open_comment(lines, s, i + 1)
             elif c == '}' and paren == 0 and brack == 0 and brace > 0:
                 brace -= 1
             j += 1
@@ -1983,15 +2238,121 @@ def apply_mutation_with_fallback(lines, all_tokens, lineno, desc, occ=0, spans=N
     return lineno, lineno, result
 
 
+# A (possibly package-qualified) JVM binary class name: Java identifiers joined
+# by '.', with '$' allowed for nested classes. Used to reject display-name text
+# that appears outside the structured [class:...] field.
+_JAVA_FQN_RE = re.compile(r'[A-Za-z_$][\w$]*(?:\.[A-Za-z_$][\w$]*)*\Z')
+
+# Any "[segment:...]" field marks the entry as a JUnit Platform unique ID.
+_PLATFORM_SEGMENT_RE = re.compile(r'\[[a-z][a-z-]*:')
+
+
+def _test_class_to_java_file(fqcn):
+    """Map a fully-qualified test class to its source-file name, or ``None``.
+
+    ``org.example.FooTest``         -> ``FooTest.java``
+    ``org.example.Foo$InnerTest``   -> ``Foo.java``   (nested class lives in the
+                                       top-level class's source file)
+    Returns ``None`` when ``fqcn`` is not a well-formed class name, so callers can
+    treat it as explicitly unresolved rather than emit a bogus path.
+    """
+    fqcn = (fqcn or "").strip()
+    if not _JAVA_FQN_RE.match(fqcn):
+        return None
+    simple = fqcn.rsplit(".", 1)[-1]      # drop package
+    top_level = simple.split("$", 1)[0]   # nested class -> enclosing source file
+    if not top_level:
+        return None
+    return top_level + ".java"
+
+
+# PIT writes test provenance in one of two XML dialects, selected by the
+# fullMutationMatrix option -- a report uses one or the other, never both:
+#
+#   fullMutationMatrix=true : <killingTests>/<coveringTests>, '|'-separated lists
+#   default (PIT 1.22)      : <killingTest>/<coveringTest>,  one test per element
+#
+# Reading only the plural form silently drops all provenance from a default report.
+_TEST_ELEMENT_NAMES = {
+    "killing": ("killingTests", "killingTest"),
+    "covering": ("coveringTests", "coveringTest"),
+}
+
+
+def collect_test_ids(mut, kind):
+    """Gather ``kind`` ("killing"/"covering") test identifiers from a <mutation>.
+
+    Uses ``findall`` rather than ``findtext`` because the element may repeat.
+    The plural elements already hold a ``|``-separated list, so identifiers are
+    de-duplicated individually -- not per element -- with first-seen order kept.
+    """
+    seen = []
+    for name in _TEST_ELEMENT_NAMES[kind]:
+        for element in mut.findall(name):
+            for value in (element.text or "").split("|"):
+                value = value.strip()
+                if value and value not in seen:
+                    seen.append(value)
+    return "|".join(seen)
+
+
+_TEST_ELEMENT_RE = re.compile(r"<(?:killing|covering|succeeding)Test(s?)[ >]")
+
+
+def detect_test_dialect(xml_path):
+    """Report which test-provenance dialect a mutations.xml uses.
+
+    ``"matrix"`` (plural), ``"single"`` (singular), ``"mixed"``, or ``"none"`` when
+    the report carries no test elements at all -- which lets callers tell "PIT
+    recorded no tests" apart from "we failed to read the ones it recorded".
+    """
+    found = set()
+    try:
+        with open(xml_path, encoding="utf-8", errors="replace") as f:
+            for line in f:
+                for m in _TEST_ELEMENT_RE.finditer(line):
+                    found.add("matrix" if m.group(1) else "single")
+                if len(found) == 2:
+                    return "mixed"
+    except OSError:
+        return "none"
+    return found.pop() if found else "none"
+
+
 def extract_test_files(test_str):
+    """Resolve PIT killing/covering test identifiers to test source-file names.
+
+    Handles both identifier encodings PIT emits:
+
+    * **JUnit Platform** unique IDs (PIT 1.22 + JUnit 5), e.g.
+      ``[engine:junit-jupiter]/[class:org.example.FooTest]/[method:bar()]``. The
+      class is read from the structured ``[class:...]`` segment, so parameterized
+      display names never leak in.
+    * **Legacy** ``testMethod(org.example.FooTest)`` form.
+
+    Returns a ``|``-separated, sorted list of ``<TopLevelClass>.java`` names, or
+    ``""`` when nothing resolves. Malformed class segments are dropped (not turned
+    into an incorrect path), so an empty result means "no resolvable test class".
+    """
     if not test_str:
         return ""
     files = set()
     for entry in test_str.split("|"):
-        m = re.search(r'\(([^)]+)\)', entry)
-        if m:
-            cls = m.group(1).rsplit(".", 1)[-1]
-            files.add(cls + ".java")
+        m = re.search(r'\[class:([^\]]+)\]', entry)
+        if not m:
+            if _PLATFORM_SEGMENT_RE.search(entry):
+                # A JUnit Platform identifier with no [class:...] is explicitly
+                # unresolved. Do NOT fall back to the legacy "(...)" parser here:
+                # on a Platform id the parentheses hold the method's *parameter
+                # types*, so it would record production classes (for example
+                # Document$OutputSettings) as though they were test files.
+                continue
+            m = re.search(r'\(([^)]+)\)', entry)
+        if not m:
+            continue
+        java_file = _test_class_to_java_file(m.group(1))
+        if java_file:
+            files.add(java_file)
     return "|".join(sorted(files))
 
 
@@ -2059,6 +2420,8 @@ __all__ = [
     "extract_javadoc",
     "int_locals_in_span",
     "extract_method_spans",
+    "collect_test_ids",
+    "detect_test_dialect",
     "extract_test_files",
     "find_span_for_line",
     "find_statement_span",

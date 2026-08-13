@@ -11,6 +11,21 @@ requires-python = ">=3.6"
 license = { text = "Apache-2.0" }
 dependencies = ["javalang>=0.13.0"]
 
+[project.optional-dependencies]
+test = ["pytest>=7.0", "pytest-cov>=4.0"]
+
 [tool.setuptools]
 packages = ["shared"]
 package-dir = { "" = "PITMuS" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+# Always on: mixing a branch run and a statement run leaves .coverage files that
+# cannot be combined ("Can't combine statement coverage data with branch data").
+branch = true
+source = ["PITMuS/shared", "PITMuS/gen_dataset.py", "PITMuS/inject.py"]
+
+[tool.coverage.report]
+exclude_lines = ["pragma: no cover", "if __name__ == .__main__.:"]
