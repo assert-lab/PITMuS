@@ -1,6 +1,6 @@
 ======================================================================
  PITMuS reconstruction evaluation  --  project: commons-jexl3
- dataset  : PITMuS_dataset_fresh_generation-v3
+ dataset  : PITMuS_dataset
  generated: 2026-08-04 14:00:00
 ======================================================================
 total reconstructed mutations (dataset rows): 14019
@@ -12,7 +12,7 @@ Section 0  XML alignment oracle  (each dataset row points at the right <mutation
   xml_line points correct : 14019
   xml_line WRONG          : 0
   => OK - all aligned
-  detail csv: eval0_xml_misalign_commons-jexl3_v3.csv
+  detail csv: eval0_xml_misalign_commons-jexl3.csv
 
 ----------------------------------------------------------------------
 Section 1  Count oracle  (every XML mutation was reconstructed)
@@ -32,7 +32,7 @@ Section 2  Faithfulness oracle  (the reconstructed edit matches the mutator)
   FAIL / UNVERIFIABLE reasons:
       106  switch default not source-representable
         6  operator ~-> contradicts description
-  detail csv: eval2_faithfulness_commons-jexl3_v3.csv
+  detail csv: eval2_faithfulness_commons-jexl3.csv
 
 ----------------------------------------------------------------------
 Section 3  Bytecode ground-truth oracle  (recon compiles + matches PIT's exported mutant .class)
@@ -47,8 +47,8 @@ Section 3  Bytecode ground-truth oracle  (recon compiles + matches PIT's exporte
     setup / unverifiable (abstained):
       DISASM_ERR     2
       NOSRC          7061
-  detail csv (genuine faults): eval3_bytecode_commons-jexl3_v3_broken.csv
-  detail csv (other non-faults): eval3_bytecode_commons-jexl3_v3_other.csv
+  detail csv (genuine faults): eval3_bytecode_commons-jexl3_broken.csv
+  detail csv (other non-faults): eval3_bytecode_commons-jexl3_other.csv
 
 ======================================================================
  OVERALL

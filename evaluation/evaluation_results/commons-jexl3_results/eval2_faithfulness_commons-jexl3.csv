@@ -1,179 +1,29 @@
 index_no,verdict,xml_line,description,mutation_line,mutated_line
-4,UNVERIFIABLE: switch default not source-representable (reconstruction declined),42,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-42,UNVERIFIABLE: switch default not source-representable (reconstruction declined),62,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-67,UNVERIFIABLE: switch default not source-representable (reconstruction declined),87,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-118,UNVERIFIABLE: switch default not source-representable (reconstruction declined),135,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-138,UNVERIFIABLE: switch default not source-representable (reconstruction declined),154,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-156,UNVERIFIABLE: switch default not source-representable (reconstruction declined),180,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-164,UNVERIFIABLE: switch default not source-representable (reconstruction declined),181,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-183,UNVERIFIABLE: switch default not source-representable (reconstruction declined),347,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-368,UNVERIFIABLE: switch default not source-representable (reconstruction declined),390,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-408,UNVERIFIABLE: switch default not source-representable (reconstruction declined),428,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-409,UNVERIFIABLE: switch default not source-representable (reconstruction declined),429,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-429,UNVERIFIABLE: switch default not source-representable (reconstruction declined),486,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-430,UNVERIFIABLE: switch default not source-representable (reconstruction declined),487,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-487,UNVERIFIABLE: switch default not source-representable (reconstruction declined),507,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-488,UNVERIFIABLE: switch default not source-representable (reconstruction declined),508,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-511,UNVERIFIABLE: switch default not source-representable (reconstruction declined),528,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-565,UNVERIFIABLE: switch default not source-representable (reconstruction declined),592,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-592,UNVERIFIABLE: switch default not source-representable (reconstruction declined),648,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-593,UNVERIFIABLE: switch default not source-representable (reconstruction declined),649,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-594,UNVERIFIABLE: switch default not source-representable (reconstruction declined),650,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-613,UNVERIFIABLE: switch default not source-representable (reconstruction declined),651,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-651,UNVERIFIABLE: switch default not source-representable (reconstruction declined),671,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-692,UNVERIFIABLE: switch default not source-representable (reconstruction declined),694,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-722,UNVERIFIABLE: switch default not source-representable (reconstruction declined),740,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-746,UNVERIFIABLE: switch default not source-representable (reconstruction declined),773,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-827,UNVERIFIABLE: switch default not source-representable (reconstruction declined),850,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-849,UNVERIFIABLE: switch default not source-representable (reconstruction declined),947,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-850,UNVERIFIABLE: switch default not source-representable (reconstruction declined),948,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-899,UNVERIFIABLE: switch default not source-representable (reconstruction declined),949,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-952,UNVERIFIABLE: switch default not source-representable (reconstruction declined),983,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-960,UNVERIFIABLE: switch default not source-representable (reconstruction declined),984,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-965,UNVERIFIABLE: switch default not source-representable (reconstruction declined),985,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-966,UNVERIFIABLE: switch default not source-representable (reconstruction declined),986,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-986,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1006,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1099,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1142,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1141,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1146,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1145,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1155,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1179,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1196,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1181,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1197,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1208,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1211,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1235,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1291,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1236,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1292,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1255,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1293,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1274,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1294,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1336,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1340,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1337,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1341,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1339,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1342,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1340,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1343,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1371,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1375,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1432,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1614,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1433,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1615,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1434,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1616,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1453,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1617,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1472,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1618,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1491,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1619,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1642,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1659,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1658,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1676,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1665,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1677,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1692,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1805,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1747,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1806,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1830,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1850,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1854,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1880,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-1879,UNVERIFIABLE: switch default not source-representable (reconstruction declined),1881,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-3838,UNVERIFIABLE: switch default not source-representable (reconstruction declined),3843,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-3842,UNVERIFIABLE: switch default not source-representable (reconstruction declined),3845,Changed switch default to be first case,switch (jj_nt.kind) {,switch (jj_nt.kind) { // switch default changed to first case
-3863,UNVERIFIABLE: switch default not source-representable (reconstruction declined),3909,Changed switch default to be first case,"switch(jjmatchedKind)
-   {","switch(jjmatchedKind)
+3976,UNVERIFIABLE: switch default not source-representable (reconstruction declined),3987,Changed switch default to be first case,"switch(hiByte)
+   {","switch(hiByte)
    { // switch default changed to first case"
-3910,UNVERIFIABLE: switch default not source-representable (reconstruction declined),3971,Changed switch default to be first case,"switch(curLexState)
-   {","switch(curLexState)
+3990,UNVERIFIABLE: switch default not source-representable (reconstruction declined),3998,Changed switch default to be first case,"switch(hiByte)
+   {","switch(hiByte)
    { // switch default changed to first case"
-4021,UNVERIFIABLE: switch default not source-representable (reconstruction declined),4541,Changed switch default to be first case,"switch(jjstateSet[--i])
+4495,UNVERIFIABLE: switch default not source-representable (reconstruction declined),4543,Changed switch default to be first case,"switch(jjstateSet[--i])
             {","switch(jjstateSet[--i])
             { // switch default changed to first case"
-4332,UNVERIFIABLE: switch default not source-representable (reconstruction declined),4542,Changed switch default to be first case,"switch(jjstateSet[--i])
+4824,UNVERIFIABLE: switch default not source-representable (reconstruction declined),4872,Changed switch default to be first case,"switch(jjstateSet[--i])
             {","switch(jjstateSet[--i])
             { // switch default changed to first case"
-4553,UNVERIFIABLE: switch default not source-representable (reconstruction declined),4870,Changed switch default to be first case,"switch(jjstateSet[--i])
+5376,UNVERIFIABLE: switch default not source-representable (reconstruction declined),5424,Changed switch default to be first case,"switch(jjstateSet[--i])
             {","switch(jjstateSet[--i])
             { // switch default changed to first case"
-4730,UNVERIFIABLE: switch default not source-representable (reconstruction declined),4871,Changed switch default to be first case,"switch(jjstateSet[--i])
-            {","switch(jjstateSet[--i])
-            { // switch default changed to first case"
-4882,UNVERIFIABLE: switch default not source-representable (reconstruction declined),5422,Changed switch default to be first case,"switch(jjstateSet[--i])
-            {","switch(jjstateSet[--i])
-            { // switch default changed to first case"
-5213,UNVERIFIABLE: switch default not source-representable (reconstruction declined),5423,Changed switch default to be first case,"switch(jjstateSet[--i])
-            {","switch(jjstateSet[--i])
-            { // switch default changed to first case"
-5425,UNVERIFIABLE: switch default not source-representable (reconstruction declined),5427,Changed switch default to be first case,"switch(curChar)
-   {","switch(curChar)
+6492,UNVERIFIABLE: switch default not source-representable (reconstruction declined),6556,Changed switch default to be first case,"switch (pos)
+   {","switch (pos)
    { // switch default changed to first case"
-5470,UNVERIFIABLE: switch default not source-representable (reconstruction declined),5472,Changed switch default to be first case,"switch(curChar)
-   {","switch(curChar)
+6579,UNVERIFIABLE: switch default not source-representable (reconstruction declined),6637,Changed switch default to be first case,"switch (pos)
+   {","switch (pos)
    { // switch default changed to first case"
-5515,UNVERIFIABLE: switch default not source-representable (reconstruction declined),5517,Changed switch default to be first case,"switch(curChar)
-   {","switch(curChar)
+6658,UNVERIFIABLE: switch default not source-representable (reconstruction declined),6722,Changed switch default to be first case,"switch (pos)
+   {","switch (pos)
    { // switch default changed to first case"
-5561,UNVERIFIABLE: switch default not source-representable (reconstruction declined),5664,Changed switch default to be first case,"switch(curChar)
-   {","switch(curChar)
-   { // switch default changed to first case"
-5710,UNVERIFIABLE: switch default not source-representable (reconstruction declined),5813,Changed switch default to be first case,"switch(curChar)
-   {","switch(curChar)
-   { // switch default changed to first case"
-5859,UNVERIFIABLE: switch default not source-representable (reconstruction declined),5962,Changed switch default to be first case,"switch(curChar)
-   {","switch(curChar)
-   { // switch default changed to first case"
-6014,UNVERIFIABLE: switch default not source-representable (reconstruction declined),6041,Changed switch default to be first case,"switch(curChar)
-   {","switch(curChar)
-   { // switch default changed to first case"
-6069,UNVERIFIABLE: switch default not source-representable (reconstruction declined),6096,Changed switch default to be first case,"switch(curChar)
-   {","switch(curChar)
-   { // switch default changed to first case"
-6124,UNVERIFIABLE: switch default not source-representable (reconstruction declined),6151,Changed switch default to be first case,"switch(curChar)
-   {","switch(curChar)
-   { // switch default changed to first case"
-6179,UNVERIFIABLE: switch default not source-representable (reconstruction declined),6191,Changed switch default to be first case,"switch(curChar)
-   {","switch(curChar)
-   { // switch default changed to first case"
-6210,UNVERIFIABLE: switch default not source-representable (reconstruction declined),6222,Changed switch default to be first case,"switch(curChar)
-   {","switch(curChar)
-   { // switch default changed to first case"
-6241,UNVERIFIABLE: switch default not source-representable (reconstruction declined),6253,Changed switch default to be first case,"switch(curChar)
-   {","switch(curChar)
-   { // switch default changed to first case"
-6270,UNVERIFIABLE: switch default not source-representable (reconstruction declined),6282,Changed switch default to be first case,"switch(curChar)
-   {","switch(curChar)
-   { // switch default changed to first case"
-6297,UNVERIFIABLE: switch default not source-representable (reconstruction declined),6309,Changed switch default to be first case,"switch(curChar)
-   {","switch(curChar)
-   { // switch default changed to first case"
-6324,UNVERIFIABLE: switch default not source-representable (reconstruction declined),6336,Changed switch default to be first case,"switch(curChar)
-   {","switch(curChar)
-   { // switch default changed to first case"
-6351,UNVERIFIABLE: switch default not source-representable (reconstruction declined),6354,Changed switch default to be first case,"switch(curChar)
-   {","switch(curChar)
-   { // switch default changed to first case"
-6365,UNVERIFIABLE: switch default not source-representable (reconstruction declined),6368,Changed switch default to be first case,"switch(curChar)
-   {","switch(curChar)
-   { // switch default changed to first case"
-6379,UNVERIFIABLE: switch default not source-representable (reconstruction declined),6382,Changed switch default to be first case,"switch(curChar)
-   {","switch(curChar)
-   { // switch default changed to first case"
-6393,UNVERIFIABLE: switch default not source-representable (reconstruction declined),6396,Changed switch default to be first case,"switch(curChar)
-   {","switch(curChar)
-   { // switch default changed to first case"
-6406,UNVERIFIABLE: switch default not source-representable (reconstruction declined),6409,Changed switch default to be first case,"switch(curChar)
-   {","switch(curChar)
-   { // switch default changed to first case"
-6419,UNVERIFIABLE: switch default not source-representable (reconstruction declined),6422,Changed switch default to be first case,"switch(curChar)
-   {","switch(curChar)
-   { // switch default changed to first case"
-6432,UNVERIFIABLE: switch default not source-representable (reconstruction declined),6438,Changed switch default to be first case,"switch(curChar)
-   {","switch(curChar)
-   { // switch default changed to first case"
-6447,UNVERIFIABLE: switch default not source-representable (reconstruction declined),6453,Changed switch default to be first case,"switch(curChar)
-   {","switch(curChar)
-   { // switch default changed to first case"
-6462,UNVERIFIABLE: switch default not source-representable (reconstruction declined),6468,Changed switch default to be first case,"switch(curChar)
-   {","switch(curChar)
-   { // switch default changed to first case"
-6875,FAIL: operator ~-> contradicts description,6877,Replaced XOR with AND,return ~l;,return l;
-9808,UNVERIFIABLE: switch default not source-representable (reconstruction declined),9765,Changed switch default to be first case,"switch (c)
+9765,UNVERIFIABLE: switch default not source-representable (reconstruction declined),9717,Changed switch default to be first case,"switch (c)
     {","switch (c)
     { // switch default changed to first case"
-10437,UNVERIFIABLE: switch default not source-representable (reconstruction declined),10149,Changed switch default to be first case,"switch (moreSpecific(args, parms, getParameterTypes(max))) {","switch (moreSpecific(args, parms, getParameterTypes(max))) { // switch default changed to first case"
-10811,FAIL: operator ~-> contradicts description,10515,Replaced XOR with AND,flags &= ~(1L << feature);,flags &= (1L << feature);
-11038,UNVERIFIABLE: switch default not source-representable (reconstruction declined),10711,Changed switch default to be first case,switch (c) {,switch (c) { // switch default changed to first case
-11095,UNVERIFIABLE: switch default not source-representable (reconstruction declined),10765,Changed switch default to be first case,switch (c) {,switch (c) { // switch default changed to first case
-11325,UNVERIFIABLE: switch default not source-representable (reconstruction declined),11099,Changed switch default to be first case,switch (c) {,switch (c) { // switch default changed to first case
-11330,UNVERIFIABLE: switch default not source-representable (reconstruction declined),11104,Changed switch default to be first case,switch (c) {,switch (c) { // switch default changed to first case
-12309,FAIL: operator ~-> contradicts description,12010,Replaced XOR with AND,mask &= ~(1 << flag);,mask &= (1 << flag);
-12317,FAIL: operator ~-> contradicts description,12026,Replaced XOR with AND,return value? mask | (1 << ordinal) : mask & ~(1 << ordinal);,return value? mask | (1 << ordinal) : mask & (1 << ordinal);
-12598,FAIL: operator ~-> contradicts description,12232,Replaced XOR with AND,clean &= ~(1L << s);,clean &= (1L << s);
-12950,UNVERIFIABLE: switch default not source-representable (reconstruction declined),12585,Changed switch default to be first case,switch (s.charAt(last)) {,switch (s.charAt(last)) { // switch default changed to first case
-12956,UNVERIFIABLE: switch default not source-representable (reconstruction declined),12591,Changed switch default to be first case,switch (s.charAt(last)) {,switch (s.charAt(last)) { // switch default changed to first case
-13547,FAIL: operator ~-> contradicts description,13220,Replaced XOR with AND,return value? mask | (1 << ordinal) : mask & ~(1 << ordinal);,return value? mask | (1 << ordinal) : mask & (1 << ordinal);
-13592,UNVERIFIABLE: switch default not source-representable (reconstruction declined),13267,Changed switch default to be first case,switch (key) {,switch (key) { // switch default changed to first case
+11054,UNVERIFIABLE: switch default not source-representable (reconstruction declined),10728,Changed switch default to be first case,switch (c) {,switch (c) { // switch default changed to first case

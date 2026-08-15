@@ -1,19 +1,4 @@
 index_no,verdict,description,detail
-2480,DISASM_ERR,Replaced integer subtraction with addition,a=None b=None lambda$getLocalVariables$0(Lorg/apache/bcel/generic/LocalVariableGen;Lorg/apache/bcel/generic/LocalVariableGen;)I
-2481,DISASM_ERR,replaced int return with 0 for org/apache/bcel/generic/MethodGen::lambda$getLocalVariables$0,a=None b=None lambda$getLocalVariables$0(Lorg/apache/bcel/generic/LocalVariableGen;Lorg/apache/bcel/generic/LocalVariableGen;)I
-4634,DISASM_ERR,removed call to org/apache/bcel/verifier/VerifierAppFrame::classNamesJList_valueChanged,a=None b=None lambda$jbInit$0(Ljavax/swing/event/ListSelectionEvent;)V
-4635,DISASM_ERR,removed call to org/apache/bcel/verifier/VerifierAppFrame::newFileMenuItem_actionPerformed,a=None b=None lambda$jbInit$1(Ljava/awt/event/ActionEvent;)V
-4636,DISASM_ERR,removed call to org/apache/bcel/verifier/VerifierAppFrame::pass3aJList_valueChanged,a=None b=None lambda$jbInit$2(Ljavax/swing/event/ListSelectionEvent;)V
-4637,DISASM_ERR,removed call to org/apache/bcel/verifier/VerifierAppFrame::pass3bJList_valueChanged,a=None b=None lambda$jbInit$3(Ljavax/swing/event/ListSelectionEvent;)V
-4638,DISASM_ERR,removed call to org/apache/bcel/verifier/VerifierAppFrame::whatisMenuItem_actionPerformed,a=None b=None lambda$jbInit$4(Ljava/awt/event/ActionEvent;)V
-4639,DISASM_ERR,removed call to org/apache/bcel/verifier/VerifierAppFrame::aboutMenuItem_actionPerformed,a=None b=None lambda$jbInit$5(Ljava/awt/event/ActionEvent;)V
-5935,DISASM_ERR,removed conditional - replaced equality check with false,a=None b=None lambda$static$0(Ljava/io/File;Ljava/lang/String;)Z
-5936,DISASM_ERR,removed conditional - replaced equality check with true,a=None b=None lambda$static$0(Ljava/io/File;Ljava/lang/String;)Z
-5937,DISASM_ERR,removed conditional - replaced equality check with false,a=None b=None lambda$static$0(Ljava/io/File;Ljava/lang/String;)Z
-5938,DISASM_ERR,removed conditional - replaced equality check with true,a=None b=None lambda$static$0(Ljava/io/File;Ljava/lang/String;)Z
-5939,DISASM_ERR,replaced boolean return with true for org/apache/bcel/util/ClassPath::lambda$static$0,a=None b=None lambda$static$0(Ljava/io/File;Ljava/lang/String;)Z
-5940,DISASM_ERR,replaced boolean return with false for org/apache/bcel/util/ClassPath::lambda$static$1,a=None b=None lambda$static$1(Ljava/io/File;Ljava/lang/String;)Z
-5941,DISASM_ERR,replaced boolean return with true for org/apache/bcel/util/ClassPath::lambda$static$1,a=None b=None lambda$static$1(Ljava/io/File;Ljava/lang/String;)Z
 12,DIVERGENT,removed conditional - replaced equality check with false,arrayrefOfArrayType(Lorg/apache/bcel/generic/Instruction;Lorg/apache/bcel/generic/Type;)Z | alen=20 blen=46
 14,DIVERGENT,removed conditional - replaced equality check with false,arrayrefOfArrayType(Lorg/apache/bcel/generic/Instruction;Lorg/apache/bcel/generic/Type;)Z | alen=19 blen=40
 38,DIVERGENT,removed conditional - replaced equality check with false,visitAALOAD(Lorg/apache/bcel/generic/AALOAD;)V | alen=35 blen=62
@@ -299,6 +284,7 @@ index_no,verdict,description,detail
 5856,DIVERGENT,removed conditional - replaced equality check with false,<init>(Ljava/lang/String;)V | alen=112 blen=124
 5861,DIVERGENT,removed conditional - replaced equality check with false,addJdkModules(Ljava/lang/String;Ljava/util/List;)V | alen=61 blen=70
 5879,DIVERGENT,replaced return value with null for org/apache/bcel/util/ClassPath::getBytes,getBytes(Ljava/lang/String;Ljava/lang/String;)[B | alen=66 blen=68
+5935,DIVERGENT,removed conditional - replaced equality check with false,lambda$static$0(Ljava/io/File;Ljava/lang/String;)Z | alen=8 blen=23
 6111,DIVERGENT,removed conditional - replaced equality check with true,mergeInFrames(Lorg/apache/bcel/verifier/structurals/Frame;)Z | alen=42 blen=46
 6117,DIVERGENT,removed conditional - replaced comparison check with false,predecessor(I)Ljava/lang/Object; | alen=17 blen=27
 6313,DIVERGENT,Changed switch default to be first case,getType(Lorg/apache/bcel/generic/ConstantPoolGen;)Lorg/apache/bcel/generic/Type; | alen=18 blen=34
@@ -310,6 +296,7 @@ index_no,verdict,description,detail
 6484,DIVERGENT,Replaced integer addition with subtraction,calculateLength()I | alen=34 blen=34
 6510,DIVERGENT,Replaced integer addition with subtraction,getInternalLength()I | alen=21 blen=21
 6511,DIVERGENT,Replaced integer addition with subtraction,getInternalLength()I | alen=21 blen=21
+6517,DIVERGENT,Replaced integer addition with subtraction,getInternalLength()I | alen=21 blen=21
 6550,DIVERGENT,removed conditional - replaced equality check with false,<init>(Lorg/apache/bcel/classfile/JavaClass;)V | alen=188 blen=195
 6625,DIVERGENT,removed conditional - replaced equality check with false,equals(Ljava/lang/Object;)Z | alen=2 blen=15
 6626,DIVERGENT,removed conditional - replaced equality check with true,equals(Ljava/lang/Object;)Z | alen=9 blen=22

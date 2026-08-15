@@ -1,6 +1,6 @@
 ======================================================================
  PITMuS reconstruction evaluation  --  project: commons-beanutils
- dataset  : PITMuS_dataset_fresh_generation-v3
+ dataset  : PITMuS_dataset
  generated: 2026-08-04 13:27:11
 ======================================================================
 total reconstructed mutations (dataset rows): 4279
@@ -12,7 +12,7 @@ Section 0  XML alignment oracle  (each dataset row points at the right <mutation
   xml_line points correct : 4279
   xml_line WRONG          : 0
   => OK - all aligned
-  detail csv: eval0_xml_misalign_commons-beanutils_v3.csv
+  detail csv: eval0_xml_misalign_commons-beanutils.csv
 
 ----------------------------------------------------------------------
 Section 1  Count oracle  (every XML mutation was reconstructed)
@@ -29,7 +29,7 @@ Section 2  Faithfulness oracle  (the reconstructed edit matches the mutator)
     PASS         : 4279
     FAIL         : 0
     UNVERIFIABLE : 0
-  detail csv: eval2_faithfulness_commons-beanutils_v3.csv
+  detail csv: eval2_faithfulness_commons-beanutils.csv
 
 ----------------------------------------------------------------------
 Section 3  Bytecode ground-truth oracle  (recon compiles + matches PIT's exported mutant .class)
@@ -41,8 +41,8 @@ Section 3  Bytecode ground-truth oracle  (recon compiles + matches PIT's exporte
     BROKEN     (real fault, won't compile): 0   <- genuine reconstruction faults
     UNREPRESENTABLE (faithful, illegal Java): 166   <- mutant PIT makes in bytecode but source can't express
     DIVERGENT  (bytecode differs)       : 219   <- needs review
-  detail csv (genuine faults): eval3_bytecode_commons-beanutils_v3_broken.csv
-  detail csv (other non-faults): eval3_bytecode_commons-beanutils_v3_other.csv
+  detail csv (genuine faults): eval3_bytecode_commons-beanutils_broken.csv
+  detail csv (other non-faults): eval3_bytecode_commons-beanutils_other.csv
 
 ======================================================================
  OVERALL

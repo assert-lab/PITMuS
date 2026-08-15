@@ -93,8 +93,8 @@ def iter_mutations(system_path, skips=None):
             method_desc = mut.findtext("methodDescription", "")
             lineno = int(mut.findtext("lineNumber", "0"))
             desc = mut.findtext("description", "")
-            killing = mut.findtext("killingTests", "") or ""
-            covering = mut.findtext("coveringTests", "") or ""
+            killing = collect_test_ids(mut, "killing")
+            covering = collect_test_ids(mut, "covering")
             index_vals = [int(x.text) for x in mut.findall("indexes/index") if (x.text or "").lstrip("-").isdigit()]
             bc_index = index_vals[0] if index_vals else None
 
@@ -109,8 +109,8 @@ def iter_mutations(system_path, skips=None):
                         break
 
             if abs_path not in source_cache:
-                source_cache[abs_path] = load_source(abs_path)
-            lines, tokens, spans = source_cache[abs_path]
+                source_cache[abs_path] = load_source(abs_path, with_origin=True)
+            lines, tokens, spans, span_origin = source_cache[abs_path]
 
             # Occurrence rank = positional count of same-family mutations in the
             # order PIT emits them, which follows PIT's ASM instruction ordinal
@@ -151,11 +151,22 @@ def iter_mutations(system_path, skips=None):
                 continue
 
             span = find_span_for_line(spans, stmt_start) if spans else None
-            if not span:
-                # Mutation lives outside any method body (e.g. a field
-                # initializer or a lambda assigned to a field). Use the
-                # statement itself as the enclosing unit so it isn't dropped.
+            if span:
+                span_kind = span_origin              # "ast" or "lexical"
+            elif span_origin == "none":
+                # The file could not be read structurally, so we cannot tell an
+                # in-method statement from a field initializer. Labelling it
+                # "<field>" would silently reduce original_method to a single
+                # statement, so drop the row and say why instead.
+                emit_skip(mut, rel_src, lineno, desc, bc_index,
+                          "no method spans recovered (source did not parse); "
+                          "cannot identify the enclosing method")
+                continue
+            else:
+                # Genuinely outside every method body (a field initializer, or a
+                # lambda assigned to a field). Use the statement as its own unit.
                 span = (stmt_start, stmt_end, "<field>")
+                span_kind = "field"
             s, e, _name = span
             body_lines = lines[s - 1:e]
             original_method = "\n".join(body_lines)
@@ -181,6 +192,7 @@ def iter_mutations(system_path, skips=None):
                 "original_method": original_method,
                 "mutated_method_body": mutated_method,
                 "docstring": docstring,
+                "span_origin": span_kind,   # ast | lexical | field -- provenance of the method span
             }
 
 
@@ -205,7 +217,9 @@ def main():
     methods_rows = []
     meta_rows = []
     skips = []
+    span_kinds = defaultdict(int)
     for info in iter_mutations(system_path, skips):
+        span_kinds[info["span_origin"]] += 1
         methods_rows.append([
             info["index_no"],
             info["original_method"],
@@ -254,6 +268,33 @@ def main():
 
     print(f"Wrote {methods_csv} and {meta_csv} ({len(methods_rows)} rows)")
     print(f"Wrote {skips_txt} ({len(skips)} skipped)")
+
+    # Losing test provenance is silent by nature -- an empty test_file looks the
+    # same whether PIT recorded no test or we failed to read the one it recorded.
+    # Say which, so a schema mismatch cannot pass for "this project has no tests".
+    dialect = detect_test_dialect(xml_path)
+    with_tests = sum(1 for row in meta_rows if row[6])
+    print(f"Test provenance: {with_tests}/{len(meta_rows)} rows (XML dialect: {dialect})")
+    if meta_rows and not with_tests and dialect != "none":
+        print(
+            f"Warning: mutations.xml uses the '{dialect}' test-element dialect but no "
+            "row resolved a test file -- the identifier format may be unrecognized.",
+            file=sys.stderr,
+        )
+
+    # Where each row's original_method came from. A row built from a lexical or
+    # field span is still a valid mutation, but only an AST span guarantees the
+    # method column really holds the enclosing method.
+    print("Method spans: " + "  ".join(
+        f"{kind}={span_kinds[kind]}" for kind in ("ast", "lexical", "field")
+    ) + f"  skipped={len(skips)}")
+    if span_kinds["lexical"]:
+        print(
+            f"Warning: {span_kinds['lexical']} row(s) used the lexical span fallback "
+            "because javalang could not parse the source (likely a newer Java level). "
+            "Method bodies are brace-balanced rather than parsed.",
+            file=sys.stderr,
+        )
 
 
 if __name__ == "__main__":

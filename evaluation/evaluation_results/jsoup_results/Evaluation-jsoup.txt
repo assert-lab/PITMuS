@@ -1,7 +1,7 @@
 ======================================================================
  PITMuS reconstruction evaluation  --  project: jsoup
- dataset  : PITMuS_dataset_fresh_generation-v3
- generated: 2026-08-04 15:29:43
+ dataset  : PITMuS_dataset
+ generated: 2026-08-13 12:19:37
 ======================================================================
 total reconstructed mutations (dataset rows): 7428
 
@@ -12,7 +12,7 @@ Section 0  XML alignment oracle  (each dataset row points at the right <mutation
   xml_line points correct : 7428
   xml_line WRONG          : 0
   => OK - all aligned
-  detail csv: eval0_xml_misalign_jsoup_v3.csv
+  detail csv: eval0_xml_misalign_jsoup.csv
 
 ----------------------------------------------------------------------
 Section 1  Count oracle  (every XML mutation was reconstructed)
@@ -32,7 +32,7 @@ Section 2  Faithfulness oracle  (the reconstructed edit matches the mutator)
   FAIL / UNVERIFIABLE reasons:
        15  switch default not source-representable
         4  mutant broke syntax
-  detail csv: eval2_faithfulness_jsoup_v3.csv
+  detail csv: eval2_faithfulness_jsoup.csv
 
 ----------------------------------------------------------------------
 Section 3  Bytecode ground-truth oracle  (recon compiles + matches PIT's exported mutant .class)
@@ -42,12 +42,12 @@ Section 3  Bytecode ground-truth oracle  (recon compiles + matches PIT's exporte
     EQUIVALENT (subsequence of PIT)     : 6439
     => confirmed faithful               : 6978
     BROKEN     (real fault, won't compile): 13   <- genuine reconstruction faults
-    UNREPRESENTABLE (faithful, illegal Java): 192   <- mutant PIT makes in bytecode but source can't express
-    DIVERGENT  (bytecode differs)       : 240   <- needs review
+    UNREPRESENTABLE (faithful, illegal Java): 193   <- mutant PIT makes in bytecode but source can't express
+    DIVERGENT  (bytecode differs)       : 239   <- needs review
     setup / unverifiable (abstained):
       DISASM_ERR     5
-  detail csv (genuine faults): eval3_bytecode_jsoup_v3_broken.csv
-  detail csv (other non-faults): eval3_bytecode_jsoup_v3_other.csv
+  detail csv (genuine faults): eval3_bytecode_jsoup_broken.csv
+  detail csv (other non-faults): eval3_bytecode_jsoup_other.csv
 
 ======================================================================
  OVERALL
@@ -55,6 +55,6 @@ Section 3  Bytecode ground-truth oracle  (recon compiles + matches PIT's exporte
   faithfulness PASS rate         : 7409/7428
   bytecode confirmed faithful      : 6978/7428
   bytecode BROKEN (real faults)    : 13   <- genuine reconstruction faults
-  bytecode UNREPRESENTABLE         : 192   <- faithful, but illegal Java source (not a fault)
-  bytecode DIVERGENT (review)      : 240
+  bytecode UNREPRESENTABLE         : 193   <- faithful, but illegal Java source (not a fault)
+  bytecode DIVERGENT (review)      : 239
 ======================================================================

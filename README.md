@@ -36,12 +36,14 @@ PITMuS/                               ← repo root
 │   ├── gen_dataset.py                ← PIT report → dataset CSVs   (main entry point)
 │   ├── inject.py                     ← PIT report → mutant .java files (standalone tool)
 │   └── pitmus_config.py              ← deprecated shim → shared.version
+├── tests/                            ← pytest regression suite (see "Tests" below)
 ├── evaluation/
 │   ├── evaluate_reconstruction.ipynb ← the 4 evaluations (eval0–eval3) that grade a dataset
 │   ├── PitmusCompile.java            ← in-JVM batch compiler used by the bytecode oracle
 │   └── evaluation_results/
 │       └── <project>_results/        ← per-project evaluation output (CSVs + Evaluation-*.txt
-│                                        + skipped-reconstructions-samples-<project>.txt)
+│                                        + skipped-reconstructions-samples-<project>.txt
+│                                        + golden-drift-<project>.txt, written by the tests)
 ├── test-projects/
 │   └── <project>/
 │       ├── src/main/java/            ← project source
@@ -172,12 +174,93 @@ reconstructions and covers rows eval3 can't compile — keep both.
 
 ---
 
+## Tests
+
+Run the suite after every engine change — it is the regression net for `shared/mutate.py`.
+
+```bash
+pip install pytest
+pytest                 # fast tier: unit tests + small projects  (~5s)
+pytest --runslow       # adds the full dataset replay, all 7 projects (~5 min)
+```
+
+| File | Covers |
+|---|---|
+| `test_apply_mutation.py` | one case per STRONGER mutator, occurrence selection, the iinc/int-local rule, fallback behavior |
+| `test_extract_test_files.py` | JUnit Platform `[class:...]` and legacy `(TestClass)` test identifiers |
+| `test_statement_spans.py` | `find_statement_span`, multi-line statements, adjacent-line fallback |
+| `test_method_spans.py` | method/lambda/anon spans, Javadoc, `int_locals_in_span`, `load_source` |
+| `test_lexical_spans.py` | span recovery when the parser fails: overloads, masking, excluded constructs, span origins |
+| `test_tokens.py` | `replace_at`, `nth_token*`, `tokens_on_line`, `nth_gt_run` (`>>` vs `>>>`) |
+| `test_switch.py` | `parse_switch_tables` against recorded `javap` output (no JDK needed) |
+| `test_opcode_constants.py` | opcode-table invariants and the exported public API |
+| `test_gen_dataset_cli.py` | `main()`: CSV filenames, headers, column order, skip report, source resolution |
+| `test_test_provenance.py` | both PIT test-element dialects (singular/plural), precedence, the dropped-provenance warning |
+| `test_inject.py` | `main()`, javap parsing, occurrence resolution, `.java` emission, CLI targeting |
+| `test_eval_notebook.py` | the eval3 `javap` parser lifted out of the notebook: lambda/synthetic names, constructors |
+| `test_golden_dataset.py` | **replays every committed dataset** and diffs it row-by-row |
+
+`test_golden_dataset.py` is the important one: it re-reconstructs each project's
+`mutations.xml` and compares all nine `meta-*.csv` columns plus the method bodies against
+the committed CSVs, so any behavioral drift surfaces as a concrete row diff. It also
+asserts invariants that hold for any healthy dataset (dense `index_no`, no unapplied
+`// MUTATED:` markers, every XML mutation either reconstructed or recorded as a skip,
+and determinism across runs).
+
+One of those invariants is `test_spans_are_self_contained`: every emitted span must be
+balanced Java — parens and brackets matched, not ending inside an open `/*`, and not
+starting mid-expression. A span that fails this either ran past the end of its own
+construct or was cut mid-token, and will not compile for a downstream consumer. Three
+shapes are unbalanced on purpose and are allowed: `if (cond) {` (the body is excluded
+because the mutation is in the condition), `} while (cond);` (the do-while mirror), and
+`// removed call to foo()` (how the removed-call mutator renders a deleted statement).
+
+Nothing shells out to `javap`/`javac`/Maven, and projects whose inputs are missing are
+skipped — so the suite runs in a bare clone.
+
+### Accepting an intended change
+
+The golden test only detects *drift*; it cannot tell you the new output is *correct*. That
+is what the evaluation notebook is for — but a full eval3 sweep is expensive. So the golden
+test writes the rows that moved to
+`evaluation/evaluation_results/<project>_results/golden-drift-<project>.txt`
+(one `index_no` per line; deleted again when nothing drifts, so the list can never go
+stale). The notebook reads it and restricts **eval2 and eval3** to just those rows:
+
+```python
+DRIFT_ONLY = True   # config cell; set False to force a full sweep
+```
+
+The drift file supplies only the *index set*. The row *content* comes from the CSVs on
+disk (`meta = load_csv(meta_path)`), so the dataset must be regenerated **before** the
+notebook runs — otherwise eval compiles the old committed text for those indices and
+grades the baseline you already accepted.
+
+The loop after an engine change:
+
+```bash
+pytest                  # ~5s   -- did I break a unit-level behavior?
+pytest --runslow        # ~5min -- which dataset rows moved? (writes golden-drift-*.txt)
+python PITMuS/gen_dataset.py test-projects/<project>   # CSVs now hold the NEW text
+# run eval2 + eval3 in the notebook: a handful of compiles, not a full sweep
+git checkout -- test-projects/<project>/PITMuS_dataset/   # only if eval disagrees
+```
+
+Do not re-run `pytest --runslow` between the regenerate and the eval: the reconstruction
+would match the CSVs it just wrote, and the now-empty drift set deletes the file — the
+notebook silently falls back to evaluating all rows.
+
+If a change adds or removes rows the drift list is skipped entirely: the row-count assert
+fires before the drift file is written, so stale indices cannot survive a renumbering.
+
+---
+
 ## Flags & Knobs Worth Knowing
 
 | Where | Flag | Effect |
 |---|---|---|
 | `pit.sh` / PIT config | `-Dfeatures=+EXPORT` | Exports mutant `.class` files to `target/pit-reports/export/`. **Required for eval3.** |
-| PIT config | `<fullMutationMatrix>true`, `<exportLineCoverage>true` | Richer report (test matrix + line coverage). |
+| PIT config | `<fullMutationMatrix>true`, `<exportLineCoverage>true` | Richer report (test matrix + line coverage). Also switches the test elements from singular `<killingTest>` to plural `<killingTests>`; PITMuS reads both. |
 | `PITMuS/shared/version.py` | `dataset_dirname()` | Single source of truth for the dataset output-folder name (`PITMuS_dataset`). `gen_dataset.py` reads it; the notebook hardcodes the same name, so keep the two in step. |
 | `gen_dataset.py` (env) | `PITMUS_DEBUG_SKIPS=1` | Prints, to stderr, every mutation it *skipped* and why (single-line methods, unresolved spans, …). |
 | notebook eval3 | `BC_SAMPLE = None` | `None` = check all rows; set an int for a quick sample. |
