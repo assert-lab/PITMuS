@@ -134,3 +134,27 @@ def test_result_never_contains_path_separators_or_package():
     out = extract_test_files(ident)
     assert out == "DeepTest.java"
     assert "/" not in out and "." not in out[:-5]
+# ------------------------------------------------- plain class names
+
+
+def test_plain_fully_qualified_class_name():
+    """PIT records class-level test identifiers as bare fully-qualified names."""
+    assert extract_test_files("com.github.kevinsawicki.http.HttpRequestTest") == "HttpRequestTest.java"
+
+
+def test_plain_and_legacy_formats_mixed_in_one_entry():
+    """A single <coveringTests> element can mix both encodings (http-request does)."""
+    ident = (
+        "com.github.kevinsawicki.http.EncodeTest.encode(com.github.kevinsawicki.http.EncodeTest)"
+        "|com.github.kevinsawicki.http.HttpRequestTest"
+    )
+    assert extract_test_files(ident) == "EncodeTest.java|HttpRequestTest.java"
+
+
+def test_plain_class_names_are_deduplicated_and_sorted():
+    assert extract_test_files("org.example.BTest|org.example.ATest|org.example.BTest") == "ATest.java|BTest.java"
+
+
+def test_survived_mutant_resolves_from_covering_tests_alone():
+    """A SURVIVED mutant has no killing tests, but coveringTests still names the class."""
+    assert extract_test_files("com.github.kevinsawicki.http.HttpRequestTest") == "HttpRequestTest.java"

@@ -2348,9 +2348,17 @@ def extract_test_files(test_str):
                 # Document$OutputSettings) as though they were test files.
                 continue
             m = re.search(r'\(([^)]+)\)', entry)
-        if not m:
-            continue
-        java_file = _test_class_to_java_file(m.group(1))
+        if m:
+            candidate = m.group(1)
+        else:
+            # Plain fully-qualified class name (class-level granularity), e.g.
+            # "com.example.FooTest" -- no [class:...] segment and no "(...)".
+            # Reject a bare word like "testFoo": without a package it is not a
+            # resolvable class name, and guessing would fabricate a file path.
+            candidate = entry.strip()
+            if "." not in candidate:
+                continue
+        java_file = _test_class_to_java_file(candidate)
         if java_file:
             files.add(java_file)
     return "|".join(sorted(files))
