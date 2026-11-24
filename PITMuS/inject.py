@@ -114,7 +114,19 @@ def load_class_bytecode(class_file):
     simple = simple.rsplit("$", 1)[-1]
     return _parse_javap(text, simple)
 
-
+# NOTE: this bytecode-guided resolution never actually activates as shipped.
+# load_class_bytecode() runs `javap -c -p -l` (no -v), but _parse_javap() only
+# starts reading method bodies once it sees a `descriptor:` line, which only
+# `javap -v` prints. Every mutation silently falls back to the left-to-right
+# occ_counter below instead.
+#
+# Separately: even with -v added, the index comparison here treats PIT's
+# <index> (an ASM instruction-list ordinal — see the same warning in
+# gen_dataset.py) as if it were a javap byte offset. The two numbering
+# schemes only coincidentally agree, so literal comparison can resolve the
+# WRONG occurrence without any error (verified: on `(a+1)*(b+a)`, PIT
+# index=5 resolves here to occ=1, but ground truth is occ=0 - the first
+# `+`, not the second).
 def resolve_occ_from_bytecode(methods_info, method, method_desc, index, line, desc):
     info = methods_info.get((method, method_desc))
     if not info or not info["insns"]:
